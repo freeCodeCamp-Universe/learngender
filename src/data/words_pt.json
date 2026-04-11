@@ -1,0 +1,7002 @@
+[
+  {
+    "word": "durante",
+    "gender": "masculine",
+    "translation": "a type of glossy wool fabric",
+    "rank": 1,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "nova",
+    "gender": "feminine",
+    "translation": "news",
+    "rank": 2,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "quase",
+    "gender": "masculine",
+    "translation": "almost",
+    "rank": 3,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "amanhã",
+    "gender": "masculine",
+    "translation": "tomorrow",
+    "rank": 4,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "tanto",
+    "gender": "masculine",
+    "translation": "an unspecified or irrelevant amount of something",
+    "rank": 5,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "história",
+    "gender": "feminine",
+    "translation": "history",
+    "rank": 6,
+    "patternNote": "Ends in -ia, usually feminine"
+  },
+  {
+    "word": "irmão",
+    "gender": "masculine",
+    "translation": "brother",
+    "rank": 7,
+    "patternNote": "Ends in -ão, usually masculine"
+  },
+  {
+    "word": "cima",
+    "gender": "feminine",
+    "translation": "top, summit",
+    "rank": 8,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "maneira",
+    "gender": "feminine",
+    "translation": "manner; way",
+    "rank": 9,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "ajuda",
+    "gender": "feminine",
+    "translation": "help, assistance, aid",
+    "rank": 10,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "morto",
+    "gender": "masculine",
+    "translation": "deceased",
+    "rank": 11,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "porta",
+    "gender": "feminine",
+    "translation": "door",
+    "rank": 12,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "medo",
+    "gender": "masculine",
+    "translation": "fear",
+    "rank": 13,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "morte",
+    "gender": "feminine",
+    "translation": "death",
+    "rank": 14,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "caminho",
+    "gender": "masculine",
+    "translation": "path",
+    "rank": 15,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "rapaz",
+    "gender": "masculine",
+    "translation": "boy, young man, lad, youngster",
+    "rank": 16,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "causa",
+    "gender": "feminine",
+    "translation": "cause, reason",
+    "rank": 17,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "feito",
+    "gender": "masculine",
+    "translation": "feat, deed, accomplishment",
+    "rank": 18,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "sorte",
+    "gender": "feminine",
+    "translation": "sort",
+    "rank": 19,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "lamento",
+    "gender": "masculine",
+    "translation": "wailing, moaning, weeping",
+    "rank": 20,
+    "patternNote": "Ends in -mento, always masculine"
+  },
+  {
+    "word": "filha",
+    "gender": "feminine",
+    "translation": "daughter",
+    "rank": 21,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "acha",
+    "gender": "feminine",
+    "translation": "billet",
+    "rank": 22,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "conta",
+    "gender": "feminine",
+    "translation": "operation, calculation",
+    "rank": 23,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "arma",
+    "gender": "feminine",
+    "translation": "weapon",
+    "rank": 24,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "pessoal",
+    "gender": "masculine",
+    "translation": "staff",
+    "rank": 25,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "quarto",
+    "gender": "masculine",
+    "translation": "quarter; fourth",
+    "rank": 26,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "senhora",
+    "gender": "feminine",
+    "translation": "lady",
+    "rank": 27,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "cara",
+    "gender": "feminine",
+    "translation": "face",
+    "rank": 28,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "última",
+    "gender": "feminine",
+    "translation": "recent news",
+    "rank": 29,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "manhã",
+    "gender": "feminine",
+    "translation": "morning",
+    "rank": 30,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "poder",
+    "gender": "masculine",
+    "translation": "power",
+    "rank": 31,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "água",
+    "gender": "feminine",
+    "translation": "water",
+    "rank": 32,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "cuidado",
+    "gender": "masculine",
+    "translation": "care, caution, precaution",
+    "rank": 33,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "sangue",
+    "gender": "masculine",
+    "translation": "blood",
+    "rank": 34,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "semana",
+    "gender": "feminine",
+    "translation": "week",
+    "rank": 35,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "cinco",
+    "gender": "masculine",
+    "translation": "five",
+    "rank": 36,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "corpo",
+    "gender": "masculine",
+    "translation": "body",
+    "rank": 37,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "altura",
+    "gender": "feminine",
+    "translation": "height",
+    "rank": 38,
+    "patternNote": "Ends in -ura, usually feminine"
+  },
+  {
+    "word": "jogo",
+    "gender": "masculine",
+    "translation": "play",
+    "rank": 39,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "guerra",
+    "gender": "feminine",
+    "translation": "war",
+    "rank": 40,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "fala",
+    "gender": "feminine",
+    "translation": "speech",
+    "rank": 41,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "procura",
+    "gender": "feminine",
+    "translation": "search",
+    "rank": 42,
+    "patternNote": "Ends in -ura, usually feminine"
+  },
+  {
+    "word": "terra",
+    "gender": "feminine",
+    "translation": "land; region; territory",
+    "rank": 43,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "ontem",
+    "gender": "masculine",
+    "translation": "yesterday",
+    "rank": 44,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "comer",
+    "gender": "masculine",
+    "translation": "food; meal",
+    "rank": 45,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "escola",
+    "gender": "feminine",
+    "translation": "school",
+    "rank": 46,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "querido",
+    "gender": "masculine",
+    "translation": "sweetheart",
+    "rank": 47,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "equipa",
+    "gender": "feminine",
+    "translation": "team",
+    "rank": 48,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "rapariga",
+    "gender": "feminine",
+    "translation": "girl, young lady",
+    "rank": 49,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "marido",
+    "gender": "masculine",
+    "translation": "husband",
+    "rank": 50,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "calma",
+    "gender": "feminine",
+    "translation": "calm",
+    "rank": 51,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "coração",
+    "gender": "masculine",
+    "translation": "heart",
+    "rank": 52,
+    "patternNote": "Ends in -ão, usually masculine"
+  },
+  {
+    "word": "segurança",
+    "gender": "feminine",
+    "translation": "security; safety",
+    "rank": 53,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "viver",
+    "gender": "masculine",
+    "translation": "life",
+    "rank": 54,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "estado",
+    "gender": "masculine",
+    "translation": "state",
+    "rank": 55,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "segundo",
+    "gender": "masculine",
+    "translation": "second",
+    "rank": 56,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "quatro",
+    "gender": "masculine",
+    "translation": "four",
+    "rank": 57,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "baixo",
+    "gender": "masculine",
+    "translation": "bass",
+    "rank": 58,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "meio",
+    "gender": "masculine",
+    "translation": "middle, center",
+    "rank": 59,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "andar",
+    "gender": "masculine",
+    "translation": "floor, storey",
+    "rank": 60,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "número",
+    "gender": "masculine",
+    "translation": "number",
+    "rank": 61,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "acordo",
+    "gender": "masculine",
+    "translation": "agreement, deal",
+    "rank": 62,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "festa",
+    "gender": "feminine",
+    "translation": "party",
+    "rank": 63,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "capitão",
+    "gender": "masculine",
+    "translation": "captain",
+    "rank": 64,
+    "patternNote": "Ends in -ão, usually masculine"
+  },
+  {
+    "word": "raio",
+    "gender": "masculine",
+    "translation": "ray",
+    "rank": 65,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "suficiente",
+    "gender": "masculine",
+    "translation": "enough",
+    "rank": 66,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "força",
+    "gender": "feminine",
+    "translation": "force; strength",
+    "rank": 67,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "irmã",
+    "gender": "feminine",
+    "translation": "sister",
+    "rank": 68,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "chega",
+    "gender": "feminine",
+    "translation": "an ox fight",
+    "rank": 69,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "olhar",
+    "gender": "masculine",
+    "translation": "gaze; stare; look",
+    "rank": 70,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "pena",
+    "gender": "feminine",
+    "translation": "punishment",
+    "rank": 71,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "penso",
+    "gender": "masculine",
+    "translation": "band-aid",
+    "rank": 72,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "estranho",
+    "gender": "masculine",
+    "translation": "stranger",
+    "rank": 73,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "veio",
+    "gender": "masculine",
+    "translation": "vein",
+    "rank": 74,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "plano",
+    "gender": "masculine",
+    "translation": "plane",
+    "rank": 75,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "prazer",
+    "gender": "masculine",
+    "translation": "pleasure",
+    "rank": 76,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "velho",
+    "gender": "masculine",
+    "translation": "an old person",
+    "rank": 77,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "passado",
+    "gender": "masculine",
+    "translation": "past",
+    "rank": 78,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "jantar",
+    "gender": "masculine",
+    "translation": "dinner",
+    "rank": 79,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "pergunta",
+    "gender": "feminine",
+    "translation": "question",
+    "rank": 80,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "pequeno",
+    "gender": "masculine",
+    "translation": "child",
+    "rank": 81,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "sala",
+    "gender": "feminine",
+    "translation": "room",
+    "rank": 82,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "telefone",
+    "gender": "masculine",
+    "translation": "telephone",
+    "rank": 83,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "trás",
+    "gender": "feminine",
+    "translation": "behind, rear",
+    "rank": 84,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "seis",
+    "gender": "masculine",
+    "translation": "six",
+    "rank": 85,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "culpa",
+    "gender": "feminine",
+    "translation": "fault",
+    "rank": 86,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "deixa",
+    "gender": "feminine",
+    "translation": "cue",
+    "rank": 87,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "menina",
+    "gender": "feminine",
+    "translation": "girl",
+    "rank": 88,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "casamento",
+    "gender": "masculine",
+    "translation": "wedding",
+    "rank": 89,
+    "patternNote": "Ends in -mento, always masculine"
+  },
+  {
+    "word": "jack",
+    "gender": "masculine",
+    "translation": "jack",
+    "rank": 90,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "cama",
+    "gender": "feminine",
+    "translation": "bed",
+    "rank": 91,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "comida",
+    "gender": "feminine",
+    "translation": "food, something edible",
+    "rank": 92,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "falta",
+    "gender": "feminine",
+    "translation": "lack",
+    "rank": 93,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "bastante",
+    "gender": "masculine",
+    "translation": "enough things; a sufficient amount",
+    "rank": 94,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "palavra",
+    "gender": "feminine",
+    "translation": "word",
+    "rank": 95,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "licença",
+    "gender": "feminine",
+    "translation": "license; permit",
+    "rank": 96,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "médico",
+    "gender": "masculine",
+    "translation": "doctor, physician",
+    "rank": 97,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "local",
+    "gender": "masculine",
+    "translation": "premises, rooms",
+    "rank": 98,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "vosso",
+    "gender": "masculine",
+    "translation": "yours",
+    "rank": 99,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "país",
+    "gender": "masculine",
+    "translation": "country; nation",
+    "rank": 100,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "forte",
+    "gender": "masculine",
+    "translation": "strength (pronounced quality), strong suit",
+    "rank": 101,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "prisão",
+    "gender": "feminine",
+    "translation": "prison",
+    "rank": 102,
+    "patternNote": "Ends in -são, usually feminine"
+  },
+  {
+    "word": "próxima",
+    "gender": "feminine",
+    "translation": "female equivalent of próximo",
+    "rank": 103,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "livro",
+    "gender": "masculine",
+    "translation": "book",
+    "rank": 104,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "oportunidade",
+    "gender": "feminine",
+    "translation": "opportunity",
+    "rank": 105,
+    "patternNote": "Ends in -dade, always feminine"
+  },
+  {
+    "word": "resto",
+    "gender": "masculine",
+    "translation": "the rest",
+    "rank": 106,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "hospital",
+    "gender": "masculine",
+    "translation": "hospital",
+    "rank": 107,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "sítio",
+    "gender": "masculine",
+    "translation": "site; location, place",
+    "rank": 108,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "porra",
+    "gender": "feminine",
+    "translation": "club",
+    "rank": 109,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "minuto",
+    "gender": "masculine",
+    "translation": "minute",
+    "rank": 110,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "sentido",
+    "gender": "masculine",
+    "translation": "sense",
+    "rank": 111,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "atenção",
+    "gender": "feminine",
+    "translation": "attention",
+    "rank": 112,
+    "patternNote": "Ends in -ção, always feminine"
+  },
+  {
+    "word": "direito",
+    "gender": "masculine",
+    "translation": "law",
+    "rank": 113,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "café",
+    "gender": "masculine",
+    "translation": "coffee",
+    "rank": 114,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "visto",
+    "gender": "masculine",
+    "translation": "visa",
+    "rank": 115,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "criança",
+    "gender": "feminine",
+    "translation": "child",
+    "rank": 116,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "filme",
+    "gender": "masculine",
+    "translation": "film; movie; motion picture",
+    "rank": 117,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "música",
+    "gender": "feminine",
+    "translation": "music",
+    "rank": 118,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "haver",
+    "gender": "masculine",
+    "translation": "credit",
+    "rank": 119,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "querer",
+    "gender": "masculine",
+    "translation": "desire, will",
+    "rank": 120,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "sexo",
+    "gender": "masculine",
+    "translation": "sex",
+    "rank": 121,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "fogo",
+    "gender": "masculine",
+    "translation": "fire",
+    "rank": 122,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "pequena",
+    "gender": "feminine",
+    "translation": "female equivalent of pequeno",
+    "rank": 123,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "ponto",
+    "gender": "masculine",
+    "translation": "point, a specific spot, location, or place",
+    "rank": 124,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "miúda",
+    "gender": "feminine",
+    "translation": "female equivalent of miúdo",
+    "rank": 125,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "assassino",
+    "gender": "masculine",
+    "translation": "killer, murderer, assassin",
+    "rank": 126,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "miúdo",
+    "gender": "masculine",
+    "translation": "child",
+    "rank": 127,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "boca",
+    "gender": "feminine",
+    "translation": "mouth",
+    "rank": 128,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "situação",
+    "gender": "feminine",
+    "translation": "situation",
+    "rank": 129,
+    "patternNote": "Ends in -ção, always feminine"
+  },
+  {
+    "word": "esposa",
+    "gender": "feminine",
+    "translation": "female equivalent of esposo: wife",
+    "rank": 130,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "sistema",
+    "gender": "masculine",
+    "translation": "system",
+    "rank": 131,
+    "patternNote": "Greek-origin -ema words are masculine"
+  },
+  {
+    "word": "amiga",
+    "gender": "feminine",
+    "translation": "female equivalent of amigo",
+    "rank": 132,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "seguro",
+    "gender": "masculine",
+    "translation": "insurance",
+    "rank": 133,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "questão",
+    "gender": "feminine",
+    "translation": "question",
+    "rank": 134,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "relação",
+    "gender": "feminine",
+    "translation": "relationship",
+    "rank": 135,
+    "patternNote": "Ends in -ção, always feminine"
+  },
+  {
+    "word": "encontro",
+    "gender": "masculine",
+    "translation": "meeting; gathering; get-together; meet-up",
+    "rank": 136,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "negócio",
+    "gender": "masculine",
+    "translation": "affair",
+    "rank": 137,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "sinal",
+    "gender": "masculine",
+    "translation": "sign; mark; trace",
+    "rank": 138,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "linda",
+    "gender": "feminine",
+    "translation": "female equivalent of lindo",
+    "rank": 139,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "facto",
+    "gender": "masculine",
+    "translation": "fact",
+    "rank": 140,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "mensagem",
+    "gender": "feminine",
+    "translation": "message",
+    "rank": 141,
+    "patternNote": "Ends in -agem, usually feminine"
+  },
+  {
+    "word": "próximo",
+    "gender": "masculine",
+    "translation": "neighbour, fellow man",
+    "rank": 142,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "adoro",
+    "gender": "masculine",
+    "translation": "will/desire to be as the other",
+    "rank": 143,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "crime",
+    "gender": "masculine",
+    "translation": "crime",
+    "rank": 144,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "banho",
+    "gender": "masculine",
+    "translation": "bath",
+    "rank": 145,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "chamada",
+    "gender": "feminine",
+    "translation": "call",
+    "rank": 146,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "futuro",
+    "gender": "masculine",
+    "translation": "future",
+    "rank": 147,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "cabelo",
+    "gender": "masculine",
+    "translation": "hair, head of hair",
+    "rank": 148,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "grupo",
+    "gender": "masculine",
+    "translation": "group",
+    "rank": 149,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "doutor",
+    "gender": "masculine",
+    "translation": "a doctor",
+    "rank": 150,
+    "patternNote": "Ends in -or, usually masculine"
+  },
+  {
+    "word": "livre",
+    "gender": "masculine",
+    "translation": "free kick",
+    "rank": 151,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "viagem",
+    "gender": "feminine",
+    "translation": "trip, journey, voyage",
+    "rank": 152,
+    "patternNote": "Ends in -agem, usually feminine"
+  },
+  {
+    "word": "vontade",
+    "gender": "feminine",
+    "translation": "will; the condition of feeling like or wanting something",
+    "rank": 153,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "conversa",
+    "gender": "feminine",
+    "translation": "conversation; talking",
+    "rank": 154,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "lista",
+    "gender": "feminine",
+    "translation": "list",
+    "rank": 155,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "escritório",
+    "gender": "masculine",
+    "translation": "office",
+    "rank": 156,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "final",
+    "gender": "masculine",
+    "translation": "end",
+    "rank": 157,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "chão",
+    "gender": "masculine",
+    "translation": "ground, soil, earth",
+    "rank": 158,
+    "patternNote": "Ends in -ão, usually masculine"
+  },
+  {
+    "word": "campo",
+    "gender": "masculine",
+    "translation": "country; countryside",
+    "rank": 159,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "perfeito",
+    "gender": "masculine",
+    "translation": "synonym of perfectum",
+    "rank": 160,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "dito",
+    "gender": "masculine",
+    "translation": "saying; proverb",
+    "rank": 161,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "respeito",
+    "gender": "masculine",
+    "translation": "respect",
+    "rank": 162,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "vista",
+    "gender": "feminine",
+    "translation": "eye; eyeball",
+    "rank": 163,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "breve",
+    "gender": "feminine",
+    "translation": "a double whole note",
+    "rank": 164,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "mesa",
+    "gender": "feminine",
+    "translation": "table",
+    "rank": 165,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "preso",
+    "gender": "masculine",
+    "translation": "prisoner",
+    "rank": 166,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "fixe",
+    "gender": "masculine",
+    "translation": "thumbs up",
+    "rank": 167,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "emprego",
+    "gender": "masculine",
+    "translation": "job",
+    "rank": 168,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "chama",
+    "gender": "feminine",
+    "translation": "flame",
+    "rank": 169,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "linha",
+    "gender": "feminine",
+    "translation": "line",
+    "rank": 170,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "real",
+    "gender": "masculine",
+    "translation": "a real number",
+    "rank": 171,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "nave",
+    "gender": "feminine",
+    "translation": "ship",
+    "rank": 172,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "assunto",
+    "gender": "masculine",
+    "translation": "subject, topic, theme",
+    "rank": 173,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "vale",
+    "gender": "masculine",
+    "translation": "valley",
+    "rank": 174,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "ataque",
+    "gender": "masculine",
+    "translation": "attack",
+    "rank": 175,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "escolha",
+    "gender": "feminine",
+    "translation": "choice",
+    "rank": 176,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "ordem",
+    "gender": "feminine",
+    "translation": "order",
+    "rank": 177,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "viva",
+    "gender": "masculine",
+    "translation": "hooray",
+    "rank": 178,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "fundo",
+    "gender": "masculine",
+    "translation": "bottom",
+    "rank": 179,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "acidente",
+    "gender": "masculine",
+    "translation": "accident",
+    "rank": 180,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "modo",
+    "gender": "masculine",
+    "translation": "mode; way; method",
+    "rank": 181,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "resposta",
+    "gender": "feminine",
+    "translation": "answer, response",
+    "rank": 182,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "bocado",
+    "gender": "masculine",
+    "translation": "mouthful",
+    "rank": 183,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "papá",
+    "gender": "masculine",
+    "translation": "dad; daddy; father",
+    "rank": 184,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "avião",
+    "gender": "masculine",
+    "translation": "airplane",
+    "rank": 185,
+    "patternNote": "Ends in -ão, usually masculine"
+  },
+  {
+    "word": "erro",
+    "gender": "masculine",
+    "translation": "error; mistake",
+    "rank": 186,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "jesus",
+    "gender": "masculine",
+    "translation": "Jesus",
+    "rank": 187,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "leva",
+    "gender": "feminine",
+    "translation": "wave",
+    "rank": 188,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "advogado",
+    "gender": "masculine",
+    "translation": "advocate",
+    "rank": 189,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "espaço",
+    "gender": "masculine",
+    "translation": "space:",
+    "rank": 190,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "serviço",
+    "gender": "masculine",
+    "translation": "service",
+    "rank": 191,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "missão",
+    "gender": "feminine",
+    "translation": "mission",
+    "rank": 192,
+    "patternNote": "Ends in -são, usually feminine"
+  },
+  {
+    "word": "louco",
+    "gender": "masculine",
+    "translation": "a madman, a crazy person",
+    "rank": 193,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "nele",
+    "gender": "masculine",
+    "translation": "An ancient French coin.",
+    "rank": 194,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "lindo",
+    "gender": "masculine",
+    "translation": "beauty",
+    "rank": 195,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "informação",
+    "gender": "feminine",
+    "translation": "information",
+    "rank": 196,
+    "patternNote": "Ends in -ção, always feminine"
+  },
+  {
+    "word": "mente",
+    "gender": "feminine",
+    "translation": "mind",
+    "rank": 197,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "programa",
+    "gender": "masculine",
+    "translation": "program",
+    "rank": 198,
+    "patternNote": "Greek-origin -ama words are masculine"
+  },
+  {
+    "word": "veja",
+    "gender": "feminine",
+    "translation": "Mediterranean parrotfish",
+    "rank": 199,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "caixa",
+    "gender": "feminine",
+    "translation": "box",
+    "rank": 200,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "sete",
+    "gender": "masculine",
+    "translation": "seven",
+    "rank": 201,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "hotel",
+    "gender": "masculine",
+    "translation": "hotel",
+    "rank": 202,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "puta",
+    "gender": "feminine",
+    "translation": "whore, hooker",
+    "rank": 203,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "presente",
+    "gender": "masculine",
+    "translation": "the present",
+    "rank": 204,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "carta",
+    "gender": "feminine",
+    "translation": "letter",
+    "rank": 205,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "governo",
+    "gender": "masculine",
+    "translation": "government",
+    "rank": 206,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "barco",
+    "gender": "masculine",
+    "translation": "boat",
+    "rank": 207,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "loja",
+    "gender": "feminine",
+    "translation": "shop, store",
+    "rank": 208,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "energia",
+    "gender": "feminine",
+    "translation": "energy",
+    "rank": 209,
+    "patternNote": "Ends in -ia, usually feminine"
+  },
+  {
+    "word": "vítima",
+    "gender": "feminine",
+    "translation": "victim",
+    "rank": 210,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "roupa",
+    "gender": "feminine",
+    "translation": "clothing, clothes",
+    "rank": 211,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "luta",
+    "gender": "feminine",
+    "translation": "fight",
+    "rank": 212,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "câmara",
+    "gender": "feminine",
+    "translation": "chamber",
+    "rank": 213,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "fome",
+    "gender": "feminine",
+    "translation": "hunger",
+    "rank": 214,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "professor",
+    "gender": "masculine",
+    "translation": "teacher",
+    "rank": 215,
+    "patternNote": "Ends in -or, usually masculine"
+  },
+  {
+    "word": "mamã",
+    "gender": "feminine",
+    "translation": "mummy, mum, mom",
+    "rank": 216,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "hipótese",
+    "gender": "feminine",
+    "translation": "hypothesis",
+    "rank": 217,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "telemóvel",
+    "gender": "masculine",
+    "translation": "mobile, mobile phone, cellphone",
+    "rank": 218,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "reunião",
+    "gender": "feminine",
+    "translation": "meeting, reunion",
+    "rank": 219,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "prova",
+    "gender": "feminine",
+    "translation": "examination; test",
+    "rank": 220,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "general",
+    "gender": "masculine",
+    "translation": "chief, leader",
+    "rank": 221,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "olho",
+    "gender": "masculine",
+    "translation": "eye",
+    "rank": 222,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "chamado",
+    "gender": "masculine",
+    "translation": "calling",
+    "rank": 223,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "exército",
+    "gender": "masculine",
+    "translation": "army",
+    "rank": 224,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "banco",
+    "gender": "masculine",
+    "translation": "bank",
+    "rank": 225,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "segunda",
+    "gender": "feminine",
+    "translation": "ellipsis of segunda-feira",
+    "rank": 226,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "tiro",
+    "gender": "masculine",
+    "translation": "the act of shooting",
+    "rank": 227,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "papel",
+    "gender": "masculine",
+    "translation": "paper",
+    "rank": 228,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "sonho",
+    "gender": "masculine",
+    "translation": "dream",
+    "rank": 229,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "povo",
+    "gender": "masculine",
+    "translation": "people",
+    "rank": 230,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "cena",
+    "gender": "feminine",
+    "translation": "scene",
+    "rank": 231,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "centro",
+    "gender": "masculine",
+    "translation": "centre",
+    "rank": 232,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "diabo",
+    "gender": "masculine",
+    "translation": "devil; demon; fiend",
+    "rank": 233,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "bebida",
+    "gender": "feminine",
+    "translation": "drink",
+    "rank": 234,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "aposto",
+    "gender": "masculine",
+    "translation": "noun or noun phrase in apposition",
+    "rank": 235,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "base",
+    "gender": "feminine",
+    "translation": "basis",
+    "rank": 236,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "tradução",
+    "gender": "feminine",
+    "translation": "translation",
+    "rank": 237,
+    "patternNote": "Ends in -ção, always feminine"
+  },
+  {
+    "word": "namorada",
+    "gender": "feminine",
+    "translation": "female equivalent of namorado: girlfriend",
+    "rank": 238,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "empresa",
+    "gender": "feminine",
+    "translation": "company; business",
+    "rank": 239,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "metade",
+    "gender": "feminine",
+    "translation": "half",
+    "rank": 240,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "interessante",
+    "gender": "masculine",
+    "translation": "the interesting aspects of something",
+    "rank": 241,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "chave",
+    "gender": "feminine",
+    "translation": "key",
+    "rank": 242,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "juro",
+    "gender": "masculine",
+    "translation": "interest",
+    "rank": 243,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "piada",
+    "gender": "feminine",
+    "translation": "joke",
+    "rank": 244,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "oito",
+    "gender": "masculine",
+    "translation": "eight",
+    "rank": 245,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "passada",
+    "gender": "feminine",
+    "translation": "step; footstep; pace",
+    "rank": 246,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "guarda",
+    "gender": "feminine",
+    "translation": "guard",
+    "rank": 247,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "controlo",
+    "gender": "masculine",
+    "translation": "control",
+    "rank": 248,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "apartamento",
+    "gender": "masculine",
+    "translation": "flat, apartment",
+    "rank": 249,
+    "patternNote": "Ends in -mento, always masculine"
+  },
+  {
+    "word": "segredo",
+    "gender": "masculine",
+    "translation": "secret",
+    "rank": 250,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "decisão",
+    "gender": "feminine",
+    "translation": "decision",
+    "rank": 251,
+    "patternNote": "Ends in -são, usually feminine"
+  },
+  {
+    "word": "posição",
+    "gender": "feminine",
+    "translation": "position",
+    "rank": 252,
+    "patternNote": "Ends in -ção, always feminine"
+  },
+  {
+    "word": "surpresa",
+    "gender": "feminine",
+    "translation": "surprise",
+    "rank": 253,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "cerca",
+    "gender": "feminine",
+    "translation": "fence",
+    "rank": 254,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "cabo",
+    "gender": "masculine",
+    "translation": "cape",
+    "rank": 255,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "motivo",
+    "gender": "masculine",
+    "translation": "motive",
+    "rank": 256,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "passo",
+    "gender": "masculine",
+    "translation": "step; footstep; pace",
+    "rank": 257,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "tribunal",
+    "gender": "masculine",
+    "translation": "court",
+    "rank": 258,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "contacto",
+    "gender": "masculine",
+    "translation": "European Portuguese standard form of contato",
+    "rank": 259,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "ótimo",
+    "gender": "masculine",
+    "translation": "the very best",
+    "rank": 260,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "inferno",
+    "gender": "masculine",
+    "translation": "hell",
+    "rank": 261,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "estrada",
+    "gender": "feminine",
+    "translation": "road",
+    "rank": 262,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "companhia",
+    "gender": "feminine",
+    "translation": "company, companionship",
+    "rank": 263,
+    "patternNote": "Ends in -ia, usually feminine"
+  },
+  {
+    "word": "escuta",
+    "gender": "feminine",
+    "translation": "bug, wire",
+    "rank": 264,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "saída",
+    "gender": "feminine",
+    "translation": "exit; way",
+    "rank": 265,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "namorado",
+    "gender": "masculine",
+    "translation": "boyfriend",
+    "rank": 266,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "norte",
+    "gender": "masculine",
+    "translation": "north",
+    "rank": 267,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "saia",
+    "gender": "feminine",
+    "translation": "a woman's skirt",
+    "rank": 268,
+    "patternNote": "Ends in -ia, usually feminine"
+  },
+  {
+    "word": "padre",
+    "gender": "masculine",
+    "translation": "ecclesiastical priest",
+    "rank": 269,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "ouro",
+    "gender": "masculine",
+    "translation": "gold",
+    "rank": 270,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "perigo",
+    "gender": "masculine",
+    "translation": "danger",
+    "rank": 271,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "coronel",
+    "gender": "masculine",
+    "translation": "colonel",
+    "rank": 272,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "alma",
+    "gender": "feminine",
+    "translation": "soul",
+    "rank": 273,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "vestido",
+    "gender": "masculine",
+    "translation": "garment",
+    "rank": 274,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "planeta",
+    "gender": "masculine",
+    "translation": "planet",
+    "rank": 275,
+    "patternNote": "Ends in -eta, usually masculine"
+  },
+  {
+    "word": "máquina",
+    "gender": "feminine",
+    "translation": "machine",
+    "rank": 276,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "maioria",
+    "gender": "feminine",
+    "translation": "majority",
+    "rank": 277,
+    "patternNote": "Ends in -ia, usually feminine"
+  },
+  {
+    "word": "parecer",
+    "gender": "masculine",
+    "translation": "expert opinion, advice, assessment, evaluation",
+    "rank": 278,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "velha",
+    "gender": "feminine",
+    "translation": "female equivalent of velho",
+    "rank": 279,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "esquerda",
+    "gender": "feminine",
+    "translation": "the left side, part, half or direction",
+    "rank": 280,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "destino",
+    "gender": "masculine",
+    "translation": "destiny, fate",
+    "rank": 281,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "frio",
+    "gender": "masculine",
+    "translation": "cold",
+    "rank": 282,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "homicídio",
+    "gender": "masculine",
+    "translation": "homicide",
+    "rank": 283,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "gajo",
+    "gender": "masculine",
+    "translation": "guy; bloke; dude",
+    "rank": 284,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "aniversário",
+    "gender": "masculine",
+    "translation": "anniversary, birthday",
+    "rank": 285,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "igreja",
+    "gender": "feminine",
+    "translation": "church",
+    "rank": 286,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "carne",
+    "gender": "feminine",
+    "translation": "flesh",
+    "rank": 287,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "direita",
+    "gender": "feminine",
+    "translation": "right",
+    "rank": 288,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "liberdade",
+    "gender": "feminine",
+    "translation": "liberty, freedom",
+    "rank": 289,
+    "patternNote": "Ends in -dade, always feminine"
+  },
+  {
+    "word": "cavalo",
+    "gender": "masculine",
+    "translation": "horse",
+    "rank": 290,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "droga",
+    "gender": "feminine",
+    "translation": "drug",
+    "rank": 291,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "área",
+    "gender": "feminine",
+    "translation": "area; region; place",
+    "rank": 292,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "bomba",
+    "gender": "feminine",
+    "translation": "bomb",
+    "rank": 293,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "espécie",
+    "gender": "feminine",
+    "translation": "species",
+    "rank": 294,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "cérebro",
+    "gender": "masculine",
+    "translation": "brain, cerebrum",
+    "rank": 295,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "henry",
+    "gender": "masculine",
+    "translation": "henry",
+    "rank": 296,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "cerveja",
+    "gender": "feminine",
+    "translation": "beer",
+    "rank": 297,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "experiência",
+    "gender": "feminine",
+    "translation": "experience",
+    "rank": 298,
+    "patternNote": "Ends in -ia, usually feminine"
+  },
+  {
+    "word": "diferença",
+    "gender": "feminine",
+    "translation": "difference",
+    "rank": 299,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "humano",
+    "gender": "masculine",
+    "translation": "a human being",
+    "rank": 300,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "branco",
+    "gender": "masculine",
+    "translation": "white",
+    "rank": 301,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "honra",
+    "gender": "feminine",
+    "translation": "honor; respect",
+    "rank": 302,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "esperança",
+    "gender": "feminine",
+    "translation": "hope",
+    "rank": 303,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "falo",
+    "gender": "masculine",
+    "translation": "phallus",
+    "rank": 304,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "acaso",
+    "gender": "masculine",
+    "translation": "chance; luck",
+    "rank": 305,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "saúde",
+    "gender": "feminine",
+    "translation": "health",
+    "rank": 306,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "paul",
+    "gender": "masculine",
+    "translation": "swamp",
+    "rank": 307,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "público",
+    "gender": "masculine",
+    "translation": "people",
+    "rank": 308,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "teste",
+    "gender": "masculine",
+    "translation": "witness",
+    "rank": 309,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "bola",
+    "gender": "feminine",
+    "translation": "ball, sphere, round object",
+    "rank": 310,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "suspeito",
+    "gender": "masculine",
+    "translation": "suspect",
+    "rank": 311,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "suposto",
+    "gender": "masculine",
+    "translation": "fact that can stand by itself",
+    "rank": 312,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "risco",
+    "gender": "masculine",
+    "translation": "line",
+    "rank": 313,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "nível",
+    "gender": "masculine",
+    "translation": "level",
+    "rank": 314,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "rainha",
+    "gender": "feminine",
+    "translation": "queen",
+    "rank": 315,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "clube",
+    "gender": "masculine",
+    "translation": "club",
+    "rank": 316,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "mestre",
+    "gender": "masculine",
+    "translation": "master",
+    "rank": 317,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "conselho",
+    "gender": "masculine",
+    "translation": "advice",
+    "rank": 318,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "serão",
+    "gender": "masculine",
+    "translation": "evening",
+    "rank": 319,
+    "patternNote": "Ends in -ão, usually masculine"
+  },
+  {
+    "word": "computador",
+    "gender": "masculine",
+    "translation": "computer",
+    "rank": 320,
+    "patternNote": "Ends in -or, usually masculine"
+  },
+  {
+    "word": "alvo",
+    "gender": "masculine",
+    "translation": "target",
+    "rank": 321,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "investigação",
+    "gender": "feminine",
+    "translation": "investigation",
+    "rank": 322,
+    "patternNote": "Ends in -ção, always feminine"
+  },
+  {
+    "word": "entrada",
+    "gender": "feminine",
+    "translation": "entrance",
+    "rank": 323,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "janela",
+    "gender": "feminine",
+    "translation": "window",
+    "rank": 324,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "dúvida",
+    "gender": "feminine",
+    "translation": "doubt, uncertainty",
+    "rank": 325,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "nick",
+    "gender": "masculine",
+    "translation": "nick; nickname",
+    "rank": 326,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "realidade",
+    "gender": "feminine",
+    "translation": "reality",
+    "rank": 327,
+    "patternNote": "Ends in -dade, always feminine"
+  },
+  {
+    "word": "código",
+    "gender": "masculine",
+    "translation": "code",
+    "rank": 328,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "zona",
+    "gender": "feminine",
+    "translation": "zone",
+    "rank": 329,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "propósito",
+    "gender": "masculine",
+    "translation": "purpose; target; aim; goal",
+    "rank": 330,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "ligação",
+    "gender": "feminine",
+    "translation": "link",
+    "rank": 331,
+    "patternNote": "Ends in -ção, always feminine"
+  },
+  {
+    "word": "meia",
+    "gender": "feminine",
+    "translation": "obsolete unit of measure for liquids, equivalent to six pints",
+    "rank": 332,
+    "patternNote": "Ends in -ia, usually feminine"
+  },
+  {
+    "word": "seguinte",
+    "gender": "masculine",
+    "translation": "next",
+    "rank": 333,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "menino",
+    "gender": "masculine",
+    "translation": "boy",
+    "rank": 334,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "loucura",
+    "gender": "feminine",
+    "translation": "insanity, madness",
+    "rank": 335,
+    "patternNote": "Ends in -ura, usually feminine"
+  },
+  {
+    "word": "foto",
+    "gender": "feminine",
+    "translation": "photo; photograph",
+    "rank": 336,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "tira",
+    "gender": "feminine",
+    "translation": "strip",
+    "rank": 337,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "monte",
+    "gender": "masculine",
+    "translation": "mount; a mountain or large hill",
+    "rank": 338,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "pedido",
+    "gender": "masculine",
+    "translation": "something which is asked for",
+    "rank": 339,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "exemplo",
+    "gender": "masculine",
+    "translation": "example",
+    "rank": 340,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "liga",
+    "gender": "feminine",
+    "translation": "alloy",
+    "rank": 341,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "jeito",
+    "gender": "masculine",
+    "translation": "way, manner, fashion",
+    "rank": 342,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "início",
+    "gender": "masculine",
+    "translation": "beginning",
+    "rank": 343,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "televisão",
+    "gender": "feminine",
+    "translation": "television; television set",
+    "rank": 344,
+    "patternNote": "Ends in -são, usually feminine"
+  },
+  {
+    "word": "socorro",
+    "gender": "masculine",
+    "translation": "succour; help",
+    "rank": 345,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "repente",
+    "gender": "masculine",
+    "translation": "attack, upsurge",
+    "rank": 346,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "almoço",
+    "gender": "masculine",
+    "translation": "lunch",
+    "rank": 347,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "xerife",
+    "gender": "masculine",
+    "translation": "sharif",
+    "rank": 348,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "cartão",
+    "gender": "masculine",
+    "translation": "card",
+    "rank": 349,
+    "patternNote": "Ends in -ão, usually masculine"
+  },
+  {
+    "word": "cozinha",
+    "gender": "feminine",
+    "translation": "kitchen",
+    "rank": 350,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "negro",
+    "gender": "masculine",
+    "translation": "black",
+    "rank": 351,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "operação",
+    "gender": "feminine",
+    "translation": "operation",
+    "rank": 352,
+    "patternNote": "Ends in -ção, always feminine"
+  },
+  {
+    "word": "preço",
+    "gender": "masculine",
+    "translation": "price",
+    "rank": 353,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "pele",
+    "gender": "feminine",
+    "translation": "skin",
+    "rank": 354,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "principal",
+    "gender": "masculine",
+    "translation": "prelate of a religious, educational or commercial institution",
+    "rank": 355,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "vinho",
+    "gender": "masculine",
+    "translation": "wine",
+    "rank": 356,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "lixo",
+    "gender": "masculine",
+    "translation": "garbage; waste; rubbish",
+    "rank": 357,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "relatório",
+    "gender": "masculine",
+    "translation": "report",
+    "rank": 358,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "Dra.",
+    "gender": "feminine",
+    "translation": "female equivalent of Dr.",
+    "rank": 359,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "alta",
+    "gender": "feminine",
+    "translation": "discharge",
+    "rank": 360,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "dado",
+    "gender": "masculine",
+    "translation": "a die",
+    "rank": 361,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "defesa",
+    "gender": "feminine",
+    "translation": "defence",
+    "rank": 362,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "laboratório",
+    "gender": "masculine",
+    "translation": "laboratory",
+    "rank": 363,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "comando",
+    "gender": "masculine",
+    "translation": "order; command",
+    "rank": 364,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "fotografia",
+    "gender": "feminine",
+    "translation": "photography",
+    "rank": 365,
+    "patternNote": "Ends in -ia, usually feminine"
+  },
+  {
+    "word": "ilha",
+    "gender": "feminine",
+    "translation": "island",
+    "rank": 366,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "opinião",
+    "gender": "feminine",
+    "translation": "opinion",
+    "rank": 367,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "acesso",
+    "gender": "masculine",
+    "translation": "access",
+    "rank": 368,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "fato",
+    "gender": "masculine",
+    "translation": "suit",
+    "rank": 369,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "braço",
+    "gender": "masculine",
+    "translation": "arm",
+    "rank": 370,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "saco",
+    "gender": "masculine",
+    "translation": "bag; sack",
+    "rank": 371,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "desejo",
+    "gender": "masculine",
+    "translation": "desire",
+    "rank": 372,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "senão",
+    "gender": "masculine",
+    "translation": "caveat",
+    "rank": 373,
+    "patternNote": "Ends in -ão, usually masculine"
+  },
+  {
+    "word": "série",
+    "gender": "feminine",
+    "translation": "series",
+    "rank": 374,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "comboio",
+    "gender": "masculine",
+    "translation": "train",
+    "rank": 375,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "cabra",
+    "gender": "feminine",
+    "translation": "she-goat; nanny goat",
+    "rank": 376,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "rádio",
+    "gender": "masculine",
+    "translation": "radium",
+    "rank": 377,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "silêncio",
+    "gender": "masculine",
+    "translation": "silence",
+    "rank": 378,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "peça",
+    "gender": "feminine",
+    "translation": "piece",
+    "rank": 379,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "cheia",
+    "gender": "feminine",
+    "translation": "flood",
+    "rank": 380,
+    "patternNote": "Ends in -ia, usually feminine"
+  },
+  {
+    "word": "nove",
+    "gender": "masculine",
+    "translation": "nine",
+    "rank": 381,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "carrinha",
+    "gender": "feminine",
+    "translation": "van",
+    "rank": 382,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "trato",
+    "gender": "masculine",
+    "translation": "manner",
+    "rank": 383,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "pista",
+    "gender": "feminine",
+    "translation": "track; road; path",
+    "rank": 384,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "departamento",
+    "gender": "masculine",
+    "translation": "department",
+    "rank": 385,
+    "patternNote": "Ends in -mento, always masculine"
+  },
+  {
+    "word": "verão",
+    "gender": "masculine",
+    "translation": "summer",
+    "rank": 386,
+    "patternNote": "Ends in -ão, usually masculine"
+  },
+  {
+    "word": "justiça",
+    "gender": "feminine",
+    "translation": "justice",
+    "rank": 387,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "mala",
+    "gender": "feminine",
+    "translation": "suitcase",
+    "rank": 388,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "memória",
+    "gender": "feminine",
+    "translation": "memory",
+    "rank": 389,
+    "patternNote": "Ends in -ia, usually feminine"
+  },
+  {
+    "word": "rabo",
+    "gender": "masculine",
+    "translation": "tail",
+    "rank": 390,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "azul",
+    "gender": "masculine",
+    "translation": "blue",
+    "rank": 391,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "graça",
+    "gender": "feminine",
+    "translation": "grace",
+    "rank": 392,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "confiança",
+    "gender": "feminine",
+    "translation": "trust, confidence",
+    "rank": 393,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "estação",
+    "gender": "feminine",
+    "translation": "season",
+    "rank": 394,
+    "patternNote": "Ends in -ção, always feminine"
+  },
+  {
+    "word": "vídeo",
+    "gender": "masculine",
+    "translation": "video",
+    "rank": 395,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "pressão",
+    "gender": "feminine",
+    "translation": "pressure",
+    "rank": 396,
+    "patternNote": "Ends in -são, usually feminine"
+  },
+  {
+    "word": "inimigo",
+    "gender": "masculine",
+    "translation": "enemy",
+    "rank": 397,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "espírito",
+    "gender": "masculine",
+    "translation": "spirit",
+    "rank": 398,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "igual",
+    "gender": "masculine",
+    "translation": "equals sign",
+    "rank": 399,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "corre",
+    "gender": "masculine",
+    "translation": "strife, fight",
+    "rank": 400,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "inteiro",
+    "gender": "masculine",
+    "translation": "integer",
+    "rank": 401,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "branca",
+    "gender": "feminine",
+    "translation": "brain freeze",
+    "rank": 402,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "gelo",
+    "gender": "masculine",
+    "translation": "ice",
+    "rank": 403,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "maluco",
+    "gender": "masculine",
+    "translation": "guy; dude",
+    "rank": 404,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "magia",
+    "gender": "feminine",
+    "translation": "magic",
+    "rank": 405,
+    "patternNote": "Ends in -ia, usually feminine"
+  },
+  {
+    "word": "universidade",
+    "gender": "feminine",
+    "translation": "university",
+    "rank": 406,
+    "patternNote": "Ends in -dade, always feminine"
+  },
+  {
+    "word": "processo",
+    "gender": "masculine",
+    "translation": "process",
+    "rank": 407,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "porcaria",
+    "gender": "feminine",
+    "translation": "dirtiness",
+    "rank": 408,
+    "patternNote": "Ends in -ia, usually feminine"
+  },
+  {
+    "word": "copo",
+    "gender": "masculine",
+    "translation": "glass",
+    "rank": 409,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "vermelho",
+    "gender": "masculine",
+    "translation": "red",
+    "rank": 410,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "apoio",
+    "gender": "masculine",
+    "translation": "support, backing",
+    "rank": 411,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "parque",
+    "gender": "masculine",
+    "translation": "park",
+    "rank": 412,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "paciente",
+    "gender": "masculine",
+    "translation": "patient",
+    "rank": 413,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "arte",
+    "gender": "feminine",
+    "translation": "art",
+    "rank": 414,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "visita",
+    "gender": "feminine",
+    "translation": "visit",
+    "rank": 415,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "buraco",
+    "gender": "masculine",
+    "translation": "pit; hole",
+    "rank": 416,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "cantar",
+    "gender": "masculine",
+    "translation": "singing; song",
+    "rank": 417,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "sucesso",
+    "gender": "masculine",
+    "translation": "success; triumph",
+    "rank": 418,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "parede",
+    "gender": "feminine",
+    "translation": "wall",
+    "rank": 419,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "cheiro",
+    "gender": "masculine",
+    "translation": "smell",
+    "rank": 420,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "herói",
+    "gender": "masculine",
+    "translation": "hero",
+    "rank": 421,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "inglês",
+    "gender": "masculine",
+    "translation": "Englishman",
+    "rank": 422,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "troca",
+    "gender": "feminine",
+    "translation": "swap; exchange",
+    "rank": 423,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "batalha",
+    "gender": "feminine",
+    "translation": "battle",
+    "rank": 424,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "bala",
+    "gender": "feminine",
+    "translation": "bullet, projectile",
+    "rank": 425,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "mentira",
+    "gender": "feminine",
+    "translation": "lie",
+    "rank": 426,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "emergência",
+    "gender": "feminine",
+    "translation": "emergency",
+    "rank": 427,
+    "patternNote": "Ends in -ia, usually feminine"
+  },
+  {
+    "word": "toca",
+    "gender": "feminine",
+    "translation": "den, burrow",
+    "rank": 428,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "americano",
+    "gender": "masculine",
+    "translation": "American",
+    "rank": 429,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "coragem",
+    "gender": "feminine",
+    "translation": "courage; boldness; guts",
+    "rank": 430,
+    "patternNote": "Ends in -agem, usually feminine"
+  },
+  {
+    "word": "vergonha",
+    "gender": "feminine",
+    "translation": "shame",
+    "rank": 431,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "longa",
+    "gender": "feminine",
+    "translation": "long syllable",
+    "rank": 432,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "estrela",
+    "gender": "feminine",
+    "translation": "star",
+    "rank": 433,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "animal",
+    "gender": "masculine",
+    "translation": "animal",
+    "rank": 434,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "achar",
+    "gender": "masculine",
+    "translation": "achar",
+    "rank": 435,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "perna",
+    "gender": "feminine",
+    "translation": "leg",
+    "rank": 436,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "edifício",
+    "gender": "masculine",
+    "translation": "building, edifice",
+    "rank": 437,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "pescoço",
+    "gender": "masculine",
+    "translation": "neck",
+    "rank": 438,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "casaco",
+    "gender": "masculine",
+    "translation": "coat",
+    "rank": 439,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "monstro",
+    "gender": "masculine",
+    "translation": "monster",
+    "rank": 440,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "começo",
+    "gender": "masculine",
+    "translation": "beginning; commencement",
+    "rank": 441,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "parceiro",
+    "gender": "masculine",
+    "translation": "partner, sidekick",
+    "rank": 442,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "estranha",
+    "gender": "feminine",
+    "translation": "female equivalent of estranho",
+    "rank": 443,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "valor",
+    "gender": "masculine",
+    "translation": "value",
+    "rank": 444,
+    "patternNote": "Ends in -or, usually masculine"
+  },
+  {
+    "word": "doce",
+    "gender": "masculine",
+    "translation": "sweet, candy",
+    "rank": 445,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "natureza",
+    "gender": "feminine",
+    "translation": "nature",
+    "rank": 446,
+    "patternNote": "Ends in -eza, always feminine"
+  },
+  {
+    "word": "máximo",
+    "gender": "masculine",
+    "translation": "maximum",
+    "rank": 447,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "autocarro",
+    "gender": "masculine",
+    "translation": "bus",
+    "rank": 448,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "gabinete",
+    "gender": "masculine",
+    "translation": "cabinet",
+    "rank": 449,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "faca",
+    "gender": "feminine",
+    "translation": "knife",
+    "rank": 450,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "grávida",
+    "gender": "feminine",
+    "translation": "pregnant woman",
+    "rank": 451,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "tamanho",
+    "gender": "masculine",
+    "translation": "size",
+    "rank": 452,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "carreira",
+    "gender": "feminine",
+    "translation": "path, trail",
+    "rank": 453,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "árvore",
+    "gender": "feminine",
+    "translation": "tree",
+    "rank": 454,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "preparado",
+    "gender": "masculine",
+    "translation": "preparation",
+    "rank": 455,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "distância",
+    "gender": "feminine",
+    "translation": "distance",
+    "rank": 456,
+    "patternNote": "Ends in -ia, usually feminine"
+  },
+  {
+    "word": "dança",
+    "gender": "feminine",
+    "translation": "dance",
+    "rank": 457,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "pedra",
+    "gender": "feminine",
+    "translation": "stone",
+    "rank": 458,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "faculdade",
+    "gender": "feminine",
+    "translation": "faculty",
+    "rank": 459,
+    "patternNote": "Ends in -dade, always feminine"
+  },
+  {
+    "word": "imagem",
+    "gender": "feminine",
+    "translation": "image; picture; figure",
+    "rank": 460,
+    "patternNote": "Ends in -agem, usually feminine"
+  },
+  {
+    "word": "majestade",
+    "gender": "feminine",
+    "translation": "majesty",
+    "rank": 461,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "caralho",
+    "gender": "masculine",
+    "translation": "cock",
+    "rank": 462,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "malta",
+    "gender": "feminine",
+    "translation": "a group of troublemakers or vagabonds; rabble",
+    "rank": 463,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "conhecido",
+    "gender": "masculine",
+    "translation": "acquaintance",
+    "rank": 464,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "doença",
+    "gender": "feminine",
+    "translation": "illness; disease; ailment",
+    "rank": 465,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "julgamento",
+    "gender": "masculine",
+    "translation": "judgment",
+    "rank": 466,
+    "patternNote": "Ends in -mento, always masculine"
+  },
+  {
+    "word": "preto",
+    "gender": "masculine",
+    "translation": "the color black",
+    "rank": 467,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "cadeira",
+    "gender": "feminine",
+    "translation": "chair",
+    "rank": 468,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "peixe",
+    "gender": "masculine",
+    "translation": "fish",
+    "rank": 469,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "partido",
+    "gender": "masculine",
+    "translation": "party",
+    "rank": 470,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "louca",
+    "gender": "feminine",
+    "translation": "female equivalent of louco",
+    "rank": 471,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "visão",
+    "gender": "feminine",
+    "translation": "view",
+    "rank": 472,
+    "patternNote": "Ends in -são, usually feminine"
+  },
+  {
+    "word": "testemunha",
+    "gender": "feminine",
+    "translation": "witness",
+    "rank": 473,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "gato",
+    "gender": "masculine",
+    "translation": "cat",
+    "rank": 474,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "canção",
+    "gender": "feminine",
+    "translation": "song",
+    "rank": 475,
+    "patternNote": "Ends in -ção, always feminine"
+  },
+  {
+    "word": "corrida",
+    "gender": "feminine",
+    "translation": "run",
+    "rank": 476,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "central",
+    "gender": "feminine",
+    "translation": "centre",
+    "rank": 477,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "notícia",
+    "gender": "feminine",
+    "translation": "news",
+    "rank": 478,
+    "patternNote": "Ends in -ia, usually feminine"
+  },
+  {
+    "word": "perdão",
+    "gender": "masculine",
+    "translation": "pardon; forgiveness",
+    "rank": 479,
+    "patternNote": "Ends in -ão, usually masculine"
+  },
+  {
+    "word": "interior",
+    "gender": "masculine",
+    "translation": "interior; inside",
+    "rank": 480,
+    "patternNote": "Ends in -or, usually masculine"
+  },
+  {
+    "word": "estilo",
+    "gender": "masculine",
+    "translation": "style",
+    "rank": 481,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "barulho",
+    "gender": "masculine",
+    "translation": "noise",
+    "rank": 482,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "velocidade",
+    "gender": "feminine",
+    "translation": "velocity; speed",
+    "rank": 483,
+    "patternNote": "Ends in -dade, always feminine"
+  },
+  {
+    "word": "ameaça",
+    "gender": "feminine",
+    "translation": "threat",
+    "rank": 484,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "movimento",
+    "gender": "masculine",
+    "translation": "movement",
+    "rank": 485,
+    "patternNote": "Ends in -mento, always masculine"
+  },
+  {
+    "word": "relógio",
+    "gender": "masculine",
+    "translation": "clock",
+    "rank": 486,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "entanto",
+    "gender": "masculine",
+    "translation": "only used in no entanto",
+    "rank": 487,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "unidade",
+    "gender": "feminine",
+    "translation": "unit",
+    "rank": 488,
+    "patternNote": "Ends in -dade, always feminine"
+  },
+  {
+    "word": "marca",
+    "gender": "feminine",
+    "translation": "mark; trace",
+    "rank": 489,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "baixa",
+    "gender": "feminine",
+    "translation": "downtown",
+    "rank": 490,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "verde",
+    "gender": "masculine",
+    "translation": "green",
+    "rank": 491,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "pega",
+    "gender": "feminine",
+    "translation": "magpie",
+    "rank": 492,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "floresta",
+    "gender": "feminine",
+    "translation": "forest",
+    "rank": 493,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "total",
+    "gender": "masculine",
+    "translation": "total",
+    "rank": 494,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "ponte",
+    "gender": "feminine",
+    "translation": "bridge",
+    "rank": 495,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "confusão",
+    "gender": "feminine",
+    "translation": "confusion",
+    "rank": 496,
+    "patternNote": "Ends in -são, usually feminine"
+  },
+  {
+    "word": "praia",
+    "gender": "feminine",
+    "translation": "beach",
+    "rank": 497,
+    "patternNote": "Ends in -ia, usually feminine"
+  },
+  {
+    "word": "língua",
+    "gender": "feminine",
+    "translation": "tongue",
+    "rank": 498,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "presa",
+    "gender": "feminine",
+    "translation": "prey",
+    "rank": 499,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "banda",
+    "gender": "feminine",
+    "translation": "band, stripe",
+    "rank": 500,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "cabrão",
+    "gender": "masculine",
+    "translation": "billy goat; masculine equivalent of cabra",
+    "rank": 501,
+    "patternNote": "Ends in -ão, usually masculine"
+  },
+  {
+    "word": "busca",
+    "gender": "feminine",
+    "translation": "searching",
+    "rank": 502,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "ouvido",
+    "gender": "masculine",
+    "translation": "hearing",
+    "rank": 503,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "receio",
+    "gender": "masculine",
+    "translation": "fear, awe",
+    "rank": 504,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "rosto",
+    "gender": "masculine",
+    "translation": "face",
+    "rank": 505,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "ridículo",
+    "gender": "masculine",
+    "translation": "ridicule, mockery",
+    "rank": 506,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "mudança",
+    "gender": "feminine",
+    "translation": "change",
+    "rank": 507,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "época",
+    "gender": "feminine",
+    "translation": "time, season",
+    "rank": 508,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "fonte",
+    "gender": "feminine",
+    "translation": "spring",
+    "rank": 509,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "major",
+    "gender": "masculine",
+    "translation": "brown-chested martin",
+    "rank": 510,
+    "patternNote": "Ends in -or, usually masculine"
+  },
+  {
+    "word": "navio",
+    "gender": "masculine",
+    "translation": "ship",
+    "rank": 511,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "aula",
+    "gender": "feminine",
+    "translation": "classroom",
+    "rank": 512,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "acordar",
+    "gender": "masculine",
+    "translation": "wakening",
+    "rank": 513,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "charles",
+    "gender": "masculine",
+    "translation": "rabona",
+    "rank": 514,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "humana",
+    "gender": "feminine",
+    "translation": "female equivalent of humano",
+    "rank": 515,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "beleza",
+    "gender": "feminine",
+    "translation": "beauty",
+    "rank": 516,
+    "patternNote": "Ends in -eza, always feminine"
+  },
+  {
+    "word": "atrasado",
+    "gender": "masculine",
+    "translation": "latecomer",
+    "rank": 517,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "dono",
+    "gender": "masculine",
+    "translation": "owner",
+    "rank": 518,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "posto",
+    "gender": "masculine",
+    "translation": "position, job",
+    "rank": 519,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "nervoso",
+    "gender": "masculine",
+    "translation": "a person who is often nervous",
+    "rank": 520,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "bordo",
+    "gender": "masculine",
+    "translation": "board",
+    "rank": 521,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "princesa",
+    "gender": "feminine",
+    "translation": "princess",
+    "rank": 522,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "calor",
+    "gender": "masculine",
+    "translation": "heat",
+    "rank": 523,
+    "patternNote": "Ends in -or, usually masculine"
+  },
+  {
+    "word": "óbvio",
+    "gender": "masculine",
+    "translation": "something that is obvious",
+    "rank": 524,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "jornal",
+    "gender": "masculine",
+    "translation": "newspaper",
+    "rank": 525,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "interesse",
+    "gender": "masculine",
+    "translation": "interest, curiosity",
+    "rank": 526,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "combate",
+    "gender": "masculine",
+    "translation": "combat; fighting; conflict",
+    "rank": 527,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "anel",
+    "gender": "masculine",
+    "translation": "ring",
+    "rank": 528,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "pago",
+    "gender": "masculine",
+    "translation": "the place where one was born or grew up",
+    "rank": 529,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "espada",
+    "gender": "feminine",
+    "translation": "épée",
+    "rank": 530,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "classe",
+    "gender": "feminine",
+    "translation": "class; elegance",
+    "rank": 531,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "casado",
+    "gender": "masculine",
+    "translation": "a married man",
+    "rank": 532,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "aberta",
+    "gender": "feminine",
+    "translation": "a sunny spell",
+    "rank": 533,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "leite",
+    "gender": "masculine",
+    "translation": "milk",
+    "rank": 534,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "mercado",
+    "gender": "masculine",
+    "translation": "market; marketplace",
+    "rank": 535,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "política",
+    "gender": "feminine",
+    "translation": "politics",
+    "rank": 536,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "milhão",
+    "gender": "masculine",
+    "translation": "million",
+    "rank": 537,
+    "patternNote": "Ends in -ão, usually masculine"
+  },
+  {
+    "word": "género",
+    "gender": "masculine",
+    "translation": "kind",
+    "rank": 538,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "oferta",
+    "gender": "feminine",
+    "translation": "offer",
+    "rank": 539,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "teoria",
+    "gender": "feminine",
+    "translation": "theory",
+    "rank": 540,
+    "patternNote": "Ends in -ia, usually feminine"
+  },
+  {
+    "word": "escuro",
+    "gender": "masculine",
+    "translation": "dark",
+    "rank": 541,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "cadeia",
+    "gender": "feminine",
+    "translation": "prison",
+    "rank": 542,
+    "patternNote": "Ends in -ia, usually feminine"
+  },
+  {
+    "word": "imprensa",
+    "gender": "feminine",
+    "translation": "the press",
+    "rank": 543,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "santo",
+    "gender": "masculine",
+    "translation": "someone who has been formally canonised by the Catholic Church",
+    "rank": 544,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "treta",
+    "gender": "feminine",
+    "translation": "feint",
+    "rank": 545,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "noiva",
+    "gender": "feminine",
+    "translation": "bride",
+    "rank": 546,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "perda",
+    "gender": "feminine",
+    "translation": "loss",
+    "rank": 547,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "resultado",
+    "gender": "masculine",
+    "translation": "result",
+    "rank": 548,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "material",
+    "gender": "masculine",
+    "translation": "material",
+    "rank": 549,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "camião",
+    "gender": "masculine",
+    "translation": "European Portuguese standard form of caminhão",
+    "rank": 550,
+    "patternNote": "Ends in -ão, usually masculine"
+  },
+  {
+    "word": "rede",
+    "gender": "feminine",
+    "translation": "net",
+    "rank": 551,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "príncipe",
+    "gender": "masculine",
+    "translation": "prince",
+    "rank": 552,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "solução",
+    "gender": "feminine",
+    "translation": "solution",
+    "rank": 553,
+    "patternNote": "Ends in -ção, always feminine"
+  },
+  {
+    "word": "beijo",
+    "gender": "masculine",
+    "translation": "kiss",
+    "rank": 554,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "data",
+    "gender": "feminine",
+    "translation": "date",
+    "rank": 555,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "garrafa",
+    "gender": "feminine",
+    "translation": "bottle",
+    "rank": 556,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "orgulho",
+    "gender": "masculine",
+    "translation": "pride",
+    "rank": 557,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "bolo",
+    "gender": "masculine",
+    "translation": "cake",
+    "rank": 558,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "propriedade",
+    "gender": "feminine",
+    "translation": "property; belonging",
+    "rank": 559,
+    "patternNote": "Ends in -dade, always feminine"
+  },
+  {
+    "word": "policia",
+    "gender": "feminine",
+    "translation": "pre-reform spelling (used until 1943 in Brazil and 1911 in Portugal) of polícia",
+    "rank": 560,
+    "patternNote": "Ends in -ia, usually feminine"
+  },
+  {
+    "word": "fuga",
+    "gender": "feminine",
+    "translation": "escape, flight",
+    "rank": 561,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "sensação",
+    "gender": "feminine",
+    "translation": "sensation, sense",
+    "rank": 562,
+    "patternNote": "Ends in -ção, always feminine"
+  },
+  {
+    "word": "tecnologia",
+    "gender": "feminine",
+    "translation": "technology",
+    "rank": 563,
+    "patternNote": "Ends in -ia, usually feminine"
+  },
+  {
+    "word": "peito",
+    "gender": "masculine",
+    "translation": "chest",
+    "rank": 564,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "futebol",
+    "gender": "masculine",
+    "translation": "football, soccer",
+    "rank": 565,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "vinte",
+    "gender": "masculine",
+    "translation": "twenty",
+    "rank": 566,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "bilhete",
+    "gender": "masculine",
+    "translation": "ticket",
+    "rank": 567,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "cinema",
+    "gender": "masculine",
+    "translation": "cinema; movie theater",
+    "rank": 568,
+    "patternNote": "Greek-origin -ema words are masculine"
+  },
+  {
+    "word": "vento",
+    "gender": "masculine",
+    "translation": "wind",
+    "rank": 569,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "táxi",
+    "gender": "masculine",
+    "translation": "taxi",
+    "rank": 570,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "boleia",
+    "gender": "feminine",
+    "translation": "ride",
+    "rank": 571,
+    "patternNote": "Ends in -ia, usually feminine"
+  },
+  {
+    "word": "quinta",
+    "gender": "feminine",
+    "translation": "wine producing estate",
+    "rank": 572,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "chapéu",
+    "gender": "masculine",
+    "translation": "hat",
+    "rank": 573,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "dedo",
+    "gender": "masculine",
+    "translation": "digit, a part of the body inclusive of fingers or toes",
+    "rank": 574,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "mano",
+    "gender": "masculine",
+    "translation": "brother, male sibling",
+    "rank": 575,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "vingança",
+    "gender": "feminine",
+    "translation": "revenge",
+    "rank": 576,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "dever",
+    "gender": "masculine",
+    "translation": "duty",
+    "rank": 577,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "porco",
+    "gender": "masculine",
+    "translation": "pig",
+    "rank": 578,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "doido",
+    "gender": "masculine",
+    "translation": "a crazy person; someone out of their mind",
+    "rank": 579,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "raiva",
+    "gender": "feminine",
+    "translation": "rabies",
+    "rank": 580,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "peso",
+    "gender": "masculine",
+    "translation": "weight",
+    "rank": 581,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "treino",
+    "gender": "masculine",
+    "translation": "training",
+    "rank": 582,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "partida",
+    "gender": "feminine",
+    "translation": "departure",
+    "rank": 583,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "responsabilidade",
+    "gender": "feminine",
+    "translation": "responsibility, responsibleness",
+    "rank": 584,
+    "patternNote": "Ends in -dade, always feminine"
+  },
+  {
+    "word": "maldição",
+    "gender": "feminine",
+    "translation": "curse",
+    "rank": 585,
+    "patternNote": "Ends in -ção, always feminine"
+  },
+  {
+    "word": "oeste",
+    "gender": "masculine",
+    "translation": "west",
+    "rank": 586,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "controle",
+    "gender": "masculine",
+    "translation": "Brazilian Portuguese standard form of controlo",
+    "rank": 587,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "corte",
+    "gender": "masculine",
+    "translation": "cut",
+    "rank": 588,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "assassinato",
+    "gender": "masculine",
+    "translation": "murder",
+    "rank": 589,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "apanhado",
+    "gender": "masculine",
+    "translation": "summary, overview",
+    "rank": 590,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "toque",
+    "gender": "masculine",
+    "translation": "touch, tap",
+    "rank": 591,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "baile",
+    "gender": "masculine",
+    "translation": "ball",
+    "rank": 592,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "aeroporto",
+    "gender": "masculine",
+    "translation": "airport",
+    "rank": 593,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "mostra",
+    "gender": "feminine",
+    "translation": "exhibition; show; display",
+    "rank": 594,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "universo",
+    "gender": "masculine",
+    "translation": "universe",
+    "rank": 595,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "bocadinho",
+    "gender": "masculine",
+    "translation": "diminutive of bocado",
+    "rank": 596,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "secretária",
+    "gender": "feminine",
+    "translation": "female equivalent of secretário",
+    "rank": 597,
+    "patternNote": "Ends in -ia, usually feminine"
+  },
+  {
+    "word": "morada",
+    "gender": "feminine",
+    "translation": "dwelling; residence",
+    "rank": 598,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "internet",
+    "gender": "feminine",
+    "translation": "alternative letter-case form of Internet",
+    "rank": 599,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "efeito",
+    "gender": "masculine",
+    "translation": "effect",
+    "rank": 600,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "enfermeira",
+    "gender": "feminine",
+    "translation": "female equivalent of enfermeiro",
+    "rank": 601,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "patrão",
+    "gender": "masculine",
+    "translation": "master, boss",
+    "rank": 602,
+    "patternNote": "Ends in -ão, usually masculine"
+  },
+  {
+    "word": "corredor",
+    "gender": "masculine",
+    "translation": "runner, jogger",
+    "rank": 603,
+    "patternNote": "Ends in -or, usually masculine"
+  },
+  {
+    "word": "conhecimento",
+    "gender": "masculine",
+    "translation": "knowledge",
+    "rank": 604,
+    "patternNote": "Ends in -mento, always masculine"
+  },
+  {
+    "word": "aldeia",
+    "gender": "feminine",
+    "translation": "village",
+    "rank": 605,
+    "patternNote": "Ends in -ia, usually feminine"
+  },
+  {
+    "word": "cirurgia",
+    "gender": "feminine",
+    "translation": "surgery",
+    "rank": 606,
+    "patternNote": "Ends in -ia, usually feminine"
+  },
+  {
+    "word": "aberto",
+    "gender": "masculine",
+    "translation": "open set",
+    "rank": 607,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "médica",
+    "gender": "feminine",
+    "translation": "female equivalent of médico",
+    "rank": 608,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "contrato",
+    "gender": "masculine",
+    "translation": "contract",
+    "rank": 609,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "sociedade",
+    "gender": "feminine",
+    "translation": "society",
+    "rank": 610,
+    "patternNote": "Ends in -dade, always feminine"
+  },
+  {
+    "word": "mata",
+    "gender": "feminine",
+    "translation": "woods, forest",
+    "rank": 611,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "instante",
+    "gender": "masculine",
+    "translation": "instant; moment",
+    "rank": 612,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "leste",
+    "gender": "masculine",
+    "translation": "east",
+    "rank": 613,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "original",
+    "gender": "masculine",
+    "translation": "original",
+    "rank": 614,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "vinha",
+    "gender": "feminine",
+    "translation": "vineyard",
+    "rank": 615,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "familiar",
+    "gender": "masculine",
+    "translation": "relative",
+    "rank": 616,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "pressa",
+    "gender": "feminine",
+    "translation": "hurry; rush; haste",
+    "rank": 617,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "ferido",
+    "gender": "masculine",
+    "translation": "injured person",
+    "rank": 618,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "treinador",
+    "gender": "masculine",
+    "translation": "coach, trainer, handler",
+    "rank": 619,
+    "patternNote": "Ends in -or, usually masculine"
+  },
+  {
+    "word": "crédito",
+    "gender": "masculine",
+    "translation": "credit",
+    "rank": 620,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "costa",
+    "gender": "feminine",
+    "translation": "coast",
+    "rank": 621,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "cancro",
+    "gender": "masculine",
+    "translation": "cancer",
+    "rank": 622,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "primo",
+    "gender": "masculine",
+    "translation": "male cousin",
+    "rank": 623,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "credo",
+    "gender": "masculine",
+    "translation": "creed; credo",
+    "rank": 624,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "pedaço",
+    "gender": "masculine",
+    "translation": "piece",
+    "rank": 625,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "jardim",
+    "gender": "masculine",
+    "translation": "garden",
+    "rank": 626,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "opção",
+    "gender": "feminine",
+    "translation": "option",
+    "rank": 627,
+    "patternNote": "Ends in -ção, always feminine"
+  },
+  {
+    "word": "reino",
+    "gender": "masculine",
+    "translation": "kingdom",
+    "rank": 628,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "grave",
+    "gender": "masculine",
+    "translation": "a low-pitched note",
+    "rank": 629,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "aspecto",
+    "gender": "masculine",
+    "translation": "appearance, look",
+    "rank": 630,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "lago",
+    "gender": "masculine",
+    "translation": "lake",
+    "rank": 631,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "pequeno-almoço",
+    "gender": "masculine",
+    "translation": "breakfast",
+    "rank": 632,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "presença",
+    "gender": "feminine",
+    "translation": "presence",
+    "rank": 633,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "vitória",
+    "gender": "feminine",
+    "translation": "victory",
+    "rank": 634,
+    "patternNote": "Ends in -ia, usually feminine"
+  },
+  {
+    "word": "pesquisa",
+    "gender": "feminine",
+    "translation": "research",
+    "rank": 635,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "pertence",
+    "gender": "masculine",
+    "translation": "belonging",
+    "rank": 636,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "camisa",
+    "gender": "feminine",
+    "translation": "shirt",
+    "rank": 637,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "explosão",
+    "gender": "feminine",
+    "translation": "explosion",
+    "rank": 638,
+    "patternNote": "Ends in -são, usually feminine"
+  },
+  {
+    "word": "giro",
+    "gender": "masculine",
+    "translation": "rotation, turn",
+    "rank": 639,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "útil",
+    "gender": "masculine",
+    "translation": "what is useful",
+    "rank": 640,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "massa",
+    "gender": "feminine",
+    "translation": "dough",
+    "rank": 641,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "tempestade",
+    "gender": "feminine",
+    "translation": "storm",
+    "rank": 642,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "paga",
+    "gender": "feminine",
+    "translation": "payback",
+    "rank": 643,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "neve",
+    "gender": "feminine",
+    "translation": "snow",
+    "rank": 644,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "aviso",
+    "gender": "masculine",
+    "translation": "warning",
+    "rank": 645,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "negra",
+    "gender": "feminine",
+    "translation": "female equivalent of negro",
+    "rank": 646,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "assalto",
+    "gender": "masculine",
+    "translation": "assault, attack",
+    "rank": 647,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "alerta",
+    "gender": "masculine",
+    "translation": "warning",
+    "rank": 648,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "sábado",
+    "gender": "masculine",
+    "translation": "Saturday",
+    "rank": 649,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "bairro",
+    "gender": "masculine",
+    "translation": "neighborhood, area",
+    "rank": 650,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "tratamento",
+    "gender": "masculine",
+    "translation": "treatment",
+    "rank": 651,
+    "patternNote": "Ends in -mento, always masculine"
+  },
+  {
+    "word": "esquadra",
+    "gender": "feminine",
+    "translation": "fleet",
+    "rank": 652,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "vazio",
+    "gender": "masculine",
+    "translation": "vacuum",
+    "rank": 653,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "percebe",
+    "gender": "masculine",
+    "translation": "barnacle",
+    "rank": 654,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "funeral",
+    "gender": "masculine",
+    "translation": "funeral",
+    "rank": 655,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "companheiro",
+    "gender": "masculine",
+    "translation": "companion, comrade",
+    "rank": 656,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "discurso",
+    "gender": "masculine",
+    "translation": "talk; lecture; speech",
+    "rank": 657,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "liceu",
+    "gender": "masculine",
+    "translation": "secondary school",
+    "rank": 658,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "chocolate",
+    "gender": "masculine",
+    "translation": "chocolate",
+    "rank": 659,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "tentativa",
+    "gender": "feminine",
+    "translation": "attempt, trial, experiment",
+    "rank": 660,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "prédio",
+    "gender": "masculine",
+    "translation": "edifice",
+    "rank": 661,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "caça",
+    "gender": "feminine",
+    "translation": "hunting",
+    "rank": 662,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "equipamento",
+    "gender": "masculine",
+    "translation": "equipment",
+    "rank": 663,
+    "patternNote": "Ends in -mento, always masculine"
+  },
+  {
+    "word": "bolsa",
+    "gender": "feminine",
+    "translation": "purse, handbag, bag",
+    "rank": 664,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "génio",
+    "gender": "masculine",
+    "translation": "genius",
+    "rank": 665,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "muda",
+    "gender": "feminine",
+    "translation": "female equivalent of mudo",
+    "rank": 666,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "violência",
+    "gender": "feminine",
+    "translation": "violence",
+    "rank": 667,
+    "patternNote": "Ends in -ia, usually feminine"
+  },
+  {
+    "word": "montanha",
+    "gender": "feminine",
+    "translation": "mountain",
+    "rank": 668,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "registo",
+    "gender": "masculine",
+    "translation": "European Portuguese standard form of registro",
+    "rank": 669,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "modelo",
+    "gender": "masculine",
+    "translation": "model",
+    "rank": 670,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "topo",
+    "gender": "masculine",
+    "translation": "top",
+    "rank": 671,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "prémio",
+    "gender": "masculine",
+    "translation": "prize",
+    "rank": 672,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "anjo",
+    "gender": "masculine",
+    "translation": "angel",
+    "rank": 673,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "chuva",
+    "gender": "feminine",
+    "translation": "rain",
+    "rank": 674,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "bêbado",
+    "gender": "masculine",
+    "translation": "one who is under the influence of alcohol",
+    "rank": 675,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "venda",
+    "gender": "feminine",
+    "translation": "sale",
+    "rank": 676,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "ladrão",
+    "gender": "masculine",
+    "translation": "thief",
+    "rank": 677,
+    "patternNote": "Ends in -ão, usually masculine"
+  },
+  {
+    "word": "ciência",
+    "gender": "feminine",
+    "translation": "science",
+    "rank": 678,
+    "patternNote": "Ends in -ia, usually feminine"
+  },
+  {
+    "word": "cofre",
+    "gender": "masculine",
+    "translation": "safe, coffer",
+    "rank": 679,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "comunidade",
+    "gender": "feminine",
+    "translation": "community",
+    "rank": 680,
+    "patternNote": "Ends in -dade, always feminine"
+  },
+  {
+    "word": "pânico",
+    "gender": "masculine",
+    "translation": "panic",
+    "rank": 681,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "casal",
+    "gender": "masculine",
+    "translation": "couple, married couple",
+    "rank": 682,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "mandado",
+    "gender": "masculine",
+    "translation": "mandate",
+    "rank": 683,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "consciência",
+    "gender": "feminine",
+    "translation": "conscience, consciousness",
+    "rank": 684,
+    "patternNote": "Ends in -ia, usually feminine"
+  },
+  {
+    "word": "passe",
+    "gender": "masculine",
+    "translation": "pass",
+    "rank": 685,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "comportamento",
+    "gender": "masculine",
+    "translation": "behaviour",
+    "rank": 686,
+    "patternNote": "Ends in -mento, always masculine"
+  },
+  {
+    "word": "exame",
+    "gender": "masculine",
+    "translation": "examination",
+    "rank": 687,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "autorização",
+    "gender": "feminine",
+    "translation": "authorization",
+    "rank": 688,
+    "patternNote": "Ends in -ção, always feminine"
+  },
+  {
+    "word": "castelo",
+    "gender": "masculine",
+    "translation": "castle",
+    "rank": 689,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "zero",
+    "gender": "masculine",
+    "translation": "zero",
+    "rank": 690,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "impressão",
+    "gender": "feminine",
+    "translation": "impression",
+    "rank": 691,
+    "patternNote": "Ends in -são, usually feminine"
+  },
+  {
+    "word": "assustador",
+    "gender": "masculine",
+    "translation": "scarer; frightener",
+    "rank": 692,
+    "patternNote": "Ends in -or, usually masculine"
+  },
+  {
+    "word": "princípio",
+    "gender": "masculine",
+    "translation": "start, beginning",
+    "rank": 693,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "vírus",
+    "gender": "masculine",
+    "translation": "virus",
+    "rank": 694,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "passeio",
+    "gender": "masculine",
+    "translation": "a leisure trip",
+    "rank": 695,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "mundial",
+    "gender": "masculine",
+    "translation": "world cup",
+    "rank": 696,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "intenção",
+    "gender": "feminine",
+    "translation": "intention, intent",
+    "rank": 697,
+    "patternNote": "Ends in -ção, always feminine"
+  },
+  {
+    "word": "curso",
+    "gender": "masculine",
+    "translation": "course",
+    "rank": 698,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "domingo",
+    "gender": "masculine",
+    "translation": "Sunday",
+    "rank": 699,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "golpe",
+    "gender": "masculine",
+    "translation": "blow",
+    "rank": 700,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "nota",
+    "gender": "feminine",
+    "translation": "note",
+    "rank": 701,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "entrevista",
+    "gender": "feminine",
+    "translation": "interview",
+    "rank": 702,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "armadilha",
+    "gender": "feminine",
+    "translation": "trap",
+    "rank": 703,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "entretanto",
+    "gender": "masculine",
+    "translation": "meantime",
+    "rank": 704,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "queijo",
+    "gender": "masculine",
+    "translation": "cheese",
+    "rank": 705,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "truque",
+    "gender": "masculine",
+    "translation": "trick",
+    "rank": 706,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "roubo",
+    "gender": "masculine",
+    "translation": "theft",
+    "rank": 707,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "francês",
+    "gender": "masculine",
+    "translation": "Frenchman",
+    "rank": 708,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "necessidade",
+    "gender": "feminine",
+    "translation": "need",
+    "rank": 709,
+    "patternNote": "Ends in -dade, always feminine"
+  },
+  {
+    "word": "sede",
+    "gender": "feminine",
+    "translation": "thirst",
+    "rank": 710,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "torre",
+    "gender": "feminine",
+    "translation": "tower",
+    "rank": 711,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "artigo",
+    "gender": "masculine",
+    "translation": "article",
+    "rank": 712,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "palco",
+    "gender": "masculine",
+    "translation": "stage",
+    "rank": 713,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "gelado",
+    "gender": "masculine",
+    "translation": "ice cream",
+    "rank": 714,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "quadro",
+    "gender": "masculine",
+    "translation": "painting; picture",
+    "rank": 715,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "extra",
+    "gender": "masculine",
+    "translation": "anything that is extra",
+    "rank": 716,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "carga",
+    "gender": "feminine",
+    "translation": "charge",
+    "rank": 717,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "tento",
+    "gender": "masculine",
+    "translation": "attention, cautiousness, prudence, care",
+    "rank": 718,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "lição",
+    "gender": "feminine",
+    "translation": "lesson",
+    "rank": 719,
+    "patternNote": "Ends in -ção, always feminine"
+  },
+  {
+    "word": "vigilância",
+    "gender": "feminine",
+    "translation": "vigilance",
+    "rank": 720,
+    "patternNote": "Ends in -ia, usually feminine"
+  },
+  {
+    "word": "chance",
+    "gender": "feminine",
+    "translation": "probability",
+    "rank": 721,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "fila",
+    "gender": "feminine",
+    "translation": "queue",
+    "rank": 722,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "parvo",
+    "gender": "masculine",
+    "translation": "a fool, an idiot",
+    "rank": 723,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "garota",
+    "gender": "feminine",
+    "translation": "girl, female equivalent of garoto",
+    "rank": 724,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "humanidade",
+    "gender": "feminine",
+    "translation": "humanity; mankind",
+    "rank": 725,
+    "patternNote": "Ends in -dade, always feminine"
+  },
+  {
+    "word": "superior",
+    "gender": "masculine",
+    "translation": "boss",
+    "rank": 726,
+    "patternNote": "Ends in -or, usually masculine"
+  },
+  {
+    "word": "geral",
+    "gender": "masculine",
+    "translation": "majority",
+    "rank": 727,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "piscina",
+    "gender": "feminine",
+    "translation": "swimming pool",
+    "rank": 728,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "fronteira",
+    "gender": "feminine",
+    "translation": "border",
+    "rank": 729,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "ferida",
+    "gender": "feminine",
+    "translation": "wound; injury",
+    "rank": 730,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "diversão",
+    "gender": "feminine",
+    "translation": "the act or result of diverging",
+    "rank": 731,
+    "patternNote": "Ends in -são, usually feminine"
+  },
+  {
+    "word": "armário",
+    "gender": "masculine",
+    "translation": "cupboard",
+    "rank": 732,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "privado",
+    "gender": "masculine",
+    "translation": "private sector",
+    "rank": 733,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "deserto",
+    "gender": "masculine",
+    "translation": "desert",
+    "rank": 734,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "possibilidade",
+    "gender": "feminine",
+    "translation": "possibility",
+    "rank": 735,
+    "patternNote": "Ends in -dade, always feminine"
+  },
+  {
+    "word": "incêndio",
+    "gender": "masculine",
+    "translation": "fire",
+    "rank": 736,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "agência",
+    "gender": "feminine",
+    "translation": "agency",
+    "rank": 737,
+    "patternNote": "Ends in -ia, usually feminine"
+  },
+  {
+    "word": "fábrica",
+    "gender": "feminine",
+    "translation": "factory",
+    "rank": 738,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "felicidade",
+    "gender": "feminine",
+    "translation": "happiness",
+    "rank": 739,
+    "patternNote": "Ends in -dade, always feminine"
+  },
+  {
+    "word": "localização",
+    "gender": "feminine",
+    "translation": "location",
+    "rank": 740,
+    "patternNote": "Ends in -ção, always feminine"
+  },
+  {
+    "word": "regra",
+    "gender": "feminine",
+    "translation": "rule",
+    "rank": 741,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "mentiroso",
+    "gender": "masculine",
+    "translation": "liar",
+    "rank": 742,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "suicídio",
+    "gender": "masculine",
+    "translation": "suicide",
+    "rank": 743,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "corda",
+    "gender": "feminine",
+    "translation": "rope, string",
+    "rank": 744,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "choque",
+    "gender": "masculine",
+    "translation": "collision, shock",
+    "rank": 745,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "álcool",
+    "gender": "masculine",
+    "translation": "alcohol",
+    "rank": 746,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "importância",
+    "gender": "feminine",
+    "translation": "importance",
+    "rank": 747,
+    "patternNote": "Ends in -ia, usually feminine"
+  },
+  {
+    "word": "fase",
+    "gender": "feminine",
+    "translation": "phase",
+    "rank": 748,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "carteira",
+    "gender": "feminine",
+    "translation": "wallet",
+    "rank": 749,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "famoso",
+    "gender": "masculine",
+    "translation": "celebrity, famous person",
+    "rank": 750,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "rock",
+    "gender": "masculine",
+    "translation": "rock",
+    "rank": 751,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "passagem",
+    "gender": "feminine",
+    "translation": "passage",
+    "rank": 752,
+    "patternNote": "Ends in -agem, usually feminine"
+  },
+  {
+    "word": "gordo",
+    "gender": "masculine",
+    "translation": "a fat man",
+    "rank": 753,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "cura",
+    "gender": "feminine",
+    "translation": "cure",
+    "rank": 754,
+    "patternNote": "Ends in -ura, usually feminine"
+  },
+  {
+    "word": "demónio",
+    "gender": "masculine",
+    "translation": "demon",
+    "rank": 755,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "madame",
+    "gender": "feminine",
+    "translation": "madam",
+    "rank": 756,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "revisão",
+    "gender": "feminine",
+    "translation": "revision",
+    "rank": 757,
+    "patternNote": "Ends in -são, usually feminine"
+  },
+  {
+    "word": "bolso",
+    "gender": "masculine",
+    "translation": "pocket",
+    "rank": 758,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "esquisito",
+    "gender": "masculine",
+    "translation": "weirdo",
+    "rank": 759,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "talento",
+    "gender": "masculine",
+    "translation": "talent",
+    "rank": 760,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "identidade",
+    "gender": "feminine",
+    "translation": "identity",
+    "rank": 761,
+    "patternNote": "Ends in -dade, always feminine"
+  },
+  {
+    "word": "telhado",
+    "gender": "masculine",
+    "translation": "roof",
+    "rank": 762,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "proposta",
+    "gender": "feminine",
+    "translation": "proposal",
+    "rank": 763,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "campanha",
+    "gender": "feminine",
+    "translation": "campaign",
+    "rank": 764,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "secreto",
+    "gender": "masculine",
+    "translation": "Succulent cut of pork meat taken from the muscle inside the fatty pork belly.",
+    "rank": 765,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "página",
+    "gender": "feminine",
+    "translation": "page",
+    "rank": 766,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "ambulância",
+    "gender": "feminine",
+    "translation": "ambulance",
+    "rank": 767,
+    "patternNote": "Ends in -ia, usually feminine"
+  },
+  {
+    "word": "fechado",
+    "gender": "masculine",
+    "translation": "closed set",
+    "rank": 768,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "século",
+    "gender": "masculine",
+    "translation": "century",
+    "rank": 769,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "discussão",
+    "gender": "feminine",
+    "translation": "discussion",
+    "rank": 770,
+    "patternNote": "Ends in -são, usually feminine"
+  },
+  {
+    "word": "identificação",
+    "gender": "feminine",
+    "translation": "identification",
+    "rank": 771,
+    "patternNote": "Ends in -ção, always feminine"
+  },
+  {
+    "word": "ferro",
+    "gender": "masculine",
+    "translation": "iron",
+    "rank": 772,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "motor",
+    "gender": "masculine",
+    "translation": "motor",
+    "rank": 773,
+    "patternNote": "Ends in -or, usually masculine"
+  },
+  {
+    "word": "senador",
+    "gender": "masculine",
+    "translation": "senator",
+    "rank": 774,
+    "patternNote": "Ends in -or, usually masculine"
+  },
+  {
+    "word": "humor",
+    "gender": "masculine",
+    "translation": "mood",
+    "rank": 775,
+    "patternNote": "Ends in -or, usually masculine"
+  },
+  {
+    "word": "mínimo",
+    "gender": "masculine",
+    "translation": "minimum",
+    "rank": 776,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "urso",
+    "gender": "masculine",
+    "translation": "bear",
+    "rank": 777,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "terreno",
+    "gender": "masculine",
+    "translation": "terrain",
+    "rank": 778,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "brincadeira",
+    "gender": "feminine",
+    "translation": "game, play",
+    "rank": 779,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "canto",
+    "gender": "masculine",
+    "translation": "singing",
+    "rank": 780,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "canal",
+    "gender": "masculine",
+    "translation": "ditch",
+    "rank": 781,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "bruxa",
+    "gender": "feminine",
+    "translation": "witch",
+    "rank": 782,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "sofá",
+    "gender": "masculine",
+    "translation": "sofa",
+    "rank": 783,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "episódio",
+    "gender": "masculine",
+    "translation": "episode",
+    "rank": 784,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "solo",
+    "gender": "masculine",
+    "translation": "soil, ground",
+    "rank": 785,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "professora",
+    "gender": "feminine",
+    "translation": "female equivalent of professor",
+    "rank": 786,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "bando",
+    "gender": "masculine",
+    "translation": "band",
+    "rank": 787,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "regresso",
+    "gender": "masculine",
+    "translation": "return",
+    "rank": 788,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "convidado",
+    "gender": "masculine",
+    "translation": "guest",
+    "rank": 789,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "disco",
+    "gender": "masculine",
+    "translation": "disc",
+    "rank": 790,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "alegria",
+    "gender": "feminine",
+    "translation": "joy, happiness",
+    "rank": 791,
+    "patternNote": "Ends in -ia, usually feminine"
+  },
+  {
+    "word": "amizade",
+    "gender": "feminine",
+    "translation": "friendship",
+    "rank": 792,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "governador",
+    "gender": "masculine",
+    "translation": "governor",
+    "rank": 793,
+    "patternNote": "Ends in -or, usually masculine"
+  },
+  {
+    "word": "coma",
+    "gender": "masculine",
+    "translation": "coma, state of unconsciousness",
+    "rank": 794,
+    "patternNote": "Greek-origin -oma words are masculine"
+  },
+  {
+    "word": "permissão",
+    "gender": "feminine",
+    "translation": "permission",
+    "rank": 795,
+    "patternNote": "Ends in -são, usually feminine"
+  },
+  {
+    "word": "criminoso",
+    "gender": "masculine",
+    "translation": "criminal",
+    "rank": 796,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "correio",
+    "gender": "masculine",
+    "translation": "mail",
+    "rank": 797,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "gigante",
+    "gender": "masculine",
+    "translation": "giant",
+    "rank": 798,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "pesadelo",
+    "gender": "masculine",
+    "translation": "nightmare",
+    "rank": 799,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "tripulação",
+    "gender": "feminine",
+    "translation": "crew",
+    "rank": 800,
+    "patternNote": "Ends in -ção, always feminine"
+  },
+  {
+    "word": "queda",
+    "gender": "feminine",
+    "translation": "a fall",
+    "rank": 801,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "clara",
+    "gender": "feminine",
+    "translation": "the white",
+    "rank": 802,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "alarme",
+    "gender": "masculine",
+    "translation": "alarm",
+    "rank": 803,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "Santa",
+    "gender": "feminine",
+    "translation": "title given to a female saint: Saint, St.",
+    "rank": 804,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "milagre",
+    "gender": "masculine",
+    "translation": "miracle",
+    "rank": 805,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "cheque",
+    "gender": "masculine",
+    "translation": "cheque",
+    "rank": 806,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "teatro",
+    "gender": "masculine",
+    "translation": "theater",
+    "rank": 807,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "capacidade",
+    "gender": "feminine",
+    "translation": "capacity",
+    "rank": 808,
+    "patternNote": "Ends in -dade, always feminine"
+  },
+  {
+    "word": "entrega",
+    "gender": "feminine",
+    "translation": "delivery",
+    "rank": 809,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "período",
+    "gender": "masculine",
+    "translation": "period",
+    "rank": 810,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "estômago",
+    "gender": "masculine",
+    "translation": "stomach",
+    "rank": 811,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "acampamento",
+    "gender": "masculine",
+    "translation": "camp",
+    "rank": 812,
+    "patternNote": "Ends in -mento, always masculine"
+  },
+  {
+    "word": "china",
+    "gender": "feminine",
+    "translation": "a woman, especially one of Native American descent",
+    "rank": 813,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "cela",
+    "gender": "feminine",
+    "translation": "cell",
+    "rank": 814,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "americana",
+    "gender": "feminine",
+    "translation": "female equivalent of americano",
+    "rank": 815,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "moda",
+    "gender": "feminine",
+    "translation": "way, manner",
+    "rank": 816,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "madeira",
+    "gender": "feminine",
+    "translation": "wood",
+    "rank": 817,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "garganta",
+    "gender": "feminine",
+    "translation": "throat",
+    "rank": 818,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "acusação",
+    "gender": "feminine",
+    "translation": "accusation",
+    "rank": 819,
+    "patternNote": "Ends in -ção, always feminine"
+  },
+  {
+    "word": "ambiente",
+    "gender": "masculine",
+    "translation": "environment",
+    "rank": 820,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "bravo",
+    "gender": "masculine",
+    "translation": "a certain part of an oxcart",
+    "rank": 821,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "garagem",
+    "gender": "feminine",
+    "translation": "garage",
+    "rank": 822,
+    "patternNote": "Ends in -agem, usually feminine"
+  },
+  {
+    "word": "cave",
+    "gender": "feminine",
+    "translation": "cellar",
+    "rank": 823,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "aposta",
+    "gender": "feminine",
+    "translation": "bet",
+    "rank": 824,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "casada",
+    "gender": "feminine",
+    "translation": "female equivalent of casado: married woman",
+    "rank": 825,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "reserva",
+    "gender": "feminine",
+    "translation": "reserve",
+    "rank": 826,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "erva",
+    "gender": "feminine",
+    "translation": "herb",
+    "rank": 827,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "promessa",
+    "gender": "feminine",
+    "translation": "promise; vow",
+    "rank": 828,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "gasolina",
+    "gender": "feminine",
+    "translation": "petrol / gasoline",
+    "rank": 829,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "versão",
+    "gender": "feminine",
+    "translation": "pouring",
+    "rank": 830,
+    "patternNote": "Ends in -são, usually feminine"
+  },
+  {
+    "word": "sorriso",
+    "gender": "masculine",
+    "translation": "smile",
+    "rank": 831,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "campeão",
+    "gender": "masculine",
+    "translation": "champion",
+    "rank": 832,
+    "patternNote": "Ends in -ão, usually masculine"
+  },
+  {
+    "word": "inverno",
+    "gender": "masculine",
+    "translation": "winter",
+    "rank": 833,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "diário",
+    "gender": "masculine",
+    "translation": "diary, journal",
+    "rank": 834,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "divisão",
+    "gender": "feminine",
+    "translation": "division",
+    "rank": 835,
+    "patternNote": "Ends in -são, usually feminine"
+  },
+  {
+    "word": "júri",
+    "gender": "masculine",
+    "translation": "jury",
+    "rank": 836,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "espelho",
+    "gender": "masculine",
+    "translation": "any reflective surface",
+    "rank": 837,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "fumo",
+    "gender": "masculine",
+    "translation": "smoke",
+    "rank": 838,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "rosa",
+    "gender": "feminine",
+    "translation": "rose",
+    "rank": 839,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "padrão",
+    "gender": "masculine",
+    "translation": "standard, model",
+    "rank": 840,
+    "patternNote": "Ends in -ão, usually masculine"
+  },
+  {
+    "word": "garoto",
+    "gender": "masculine",
+    "translation": "boy, young man",
+    "rank": 841,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "revista",
+    "gender": "feminine",
+    "translation": "magazine",
+    "rank": 842,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "elevador",
+    "gender": "masculine",
+    "translation": "something which elevates",
+    "rank": 843,
+    "patternNote": "Ends in -or, usually masculine"
+  },
+  {
+    "word": "tesouro",
+    "gender": "masculine",
+    "translation": "treasure",
+    "rank": 844,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "rato",
+    "gender": "masculine",
+    "translation": "rat",
+    "rank": 845,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "vantagem",
+    "gender": "feminine",
+    "translation": "advantage, vantage",
+    "rank": 846,
+    "patternNote": "Ends in -agem, usually feminine"
+  },
+  {
+    "word": "obra",
+    "gender": "feminine",
+    "translation": "construction",
+    "rank": 847,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "marinha",
+    "gender": "feminine",
+    "translation": "navy",
+    "rank": 848,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "crise",
+    "gender": "feminine",
+    "translation": "crisis",
+    "rank": 849,
+    "patternNote": "Ends in -ise, usually feminine"
+  },
+  {
+    "word": "corrente",
+    "gender": "feminine",
+    "translation": "current; flow",
+    "rank": 850,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "coincidência",
+    "gender": "feminine",
+    "translation": "coincidence",
+    "rank": 851,
+    "patternNote": "Ends in -ia, usually feminine"
+  },
+  {
+    "word": "veneno",
+    "gender": "masculine",
+    "translation": "poison",
+    "rank": 852,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "paciência",
+    "gender": "feminine",
+    "translation": "patience",
+    "rank": 853,
+    "patternNote": "Ends in -ia, usually feminine"
+  },
+  {
+    "word": "atitude",
+    "gender": "feminine",
+    "translation": "attitude, position",
+    "rank": 854,
+    "patternNote": "Ends in -tude, always feminine"
+  },
+  {
+    "word": "empregada",
+    "gender": "feminine",
+    "translation": "female equivalent of empregado",
+    "rank": 855,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "combinado",
+    "gender": "masculine",
+    "translation": "agreement",
+    "rank": 856,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "demora",
+    "gender": "feminine",
+    "translation": "delay",
+    "rank": 857,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "transporte",
+    "gender": "masculine",
+    "translation": "transport",
+    "rank": 858,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "bicicleta",
+    "gender": "feminine",
+    "translation": "bicycle",
+    "rank": 859,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "alternativa",
+    "gender": "feminine",
+    "translation": "alternative",
+    "rank": 860,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "vidro",
+    "gender": "masculine",
+    "translation": "glass",
+    "rank": 861,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "limite",
+    "gender": "masculine",
+    "translation": "limit",
+    "rank": 862,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "atirador",
+    "gender": "masculine",
+    "translation": "shooter",
+    "rank": 863,
+    "patternNote": "Ends in -or, usually masculine"
+  },
+  {
+    "word": "macaco",
+    "gender": "masculine",
+    "translation": "monkey; ape",
+    "rank": 864,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "quantidade",
+    "gender": "feminine",
+    "translation": "quantity, amount",
+    "rank": 865,
+    "patternNote": "Ends in -dade, always feminine"
+  },
+  {
+    "word": "educação",
+    "gender": "feminine",
+    "translation": "education",
+    "rank": 866,
+    "patternNote": "Ends in -ção, always feminine"
+  },
+  {
+    "word": "tratado",
+    "gender": "masculine",
+    "translation": "treaty",
+    "rank": 867,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "conto",
+    "gender": "masculine",
+    "translation": "tale, story",
+    "rank": 868,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "turno",
+    "gender": "masculine",
+    "translation": "shift",
+    "rank": 869,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "criatura",
+    "gender": "feminine",
+    "translation": "creature, beast",
+    "rank": 870,
+    "patternNote": "Ends in -ura, usually feminine"
+  },
+  {
+    "word": "vendo",
+    "gender": "masculine",
+    "translation": "Wend",
+    "rank": 871,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "medida",
+    "gender": "feminine",
+    "translation": "measurement; measure",
+    "rank": 872,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "nação",
+    "gender": "feminine",
+    "translation": "nation",
+    "rank": 873,
+    "patternNote": "Ends in -ção, always feminine"
+  },
+  {
+    "word": "sofrimento",
+    "gender": "masculine",
+    "translation": "suffering",
+    "rank": 874,
+    "patternNote": "Ends in -mento, always masculine"
+  },
+  {
+    "word": "medicina",
+    "gender": "feminine",
+    "translation": "medicine",
+    "rank": 875,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "francisco",
+    "gender": "masculine",
+    "translation": "Franciscan",
+    "rank": 876,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "biblioteca",
+    "gender": "feminine",
+    "translation": "library",
+    "rank": 877,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "armazém",
+    "gender": "masculine",
+    "translation": "warehouse",
+    "rank": 878,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "cavalheiro",
+    "gender": "masculine",
+    "translation": "gentleman",
+    "rank": 879,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "atraso",
+    "gender": "masculine",
+    "translation": "belatedness",
+    "rank": 880,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "divórcio",
+    "gender": "masculine",
+    "translation": "divorce",
+    "rank": 881,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "fortuna",
+    "gender": "feminine",
+    "translation": "fortune",
+    "rank": 882,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "estudo",
+    "gender": "masculine",
+    "translation": "study",
+    "rank": 883,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "território",
+    "gender": "masculine",
+    "translation": "territory",
+    "rank": 884,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "escuridão",
+    "gender": "feminine",
+    "translation": "darkness",
+    "rank": 885,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "vaca",
+    "gender": "feminine",
+    "translation": "a cow",
+    "rank": 886,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "sombra",
+    "gender": "feminine",
+    "translation": "shadow",
+    "rank": 887,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "cadáver",
+    "gender": "masculine",
+    "translation": "cadaver, corpse",
+    "rank": 888,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "falha",
+    "gender": "feminine",
+    "translation": "a flaw",
+    "rank": 889,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "cópia",
+    "gender": "feminine",
+    "translation": "copy",
+    "rank": 890,
+    "patternNote": "Ends in -ia, usually feminine"
+  },
+  {
+    "word": "inteligência",
+    "gender": "feminine",
+    "translation": "intelligence",
+    "rank": 891,
+    "patternNote": "Ends in -ia, usually feminine"
+  },
+  {
+    "word": "queixa",
+    "gender": "feminine",
+    "translation": "complaint",
+    "rank": 892,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "jogador",
+    "gender": "masculine",
+    "translation": "player",
+    "rank": 893,
+    "patternNote": "Ends in -or, usually masculine"
+  },
+  {
+    "word": "botão",
+    "gender": "masculine",
+    "translation": "button",
+    "rank": 894,
+    "patternNote": "Ends in -ão, usually masculine"
+  },
+  {
+    "word": "criado",
+    "gender": "masculine",
+    "translation": "servant",
+    "rank": 895,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "explicação",
+    "gender": "feminine",
+    "translation": "explanation, explication",
+    "rank": 896,
+    "patternNote": "Ends in -ção, always feminine"
+  },
+  {
+    "word": "ministro",
+    "gender": "masculine",
+    "translation": "minister",
+    "rank": 897,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "alcance",
+    "gender": "masculine",
+    "translation": "reach, range, scope",
+    "rank": 898,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "autoridade",
+    "gender": "feminine",
+    "translation": "authority",
+    "rank": 899,
+    "patternNote": "Ends in -dade, always feminine"
+  },
+  {
+    "word": "reputação",
+    "gender": "feminine",
+    "translation": "name, reputation",
+    "rank": 900,
+    "patternNote": "Ends in -ção, always feminine"
+  },
+  {
+    "word": "esforço",
+    "gender": "masculine",
+    "translation": "effort",
+    "rank": 901,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "sono",
+    "gender": "masculine",
+    "translation": "sleep",
+    "rank": 902,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "oceano",
+    "gender": "masculine",
+    "translation": "ocean",
+    "rank": 903,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "fita",
+    "gender": "feminine",
+    "translation": "tape, ribbon, band",
+    "rank": 904,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "estúdio",
+    "gender": "masculine",
+    "translation": "studio",
+    "rank": 905,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "compra",
+    "gender": "feminine",
+    "translation": "purchase",
+    "rank": 906,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "mora",
+    "gender": "feminine",
+    "translation": "a delay",
+    "rank": 907,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "areia",
+    "gender": "feminine",
+    "translation": "sand",
+    "rank": 908,
+    "patternNote": "Ends in -ia, usually feminine"
+  },
+  {
+    "word": "tolo",
+    "gender": "masculine",
+    "translation": "fool, idiot",
+    "rank": 909,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "desafio",
+    "gender": "masculine",
+    "translation": "challenge",
+    "rank": 910,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "clínica",
+    "gender": "feminine",
+    "translation": "clinic",
+    "rank": 911,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "cooper",
+    "gender": "masculine",
+    "translation": "A slow-paced run intented to improve one's physical fitness.",
+    "rank": 912,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "superfície",
+    "gender": "feminine",
+    "translation": "surface",
+    "rank": 913,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "sessão",
+    "gender": "feminine",
+    "translation": "session",
+    "rank": 914,
+    "patternNote": "Ends in -são, usually feminine"
+  },
+  {
+    "word": "ponta",
+    "gender": "feminine",
+    "translation": "tip, point",
+    "rank": 915,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "paixão",
+    "gender": "feminine",
+    "translation": "passion",
+    "rank": 916,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "ganho",
+    "gender": "masculine",
+    "translation": "gain, profit",
+    "rank": 917,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "empregado",
+    "gender": "masculine",
+    "translation": "employee",
+    "rank": 918,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "alemão",
+    "gender": "masculine",
+    "translation": "German",
+    "rank": 919,
+    "patternNote": "Ends in -ão, usually masculine"
+  },
+  {
+    "word": "estacionamento",
+    "gender": "masculine",
+    "translation": "parking",
+    "rank": 920,
+    "patternNote": "Ends in -mento, always masculine"
+  },
+  {
+    "word": "jogada",
+    "gender": "feminine",
+    "translation": "play",
+    "rank": 921,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "organização",
+    "gender": "feminine",
+    "translation": "organization; order",
+    "rank": 922,
+    "patternNote": "Ends in -ção, always feminine"
+  },
+  {
+    "word": "açúcar",
+    "gender": "masculine",
+    "translation": "sugar",
+    "rank": 923,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "lobo",
+    "gender": "masculine",
+    "translation": "wolf",
+    "rank": 924,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "pássaro",
+    "gender": "masculine",
+    "translation": "passerine",
+    "rank": 925,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "máscara",
+    "gender": "feminine",
+    "translation": "mask",
+    "rank": 926,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "meia-noite",
+    "gender": "feminine",
+    "translation": "midnight",
+    "rank": 927,
+    "patternNote": "Medical ending -ite, usually feminine"
+  },
+  {
+    "word": "senhorita",
+    "gender": "feminine",
+    "translation": "miss, senhorita, diminutive of senhora",
+    "rank": 928,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "despedida",
+    "gender": "feminine",
+    "translation": "farewell",
+    "rank": 929,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "prostituta",
+    "gender": "feminine",
+    "translation": "prostitute",
+    "rank": 930,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "champanhe",
+    "gender": "masculine",
+    "translation": "champagne",
+    "rank": 931,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "russo",
+    "gender": "masculine",
+    "translation": "Russian",
+    "rank": 932,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "esquecido",
+    "gender": "masculine",
+    "translation": "forgetter, a forgetful person",
+    "rank": 933,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "sobretudo",
+    "gender": "masculine",
+    "translation": "overcoat",
+    "rank": 934,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "dívida",
+    "gender": "feminine",
+    "translation": "obligation",
+    "rank": 935,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "mistério",
+    "gender": "masculine",
+    "translation": "mystery",
+    "rank": 936,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "portão",
+    "gender": "masculine",
+    "translation": "gate",
+    "rank": 937,
+    "patternNote": "Ends in -ão, usually masculine"
+  },
+  {
+    "word": "qualidade",
+    "gender": "feminine",
+    "translation": "quality",
+    "rank": 938,
+    "patternNote": "Ends in -dade, always feminine"
+  },
+  {
+    "word": "noivo",
+    "gender": "masculine",
+    "translation": "fiancé",
+    "rank": 939,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "frota",
+    "gender": "feminine",
+    "translation": "fleet",
+    "rank": 940,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "seca",
+    "gender": "feminine",
+    "translation": "drought",
+    "rank": 941,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "feitiço",
+    "gender": "masculine",
+    "translation": "spell, incantation",
+    "rank": 942,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "pausa",
+    "gender": "feminine",
+    "translation": "pause",
+    "rank": 943,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "tarefa",
+    "gender": "feminine",
+    "translation": "job, task",
+    "rank": 944,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "abrigo",
+    "gender": "masculine",
+    "translation": "shelter, haven, refuge",
+    "rank": 945,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "preocupação",
+    "gender": "feminine",
+    "translation": "concern, worry",
+    "rank": 946,
+    "patternNote": "Ends in -ção, always feminine"
+  },
+  {
+    "word": "análise",
+    "gender": "feminine",
+    "translation": "analysis",
+    "rank": 947,
+    "patternNote": "Ends in -ise, usually feminine"
+  },
+  {
+    "word": "telefonema",
+    "gender": "masculine",
+    "translation": "call",
+    "rank": 948,
+    "patternNote": "Greek-origin -ema words are masculine"
+  },
+  {
+    "word": "cigarro",
+    "gender": "masculine",
+    "translation": "cigarette",
+    "rank": 949,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "ritmo",
+    "gender": "masculine",
+    "translation": "rhythm",
+    "rank": 950,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "maravilha",
+    "gender": "feminine",
+    "translation": "wonder; marvel",
+    "rank": 951,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "Hitler",
+    "gender": "masculine",
+    "translation": "Hitler",
+    "rank": 952,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "puto",
+    "gender": "masculine",
+    "translation": "kid",
+    "rank": 953,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "pulso",
+    "gender": "masculine",
+    "translation": "pulse",
+    "rank": 954,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "física",
+    "gender": "feminine",
+    "translation": "physics",
+    "rank": 955,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "veículo",
+    "gender": "masculine",
+    "translation": "vehicle; conveyance",
+    "rank": 956,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "pensamento",
+    "gender": "masculine",
+    "translation": "a thought; an idea",
+    "rank": 957,
+    "patternNote": "Ends in -mento, always masculine"
+  },
+  {
+    "word": "ódio",
+    "gender": "masculine",
+    "translation": "hatred",
+    "rank": 958,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "pagamento",
+    "gender": "masculine",
+    "translation": "payment",
+    "rank": 959,
+    "patternNote": "Ends in -mento, always masculine"
+  },
+  {
+    "word": "comunicação",
+    "gender": "feminine",
+    "translation": "communication",
+    "rank": 960,
+    "patternNote": "Ends in -ção, always feminine"
+  },
+  {
+    "word": "dispositivo",
+    "gender": "masculine",
+    "translation": "device (piece of equipment), apparatus",
+    "rank": 961,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "exterior",
+    "gender": "masculine",
+    "translation": "outside",
+    "rank": 962,
+    "patternNote": "Ends in -or, usually masculine"
+  },
+  {
+    "word": "anúncio",
+    "gender": "masculine",
+    "translation": "advertisement",
+    "rank": 963,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "pizza",
+    "gender": "feminine",
+    "translation": "sweat visible in the clothes, specially under armpits",
+    "rank": 964,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "comissão",
+    "gender": "feminine",
+    "translation": "commission",
+    "rank": 965,
+    "patternNote": "Ends in -são, usually feminine"
+  },
+  {
+    "word": "adivinha",
+    "gender": "feminine",
+    "translation": "riddle",
+    "rank": 966,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "prato",
+    "gender": "masculine",
+    "translation": "plate",
+    "rank": 967,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "engano",
+    "gender": "masculine",
+    "translation": "deceit; fraud",
+    "rank": 968,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "evento",
+    "gender": "masculine",
+    "translation": "event; occurrence",
+    "rank": 969,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "chato",
+    "gender": "masculine",
+    "translation": "bore",
+    "rank": 970,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "esquina",
+    "gender": "feminine",
+    "translation": "angle",
+    "rank": 971,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "papai",
+    "gender": "masculine",
+    "translation": "dad, papa",
+    "rank": 972,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "palhaço",
+    "gender": "masculine",
+    "translation": "clown",
+    "rank": 973,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "comissário",
+    "gender": "masculine",
+    "translation": "commissioner",
+    "rank": 974,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "amostra",
+    "gender": "feminine",
+    "translation": "sample",
+    "rank": 975,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "cego",
+    "gender": "masculine",
+    "translation": "a blind person",
+    "rank": 976,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "osso",
+    "gender": "masculine",
+    "translation": "bone",
+    "rank": 977,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "sujeito",
+    "gender": "masculine",
+    "translation": "subject",
+    "rank": 978,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "recompensa",
+    "gender": "feminine",
+    "translation": "the act of rewarding",
+    "rank": 979,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "limpeza",
+    "gender": "feminine",
+    "translation": "cleanliness",
+    "rank": 980,
+    "patternNote": "Ends in -eza, always feminine"
+  },
+  {
+    "word": "produção",
+    "gender": "feminine",
+    "translation": "production",
+    "rank": 981,
+    "patternNote": "Ends in -ção, always feminine"
+  },
+  {
+    "word": "museu",
+    "gender": "masculine",
+    "translation": "museum",
+    "rank": 982,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "folga",
+    "gender": "feminine",
+    "translation": "rest, day off",
+    "rank": 983,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "índia",
+    "gender": "feminine",
+    "translation": "female equivalent of índio",
+    "rank": 984,
+    "patternNote": "Ends in -ia, usually feminine"
+  },
+  {
+    "word": "raça",
+    "gender": "feminine",
+    "translation": "race, breed",
+    "rank": 985,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "porto",
+    "gender": "masculine",
+    "translation": "port; harbour",
+    "rank": 986,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "mágico",
+    "gender": "masculine",
+    "translation": "a magician",
+    "rank": 987,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "declaração",
+    "gender": "feminine",
+    "translation": "declaration",
+    "rank": 988,
+    "patternNote": "Ends in -ção, always feminine"
+  },
+  {
+    "word": "resistência",
+    "gender": "feminine",
+    "translation": "resistance",
+    "rank": 989,
+    "patternNote": "Ends in -ia, usually feminine"
+  },
+  {
+    "word": "onda",
+    "gender": "feminine",
+    "translation": "wave",
+    "rank": 990,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "curioso",
+    "gender": "masculine",
+    "translation": "one who is curious, inquisitive",
+    "rank": 991,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "aliança",
+    "gender": "feminine",
+    "translation": "engagement ring or wedding ring",
+    "rank": 992,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "significado",
+    "gender": "masculine",
+    "translation": "meaning, significance",
+    "rank": 993,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "dragão",
+    "gender": "masculine",
+    "translation": "dragon",
+    "rank": 994,
+    "patternNote": "Ends in -ão, usually masculine"
+  },
+  {
+    "word": "castigo",
+    "gender": "masculine",
+    "translation": "punishment",
+    "rank": 995,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "secção",
+    "gender": "feminine",
+    "translation": "European Portuguese standard form of seção",
+    "rank": 996,
+    "patternNote": "Ends in -ção, always feminine"
+  },
+  {
+    "word": "desastre",
+    "gender": "masculine",
+    "translation": "disaster",
+    "rank": 997,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "galinha",
+    "gender": "feminine",
+    "translation": "hen",
+    "rank": 998,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "palácio",
+    "gender": "masculine",
+    "translation": "palace",
+    "rank": 999,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "paraíso",
+    "gender": "masculine",
+    "translation": "paradise",
+    "rank": 1000,
+    "patternNote": "Ends in -o, typically masculine"
+  }
+]

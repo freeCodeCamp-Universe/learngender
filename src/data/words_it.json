@@ -1,0 +1,7002 @@
+[
+  {
+    "word": "bella",
+    "gender": "feminine",
+    "translation": "beauty, belle",
+    "rank": 1,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "scusa",
+    "gender": "feminine",
+    "translation": "apology, excuse",
+    "rank": 2,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "porta",
+    "gender": "feminine",
+    "translation": "gate",
+    "rank": 3,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "bello",
+    "gender": "masculine",
+    "translation": "beauty",
+    "rank": 4,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "moglie",
+    "gender": "feminine",
+    "translation": "wife",
+    "rank": 5,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "storia",
+    "gender": "feminine",
+    "translation": "history",
+    "rank": 6,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "morto",
+    "gender": "masculine",
+    "translation": "dead man",
+    "rank": 7,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "persona",
+    "gender": "feminine",
+    "translation": "person, pl people, persons",
+    "rank": 8,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "pronto",
+    "gender": "masculine",
+    "translation": "ready-made",
+    "rank": 9,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "dovuto",
+    "gender": "masculine",
+    "translation": "due, score, bill",
+    "rank": 10,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "avanti",
+    "gender": "masculine",
+    "translation": "player whose main objective is scoring points; forward",
+    "rank": 11,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "secondo",
+    "gender": "masculine",
+    "translation": "second",
+    "rank": 12,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "polizia",
+    "gender": "feminine",
+    "translation": "polity",
+    "rank": 13,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "letto",
+    "gender": "masculine",
+    "translation": "bed",
+    "rank": 14,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "fine",
+    "gender": "feminine",
+    "translation": "end",
+    "rank": 15,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "aiuto",
+    "gender": "masculine",
+    "translation": "help, assistance, aid",
+    "rank": 16,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "paura",
+    "gender": "feminine",
+    "translation": "fear",
+    "rank": 17,
+    "patternNote": "Ends in -ura, usually feminine"
+  },
+  {
+    "word": "fratello",
+    "gender": "masculine",
+    "translation": "brother, sibling",
+    "rank": 18,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "domani",
+    "gender": "masculine",
+    "translation": "tomorrow",
+    "rank": 19,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "capo",
+    "gender": "masculine",
+    "translation": "head",
+    "rank": 20,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "amore",
+    "gender": "masculine",
+    "translation": "love",
+    "rank": 21,
+    "patternNote": "Ends in -ore, usually masculine"
+  },
+  {
+    "word": "ucciso",
+    "gender": "masculine",
+    "translation": "victim",
+    "rank": 22,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "piano",
+    "gender": "masculine",
+    "translation": "plane",
+    "rank": 23,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "macchina",
+    "gender": "feminine",
+    "translation": "machine",
+    "rank": 24,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "giorni",
+    "gender": "masculine",
+    "translation": "days",
+    "rank": 25,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "mano",
+    "gender": "feminine",
+    "translation": "hand",
+    "rank": 26,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "presto",
+    "gender": "masculine",
+    "translation": "loan",
+    "rank": 27,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "merda",
+    "gender": "feminine",
+    "translation": "shit, crap (all senses).",
+    "rank": 28,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "bambino",
+    "gender": "masculine",
+    "translation": "child, baby, toddler, tot",
+    "rank": 29,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "primo",
+    "gender": "masculine",
+    "translation": "first, first one",
+    "rank": 30,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "sera",
+    "gender": "feminine",
+    "translation": "evening",
+    "rank": 31,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "giro",
+    "gender": "masculine",
+    "translation": "turn, twist, rotation, revolution",
+    "rank": 32,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "morte",
+    "gender": "feminine",
+    "translation": "death",
+    "rank": 33,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "anno",
+    "gender": "masculine",
+    "translation": "year",
+    "rank": 34,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "diavolo",
+    "gender": "masculine",
+    "translation": "devil, demon, fiend, Satan",
+    "rank": 35,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "piacere",
+    "gender": "masculine",
+    "translation": "pleasure, enjoyment",
+    "rank": 36,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "contro",
+    "gender": "masculine",
+    "translation": "con",
+    "rank": 37,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "colpa",
+    "gender": "feminine",
+    "translation": "fault",
+    "rank": 38,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "punto",
+    "gender": "masculine",
+    "translation": "point (all senses), jot, iota",
+    "rank": 39,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "andata",
+    "gender": "feminine",
+    "translation": "outward journey, journey there",
+    "rank": 40,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "migliore",
+    "gender": "masculine",
+    "translation": "the best",
+    "rank": 41,
+    "patternNote": "Ends in -ore, usually masculine"
+  },
+  {
+    "word": "figlia",
+    "gender": "feminine",
+    "translation": "daughter",
+    "rank": 42,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "papa",
+    "gender": "masculine",
+    "translation": "pope",
+    "rank": 43,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "passato",
+    "gender": "masculine",
+    "translation": "past",
+    "rank": 44,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "terra",
+    "gender": "feminine",
+    "translation": "ground",
+    "rank": 45,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "strada",
+    "gender": "feminine",
+    "translation": "road, way, street",
+    "rank": 46,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "sola",
+    "gender": "feminine",
+    "translation": "female equivalent of solo",
+    "rank": 47,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "settimana",
+    "gender": "feminine",
+    "translation": "week",
+    "rank": 48,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "parlato",
+    "gender": "masculine",
+    "translation": "spoken language",
+    "rank": 49,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "papà",
+    "gender": "masculine",
+    "translation": "dad, papa",
+    "rank": 50,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "mani",
+    "gender": "masculine",
+    "translation": "manes",
+    "rank": 51,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "ultima",
+    "gender": "feminine",
+    "translation": "female equivalent of ultimo",
+    "rank": 52,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "possibile",
+    "gender": "masculine",
+    "translation": "possible",
+    "rank": 53,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "scuola",
+    "gender": "feminine",
+    "translation": "school",
+    "rank": 54,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "sangue",
+    "gender": "masculine",
+    "translation": "blood",
+    "rank": 55,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "chiama",
+    "gender": "feminine",
+    "translation": "roll call",
+    "rank": 56,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "messo",
+    "gender": "masculine",
+    "translation": "messenger",
+    "rank": 57,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "traduzione",
+    "gender": "feminine",
+    "translation": "translation",
+    "rank": 58,
+    "patternNote": "Ends in -zione, always feminine"
+  },
+  {
+    "word": "cuore",
+    "gender": "masculine",
+    "translation": "heart",
+    "rank": 59,
+    "patternNote": "Ends in -ore, usually masculine"
+  },
+  {
+    "word": "marito",
+    "gender": "masculine",
+    "translation": "husband",
+    "rank": 60,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "venuto",
+    "gender": "masculine",
+    "translation": "comer",
+    "rank": 61,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "ieri",
+    "gender": "masculine",
+    "translation": "yesterday",
+    "rank": 62,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "difficile",
+    "gender": "masculine",
+    "translation": "difficult time or moment",
+    "rank": 63,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "auto",
+    "gender": "feminine",
+    "translation": "clipping of automobile: car",
+    "rank": 64,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "fatta",
+    "gender": "feminine",
+    "translation": "type, kind",
+    "rank": 65,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "numero",
+    "gender": "masculine",
+    "translation": "number",
+    "rank": 66,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "possa",
+    "gender": "feminine",
+    "translation": "power, strength, vigour",
+    "rank": 67,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "entrare",
+    "gender": "masculine",
+    "translation": "entrance, entry, place of entering",
+    "rank": 68,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "acqua",
+    "gender": "feminine",
+    "translation": "water",
+    "rank": 69,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "portato",
+    "gender": "masculine",
+    "translation": "result, outcome",
+    "rank": 70,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "stanza",
+    "gender": "feminine",
+    "translation": "room",
+    "rank": 71,
+    "patternNote": "Ends in -anza, usually feminine"
+  },
+  {
+    "word": "forte",
+    "gender": "masculine",
+    "translation": "fort, fortress",
+    "rank": 72,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "roba",
+    "gender": "feminine",
+    "translation": "things, stuff",
+    "rank": 73,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "agente",
+    "gender": "masculine",
+    "translation": "agent, representative",
+    "rank": 74,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "dietro",
+    "gender": "masculine",
+    "translation": "back, rear",
+    "rank": 75,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "corpo",
+    "gender": "masculine",
+    "translation": "body, corpse",
+    "rank": 76,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "foto",
+    "gender": "feminine",
+    "translation": "photo, snap",
+    "rank": 77,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "telefono",
+    "gender": "masculine",
+    "translation": "telephone, phone",
+    "rank": 78,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "poco",
+    "gender": "masculine",
+    "translation": "little",
+    "rank": 79,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "piccola",
+    "gender": "feminine",
+    "translation": "a small glass of beer",
+    "rank": 80,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "vicino",
+    "gender": "masculine",
+    "translation": "neighbour/neighbor",
+    "rank": 81,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "sacco",
+    "gender": "masculine",
+    "translation": "sack, bag",
+    "rank": 82,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "stia",
+    "gender": "feminine",
+    "translation": "hutch, coop",
+    "rank": 83,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "cinque",
+    "gender": "masculine",
+    "translation": "five",
+    "rank": 84,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "bravo",
+    "gender": "masculine",
+    "translation": "henchman",
+    "rank": 85,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "festa",
+    "gender": "feminine",
+    "translation": "feast",
+    "rank": 86,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "senso",
+    "gender": "masculine",
+    "translation": "sense",
+    "rank": 87,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "genere",
+    "gender": "masculine",
+    "translation": "kind",
+    "rank": 88,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "quattro",
+    "gender": "masculine",
+    "translation": "four",
+    "rank": 89,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "dare",
+    "gender": "masculine",
+    "translation": "debit",
+    "rank": 90,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "attimo",
+    "gender": "masculine",
+    "translation": "moment, instant, second",
+    "rank": 91,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "sorella",
+    "gender": "feminine",
+    "translation": "sister",
+    "rank": 92,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "film",
+    "gender": "masculine",
+    "translation": "film, movie",
+    "rank": 93,
+    "patternNote": "Ends in consonant; usually masculine in Italian"
+  },
+  {
+    "word": "ufficio",
+    "gender": "masculine",
+    "translation": "moral duty",
+    "rank": 94,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "verso",
+    "gender": "masculine",
+    "translation": "verse",
+    "rank": 95,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "unica",
+    "gender": "feminine",
+    "translation": "only thing",
+    "rank": 96,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "morire",
+    "gender": "masculine",
+    "translation": "death",
+    "rank": 97,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "signorina",
+    "gender": "feminine",
+    "translation": "young lady",
+    "rank": 98,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "vecchio",
+    "gender": "masculine",
+    "translation": "an old man",
+    "rank": 99,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "domanda",
+    "gender": "feminine",
+    "translation": "question",
+    "rank": 100,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "guerra",
+    "gender": "feminine",
+    "translation": "war, warfare",
+    "rank": 101,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "dottore",
+    "gender": "masculine",
+    "translation": "doctor",
+    "rank": 102,
+    "patternNote": "Ends in -ore, usually masculine"
+  },
+  {
+    "word": "vivere",
+    "gender": "masculine",
+    "translation": "living, life",
+    "rank": 103,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "vista",
+    "gender": "feminine",
+    "translation": "sight, eyesight, vision, visual acuity",
+    "rank": 104,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "prova",
+    "gender": "feminine",
+    "translation": "trial, test, experiment",
+    "rank": 105,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "nuova",
+    "gender": "feminine",
+    "translation": "news",
+    "rank": 106,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "ricordo",
+    "gender": "masculine",
+    "translation": "memory, recollection, remembrance",
+    "rank": 107,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "sicura",
+    "gender": "feminine",
+    "translation": "safety catch",
+    "rank": 108,
+    "patternNote": "Ends in -ura, usually feminine"
+  },
+  {
+    "word": "paio",
+    "gender": "masculine",
+    "translation": "pair",
+    "rank": 109,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "conto",
+    "gender": "masculine",
+    "translation": "calculation",
+    "rank": 110,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "mezzo",
+    "gender": "masculine",
+    "translation": "half, middle",
+    "rank": 111,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "unico",
+    "gender": "masculine",
+    "translation": "only person, only one",
+    "rank": 112,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "squadra",
+    "gender": "feminine",
+    "translation": "set square, triangle",
+    "rank": 113,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "faro",
+    "gender": "masculine",
+    "translation": "lighthouse",
+    "rank": 114,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "Dottor",
+    "gender": "masculine",
+    "translation": "apocopic form of Dottore; used before a personal name",
+    "rank": 115,
+    "patternNote": "Ends in consonant; usually masculine in Italian"
+  },
+  {
+    "word": "parola",
+    "gender": "feminine",
+    "translation": "word",
+    "rank": 116,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "sopra",
+    "gender": "masculine",
+    "translation": "top",
+    "rank": 117,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "motivo",
+    "gender": "masculine",
+    "translation": "reason, ground",
+    "rank": 118,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "cavolo",
+    "gender": "masculine",
+    "translation": "cabbage",
+    "rank": 119,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "capitano",
+    "gender": "masculine",
+    "translation": "captain",
+    "rank": 120,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "gioco",
+    "gender": "masculine",
+    "translation": "game",
+    "rank": 121,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "perfetto",
+    "gender": "masculine",
+    "translation": "perfect tense",
+    "rank": 122,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "mente",
+    "gender": "feminine",
+    "translation": "mind",
+    "rank": 123,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "mangiare",
+    "gender": "masculine",
+    "translation": "eating",
+    "rank": 124,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "resto",
+    "gender": "masculine",
+    "translation": "rest, remainder, balance",
+    "rank": 125,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "fortuna",
+    "gender": "feminine",
+    "translation": "luck",
+    "rank": 126,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "tratta",
+    "gender": "feminine",
+    "translation": "act of pulling",
+    "rank": 127,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "passare",
+    "gender": "masculine",
+    "translation": "passing, duration, movement",
+    "rank": 128,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "cena",
+    "gender": "feminine",
+    "translation": "dinner",
+    "rank": 129,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "controllo",
+    "gender": "masculine",
+    "translation": "check, control, verification, examination, inspection",
+    "rank": 130,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "ultimo",
+    "gender": "masculine",
+    "translation": "last one",
+    "rank": 131,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "davanti",
+    "gender": "masculine",
+    "translation": "a front",
+    "rank": 132,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "tizio",
+    "gender": "masculine",
+    "translation": "man, someone, guy, what's-his-name",
+    "rank": 133,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "sicurezza",
+    "gender": "feminine",
+    "translation": "safety, security",
+    "rank": 134,
+    "patternNote": "Ends in -ezza, always feminine"
+  },
+  {
+    "word": "matrimonio",
+    "gender": "masculine",
+    "translation": "marriage",
+    "rank": 135,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "culo",
+    "gender": "masculine",
+    "translation": "ass, bottom, buttocks, butt, anus",
+    "rank": 136,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "fuoco",
+    "gender": "masculine",
+    "translation": "fire",
+    "rank": 137,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "pistola",
+    "gender": "feminine",
+    "translation": "pistol, handgun",
+    "rank": 138,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "mandato",
+    "gender": "masculine",
+    "translation": "mandate, charge, commission, task",
+    "rank": 139,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "puttana",
+    "gender": "feminine",
+    "translation": "whore, slut, hooker, harlot, tart",
+    "rank": 140,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "inizio",
+    "gender": "masculine",
+    "translation": "beginning, start, inception",
+    "rank": 141,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "causa",
+    "gender": "feminine",
+    "translation": "cause",
+    "rank": 142,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "voglia",
+    "gender": "feminine",
+    "translation": "wish, will, desire, longing",
+    "rank": 143,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "sesso",
+    "gender": "masculine",
+    "translation": "sex",
+    "rank": 144,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "vivo",
+    "gender": "masculine",
+    "translation": "living person",
+    "rank": 145,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "città",
+    "gender": "feminine",
+    "translation": "town, city",
+    "rank": 146,
+    "patternNote": "Ends in -tà, always feminine"
+  },
+  {
+    "word": "citta",
+    "gender": "feminine",
+    "translation": "female equivalent of citto",
+    "rank": 147,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "ospedale",
+    "gender": "masculine",
+    "translation": "hospital",
+    "rank": 148,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "scritto",
+    "gender": "masculine",
+    "translation": "text",
+    "rank": 149,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "attenzione",
+    "gender": "feminine",
+    "translation": "attention",
+    "rank": 150,
+    "patternNote": "Ends in -zione, always feminine"
+  },
+  {
+    "word": "situazione",
+    "gender": "feminine",
+    "translation": "situation, position, condition, circumstances",
+    "rank": 151,
+    "patternNote": "Ends in -zione, always feminine"
+  },
+  {
+    "word": "omicidio",
+    "gender": "masculine",
+    "translation": "murder",
+    "rank": 152,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "revisione",
+    "gender": "feminine",
+    "translation": "review",
+    "rank": 153,
+    "patternNote": "Ends in -sione, always feminine"
+  },
+  {
+    "word": "ottimo",
+    "gender": "masculine",
+    "translation": "the best",
+    "rank": 154,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "cura",
+    "gender": "feminine",
+    "translation": "care",
+    "rank": 155,
+    "patternNote": "Ends in -ura, usually feminine"
+  },
+  {
+    "word": "paese",
+    "gender": "masculine",
+    "translation": "country",
+    "rank": 156,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "pace",
+    "gender": "feminine",
+    "translation": "peace",
+    "rank": 157,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "musica",
+    "gender": "feminine",
+    "translation": "music",
+    "rank": 158,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "libro",
+    "gender": "masculine",
+    "translation": "book",
+    "rank": 159,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "amica",
+    "gender": "feminine",
+    "translation": "female equivalent of amico",
+    "rank": 160,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "venuta",
+    "gender": "feminine",
+    "translation": "coming, arrival",
+    "rank": 161,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "scelta",
+    "gender": "feminine",
+    "translation": "choice",
+    "rank": 162,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "scoperto",
+    "gender": "masculine",
+    "translation": "overdraft",
+    "rank": 163,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "prigione",
+    "gender": "feminine",
+    "translation": "jail, prison",
+    "rank": 164,
+    "patternNote": "Ends in -ione, always feminine"
+  },
+  {
+    "word": "giornata",
+    "gender": "feminine",
+    "translation": "day",
+    "rank": 165,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "buono",
+    "gender": "masculine",
+    "translation": "good guy, hero",
+    "rank": 166,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "lungo",
+    "gender": "masculine",
+    "translation": "length",
+    "rank": 167,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "avvocato",
+    "gender": "masculine",
+    "translation": "lawyer, counsel, solicitor, barrister",
+    "rank": 168,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "messaggio",
+    "gender": "masculine",
+    "translation": "message",
+    "rank": 169,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "dieci",
+    "gender": "masculine",
+    "translation": "ten",
+    "rank": 170,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "stupido",
+    "gender": "masculine",
+    "translation": "idiot, fool, moron, clot",
+    "rank": 171,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "cielo",
+    "gender": "masculine",
+    "translation": "sky",
+    "rank": 172,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "bagno",
+    "gender": "masculine",
+    "translation": "bath",
+    "rank": 173,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "aria",
+    "gender": "feminine",
+    "translation": "air",
+    "rank": 174,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "voce",
+    "gender": "feminine",
+    "translation": "voice",
+    "rank": 175,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "cane",
+    "gender": "masculine",
+    "translation": "dog, male dog",
+    "rank": 176,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "poter",
+    "gender": "masculine",
+    "translation": "literary form of potere",
+    "rank": 177,
+    "patternNote": "Ends in consonant; usually masculine in Italian"
+  },
+  {
+    "word": "campo",
+    "gender": "masculine",
+    "translation": "field",
+    "rank": 178,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "luce",
+    "gender": "feminine",
+    "translation": "light",
+    "rank": 179,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "minuto",
+    "gender": "masculine",
+    "translation": "minute, moment",
+    "rank": 180,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "gruppo",
+    "gender": "masculine",
+    "translation": "group, cluster, party, team, covey",
+    "rank": 181,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "arrivo",
+    "gender": "masculine",
+    "translation": "arrival",
+    "rank": 182,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "cerca",
+    "gender": "feminine",
+    "translation": "search",
+    "rank": 183,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "passo",
+    "gender": "masculine",
+    "translation": "footstep",
+    "rank": 184,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "bambina",
+    "gender": "feminine",
+    "translation": "female equivalent of bambino",
+    "rank": 185,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "onore",
+    "gender": "masculine",
+    "translation": "honour/honor",
+    "rank": 186,
+    "patternNote": "Ends in -ore, usually masculine"
+  },
+  {
+    "word": "verità",
+    "gender": "feminine",
+    "translation": "truth",
+    "rank": 187,
+    "patternNote": "Ends in -tà, always feminine"
+  },
+  {
+    "word": "futuro",
+    "gender": "masculine",
+    "translation": "the future",
+    "rank": 188,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "cibo",
+    "gender": "masculine",
+    "translation": "food",
+    "rank": 189,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "fretta",
+    "gender": "feminine",
+    "translation": "hurry, haste, rush",
+    "rank": 190,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "cara",
+    "gender": "feminine",
+    "translation": "female equivalent of caro",
+    "rank": 191,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "odio",
+    "gender": "masculine",
+    "translation": "hatred",
+    "rank": 192,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "solito",
+    "gender": "masculine",
+    "translation": "usual",
+    "rank": 193,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "incidente",
+    "gender": "masculine",
+    "translation": "incident",
+    "rank": 194,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "intenzione",
+    "gender": "feminine",
+    "translation": "intention, intent, purpose, mind, wish",
+    "rank": 195,
+    "patternNote": "Ends in -zione, always feminine"
+  },
+  {
+    "word": "speciale",
+    "gender": "masculine",
+    "translation": "special",
+    "rank": 196,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "vera",
+    "gender": "feminine",
+    "translation": "wedding ring, wedding band",
+    "rank": 197,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "camera",
+    "gender": "feminine",
+    "translation": "room; chamber",
+    "rank": 198,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "riguardo",
+    "gender": "masculine",
+    "translation": "respect, connection, regard",
+    "rank": 199,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "aspetto",
+    "gender": "masculine",
+    "translation": "look",
+    "rank": 200,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "viaggio",
+    "gender": "masculine",
+    "translation": "journey, trip, tour, voyage",
+    "rank": 201,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "chiaro",
+    "gender": "masculine",
+    "translation": "luminosity, brightness",
+    "rank": 202,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "chiamata",
+    "gender": "feminine",
+    "translation": "call",
+    "rank": 203,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "bocca",
+    "gender": "feminine",
+    "translation": "mouth",
+    "rank": 204,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "permesso",
+    "gender": "masculine",
+    "translation": "permission, permit, consent, leave, licence/license",
+    "rank": 205,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "ordine",
+    "gender": "masculine",
+    "translation": "order",
+    "rank": 206,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "natale",
+    "gender": "masculine",
+    "translation": "birthday",
+    "rank": 207,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "occhio",
+    "gender": "masculine",
+    "translation": "eye",
+    "rank": 208,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "mattina",
+    "gender": "feminine",
+    "translation": "morning",
+    "rank": 209,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "sistema",
+    "gender": "masculine",
+    "translation": "system",
+    "rank": 210,
+    "patternNote": "Greek-origin -ema words are masculine"
+  },
+  {
+    "word": "fondo",
+    "gender": "masculine",
+    "translation": "bottom",
+    "rank": 211,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "resta",
+    "gender": "feminine",
+    "translation": "awn, ear",
+    "rank": 212,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "prossimo",
+    "gender": "masculine",
+    "translation": "neighbour/neighbor, the others",
+    "rank": 213,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "saputo",
+    "gender": "masculine",
+    "translation": "know-it-all",
+    "rank": 214,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "potere",
+    "gender": "masculine",
+    "translation": "power",
+    "rank": 215,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "fermo",
+    "gender": "masculine",
+    "translation": "act of stopping or halting",
+    "rank": 216,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "mese",
+    "gender": "masculine",
+    "translation": "month",
+    "rank": 217,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "cristo",
+    "gender": "masculine",
+    "translation": "Christ",
+    "rank": 218,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "appuntamento",
+    "gender": "masculine",
+    "translation": "appointment, meeting, rendezvous",
+    "rank": 219,
+    "patternNote": "Ends in -mento, always masculine"
+  },
+  {
+    "word": "vecchia",
+    "gender": "feminine",
+    "translation": "an old woman",
+    "rank": 220,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "pero",
+    "gender": "masculine",
+    "translation": "pear tree",
+    "rank": 221,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "grado",
+    "gender": "masculine",
+    "translation": "degree",
+    "rank": 222,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "nave",
+    "gender": "feminine",
+    "translation": "ship",
+    "rank": 223,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "iniziato",
+    "gender": "masculine",
+    "translation": "initiate",
+    "rank": 224,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "libero",
+    "gender": "masculine",
+    "translation": "libero, sweeper",
+    "rank": 225,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "stronzo",
+    "gender": "masculine",
+    "translation": "turd",
+    "rank": 226,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "pezzo",
+    "gender": "masculine",
+    "translation": "piece, chunk",
+    "rank": 227,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "segreto",
+    "gender": "masculine",
+    "translation": "secret",
+    "rank": 228,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "colpo",
+    "gender": "masculine",
+    "translation": "blow, knock, shock",
+    "rank": 229,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "porto",
+    "gender": "masculine",
+    "translation": "port, harbour/harbor",
+    "rank": 230,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "lista",
+    "gender": "feminine",
+    "translation": "list, pile",
+    "rank": 231,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "assassino",
+    "gender": "masculine",
+    "translation": "assassin, hitman",
+    "rank": 232,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "giusta",
+    "gender": "feminine",
+    "translation": "female equivalent of giusto",
+    "rank": 233,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "pazzo",
+    "gender": "masculine",
+    "translation": "madman",
+    "rank": 234,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "vittima",
+    "gender": "feminine",
+    "translation": "victim",
+    "rank": 235,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "giuro",
+    "gender": "masculine",
+    "translation": "oath, promise, resolution",
+    "rank": 236,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "consiglio",
+    "gender": "masculine",
+    "translation": "advice, counsel",
+    "rank": 237,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "centro",
+    "gender": "masculine",
+    "translation": "centre, center",
+    "rank": 238,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "specie",
+    "gender": "feminine",
+    "translation": "kind, type, sort",
+    "rank": 239,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "sogno",
+    "gender": "masculine",
+    "translation": "dream",
+    "rank": 240,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "brutto",
+    "gender": "masculine",
+    "translation": "ugly person",
+    "rank": 241,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "sole",
+    "gender": "masculine",
+    "translation": "sun",
+    "rank": 242,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "legge",
+    "gender": "feminine",
+    "translation": "law",
+    "rank": 243,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "scena",
+    "gender": "feminine",
+    "translation": "scene",
+    "rank": 244,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "gentile",
+    "gender": "masculine",
+    "translation": "gentile",
+    "rank": 245,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "rispetto",
+    "gender": "masculine",
+    "translation": "respect, deference",
+    "rank": 246,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "incontro",
+    "gender": "masculine",
+    "translation": "encounter, meeting",
+    "rank": 247,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "rapporto",
+    "gender": "masculine",
+    "translation": "report, statement, account",
+    "rank": 248,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "errore",
+    "gender": "masculine",
+    "translation": "mistake, error, slip, howler, blunder, goof",
+    "rank": 249,
+    "patternNote": "Ends in -ore, usually masculine"
+  },
+  {
+    "word": "sorpresa",
+    "gender": "feminine",
+    "translation": "surprise",
+    "rank": 250,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "occhiata",
+    "gender": "feminine",
+    "translation": "look, glance, gander",
+    "rank": 251,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "risposta",
+    "gender": "feminine",
+    "translation": "answer, reply, response, feedback",
+    "rank": 252,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "presa",
+    "gender": "feminine",
+    "translation": "grip, hold, grasp, grip",
+    "rank": 253,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "servizio",
+    "gender": "masculine",
+    "translation": "service, serve",
+    "rank": 254,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "medico",
+    "gender": "masculine",
+    "translation": "doctor, physician",
+    "rank": 255,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "usato",
+    "gender": "masculine",
+    "translation": "second-hand goods",
+    "rank": 256,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "caro",
+    "gender": "masculine",
+    "translation": "dear",
+    "rank": 257,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "schifo",
+    "gender": "masculine",
+    "translation": "disgust, nausea, loathing",
+    "rank": 258,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "dolore",
+    "gender": "masculine",
+    "translation": "ache, pain",
+    "rank": 259,
+    "patternNote": "Ends in -ore, usually masculine"
+  },
+  {
+    "word": "personale",
+    "gender": "masculine",
+    "translation": "staff, personnel",
+    "rank": 260,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "peggio",
+    "gender": "masculine",
+    "translation": "the worst thing, the worst part",
+    "rank": 261,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "addio",
+    "gender": "masculine",
+    "translation": "goodbye, farewell",
+    "rank": 262,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "diverso",
+    "gender": "masculine",
+    "translation": "homosexual, gay",
+    "rank": 263,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "sparato",
+    "gender": "masculine",
+    "translation": "the collar of a men's dress shirt",
+    "rank": 264,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "realtà",
+    "gender": "feminine",
+    "translation": "reality",
+    "rank": 265,
+    "patternNote": "Ends in -tà, always feminine"
+  },
+  {
+    "word": "fame",
+    "gender": "feminine",
+    "translation": "hunger",
+    "rank": 266,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "programma",
+    "gender": "masculine",
+    "translation": "programme/program, schedule, agenda",
+    "rank": 267,
+    "patternNote": "Greek-origin -amma words are masculine"
+  },
+  {
+    "word": "nonna",
+    "gender": "feminine",
+    "translation": "grandmother, granny",
+    "rank": 268,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "posizione",
+    "gender": "feminine",
+    "translation": "position",
+    "rank": 269,
+    "patternNote": "Ends in -zione, always feminine"
+  },
+  {
+    "word": "compagnia",
+    "gender": "feminine",
+    "translation": "company, companionship, fellowship, society, people",
+    "rank": 270,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "proposito",
+    "gender": "masculine",
+    "translation": "purpose, intention, plan, design",
+    "rank": 271,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "ritardo",
+    "gender": "masculine",
+    "translation": "delay, lag",
+    "rank": 272,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "fallo",
+    "gender": "masculine",
+    "translation": "fault, error",
+    "rank": 273,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "bisogna",
+    "gender": "feminine",
+    "translation": "thing, matter, affair",
+    "rank": 274,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "impossibile",
+    "gender": "masculine",
+    "translation": "impossible",
+    "rank": 275,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "studio",
+    "gender": "masculine",
+    "translation": "study",
+    "rank": 276,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "arma",
+    "gender": "feminine",
+    "translation": "weapon, arms",
+    "rank": 277,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "uscita",
+    "gender": "feminine",
+    "translation": "exit, way out",
+    "rank": 278,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "intorno",
+    "gender": "masculine",
+    "translation": "neighbourhood/neighborhood",
+    "rank": 279,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "video",
+    "gender": "masculine",
+    "translation": "video",
+    "rank": 280,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "manca",
+    "gender": "feminine",
+    "translation": "left hand",
+    "rank": 281,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "grosso",
+    "gender": "masculine",
+    "translation": "the main part of something",
+    "rank": 282,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "dolce",
+    "gender": "masculine",
+    "translation": "sweetness",
+    "rank": 283,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "chiave",
+    "gender": "feminine",
+    "translation": "key",
+    "rank": 284,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "cervello",
+    "gender": "masculine",
+    "translation": "brain",
+    "rank": 285,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "coraggio",
+    "gender": "masculine",
+    "translation": "courage, bravery, valour/valor",
+    "rank": 286,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "peccato",
+    "gender": "masculine",
+    "translation": "sin",
+    "rank": 287,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "questione",
+    "gender": "feminine",
+    "translation": "question, issue, matter, point",
+    "rank": 288,
+    "patternNote": "Ends in -ione, always feminine"
+  },
+  {
+    "word": "aereo",
+    "gender": "masculine",
+    "translation": "aeroplane",
+    "rank": 289,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "sala",
+    "gender": "feminine",
+    "translation": "room",
+    "rank": 290,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "base",
+    "gender": "feminine",
+    "translation": "base, alkaline",
+    "rank": 291,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "sette",
+    "gender": "masculine",
+    "translation": "seven",
+    "rank": 292,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "compleanno",
+    "gender": "masculine",
+    "translation": "birthday",
+    "rank": 293,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "relazione",
+    "gender": "feminine",
+    "translation": "connection",
+    "rank": 294,
+    "patternNote": "Ends in -zione, always feminine"
+  },
+  {
+    "word": "spalle",
+    "gender": "feminine",
+    "translation": "back",
+    "rank": 295,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "seconda",
+    "gender": "feminine",
+    "translation": "second",
+    "rank": 296,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "diritto",
+    "gender": "masculine",
+    "translation": "right side",
+    "rank": 297,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "appartamento",
+    "gender": "masculine",
+    "translation": "apartment, flat",
+    "rank": 298,
+    "patternNote": "Ends in -mento, always masculine"
+  },
+  {
+    "word": "pranzo",
+    "gender": "masculine",
+    "translation": "lunch or dinner",
+    "rank": 299,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "denaro",
+    "gender": "masculine",
+    "translation": "money",
+    "rank": 300,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "serata",
+    "gender": "feminine",
+    "translation": "evening, night",
+    "rank": 301,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "nero",
+    "gender": "masculine",
+    "translation": "black",
+    "rank": 302,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "vestito",
+    "gender": "masculine",
+    "translation": "suit, dress, frock, clothes",
+    "rank": 303,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "carta",
+    "gender": "feminine",
+    "translation": "paper",
+    "rank": 304,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "dottoressa",
+    "gender": "feminine",
+    "translation": "female equivalent of dottore",
+    "rank": 305,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "bastardo",
+    "gender": "masculine",
+    "translation": "bastard",
+    "rank": 306,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "otto",
+    "gender": "masculine",
+    "translation": "eight",
+    "rank": 307,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "conosciuto",
+    "gender": "masculine",
+    "translation": "the known, that which is known",
+    "rank": 308,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "zona",
+    "gender": "feminine",
+    "translation": "a zone, area or district",
+    "rank": 309,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "negozio",
+    "gender": "masculine",
+    "translation": "shop, a store",
+    "rank": 310,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "partita",
+    "gender": "feminine",
+    "translation": "match, game",
+    "rank": 311,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "spazio",
+    "gender": "masculine",
+    "translation": "space",
+    "rank": 312,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "notizia",
+    "gender": "feminine",
+    "translation": "item of news",
+    "rank": 313,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "linea",
+    "gender": "feminine",
+    "translation": "line",
+    "rank": 314,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "poliziotto",
+    "gender": "masculine",
+    "translation": "policeman, police officer, cop, copper, rozzer, bobby",
+    "rank": 315,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "fronte",
+    "gender": "feminine",
+    "translation": "forehead, brow",
+    "rank": 316,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "vinto",
+    "gender": "masculine",
+    "translation": "loser",
+    "rank": 317,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "silenzio",
+    "gender": "masculine",
+    "translation": "silence, quiet",
+    "rank": 318,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "calma",
+    "gender": "feminine",
+    "translation": "calm, stillness, peacefulness",
+    "rank": 319,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "santo",
+    "gender": "masculine",
+    "translation": "saint",
+    "rank": 320,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "ricerca",
+    "gender": "feminine",
+    "translation": "search, quest, hunt, manhunt, prospecting, pursuit",
+    "rank": 321,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "pena",
+    "gender": "feminine",
+    "translation": "pain",
+    "rank": 322,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "luogo",
+    "gender": "masculine",
+    "translation": "place",
+    "rank": 323,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "lettera",
+    "gender": "feminine",
+    "translation": "letter",
+    "rank": 324,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "canzone",
+    "gender": "feminine",
+    "translation": "song",
+    "rank": 325,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "pubblico",
+    "gender": "masculine",
+    "translation": "the public",
+    "rank": 326,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "corso",
+    "gender": "masculine",
+    "translation": "course",
+    "rank": 327,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "regalo",
+    "gender": "masculine",
+    "translation": "present, gift",
+    "rank": 328,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "missione",
+    "gender": "feminine",
+    "translation": "mission",
+    "rank": 329,
+    "patternNote": "Ends in -sione, always feminine"
+  },
+  {
+    "word": "test",
+    "gender": "masculine",
+    "translation": "test",
+    "rank": 330,
+    "patternNote": "Ends in consonant; usually masculine in Italian"
+  },
+  {
+    "word": "salute",
+    "gender": "feminine",
+    "translation": "health, wellbeing",
+    "rank": 331,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "computer",
+    "gender": "masculine",
+    "translation": "computer",
+    "rank": 332,
+    "patternNote": "Ends in consonant; usually masculine in Italian"
+  },
+  {
+    "word": "stupida",
+    "gender": "feminine",
+    "translation": "female equivalent of stupido",
+    "rank": 333,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "contatto",
+    "gender": "masculine",
+    "translation": "contact",
+    "rank": 334,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "pericolo",
+    "gender": "masculine",
+    "translation": "peril, danger",
+    "rank": 335,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "freddo",
+    "gender": "masculine",
+    "translation": "the cold",
+    "rank": 336,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "promesso",
+    "gender": "masculine",
+    "translation": "betrothed",
+    "rank": 337,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "esercito",
+    "gender": "masculine",
+    "translation": "army",
+    "rank": 338,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "guardia",
+    "gender": "feminine",
+    "translation": "guard",
+    "rank": 339,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "casino",
+    "gender": "masculine",
+    "translation": "brothel",
+    "rank": 340,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "buonanotte",
+    "gender": "feminine",
+    "translation": "an instance or circumstance in which one says good night",
+    "rank": 341,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "caccia",
+    "gender": "feminine",
+    "translation": "hunting; shooting",
+    "rank": 342,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "ballo",
+    "gender": "masculine",
+    "translation": "dance, ball",
+    "rank": 343,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "birra",
+    "gender": "feminine",
+    "translation": "beer",
+    "rank": 344,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "club",
+    "gender": "masculine",
+    "translation": "club",
+    "rank": 345,
+    "patternNote": "Ends in consonant; usually masculine in Italian"
+  },
+  {
+    "word": "governo",
+    "gender": "masculine",
+    "translation": "government, administration, rule",
+    "rank": 346,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "duro",
+    "gender": "masculine",
+    "translation": "hardness",
+    "rank": 347,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "cucina",
+    "gender": "feminine",
+    "translation": "kitchen",
+    "rank": 348,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "decisione",
+    "gender": "feminine",
+    "translation": "decision",
+    "rank": 349,
+    "patternNote": "Ends in -sione, always feminine"
+  },
+  {
+    "word": "anima",
+    "gender": "feminine",
+    "translation": "soul",
+    "rank": 350,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "forma",
+    "gender": "feminine",
+    "translation": "form",
+    "rank": 351,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "tornata",
+    "gender": "feminine",
+    "translation": "round",
+    "rank": 352,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "esempio",
+    "gender": "masculine",
+    "translation": "example",
+    "rank": 353,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "occasione",
+    "gender": "feminine",
+    "translation": "opportunity, chance, occasion, scope",
+    "rank": 354,
+    "patternNote": "Ends in -sione, always feminine"
+  },
+  {
+    "word": "droga",
+    "gender": "feminine",
+    "translation": "spice",
+    "rank": 355,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "possibilità",
+    "gender": "feminine",
+    "translation": "possibility",
+    "rank": 356,
+    "patternNote": "Ends in -tà, always feminine"
+  },
+  {
+    "word": "cellulare",
+    "gender": "masculine",
+    "translation": "cellular phone, cell phone, cellular",
+    "rank": 357,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "necessario",
+    "gender": "masculine",
+    "translation": "necessary, what is necessary",
+    "rank": 358,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "ferma",
+    "gender": "feminine",
+    "translation": "service, draft",
+    "rank": 359,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "borsa",
+    "gender": "feminine",
+    "translation": "bag, handbag, purse, briefcase",
+    "rank": 360,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "palle",
+    "gender": "feminine",
+    "translation": "courage, bravery",
+    "rank": 361,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "nonno",
+    "gender": "masculine",
+    "translation": "grandfather",
+    "rank": 362,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "piena",
+    "gender": "feminine",
+    "translation": "flood, spate",
+    "rank": 363,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "attacco",
+    "gender": "masculine",
+    "translation": "attack, assault",
+    "rank": 364,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "reale",
+    "gender": "masculine",
+    "translation": "various gold and silver coins used in what is now Italy",
+    "rank": 365,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "inferno",
+    "gender": "masculine",
+    "translation": "hell",
+    "rank": 366,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "regina",
+    "gender": "feminine",
+    "translation": "queen",
+    "rank": 367,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "brutta",
+    "gender": "feminine",
+    "translation": "rough copy",
+    "rank": 368,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "braccio",
+    "gender": "masculine",
+    "translation": "arm",
+    "rank": 369,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "crimine",
+    "gender": "masculine",
+    "translation": "crime",
+    "rank": 370,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "chiesa",
+    "gender": "feminine",
+    "translation": "church",
+    "rank": 371,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "tenente",
+    "gender": "masculine",
+    "translation": "lieutenant",
+    "rank": 372,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "livello",
+    "gender": "masculine",
+    "translation": "level",
+    "rank": 373,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "lunga",
+    "gender": "feminine",
+    "translation": "long",
+    "rank": 374,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "spettacolo",
+    "gender": "masculine",
+    "translation": "show, performance, play, review",
+    "rank": 375,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "visita",
+    "gender": "feminine",
+    "translation": "visit",
+    "rank": 376,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "mica",
+    "gender": "feminine",
+    "translation": "breadcrumb",
+    "rank": 377,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "sinistra",
+    "gender": "feminine",
+    "translation": "left",
+    "rank": 378,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "processo",
+    "gender": "masculine",
+    "translation": "trial, action, lawsuit, suit, proceedings",
+    "rank": 379,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "mare",
+    "gender": "masculine",
+    "translation": "sea",
+    "rank": 380,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "direttore",
+    "gender": "masculine",
+    "translation": "manager, director",
+    "rank": 381,
+    "patternNote": "Ends in -ore, usually masculine"
+  },
+  {
+    "word": "classe",
+    "gender": "feminine",
+    "translation": "class",
+    "rank": 382,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "cambio",
+    "gender": "masculine",
+    "translation": "exchange",
+    "rank": 383,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "scorsa",
+    "gender": "feminine",
+    "translation": "a glance",
+    "rank": 384,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "bianco",
+    "gender": "masculine",
+    "translation": "white",
+    "rank": 385,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "tavolo",
+    "gender": "masculine",
+    "translation": "table, board, desk",
+    "rank": 386,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "stagione",
+    "gender": "feminine",
+    "translation": "season",
+    "rank": 387,
+    "patternNote": "Ends in -ione, always feminine"
+  },
+  {
+    "word": "dannazione",
+    "gender": "feminine",
+    "translation": "damnation",
+    "rank": 388,
+    "patternNote": "Ends in -zione, always feminine"
+  },
+  {
+    "word": "cavallo",
+    "gender": "masculine",
+    "translation": "horse",
+    "rank": 389,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "sergente",
+    "gender": "masculine",
+    "translation": "sergeant",
+    "rank": 390,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "episodio",
+    "gender": "masculine",
+    "translation": "episode",
+    "rank": 391,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "contento",
+    "gender": "masculine",
+    "translation": "that which is contained; content",
+    "rank": 392,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "inglese",
+    "gender": "masculine",
+    "translation": "English",
+    "rank": 393,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "volo",
+    "gender": "masculine",
+    "translation": "flight",
+    "rank": 394,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "differenza",
+    "gender": "feminine",
+    "translation": "difference",
+    "rank": 395,
+    "patternNote": "Ends in -enza, usually feminine"
+  },
+  {
+    "word": "codice",
+    "gender": "masculine",
+    "translation": "code",
+    "rank": 396,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "lato",
+    "gender": "masculine",
+    "translation": "side",
+    "rank": 397,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "hotel",
+    "gender": "masculine",
+    "translation": "hotel",
+    "rank": 398,
+    "patternNote": "Ends in consonant; usually masculine in Italian"
+  },
+  {
+    "word": "trovata",
+    "gender": "feminine",
+    "translation": "solution or quick fix used to get out of a difficult situation; expedient",
+    "rank": 399,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "carne",
+    "gender": "feminine",
+    "translation": "meat, flesh",
+    "rank": 400,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "star",
+    "gender": "feminine",
+    "translation": "star",
+    "rank": 401,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "umano",
+    "gender": "masculine",
+    "translation": "human being",
+    "rank": 402,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "caldo",
+    "gender": "masculine",
+    "translation": "heat",
+    "rank": 403,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "pelle",
+    "gender": "feminine",
+    "translation": "skin",
+    "rank": 404,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "interno",
+    "gender": "masculine",
+    "translation": "interior, inside",
+    "rank": 405,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "temo",
+    "gender": "masculine",
+    "translation": "helm, rudder",
+    "rank": 406,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "comandante",
+    "gender": "masculine",
+    "translation": "commander, commandant",
+    "rank": 407,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "pomeriggio",
+    "gender": "masculine",
+    "translation": "afternoon",
+    "rank": 408,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "mostro",
+    "gender": "masculine",
+    "translation": "monster",
+    "rank": 409,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "destra",
+    "gender": "feminine",
+    "translation": "right",
+    "rank": 410,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "luna",
+    "gender": "feminine",
+    "translation": "a natural satellite",
+    "rank": 411,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "affare",
+    "gender": "masculine",
+    "translation": "affair, matter",
+    "rank": 412,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "figliolo",
+    "gender": "masculine",
+    "translation": "son",
+    "rank": 413,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "passa",
+    "gender": "feminine",
+    "translation": "only used in e passa.",
+    "rank": 414,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "presente",
+    "gender": "masculine",
+    "translation": "present tense",
+    "rank": 415,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "arrivederci",
+    "gender": "masculine",
+    "translation": "goodbye, farewell",
+    "rank": 416,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "caffè",
+    "gender": "masculine",
+    "translation": "coffee",
+    "rank": 417,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "barca",
+    "gender": "feminine",
+    "translation": "boat",
+    "rank": 418,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "maledizione",
+    "gender": "feminine",
+    "translation": "curse, spell, malediction, bane",
+    "rank": 419,
+    "patternNote": "Ends in -zione, always feminine"
+  },
+  {
+    "word": "lezione",
+    "gender": "feminine",
+    "translation": "lesson",
+    "rank": 420,
+    "patternNote": "Ends in -zione, always feminine"
+  },
+  {
+    "word": "intero",
+    "gender": "masculine",
+    "translation": "whole",
+    "rank": 421,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "nord",
+    "gender": "masculine",
+    "translation": "north",
+    "rank": 422,
+    "patternNote": "Ends in consonant; usually masculine in Italian"
+  },
+  {
+    "word": "data",
+    "gender": "feminine",
+    "translation": "date",
+    "rank": 423,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "treno",
+    "gender": "masculine",
+    "translation": "train",
+    "rank": 424,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "radio",
+    "gender": "masculine",
+    "translation": "radius",
+    "rank": 425,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "comune",
+    "gender": "masculine",
+    "translation": "majority, most",
+    "rank": 426,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "cattivo",
+    "gender": "masculine",
+    "translation": "villain, bad guy",
+    "rank": 427,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "bomba",
+    "gender": "feminine",
+    "translation": "bomb",
+    "rank": 428,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "periodo",
+    "gender": "masculine",
+    "translation": "period, time, span, run",
+    "rank": 429,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "energia",
+    "gender": "feminine",
+    "translation": "energy",
+    "rank": 430,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "segno",
+    "gender": "masculine",
+    "translation": "sign",
+    "rank": 431,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "speranza",
+    "gender": "feminine",
+    "translation": "hope",
+    "rank": 432,
+    "patternNote": "Ends in -anza, usually feminine"
+  },
+  {
+    "word": "rischio",
+    "gender": "masculine",
+    "translation": "risk, chance, hazard, peril, danger",
+    "rank": 433,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "rosso",
+    "gender": "masculine",
+    "translation": "red",
+    "rank": 434,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "tocca",
+    "gender": "feminine",
+    "translation": "type of sacred trimming, like a chevron, woven with metallic foil and hemp",
+    "rank": 435,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "operazione",
+    "gender": "feminine",
+    "translation": "operation",
+    "rank": 436,
+    "patternNote": "Ends in -zione, always feminine"
+  },
+  {
+    "word": "gamba",
+    "gender": "feminine",
+    "translation": "leg",
+    "rank": 437,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "biglietto",
+    "gender": "masculine",
+    "translation": "ticket",
+    "rank": 438,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "ufficiale",
+    "gender": "masculine",
+    "translation": "officer",
+    "rank": 439,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "pressione",
+    "gender": "feminine",
+    "translation": "pressure",
+    "rank": 440,
+    "patternNote": "Ends in -sione, always feminine"
+  },
+  {
+    "word": "seguito",
+    "gender": "masculine",
+    "translation": "sequel, rest, follow-up, continuation",
+    "rank": 441,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "maestro",
+    "gender": "masculine",
+    "translation": "teacher",
+    "rank": 442,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "benvenuto",
+    "gender": "masculine",
+    "translation": "welcome",
+    "rank": 443,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "offerta",
+    "gender": "feminine",
+    "translation": "offer",
+    "rank": 444,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "vite",
+    "gender": "feminine",
+    "translation": "screw",
+    "rank": 445,
+    "patternNote": "Medical ending -ite, usually feminine"
+  },
+  {
+    "word": "scherzo",
+    "gender": "masculine",
+    "translation": "joke, jest, trick, hoax, frolic",
+    "rank": 446,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "finta",
+    "gender": "feminine",
+    "translation": "affectation, simulation",
+    "rank": 447,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "testimone",
+    "gender": "masculine",
+    "translation": "baton",
+    "rank": 448,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "banca",
+    "gender": "feminine",
+    "translation": "bank",
+    "rank": 449,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "indirizzo",
+    "gender": "masculine",
+    "translation": "address",
+    "rank": 450,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "esperienza",
+    "gender": "feminine",
+    "translation": "experience",
+    "rank": 451,
+    "patternNote": "Ends in -enza, usually feminine"
+  },
+  {
+    "word": "portata",
+    "gender": "feminine",
+    "translation": "course, plate",
+    "rank": 452,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "messa",
+    "gender": "feminine",
+    "translation": "mass",
+    "rank": 453,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "scorso",
+    "gender": "masculine",
+    "translation": "past",
+    "rank": 454,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "pianeta",
+    "gender": "masculine",
+    "translation": "planet",
+    "rank": 455,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "serie",
+    "gender": "feminine",
+    "translation": "series",
+    "rank": 456,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "porca",
+    "gender": "feminine",
+    "translation": "the ridge between two furrows; balk",
+    "rank": 457,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "guida",
+    "gender": "feminine",
+    "translation": "guide",
+    "rank": 458,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "prezzo",
+    "gender": "masculine",
+    "translation": "price",
+    "rank": 459,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "ritorno",
+    "gender": "masculine",
+    "translation": "return",
+    "rank": 460,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "passaggio",
+    "gender": "masculine",
+    "translation": "passage, passing, gap",
+    "rank": 461,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "progetto",
+    "gender": "masculine",
+    "translation": "plan, project, design, scheme, layout",
+    "rank": 462,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "danno",
+    "gender": "masculine",
+    "translation": "damage, harm, injury",
+    "rank": 463,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "ragazzino",
+    "gender": "masculine",
+    "translation": "young boy, little boy, kid, (male) teenager, teenage boy",
+    "rank": 464,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "Tommy",
+    "gender": "masculine",
+    "translation": "Tommy, redcoat",
+    "rank": 465,
+    "patternNote": "Ends in consonant; usually masculine in Italian"
+  },
+  {
+    "word": "mossa",
+    "gender": "feminine",
+    "translation": "movement",
+    "rank": 466,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "finestra",
+    "gender": "feminine",
+    "translation": "window",
+    "rank": 467,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "destino",
+    "gender": "masculine",
+    "translation": "destiny, fate",
+    "rank": 468,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "frega",
+    "gender": "feminine",
+    "translation": "synonym of fregagione",
+    "rank": 469,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "edificio",
+    "gender": "masculine",
+    "translation": "building",
+    "rank": 470,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "colazione",
+    "gender": "feminine",
+    "translation": "breakfast",
+    "rank": 471,
+    "patternNote": "Ends in -zione, always feminine"
+  },
+  {
+    "word": "collo",
+    "gender": "masculine",
+    "translation": "neck",
+    "rank": 472,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "difesa",
+    "gender": "feminine",
+    "translation": "defence/defense",
+    "rank": 473,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "fiducia",
+    "gender": "feminine",
+    "translation": "trust, faith",
+    "rank": 474,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "ristorante",
+    "gender": "masculine",
+    "translation": "restaurant",
+    "rank": 475,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "laboratorio",
+    "gender": "masculine",
+    "translation": "laboratory, lab",
+    "rank": 476,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "comando",
+    "gender": "masculine",
+    "translation": "order, command",
+    "rank": 477,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "arte",
+    "gender": "feminine",
+    "translation": "art",
+    "rank": 478,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "meta",
+    "gender": "feminine",
+    "translation": "destination",
+    "rank": 479,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "discorso",
+    "gender": "masculine",
+    "translation": "speech, address, discourse",
+    "rank": 480,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "nove",
+    "gender": "masculine",
+    "translation": "nine",
+    "rank": 481,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "segnale",
+    "gender": "masculine",
+    "translation": "signal, sign",
+    "rank": 482,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "carriera",
+    "gender": "feminine",
+    "translation": "career",
+    "rank": 483,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "muro",
+    "gender": "masculine",
+    "translation": "wall",
+    "rank": 484,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "dubbio",
+    "gender": "masculine",
+    "translation": "doubt, uncertainty, suspicion",
+    "rank": 485,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "dati",
+    "gender": "masculine",
+    "translation": "data",
+    "rank": 486,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "emergenza",
+    "gender": "feminine",
+    "translation": "emergency",
+    "rank": 487,
+    "patternNote": "Ends in -enza, usually feminine"
+  },
+  {
+    "word": "giustizia",
+    "gender": "feminine",
+    "translation": "justice, fairness, equity",
+    "rank": 488,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "odore",
+    "gender": "masculine",
+    "translation": "smell, odour, odor, aroma, fragrance, scent",
+    "rank": 489,
+    "patternNote": "Ends in -ore, usually masculine"
+  },
+  {
+    "word": "contrario",
+    "gender": "masculine",
+    "translation": "opposite, contrary",
+    "rank": 490,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "terzo",
+    "gender": "masculine",
+    "translation": "third",
+    "rank": 491,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "locale",
+    "gender": "masculine",
+    "translation": "room",
+    "rank": 492,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "battaglia",
+    "gender": "feminine",
+    "translation": "battle",
+    "rank": 493,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "sceriffo",
+    "gender": "masculine",
+    "translation": "sheriff",
+    "rank": 494,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "spirito",
+    "gender": "masculine",
+    "translation": "spirit, mind",
+    "rank": 495,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "bianca",
+    "gender": "feminine",
+    "translation": "female equivalent of bianco: white woman",
+    "rank": 496,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "lingua",
+    "gender": "feminine",
+    "translation": "tongue",
+    "rank": 497,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "dipartimento",
+    "gender": "masculine",
+    "translation": "department, district",
+    "rank": 498,
+    "patternNote": "Ends in -mento, always masculine"
+  },
+  {
+    "word": "massimo",
+    "gender": "masculine",
+    "translation": "maximum",
+    "rank": 499,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "riunione",
+    "gender": "feminine",
+    "translation": "meeting, assembly, conference",
+    "rank": 500,
+    "patternNote": "Ends in -ione, always feminine"
+  },
+  {
+    "word": "rumore",
+    "gender": "masculine",
+    "translation": "noise, sound",
+    "rank": 501,
+    "patternNote": "Ends in -ore, usually masculine"
+  },
+  {
+    "word": "torta",
+    "gender": "feminine",
+    "translation": "pie, tart, cake or similar",
+    "rank": 502,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "eroe",
+    "gender": "masculine",
+    "translation": "hero",
+    "rank": 503,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "turno",
+    "gender": "masculine",
+    "translation": "turn",
+    "rank": 504,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "fiori",
+    "gender": "masculine",
+    "translation": "clubs",
+    "rank": 505,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "furgone",
+    "gender": "masculine",
+    "translation": "van",
+    "rank": 506,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "coppia",
+    "gender": "feminine",
+    "translation": "couple",
+    "rank": 507,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "pausa",
+    "gender": "feminine",
+    "translation": "pause, break, stop, interval",
+    "rank": 508,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "memoria",
+    "gender": "feminine",
+    "translation": "memory, recall",
+    "rank": 509,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "naso",
+    "gender": "masculine",
+    "translation": "nose",
+    "rank": 510,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "nemico",
+    "gender": "masculine",
+    "translation": "enemy, foe",
+    "rank": 511,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "colonnello",
+    "gender": "masculine",
+    "translation": "colonel",
+    "rank": 512,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "palla",
+    "gender": "feminine",
+    "translation": "ball",
+    "rank": 513,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "giovani",
+    "gender": "masculine",
+    "translation": "The young - young people",
+    "rank": 514,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "costa",
+    "gender": "feminine",
+    "translation": "meanings related to the literal sense:",
+    "rank": 515,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "scatola",
+    "gender": "feminine",
+    "translation": "box",
+    "rank": 516,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "albero",
+    "gender": "masculine",
+    "translation": "tree",
+    "rank": 517,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "tribunale",
+    "gender": "masculine",
+    "translation": "court",
+    "rank": 518,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "razza",
+    "gender": "feminine",
+    "translation": "race, breed",
+    "rank": 519,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "anello",
+    "gender": "masculine",
+    "translation": "ring",
+    "rank": 520,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "piede",
+    "gender": "masculine",
+    "translation": "foot",
+    "rank": 521,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "ferita",
+    "gender": "feminine",
+    "translation": "injury",
+    "rank": 522,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "ferito",
+    "gender": "masculine",
+    "translation": "a wounded or injured person",
+    "rank": 523,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "arresto",
+    "gender": "masculine",
+    "translation": "arrest",
+    "rank": 524,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "averla",
+    "gender": "feminine",
+    "translation": "shrike",
+    "rank": 525,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "soldato",
+    "gender": "masculine",
+    "translation": "soldier",
+    "rank": 526,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "natura",
+    "gender": "feminine",
+    "translation": "nature",
+    "rank": 527,
+    "patternNote": "Ends in -tura, usually feminine"
+  },
+  {
+    "word": "colore",
+    "gender": "masculine",
+    "translation": "color/colour",
+    "rank": 528,
+    "patternNote": "Ends in -ore, usually masculine"
+  },
+  {
+    "word": "basso",
+    "gender": "masculine",
+    "translation": "bottom, lower part",
+    "rank": 529,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "preferito",
+    "gender": "masculine",
+    "translation": "favourite/favorite, darling, pet",
+    "rank": 530,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "professore",
+    "gender": "masculine",
+    "translation": "teacher, schoolteacher, schoolmaster, master, professor, lecturer",
+    "rank": 531,
+    "patternNote": "Ends in -ore, usually masculine"
+  },
+  {
+    "word": "fidanzato",
+    "gender": "masculine",
+    "translation": "fiancé",
+    "rank": 532,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "sensazione",
+    "gender": "feminine",
+    "translation": "sensation, feeling",
+    "rank": 533,
+    "patternNote": "Ends in -zione, always feminine"
+  },
+  {
+    "word": "compito",
+    "gender": "masculine",
+    "translation": "job, task",
+    "rank": 534,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "stronza",
+    "gender": "feminine",
+    "translation": "female equivalent of stronzo",
+    "rank": 535,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "corte",
+    "gender": "feminine",
+    "translation": "courtyard",
+    "rank": 536,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "pesce",
+    "gender": "masculine",
+    "translation": "fish",
+    "rank": 537,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "obiettivo",
+    "gender": "masculine",
+    "translation": "objective",
+    "rank": 538,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "conta",
+    "gender": "feminine",
+    "translation": "count, counting",
+    "rank": 539,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "accesso",
+    "gender": "masculine",
+    "translation": "access, admittance, approach",
+    "rank": 540,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "breve",
+    "gender": "feminine",
+    "translation": "short",
+    "rank": 541,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "isola",
+    "gender": "feminine",
+    "translation": "island, isle",
+    "rank": 542,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "povero",
+    "gender": "masculine",
+    "translation": "poor man, pauper",
+    "rank": 543,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "opera",
+    "gender": "feminine",
+    "translation": "work",
+    "rank": 544,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "bacio",
+    "gender": "masculine",
+    "translation": "kiss",
+    "rank": 545,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "bordo",
+    "gender": "masculine",
+    "translation": "edge, border, margin, hem, rim",
+    "rank": 546,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "sbaglio",
+    "gender": "masculine",
+    "translation": "mistake, failure, goof",
+    "rank": 547,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "verde",
+    "gender": "masculine",
+    "translation": "green",
+    "rank": 548,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "fianco",
+    "gender": "masculine",
+    "translation": "flank, haunch",
+    "rank": 549,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "metà",
+    "gender": "feminine",
+    "translation": "half",
+    "rank": 550,
+    "patternNote": "Ends in -tà, always feminine"
+  },
+  {
+    "word": "continuo",
+    "gender": "masculine",
+    "translation": "that which has continuity or continuousness",
+    "rank": 551,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "peso",
+    "gender": "masculine",
+    "translation": "weight",
+    "rank": 552,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "stile",
+    "gender": "masculine",
+    "translation": "style",
+    "rank": 553,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "corsa",
+    "gender": "feminine",
+    "translation": "run, running",
+    "rank": 554,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "entrata",
+    "gender": "feminine",
+    "translation": "the act of entering; entry, entrance, arrival, admission",
+    "rank": 555,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "soluzione",
+    "gender": "feminine",
+    "translation": "solution",
+    "rank": 556,
+    "patternNote": "Ends in -zione, always feminine"
+  },
+  {
+    "word": "Maria",
+    "gender": "feminine",
+    "translation": "cannabis, marijuana",
+    "rank": 557,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "contratto",
+    "gender": "masculine",
+    "translation": "contract, agreement, deed",
+    "rank": 558,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "arrabbiata",
+    "gender": "feminine",
+    "translation": "a rage, an act of getting angry",
+    "rank": 559,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "retro",
+    "gender": "masculine",
+    "translation": "back, rear, reverse",
+    "rank": 560,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "meraviglioso",
+    "gender": "masculine",
+    "translation": "the marvellous, the supernatural",
+    "rank": 561,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "sveglia",
+    "gender": "feminine",
+    "translation": "waking up, waking up time",
+    "rank": 562,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "creato",
+    "gender": "masculine",
+    "translation": "creation",
+    "rank": 563,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "scopo",
+    "gender": "masculine",
+    "translation": "aim, end, goal",
+    "rank": 564,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "coltello",
+    "gender": "masculine",
+    "translation": "knife",
+    "rank": 565,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "fila",
+    "gender": "feminine",
+    "translation": "line, rank",
+    "rank": 566,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "magia",
+    "gender": "feminine",
+    "translation": "magic",
+    "rank": 567,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "effetto",
+    "gender": "masculine",
+    "translation": "effect",
+    "rank": 568,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "procuratore",
+    "gender": "masculine",
+    "translation": "someone who holds power of attorney",
+    "rank": 569,
+    "patternNote": "Ends in -ore, usually masculine"
+  },
+  {
+    "word": "centrale",
+    "gender": "feminine",
+    "translation": "head office",
+    "rank": 570,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "azione",
+    "gender": "feminine",
+    "translation": "action, deed",
+    "rank": 571,
+    "patternNote": "Ends in -zione, always feminine"
+  },
+  {
+    "word": "principe",
+    "gender": "masculine",
+    "translation": "prince",
+    "rank": 572,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "cadavere",
+    "gender": "masculine",
+    "translation": "corpse, body, cadaver",
+    "rank": 573,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "chiusa",
+    "gender": "feminine",
+    "translation": "enclosure",
+    "rank": 574,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "fede",
+    "gender": "feminine",
+    "translation": "faith, belief",
+    "rank": 575,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "riuscita",
+    "gender": "feminine",
+    "translation": "result, outcome",
+    "rank": 576,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "stampa",
+    "gender": "feminine",
+    "translation": "press",
+    "rank": 577,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "debole",
+    "gender": "masculine",
+    "translation": "weakness",
+    "rank": 578,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "ridicolo",
+    "gender": "masculine",
+    "translation": "ridiculousness",
+    "rank": 579,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "Adam",
+    "gender": "masculine",
+    "translation": "ecstasy",
+    "rank": 580,
+    "patternNote": "Ends in consonant; usually masculine in Italian"
+  },
+  {
+    "word": "francese",
+    "gender": "masculine",
+    "translation": "French",
+    "rank": 581,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "taxi",
+    "gender": "masculine",
+    "translation": "taxi",
+    "rank": 582,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "peggiore",
+    "gender": "masculine",
+    "translation": "the worst",
+    "rank": 583,
+    "patternNote": "Ends in -ore, usually masculine"
+  },
+  {
+    "word": "angolo",
+    "gender": "masculine",
+    "translation": "angle, corner",
+    "rank": 584,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "latte",
+    "gender": "masculine",
+    "translation": "milk",
+    "rank": 585,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "buio",
+    "gender": "masculine",
+    "translation": "darkness, dark",
+    "rank": 586,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "malattia",
+    "gender": "feminine",
+    "translation": "illness, sickness, disease, ailment",
+    "rank": 587,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "gatto",
+    "gender": "masculine",
+    "translation": "cat",
+    "rank": 588,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "estate",
+    "gender": "feminine",
+    "translation": "summer",
+    "rank": 589,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "scomparsa",
+    "gender": "feminine",
+    "translation": "disappearance, vanishing",
+    "rank": 590,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "fiume",
+    "gender": "masculine",
+    "translation": "river",
+    "rank": 591,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "schiena",
+    "gender": "feminine",
+    "translation": "back",
+    "rank": 592,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "sindaco",
+    "gender": "masculine",
+    "translation": "mayor",
+    "rank": 593,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "reso",
+    "gender": "masculine",
+    "translation": "return",
+    "rank": 594,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "campagna",
+    "gender": "feminine",
+    "translation": "rural area: country, countryside",
+    "rank": 595,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "paga",
+    "gender": "feminine",
+    "translation": "pay",
+    "rank": 596,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "coglione",
+    "gender": "masculine",
+    "translation": "testicle",
+    "rank": 597,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "importanza",
+    "gender": "feminine",
+    "translation": "importance, consequence, significance",
+    "rank": 598,
+    "patternNote": "Ends in -anza, usually feminine"
+  },
+  {
+    "word": "particolare",
+    "gender": "masculine",
+    "translation": "detail, particular",
+    "rank": 599,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "piani",
+    "gender": "masculine",
+    "translation": "plans",
+    "rank": 600,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "richiesta",
+    "gender": "feminine",
+    "translation": "request, demand, claim, call",
+    "rank": 601,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "principale",
+    "gender": "masculine",
+    "translation": "boss",
+    "rank": 602,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "faccenda",
+    "gender": "feminine",
+    "translation": "task, labour/labor",
+    "rank": 603,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "vento",
+    "gender": "masculine",
+    "translation": "wind",
+    "rank": 604,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "matto",
+    "gender": "masculine",
+    "translation": "madman",
+    "rank": 605,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "campione",
+    "gender": "masculine",
+    "translation": "champion, ace, master",
+    "rank": 606,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "braccia",
+    "gender": "feminine",
+    "translation": "brace",
+    "rank": 607,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "mercato",
+    "gender": "masculine",
+    "translation": "market",
+    "rank": 608,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "valore",
+    "gender": "masculine",
+    "translation": "value",
+    "rank": 609,
+    "patternNote": "Ends in -ore, usually masculine"
+  },
+  {
+    "word": "drink",
+    "gender": "masculine",
+    "translation": "drink",
+    "rank": 610,
+    "patternNote": "Ends in consonant; usually masculine in Italian"
+  },
+  {
+    "word": "principessa",
+    "gender": "feminine",
+    "translation": "princess",
+    "rank": 611,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "bellezza",
+    "gender": "feminine",
+    "translation": "beauty",
+    "rank": 612,
+    "patternNote": "Ends in -ezza, always feminine"
+  },
+  {
+    "word": "buco",
+    "gender": "masculine",
+    "translation": "hole",
+    "rank": 613,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "conversazione",
+    "gender": "feminine",
+    "translation": "conversation, talk, interview",
+    "rank": 614,
+    "patternNote": "Ends in -zione, always feminine"
+  },
+  {
+    "word": "attesa",
+    "gender": "feminine",
+    "translation": "waiting, wait",
+    "rank": 615,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "pensiero",
+    "gender": "masculine",
+    "translation": "thought",
+    "rank": 616,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "conoscenza",
+    "gender": "feminine",
+    "translation": "knowledge, cognition",
+    "rank": 617,
+    "patternNote": "Ends in -enza, usually feminine"
+  },
+  {
+    "word": "ponte",
+    "gender": "masculine",
+    "translation": "bridge",
+    "rank": 618,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "malato",
+    "gender": "masculine",
+    "translation": "patient, sick person, invalid",
+    "rank": 619,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "sedia",
+    "gender": "feminine",
+    "translation": "chair",
+    "rank": 620,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "finale",
+    "gender": "masculine",
+    "translation": "end, ending, conclusion",
+    "rank": 621,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "ghiaccio",
+    "gender": "masculine",
+    "translation": "ice",
+    "rank": 622,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "bottiglia",
+    "gender": "feminine",
+    "translation": "bottle",
+    "rank": 623,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "indagine",
+    "gender": "feminine",
+    "translation": "investigation, inquiry, probe, enquiry",
+    "rank": 624,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "passata",
+    "gender": "feminine",
+    "translation": "glance, look",
+    "rank": 625,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "super",
+    "gender": "masculine",
+    "translation": "the best",
+    "rank": 626,
+    "patternNote": "Ends in consonant; usually masculine in Italian"
+  },
+  {
+    "word": "tiro",
+    "gender": "masculine",
+    "translation": "pull, tug, draught/draft",
+    "rank": 627,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "sguardo",
+    "gender": "masculine",
+    "translation": "glance, look",
+    "rank": 628,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "perdita",
+    "gender": "feminine",
+    "translation": "loss, waste, deprivation",
+    "rank": 629,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "camminare",
+    "gender": "masculine",
+    "translation": "walking",
+    "rank": 630,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "pratica",
+    "gender": "feminine",
+    "translation": "practice",
+    "rank": 631,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "villaggio",
+    "gender": "masculine",
+    "translation": "village, hamlet",
+    "rank": 632,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "fantasma",
+    "gender": "masculine",
+    "translation": "ghost, spectre",
+    "rank": 633,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "ispettore",
+    "gender": "masculine",
+    "translation": "inspector, supervisor, surveyor, assessor",
+    "rank": 634,
+    "patternNote": "Ends in -ore, usually masculine"
+  },
+  {
+    "word": "teoria",
+    "gender": "feminine",
+    "translation": "theory",
+    "rank": 635,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "dovere",
+    "gender": "masculine",
+    "translation": "duty",
+    "rank": 636,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "camion",
+    "gender": "masculine",
+    "translation": "lorry",
+    "rank": 637,
+    "patternNote": "Ends in consonant; usually masculine in Italian"
+  },
+  {
+    "word": "parco",
+    "gender": "masculine",
+    "translation": "park, garden",
+    "rank": 638,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "palazzo",
+    "gender": "masculine",
+    "translation": "a royal palace",
+    "rank": 639,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "privato",
+    "gender": "masculine",
+    "translation": "private person, private citizen",
+    "rank": 640,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "troia",
+    "gender": "feminine",
+    "translation": "sow",
+    "rank": 641,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "area",
+    "gender": "feminine",
+    "translation": "area, surface",
+    "rank": 642,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "accusa",
+    "gender": "feminine",
+    "translation": "accusation",
+    "rank": 643,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "martin",
+    "gender": "masculine",
+    "translation": "only used in martin pescatore",
+    "rank": 644,
+    "patternNote": "Ends in consonant; usually masculine in Italian"
+  },
+  {
+    "word": "fidanzata",
+    "gender": "feminine",
+    "translation": "fiancée",
+    "rank": 645,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "pista",
+    "gender": "feminine",
+    "translation": "track, trail, scent, clue",
+    "rank": 646,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "terza",
+    "gender": "feminine",
+    "translation": "third",
+    "rank": 647,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "desiderio",
+    "gender": "masculine",
+    "translation": "wish, desire, longing",
+    "rank": 648,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "ubriaco",
+    "gender": "masculine",
+    "translation": "a drunk person, a blotto",
+    "rank": 649,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "angelo",
+    "gender": "masculine",
+    "translation": "angel",
+    "rank": 650,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "popolo",
+    "gender": "masculine",
+    "translation": "people",
+    "rank": 651,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "infermiera",
+    "gender": "feminine",
+    "translation": "female nurse",
+    "rank": 652,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "altezza",
+    "gender": "feminine",
+    "translation": "height, altitude, tallness",
+    "rank": 653,
+    "patternNote": "Ends in -ezza, always feminine"
+  },
+  {
+    "word": "seduta",
+    "gender": "feminine",
+    "translation": "session, meeting, sitting",
+    "rank": 654,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "minaccia",
+    "gender": "feminine",
+    "translation": "threat, menace",
+    "rank": 655,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "nazionale",
+    "gender": "feminine",
+    "translation": "national sports team",
+    "rank": 656,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "genio",
+    "gender": "masculine",
+    "translation": "genius",
+    "rank": 657,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "caduto",
+    "gender": "masculine",
+    "translation": "dead soldier",
+    "rank": 658,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "cinema",
+    "gender": "masculine",
+    "translation": "cinema",
+    "rank": 659,
+    "patternNote": "Greek-origin -ema words are masculine"
+  },
+  {
+    "word": "tetto",
+    "gender": "masculine",
+    "translation": "roof",
+    "rank": 660,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "stella",
+    "gender": "feminine",
+    "translation": "star",
+    "rank": 661,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "media",
+    "gender": "feminine",
+    "translation": "average, mean",
+    "rank": 662,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "politica",
+    "gender": "feminine",
+    "translation": "politics",
+    "rank": 663,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "suono",
+    "gender": "masculine",
+    "translation": "sound",
+    "rank": 664,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "copertura",
+    "gender": "feminine",
+    "translation": "covering",
+    "rank": 665,
+    "patternNote": "Ends in -tura, usually feminine"
+  },
+  {
+    "word": "cancro",
+    "gender": "masculine",
+    "translation": "cancer",
+    "rank": 666,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "compagno",
+    "gender": "masculine",
+    "translation": "mate, companion, partner, live-in partner, fellow, friend, pal, pardner",
+    "rank": 667,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "merito",
+    "gender": "masculine",
+    "translation": "merit",
+    "rank": 668,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "società",
+    "gender": "feminine",
+    "translation": "society, community",
+    "rank": 669,
+    "patternNote": "Ends in -tà, always feminine"
+  },
+  {
+    "word": "spada",
+    "gender": "feminine",
+    "translation": "sword",
+    "rank": 670,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "ragazzina",
+    "gender": "feminine",
+    "translation": "young girl, little girl, kid, (female) teenager, teenage girl",
+    "rank": 671,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "bicchiere",
+    "gender": "masculine",
+    "translation": "glass",
+    "rank": 672,
+    "patternNote": "Agent ending -iere, masculine"
+  },
+  {
+    "word": "autobus",
+    "gender": "masculine",
+    "translation": "bus",
+    "rank": 673,
+    "patternNote": "Ends in consonant; usually masculine in Italian"
+  },
+  {
+    "word": "vuoto",
+    "gender": "masculine",
+    "translation": "gap",
+    "rank": 674,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "animale",
+    "gender": "masculine",
+    "translation": "animal",
+    "rank": 675,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "azienda",
+    "gender": "feminine",
+    "translation": "firm, company, business, concern, establishment",
+    "rank": 676,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "sabato",
+    "gender": "masculine",
+    "translation": "Saturday",
+    "rank": 677,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "pollo",
+    "gender": "masculine",
+    "translation": "chicken",
+    "rank": 678,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "spiaggia",
+    "gender": "feminine",
+    "translation": "beach",
+    "rank": 679,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "rotta",
+    "gender": "feminine",
+    "translation": "course, route, lane",
+    "rank": 680,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "telefonata",
+    "gender": "feminine",
+    "translation": "a phone call",
+    "rank": 681,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "completo",
+    "gender": "masculine",
+    "translation": "suit",
+    "rank": 682,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "rosa",
+    "gender": "feminine",
+    "translation": "rose",
+    "rank": 683,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "mezza",
+    "gender": "feminine",
+    "translation": "half-hour",
+    "rank": 684,
+    "patternNote": "Ends in -ezza, always feminine"
+  },
+  {
+    "word": "innamorato",
+    "gender": "masculine",
+    "translation": "lover, boyfriend, sweetheart",
+    "rank": 685,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "doccia",
+    "gender": "feminine",
+    "translation": "shower",
+    "rank": 686,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "stanca",
+    "gender": "feminine",
+    "translation": "standstill, deadlock, grind",
+    "rank": 687,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "arrestato",
+    "gender": "masculine",
+    "translation": "person under arrest",
+    "rank": 688,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "venduto",
+    "gender": "masculine",
+    "translation": "a sellout",
+    "rank": 689,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "gara",
+    "gender": "feminine",
+    "translation": "competition",
+    "rank": 690,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "orologio",
+    "gender": "masculine",
+    "translation": "clock, watch",
+    "rank": 691,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "erba",
+    "gender": "feminine",
+    "translation": "grass",
+    "rank": 692,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "viso",
+    "gender": "masculine",
+    "translation": "face",
+    "rank": 693,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "distanza",
+    "gender": "feminine",
+    "translation": "distance, interval",
+    "rank": 694,
+    "patternNote": "Ends in -anza, usually feminine"
+  },
+  {
+    "word": "alice",
+    "gender": "feminine",
+    "translation": "anchovy",
+    "rank": 695,
+    "patternNote": "Feminine agent ending -ice"
+  },
+  {
+    "word": "universo",
+    "gender": "masculine",
+    "translation": "universe",
+    "rank": 696,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "esame",
+    "gender": "masculine",
+    "translation": "examination, test",
+    "rank": 697,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "quartiere",
+    "gender": "masculine",
+    "translation": "quarter",
+    "rank": 698,
+    "patternNote": "Agent ending -iere, masculine"
+  },
+  {
+    "word": "partito",
+    "gender": "masculine",
+    "translation": "party, political party",
+    "rank": 699,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "cappello",
+    "gender": "masculine",
+    "translation": "hat",
+    "rank": 700,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "pagina",
+    "gender": "feminine",
+    "translation": "page",
+    "rank": 701,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "mostra",
+    "gender": "feminine",
+    "translation": "exhibition, show",
+    "rank": 702,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "giardino",
+    "gender": "masculine",
+    "translation": "garden",
+    "rank": 703,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "taglio",
+    "gender": "masculine",
+    "translation": "cut, slit, slash, incision",
+    "rank": 704,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "potente",
+    "gender": "masculine",
+    "translation": "powerful person",
+    "rank": 705,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "killer",
+    "gender": "masculine",
+    "translation": "hitman",
+    "rank": 706,
+    "patternNote": "Ends in consonant; usually masculine in Italian"
+  },
+  {
+    "word": "paradiso",
+    "gender": "masculine",
+    "translation": "paradise",
+    "rank": 707,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "rabbia",
+    "gender": "feminine",
+    "translation": "anger, chafe",
+    "rank": 708,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "fuga",
+    "gender": "feminine",
+    "translation": "flight, escape",
+    "rank": 709,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "termine",
+    "gender": "masculine",
+    "translation": "end, close",
+    "rank": 710,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "vittoria",
+    "gender": "feminine",
+    "translation": "victory",
+    "rank": 711,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "assurdo",
+    "gender": "masculine",
+    "translation": "absurdity",
+    "rank": 712,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "giornale",
+    "gender": "masculine",
+    "translation": "newspaper",
+    "rank": 713,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "talento",
+    "gender": "masculine",
+    "translation": "wish, will, desire, longing",
+    "rank": 714,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "vicina",
+    "gender": "feminine",
+    "translation": "female equivalent of vicino",
+    "rank": 715,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "grossa",
+    "gender": "feminine",
+    "translation": "gross",
+    "rank": 716,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "umana",
+    "gender": "feminine",
+    "translation": "female equivalent of umano",
+    "rank": 717,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "corrente",
+    "gender": "feminine",
+    "translation": "current",
+    "rank": 718,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "libertà",
+    "gender": "feminine",
+    "translation": "freedom; liberty",
+    "rank": 719,
+    "patternNote": "Ends in -tà, always feminine"
+  },
+  {
+    "word": "doppio",
+    "gender": "masculine",
+    "translation": "double",
+    "rank": 720,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "immagine",
+    "gender": "feminine",
+    "translation": "image",
+    "rank": 721,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "allarme",
+    "gender": "masculine",
+    "translation": "alarm",
+    "rank": 722,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "militare",
+    "gender": "masculine",
+    "translation": "serviceman",
+    "rank": 723,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "padrone",
+    "gender": "masculine",
+    "translation": "master",
+    "rank": 724,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "amor",
+    "gender": "masculine",
+    "translation": "apocopic form of amore",
+    "rank": 725,
+    "patternNote": "Ends in consonant; usually masculine in Italian"
+  },
+  {
+    "word": "preparato",
+    "gender": "masculine",
+    "translation": "preparation",
+    "rank": 726,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "direzione",
+    "gender": "feminine",
+    "translation": "direction, way, course",
+    "rank": 727,
+    "patternNote": "Ends in -zione, always feminine"
+  },
+  {
+    "word": "dito",
+    "gender": "masculine",
+    "translation": "finger",
+    "rank": 728,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "vendetta",
+    "gender": "feminine",
+    "translation": "revenge, vengeance",
+    "rank": 729,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "invitato",
+    "gender": "masculine",
+    "translation": "guest",
+    "rank": 730,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "regola",
+    "gender": "feminine",
+    "translation": "rule, norm, code, principle, order",
+    "rank": 731,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "zero",
+    "gender": "masculine",
+    "translation": "zero",
+    "rank": 732,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "ruolo",
+    "gender": "masculine",
+    "translation": "role",
+    "rank": 733,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "mattino",
+    "gender": "masculine",
+    "translation": "morning",
+    "rank": 734,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "funerale",
+    "gender": "masculine",
+    "translation": "funeral",
+    "rank": 735,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "ministro",
+    "gender": "masculine",
+    "translation": "minister",
+    "rank": 736,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "domenica",
+    "gender": "feminine",
+    "translation": "Sunday",
+    "rank": 737,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "spia",
+    "gender": "feminine",
+    "translation": "spy, bug",
+    "rank": 738,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "dritto",
+    "gender": "masculine",
+    "translation": "right side",
+    "rank": 739,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "presenza",
+    "gender": "feminine",
+    "translation": "presence",
+    "rank": 740,
+    "patternNote": "Ends in -enza, usually feminine"
+  },
+  {
+    "word": "atto",
+    "gender": "masculine",
+    "translation": "act, deed",
+    "rank": 741,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "vacanza",
+    "gender": "feminine",
+    "translation": "holiday",
+    "rank": 742,
+    "patternNote": "Ends in -anza, usually feminine"
+  },
+  {
+    "word": "medicina",
+    "gender": "feminine",
+    "translation": "medicine",
+    "rank": 743,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "informazione",
+    "gender": "feminine",
+    "translation": "information",
+    "rank": 744,
+    "patternNote": "Ends in -zione, always feminine"
+  },
+  {
+    "word": "accaduto",
+    "gender": "masculine",
+    "translation": "event, happening",
+    "rank": 745,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "violenza",
+    "gender": "feminine",
+    "translation": "violence",
+    "rank": 746,
+    "patternNote": "Ends in -enza, usually feminine"
+  },
+  {
+    "word": "articolo",
+    "gender": "masculine",
+    "translation": "article",
+    "rank": 747,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "caduta",
+    "gender": "feminine",
+    "translation": "fall",
+    "rank": 748,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "calmo",
+    "gender": "masculine",
+    "translation": "synonym of marza",
+    "rank": 749,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "cugino",
+    "gender": "masculine",
+    "translation": "a male cousin",
+    "rank": 750,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "povera",
+    "gender": "feminine",
+    "translation": "female equivalent of povero",
+    "rank": 751,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "sospetto",
+    "gender": "masculine",
+    "translation": "suspect",
+    "rank": 752,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "trappola",
+    "gender": "feminine",
+    "translation": "trap, snare, catch",
+    "rank": 753,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "lady",
+    "gender": "feminine",
+    "translation": "lady",
+    "rank": 754,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "giacca",
+    "gender": "feminine",
+    "translation": "jacket, coat",
+    "rank": 755,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "commesso",
+    "gender": "masculine",
+    "translation": "shop assistant",
+    "rank": 756,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "pugno",
+    "gender": "masculine",
+    "translation": "fist",
+    "rank": 757,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "opinione",
+    "gender": "feminine",
+    "translation": "opinion, mind, view, attitude",
+    "rank": 758,
+    "patternNote": "Ends in -ione, always feminine"
+  },
+  {
+    "word": "interesse",
+    "gender": "masculine",
+    "translation": "interest, concern",
+    "rank": 759,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "carico",
+    "gender": "masculine",
+    "translation": "load, loading, cargo",
+    "rank": 760,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "fastidio",
+    "gender": "masculine",
+    "translation": "trouble, bother, nuisance",
+    "rank": 761,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "premio",
+    "gender": "masculine",
+    "translation": "prize, award",
+    "rank": 762,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "battuta",
+    "gender": "feminine",
+    "translation": "witty remark, joke",
+    "rank": 763,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "profondo",
+    "gender": "masculine",
+    "translation": "depths",
+    "rank": 764,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "arrivi",
+    "gender": "masculine",
+    "translation": "arrivals",
+    "rank": 765,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "cella",
+    "gender": "feminine",
+    "translation": "cell",
+    "rank": 766,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "membro",
+    "gender": "masculine",
+    "translation": "member",
+    "rank": 767,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "lupo",
+    "gender": "masculine",
+    "translation": "wolf",
+    "rank": 768,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "lotta",
+    "gender": "feminine",
+    "translation": "fight, struggle",
+    "rank": 769,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "moto",
+    "gender": "feminine",
+    "translation": "clipping of motocicletta; motorcycle",
+    "rank": 770,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "percento",
+    "gender": "masculine",
+    "translation": "percent",
+    "rank": 771,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "amicizia",
+    "gender": "feminine",
+    "translation": "friendship",
+    "rank": 772,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "pulito",
+    "gender": "masculine",
+    "translation": "clean place",
+    "rank": 773,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "protezione",
+    "gender": "feminine",
+    "translation": "protection",
+    "rank": 774,
+    "patternNote": "Ends in -zione, always feminine"
+  },
+  {
+    "word": "disturbo",
+    "gender": "masculine",
+    "translation": "trouble, bother, inconvenience",
+    "rank": 775,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "assieme",
+    "gender": "masculine",
+    "translation": "synonym of",
+    "rank": 776,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "diretto",
+    "gender": "masculine",
+    "translation": "through train",
+    "rank": 777,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "pane",
+    "gender": "masculine",
+    "translation": "bread",
+    "rank": 778,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "city",
+    "gender": "feminine",
+    "translation": "city",
+    "rank": 779,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "aeroporto",
+    "gender": "masculine",
+    "translation": "airport, airfield",
+    "rank": 780,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "gloria",
+    "gender": "feminine",
+    "translation": "glory",
+    "rank": 781,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "terapia",
+    "gender": "feminine",
+    "translation": "therapy, treatment",
+    "rank": 782,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "santa",
+    "gender": "feminine",
+    "translation": "saint",
+    "rank": 783,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "disastro",
+    "gender": "masculine",
+    "translation": "disaster",
+    "rank": 784,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "sedere",
+    "gender": "masculine",
+    "translation": "bottom, butt, seat, buttocks, bum",
+    "rank": 785,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "versione",
+    "gender": "feminine",
+    "translation": "version",
+    "rank": 786,
+    "patternNote": "Ends in -sione, always feminine"
+  },
+  {
+    "word": "rete",
+    "gender": "feminine",
+    "translation": "net, mesh",
+    "rank": 787,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "ricco",
+    "gender": "masculine",
+    "translation": "rich man",
+    "rank": 788,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "gola",
+    "gender": "feminine",
+    "translation": "throat",
+    "rank": 789,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "fumo",
+    "gender": "masculine",
+    "translation": "smoke",
+    "rank": 790,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "crisi",
+    "gender": "feminine",
+    "translation": "crisis",
+    "rank": 791,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "nervoso",
+    "gender": "masculine",
+    "translation": "irritability, bad mood",
+    "rank": 792,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "minimo",
+    "gender": "masculine",
+    "translation": "minimum, the least",
+    "rank": 793,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "persa",
+    "gender": "feminine",
+    "translation": "synonym of maggiorana",
+    "rank": 794,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "traccia",
+    "gender": "feminine",
+    "translation": "trace",
+    "rank": 795,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "albergo",
+    "gender": "masculine",
+    "translation": "hotel, inn",
+    "rank": 796,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "incendio",
+    "gender": "masculine",
+    "translation": "fire, blaze",
+    "rank": 797,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "falso",
+    "gender": "masculine",
+    "translation": "forgery",
+    "rank": 798,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "polvere",
+    "gender": "feminine",
+    "translation": "dust, powder",
+    "rank": 799,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "gioia",
+    "gender": "feminine",
+    "translation": "joy, delight",
+    "rank": 800,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "fucile",
+    "gender": "masculine",
+    "translation": "long gun, rifle",
+    "rank": 801,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "maniera",
+    "gender": "feminine",
+    "translation": "manner, way",
+    "rank": 802,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "privata",
+    "gender": "feminine",
+    "translation": "female equivalent of privato",
+    "rank": 803,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "tentativo",
+    "gender": "masculine",
+    "translation": "attempt, try, effort, shot, endeavour/endeavor",
+    "rank": 804,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "weekend",
+    "gender": "masculine",
+    "translation": "weekend",
+    "rank": 805,
+    "patternNote": "Ends in consonant; usually masculine in Italian"
+  },
+  {
+    "word": "totale",
+    "gender": "masculine",
+    "translation": "total",
+    "rank": 806,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "trucco",
+    "gender": "masculine",
+    "translation": "makeup",
+    "rank": 807,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "lord",
+    "gender": "masculine",
+    "translation": "lord",
+    "rank": 808,
+    "patternNote": "Ends in consonant; usually masculine in Italian"
+  },
+  {
+    "word": "ambulanza",
+    "gender": "feminine",
+    "translation": "ambulance",
+    "rank": 809,
+    "patternNote": "Ends in -anza, usually feminine"
+  },
+  {
+    "word": "superiore",
+    "gender": "masculine",
+    "translation": "superior",
+    "rank": 810,
+    "patternNote": "Ends in -ore, usually masculine"
+  },
+  {
+    "word": "perdono",
+    "gender": "masculine",
+    "translation": "forgiveness, pardon",
+    "rank": 811,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "proprietario",
+    "gender": "masculine",
+    "translation": "owner, proprietary, proprietor, landlord",
+    "rank": 812,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "credito",
+    "gender": "masculine",
+    "translation": "credit",
+    "rank": 813,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "pizza",
+    "gender": "feminine",
+    "translation": "pizza",
+    "rank": 814,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "amato",
+    "gender": "masculine",
+    "translation": "beloved, sweetheart",
+    "rank": 815,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "quarto",
+    "gender": "masculine",
+    "translation": "quarter",
+    "rank": 816,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "movimento",
+    "gender": "masculine",
+    "translation": "movement",
+    "rank": 817,
+    "patternNote": "Ends in -mento, always masculine"
+  },
+  {
+    "word": "regno",
+    "gender": "masculine",
+    "translation": "kingdom",
+    "rank": 818,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "stomaco",
+    "gender": "masculine",
+    "translation": "stomach, tummy",
+    "rank": 819,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "analisi",
+    "gender": "feminine",
+    "translation": "analysis, testing, test",
+    "rank": 820,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "promessa",
+    "gender": "feminine",
+    "translation": "promise",
+    "rank": 821,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "dannato",
+    "gender": "masculine",
+    "translation": "damned soul",
+    "rank": 822,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "baby",
+    "gender": "masculine",
+    "translation": "child, baby, neonate",
+    "rank": 823,
+    "patternNote": "Ends in consonant; usually masculine in Italian"
+  },
+  {
+    "word": "abbandonato",
+    "gender": "masculine",
+    "translation": "foundling, orphan",
+    "rank": 824,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "cinese",
+    "gender": "masculine",
+    "translation": "Chinese",
+    "rank": 825,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "fonte",
+    "gender": "feminine",
+    "translation": "source, spring",
+    "rank": 826,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "divano",
+    "gender": "masculine",
+    "translation": "sofa, divan, settee, chesterfield, love seat",
+    "rank": 827,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "risultato",
+    "gender": "masculine",
+    "translation": "result, outcome, issue",
+    "rank": 828,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "scrivania",
+    "gender": "feminine",
+    "translation": "desk, writing desk, writing table, bonheur du jour",
+    "rank": 829,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "pavimento",
+    "gender": "masculine",
+    "translation": "floor",
+    "rank": 830,
+    "patternNote": "Ends in -mento, always masculine"
+  },
+  {
+    "word": "traffico",
+    "gender": "masculine",
+    "translation": "traffic",
+    "rank": 831,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "prestito",
+    "gender": "masculine",
+    "translation": "loan",
+    "rank": 832,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "sorriso",
+    "gender": "masculine",
+    "translation": "smile",
+    "rank": 833,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "proiettile",
+    "gender": "masculine",
+    "translation": "projectile",
+    "rank": 834,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "motore",
+    "gender": "masculine",
+    "translation": "engine, motor",
+    "rank": 835,
+    "patternNote": "Ends in -ore, usually masculine"
+  },
+  {
+    "word": "posta",
+    "gender": "feminine",
+    "translation": "mail, post",
+    "rank": 836,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "file",
+    "gender": "masculine",
+    "translation": "file",
+    "rank": 837,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "ingresso",
+    "gender": "masculine",
+    "translation": "entrance, hall",
+    "rank": 838,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "fido",
+    "gender": "masculine",
+    "translation": "a credit concession",
+    "rank": 839,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "piatto",
+    "gender": "masculine",
+    "translation": "plate",
+    "rank": 840,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "folle",
+    "gender": "masculine",
+    "translation": "bellows",
+    "rank": 841,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "proposta",
+    "gender": "feminine",
+    "translation": "proposal",
+    "rank": 842,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "virus",
+    "gender": "masculine",
+    "translation": "virus",
+    "rank": 843,
+    "patternNote": "Ends in consonant; usually masculine in Italian"
+  },
+  {
+    "word": "liberta",
+    "gender": "feminine",
+    "translation": "female equivalent of liberto: freedwoman",
+    "rank": 844,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "carter",
+    "gender": "masculine",
+    "translation": "chain guard",
+    "rank": 845,
+    "patternNote": "Ends in consonant; usually masculine in Italian"
+  },
+  {
+    "word": "frattempo",
+    "gender": "masculine",
+    "translation": "meantime",
+    "rank": 846,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "banda",
+    "gender": "feminine",
+    "translation": "side",
+    "rank": 847,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "esplosione",
+    "gender": "feminine",
+    "translation": "explosion, blast, burst",
+    "rank": 848,
+    "patternNote": "Ends in -sione, always feminine"
+  },
+  {
+    "word": "calcio",
+    "gender": "masculine",
+    "translation": "a kick",
+    "rank": 849,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "lago",
+    "gender": "masculine",
+    "translation": "lake",
+    "rank": 850,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "ascolto",
+    "gender": "masculine",
+    "translation": "listening",
+    "rank": 851,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "teatro",
+    "gender": "masculine",
+    "translation": "drama",
+    "rank": 852,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "ladro",
+    "gender": "masculine",
+    "translation": "thief, lift",
+    "rank": 853,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "pioggia",
+    "gender": "feminine",
+    "translation": "rain",
+    "rank": 854,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "debito",
+    "gender": "masculine",
+    "translation": "debt",
+    "rank": 855,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "taglia",
+    "gender": "feminine",
+    "translation": "size",
+    "rank": 856,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "pietra",
+    "gender": "feminine",
+    "translation": "stone",
+    "rank": 857,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "uccello",
+    "gender": "masculine",
+    "translation": "bird",
+    "rank": 858,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "sito",
+    "gender": "masculine",
+    "translation": "site, specifically:",
+    "rank": 859,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "maiale",
+    "gender": "masculine",
+    "translation": "pig",
+    "rank": 860,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "dubito",
+    "gender": "masculine",
+    "translation": "doubt",
+    "rank": 861,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "parcheggio",
+    "gender": "masculine",
+    "translation": "parking",
+    "rank": 862,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "camicia",
+    "gender": "feminine",
+    "translation": "shirt, dress shirt",
+    "rank": 863,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "comportamento",
+    "gender": "masculine",
+    "translation": "behaviour/behavior, conduct, ways, actions",
+    "rank": 864,
+    "patternNote": "Ends in -mento, always masculine"
+  },
+  {
+    "word": "montagna",
+    "gender": "feminine",
+    "translation": "mountain",
+    "rank": 865,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "formaggio",
+    "gender": "masculine",
+    "translation": "cheese",
+    "rank": 866,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "sparo",
+    "gender": "masculine",
+    "translation": "shot, gunshot",
+    "rank": 867,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "assunto",
+    "gender": "masculine",
+    "translation": "proposition",
+    "rank": 868,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "diretta",
+    "gender": "feminine",
+    "translation": "live broadcast",
+    "rank": 869,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "spazzatura",
+    "gender": "feminine",
+    "translation": "cleaning, sweep",
+    "rank": 870,
+    "patternNote": "Ends in -tura, usually feminine"
+  },
+  {
+    "word": "divorzio",
+    "gender": "masculine",
+    "translation": "divorce",
+    "rank": 871,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "innamorata",
+    "gender": "feminine",
+    "translation": "lover, girlfriend, sweetheart",
+    "rank": 872,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "tazza",
+    "gender": "feminine",
+    "translation": "cup, mug",
+    "rank": 873,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "agenzia",
+    "gender": "feminine",
+    "translation": "agency, bureau",
+    "rank": 874,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "volto",
+    "gender": "masculine",
+    "translation": "face",
+    "rank": 875,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "intervento",
+    "gender": "masculine",
+    "translation": "intervention",
+    "rank": 876,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "mucchio",
+    "gender": "masculine",
+    "translation": "heap, pile, crop",
+    "rank": 877,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "salto",
+    "gender": "masculine",
+    "translation": "jump, leap, spring, bound",
+    "rank": 878,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "team",
+    "gender": "masculine",
+    "translation": "team",
+    "rank": 879,
+    "patternNote": "Ends in consonant; usually masculine in Italian"
+  },
+  {
+    "word": "soccorso",
+    "gender": "masculine",
+    "translation": "help, aid, rescue, succour, assistance, relief",
+    "rank": 880,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "respiro",
+    "gender": "masculine",
+    "translation": "breath",
+    "rank": 881,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "giuria",
+    "gender": "feminine",
+    "translation": "jury",
+    "rank": 882,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "modello",
+    "gender": "masculine",
+    "translation": "model",
+    "rank": 883,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "panico",
+    "gender": "masculine",
+    "translation": "panic",
+    "rank": 884,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "ombra",
+    "gender": "feminine",
+    "translation": "shade, shadow",
+    "rank": 885,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "piscina",
+    "gender": "feminine",
+    "translation": "swimming pool",
+    "rank": 886,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "marina",
+    "gender": "feminine",
+    "translation": "coast",
+    "rank": 887,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "tavola",
+    "gender": "feminine",
+    "translation": "table",
+    "rank": 888,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "carica",
+    "gender": "feminine",
+    "translation": "position",
+    "rank": 889,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "pensione",
+    "gender": "feminine",
+    "translation": "pension",
+    "rank": 890,
+    "patternNote": "Ends in -sione, always feminine"
+  },
+  {
+    "word": "copia",
+    "gender": "feminine",
+    "translation": "copy",
+    "rank": 891,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "sorveglianza",
+    "gender": "feminine",
+    "translation": "supervision",
+    "rank": 892,
+    "patternNote": "Ends in -anza, usually feminine"
+  },
+  {
+    "word": "dichiarazione",
+    "gender": "feminine",
+    "translation": "declaration, announcement, statement, remark",
+    "rank": 893,
+    "patternNote": "Ends in -zione, always feminine"
+  },
+  {
+    "word": "limite",
+    "gender": "masculine",
+    "translation": "limit, limitation, bounds",
+    "rank": 894,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "bugia",
+    "gender": "feminine",
+    "translation": "lie, untruth",
+    "rank": 895,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "affitto",
+    "gender": "masculine",
+    "translation": "renting, hiring",
+    "rank": 896,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "evento",
+    "gender": "masculine",
+    "translation": "event",
+    "rank": 897,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "bugiardo",
+    "gender": "masculine",
+    "translation": "liar",
+    "rank": 898,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "governatore",
+    "gender": "masculine",
+    "translation": "governor",
+    "rank": 899,
+    "patternNote": "Ends in -ore, usually masculine"
+  },
+  {
+    "word": "dono",
+    "gender": "masculine",
+    "translation": "gift",
+    "rank": 900,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "moda",
+    "gender": "feminine",
+    "translation": "fashion, trend, style, vogue",
+    "rank": 901,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "petto",
+    "gender": "masculine",
+    "translation": "chest",
+    "rank": 902,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "custodia",
+    "gender": "feminine",
+    "translation": "care",
+    "rank": 903,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "impressione",
+    "gender": "feminine",
+    "translation": "feeling",
+    "rank": 904,
+    "patternNote": "Ends in -sione, always feminine"
+  },
+  {
+    "word": "strega",
+    "gender": "feminine",
+    "translation": "witch, hag",
+    "rank": 905,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "coso",
+    "gender": "masculine",
+    "translation": "thing",
+    "rank": 906,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "terreno",
+    "gender": "masculine",
+    "translation": "ground, land, terrain, country",
+    "rank": 907,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "tradito",
+    "gender": "masculine",
+    "translation": "betrayed man/person",
+    "rank": 908,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "neve",
+    "gender": "feminine",
+    "translation": "snow",
+    "rank": 909,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "gelato",
+    "gender": "masculine",
+    "translation": "ice cream, gelato",
+    "rank": 910,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "vergogna",
+    "gender": "feminine",
+    "translation": "shame, disgrace, discredit, scandal",
+    "rank": 911,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "castello",
+    "gender": "masculine",
+    "translation": "castle",
+    "rank": 912,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "pazienza",
+    "gender": "feminine",
+    "translation": "patience, endurance, forbearance",
+    "rank": 913,
+    "patternNote": "Ends in -enza, usually feminine"
+  },
+  {
+    "word": "sonno",
+    "gender": "masculine",
+    "translation": "the state of being asleep; sleep, slumber",
+    "rank": 914,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "nota",
+    "gender": "feminine",
+    "translation": "note",
+    "rank": 915,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "maschio",
+    "gender": "masculine",
+    "translation": "sire, male",
+    "rank": 916,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "sporco",
+    "gender": "masculine",
+    "translation": "dirt, filth, much",
+    "rank": 917,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "miracolo",
+    "gender": "masculine",
+    "translation": "miracle",
+    "rank": 918,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "epoca",
+    "gender": "feminine",
+    "translation": "epoch, era, age, period",
+    "rank": 919,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "vicenda",
+    "gender": "feminine",
+    "translation": "affair, event, story",
+    "rank": 920,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "divertimento",
+    "gender": "masculine",
+    "translation": "fun, amusement, entertainment, distraction",
+    "rank": 921,
+    "patternNote": "Ends in -mento, always masculine"
+  },
+  {
+    "word": "volere",
+    "gender": "masculine",
+    "translation": "will, wish, desire, want",
+    "rank": 922,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "anticipo",
+    "gender": "masculine",
+    "translation": "advance, prepayment, deposit, down payment",
+    "rank": 923,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "rapina",
+    "gender": "feminine",
+    "translation": "robbery, mugging",
+    "rank": 924,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "nazione",
+    "gender": "feminine",
+    "translation": "nation",
+    "rank": 925,
+    "patternNote": "Ends in -zione, always feminine"
+  },
+  {
+    "word": "argomento",
+    "gender": "masculine",
+    "translation": "topic, matter, subject, issue, point",
+    "rank": 926,
+    "patternNote": "Ends in -mento, always masculine"
+  },
+  {
+    "word": "alba",
+    "gender": "feminine",
+    "translation": "dawn, daybreak, break of day",
+    "rank": 927,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "telecamera",
+    "gender": "feminine",
+    "translation": "television camera",
+    "rank": 928,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "fase",
+    "gender": "feminine",
+    "translation": "phase, stage, period, level, degree, step",
+    "rank": 929,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "abito",
+    "gender": "masculine",
+    "translation": "garment",
+    "rank": 930,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "suicidio",
+    "gender": "masculine",
+    "translation": "suicide",
+    "rank": 931,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "uguale",
+    "gender": "masculine",
+    "translation": "same thing",
+    "rank": 932,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "ginocchio",
+    "gender": "masculine",
+    "translation": "knee",
+    "rank": 933,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "galera",
+    "gender": "feminine",
+    "translation": "prison, jail, jug",
+    "rank": 934,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "familiare",
+    "gender": "feminine",
+    "translation": "station wagon, estate car",
+    "rank": 935,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "interessato",
+    "gender": "masculine",
+    "translation": "interested person, concerned person",
+    "rank": 936,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "invito",
+    "gender": "masculine",
+    "translation": "invitation",
+    "rank": 937,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "onesto",
+    "gender": "masculine",
+    "translation": "honest person",
+    "rank": 938,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "punta",
+    "gender": "feminine",
+    "translation": "point, head, tip, top, peak, end",
+    "rank": 939,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "università",
+    "gender": "feminine",
+    "translation": "totality, entirety, whole",
+    "rank": 940,
+    "patternNote": "Ends in -tà, always feminine"
+  },
+  {
+    "word": "bosco",
+    "gender": "masculine",
+    "translation": "woodland",
+    "rank": 941,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "patto",
+    "gender": "masculine",
+    "translation": "pact, agreement",
+    "rank": 942,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "sale",
+    "gender": "masculine",
+    "translation": "salt, sal",
+    "rank": 943,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "ovest",
+    "gender": "masculine",
+    "translation": "west",
+    "rank": 944,
+    "patternNote": "Ends in consonant; usually masculine in Italian"
+  },
+  {
+    "word": "bestia",
+    "gender": "feminine",
+    "translation": "beast",
+    "rank": 945,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "socio",
+    "gender": "masculine",
+    "translation": "member, affiliate, partner, associate, fellow, mate",
+    "rank": 946,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "magazzino",
+    "gender": "masculine",
+    "translation": "warehouse, store",
+    "rank": 947,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "commissione",
+    "gender": "feminine",
+    "translation": "commission, committee, board",
+    "rank": 948,
+    "patternNote": "Ends in -sione, always feminine"
+  },
+  {
+    "word": "coach",
+    "gender": "masculine",
+    "translation": "coach",
+    "rank": 949,
+    "patternNote": "Ends in consonant; usually masculine in Italian"
+  },
+  {
+    "word": "vantaggio",
+    "gender": "masculine",
+    "translation": "advantage, vantage",
+    "rank": 950,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "mezzanotte",
+    "gender": "feminine",
+    "translation": "midnight",
+    "rank": 951,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "contanti",
+    "gender": "masculine",
+    "translation": "cash, money",
+    "rank": 952,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "morale",
+    "gender": "feminine",
+    "translation": "morals",
+    "rank": 953,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "fallito",
+    "gender": "masculine",
+    "translation": "bankrupt",
+    "rank": 954,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "esperto",
+    "gender": "masculine",
+    "translation": "expert, specialist, adept, insider",
+    "rank": 955,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "onda",
+    "gender": "feminine",
+    "translation": "wave",
+    "rank": 956,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "incubo",
+    "gender": "masculine",
+    "translation": "nightmare, incubus",
+    "rank": 957,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "babbo",
+    "gender": "masculine",
+    "translation": "dad, daddy",
+    "rank": 958,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "fattoria",
+    "gender": "feminine",
+    "translation": "farm",
+    "rank": 959,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "senatore",
+    "gender": "masculine",
+    "translation": "senator, member of the Senate",
+    "rank": 960,
+    "patternNote": "Ends in -ore, usually masculine"
+  },
+  {
+    "word": "tasca",
+    "gender": "feminine",
+    "translation": "pocket",
+    "rank": 961,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "secolo",
+    "gender": "masculine",
+    "translation": "century",
+    "rank": 962,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "cima",
+    "gender": "feminine",
+    "translation": "top",
+    "rank": 963,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "corridoio",
+    "gender": "masculine",
+    "translation": "corridor, passage",
+    "rank": 964,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "bersaglio",
+    "gender": "masculine",
+    "translation": "target",
+    "rank": 965,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "originale",
+    "gender": "masculine",
+    "translation": "original",
+    "rank": 966,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "riposo",
+    "gender": "masculine",
+    "translation": "rest, repose, break",
+    "rank": 967,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "indovina",
+    "gender": "feminine",
+    "translation": "female equivalent of indovino",
+    "rank": 968,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "esterno",
+    "gender": "masculine",
+    "translation": "exterior, outside",
+    "rank": 969,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "concerto",
+    "gender": "masculine",
+    "translation": "concert, recital",
+    "rank": 970,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "clinica",
+    "gender": "feminine",
+    "translation": "medicine",
+    "rank": 971,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "champagne",
+    "gender": "masculine",
+    "translation": "champagne",
+    "rank": 972,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "maestà",
+    "gender": "feminine",
+    "translation": "majesty",
+    "rank": 973,
+    "patternNote": "Ends in -tà, always feminine"
+  },
+  {
+    "word": "tecnologia",
+    "gender": "feminine",
+    "translation": "technology",
+    "rank": 974,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "firma",
+    "gender": "feminine",
+    "translation": "signature",
+    "rank": 975,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "furto",
+    "gender": "masculine",
+    "translation": "theft",
+    "rank": 976,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "vendita",
+    "gender": "feminine",
+    "translation": "sale",
+    "rank": 977,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "voto",
+    "gender": "masculine",
+    "translation": "vow",
+    "rank": 978,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "rock",
+    "gender": "masculine",
+    "translation": "rock",
+    "rank": 979,
+    "patternNote": "Ends in consonant; usually masculine in Italian"
+  },
+  {
+    "word": "tomba",
+    "gender": "feminine",
+    "translation": "tomb, grave",
+    "rank": 980,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "legame",
+    "gender": "masculine",
+    "translation": "link, bond",
+    "rank": 981,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "mancanza",
+    "gender": "feminine",
+    "translation": "lack, shortage, deficiency, want",
+    "rank": 982,
+    "patternNote": "Ends in -anza, usually feminine"
+  },
+  {
+    "word": "materiale",
+    "gender": "masculine",
+    "translation": "material, stuff",
+    "rank": 983,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "passeggiata",
+    "gender": "feminine",
+    "translation": "walk, stroll, promenade",
+    "rank": 984,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "opportunità",
+    "gender": "feminine",
+    "translation": "expediency, advisability, opportunity, timeliness",
+    "rank": 985,
+    "patternNote": "Ends in -tà, always feminine"
+  },
+  {
+    "word": "causato",
+    "gender": "masculine",
+    "translation": "effect, outcome of a cause",
+    "rank": 986,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "follia",
+    "gender": "feminine",
+    "translation": "madness, insanity, craziness, rampage, spree",
+    "rank": 987,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "attività",
+    "gender": "feminine",
+    "translation": "activity, operation",
+    "rank": 988,
+    "patternNote": "Ends in -tà, always feminine"
+  },
+  {
+    "word": "football",
+    "gender": "masculine",
+    "translation": "football",
+    "rank": 989,
+    "patternNote": "Ends in consonant; usually masculine in Italian"
+  },
+  {
+    "word": "unità",
+    "gender": "feminine",
+    "translation": "unity",
+    "rank": 990,
+    "patternNote": "Ends in -tà, always feminine"
+  },
+  {
+    "word": "supporto",
+    "gender": "masculine",
+    "translation": "helper",
+    "rank": 991,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "scala",
+    "gender": "feminine",
+    "translation": "ladder",
+    "rank": 992,
+    "patternNote": "Ends in -a, typically feminine"
+  },
+  {
+    "word": "scienza",
+    "gender": "feminine",
+    "translation": "science",
+    "rank": 993,
+    "patternNote": "Ends in -enza, usually feminine"
+  },
+  {
+    "word": "costume",
+    "gender": "masculine",
+    "translation": "a custom, habit",
+    "rank": 994,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "passione",
+    "gender": "feminine",
+    "translation": "passion, love, addiction",
+    "rank": 995,
+    "patternNote": "Ends in -sione, always feminine"
+  },
+  {
+    "word": "coscienza",
+    "gender": "feminine",
+    "translation": "conscience",
+    "rank": 996,
+    "patternNote": "Ends in -enza, usually feminine"
+  },
+  {
+    "word": "discussione",
+    "gender": "feminine",
+    "translation": "discussion",
+    "rank": 997,
+    "patternNote": "Ends in -sione, always feminine"
+  },
+  {
+    "word": "profilo",
+    "gender": "masculine",
+    "translation": "profile",
+    "rank": 998,
+    "patternNote": "Ends in -o, typically masculine"
+  },
+  {
+    "word": "prete",
+    "gender": "masculine",
+    "translation": "priest, clergyman, minister, pastor",
+    "rank": 999,
+    "patternNote": "Ends in -e; masculine when no other rule applies"
+  },
+  {
+    "word": "gusto",
+    "gender": "masculine",
+    "translation": "taste",
+    "rank": 1000,
+    "patternNote": "Ends in -o, typically masculine"
+  }
+]

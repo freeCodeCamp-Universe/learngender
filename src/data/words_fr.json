@@ -1,0 +1,7002 @@
+[
+  {
+    "word": "sang",
+    "gender": "masculine",
+    "translation": "blood",
+    "rank": 1,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "sous",
+    "gender": "masculine",
+    "translation": "money",
+    "rank": 2,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "fini",
+    "gender": "masculine",
+    "translation": "aspect or texture of what has been completed",
+    "rank": 3,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "question",
+    "gender": "feminine",
+    "translation": "question",
+    "rank": 4,
+    "patternNote": "Ends in -tion, always feminine"
+  },
+  {
+    "word": "partie",
+    "gender": "feminine",
+    "translation": "part",
+    "rank": 5,
+    "patternNote": "Ends in -ie, usually feminine"
+  },
+  {
+    "word": "histoire",
+    "gender": "feminine",
+    "translation": "story",
+    "rank": 6,
+    "patternNote": "Feminine exception ending in -oire"
+  },
+  {
+    "word": "aide",
+    "gender": "feminine",
+    "translation": "help, support",
+    "rank": 7,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "demande",
+    "gender": "feminine",
+    "translation": "request",
+    "rank": 8,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "genre",
+    "gender": "masculine",
+    "translation": "kind",
+    "rank": 9,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "police",
+    "gender": "feminine",
+    "translation": "police",
+    "rank": 10,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "mois",
+    "gender": "masculine",
+    "translation": "month",
+    "rank": 11,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "frère",
+    "gender": "masculine",
+    "translation": "brother",
+    "rank": 12,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "laisse",
+    "gender": "feminine",
+    "translation": "leash, lead",
+    "rank": 13,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "ville",
+    "gender": "feminine",
+    "translation": "town, city",
+    "rank": 14,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "bébé",
+    "gender": "masculine",
+    "translation": "baby",
+    "rank": 15,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "place",
+    "gender": "feminine",
+    "translation": "place, square, plaza, piazza",
+    "rank": 16,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "putain",
+    "gender": "feminine",
+    "translation": "whore, hooker",
+    "rank": 17,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "attention",
+    "gender": "feminine",
+    "translation": "attention",
+    "rank": 18,
+    "patternNote": "Ends in -tion, always feminine"
+  },
+  {
+    "word": "affaire",
+    "gender": "feminine",
+    "translation": "business; matter; affair",
+    "rank": 19,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "endroit",
+    "gender": "masculine",
+    "translation": "place, spot",
+    "rank": 20,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "corps",
+    "gender": "masculine",
+    "translation": "body",
+    "rank": 21,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "façon",
+    "gender": "feminine",
+    "translation": "way; manner; fashion",
+    "rank": 22,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "train",
+    "gender": "masculine",
+    "translation": "train",
+    "rank": 23,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "écoute",
+    "gender": "feminine",
+    "translation": "the act of listening",
+    "rank": 24,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "pouvoir",
+    "gender": "masculine",
+    "translation": "power",
+    "rank": 25,
+    "patternNote": "Ends in -oir, usually masculine"
+  },
+  {
+    "word": "type",
+    "gender": "masculine",
+    "translation": "type; sort, kind",
+    "rank": 26,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "premier",
+    "gender": "masculine",
+    "translation": "first",
+    "rank": 27,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "première",
+    "gender": "feminine",
+    "translation": "premiere, première",
+    "rank": 28,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "côté",
+    "gender": "masculine",
+    "translation": "side",
+    "rank": 29,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "point",
+    "gender": "masculine",
+    "translation": "point",
+    "rank": 30,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "main",
+    "gender": "feminine",
+    "translation": "hand",
+    "rank": 31,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "vieux",
+    "gender": "masculine",
+    "translation": "old person",
+    "rank": 32,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "matin",
+    "gender": "masculine",
+    "translation": "morning",
+    "rank": 33,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "pardon",
+    "gender": "masculine",
+    "translation": "pardon, forgiveness",
+    "rank": 34,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "suite",
+    "gender": "feminine",
+    "translation": "result",
+    "rank": 35,
+    "patternNote": "Medical ending -ite, usually feminine"
+  },
+  {
+    "word": "vers",
+    "gender": "masculine",
+    "translation": "verse",
+    "rank": 36,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "devant",
+    "gender": "masculine",
+    "translation": "front",
+    "rank": 37,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "cause",
+    "gender": "feminine",
+    "translation": "cause",
+    "rank": 38,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "nouvelle",
+    "gender": "feminine",
+    "translation": "news, a piece of information",
+    "rank": 39,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "chambre",
+    "gender": "feminine",
+    "translation": "a chamber in its various senses, including:",
+    "rank": 40,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "droit",
+    "gender": "masculine",
+    "translation": "right",
+    "rank": 41,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "parti",
+    "gender": "masculine",
+    "translation": "party",
+    "rank": 42,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "compte",
+    "gender": "masculine",
+    "translation": "account",
+    "rank": 43,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "terre",
+    "gender": "feminine",
+    "translation": "earth; soil",
+    "rank": 44,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "belle",
+    "gender": "feminine",
+    "translation": "beautiful woman, belle, beauty",
+    "rank": 45,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "mari",
+    "gender": "masculine",
+    "translation": "husband",
+    "rank": 46,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "donne",
+    "gender": "feminine",
+    "translation": "distribution of cards; dealing of cards; (metonymic) the cards that one is given",
+    "rank": 47,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "aura",
+    "gender": "feminine",
+    "translation": "aura",
+    "rank": 48,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "gros",
+    "gender": "masculine",
+    "translation": "a person in overweight",
+    "rank": 49,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "boulot",
+    "gender": "masculine",
+    "translation": "work",
+    "rank": 50,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "chérie",
+    "gender": "feminine",
+    "translation": "female equivalent of chéri",
+    "rank": 51,
+    "patternNote": "Ends in -ie, usually feminine"
+  },
+  {
+    "word": "prêt",
+    "gender": "masculine",
+    "translation": "loan",
+    "rank": 52,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "bureau",
+    "gender": "masculine",
+    "translation": "desk",
+    "rank": 53,
+    "patternNote": "Ends in -eau, always masculine"
+  },
+  {
+    "word": "possible",
+    "gender": "masculine",
+    "translation": "the possible, feasible, what can be done, achieved etc.",
+    "rank": 54,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "beau",
+    "gender": "masculine",
+    "translation": "boyfriend",
+    "rank": 55,
+    "patternNote": "Ends in -eau, always masculine"
+  },
+  {
+    "word": "dehors",
+    "gender": "masculine",
+    "translation": "outside",
+    "rank": 56,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "docteur",
+    "gender": "masculine",
+    "translation": "a doctor",
+    "rank": 57,
+    "patternNote": "Agent/doer ending -eur, masculine"
+  },
+  {
+    "word": "confiance",
+    "gender": "feminine",
+    "translation": "confidence",
+    "rank": 58,
+    "patternNote": "Ends in -ance, always feminine"
+  },
+  {
+    "word": "vérité",
+    "gender": "feminine",
+    "translation": "truth",
+    "rank": 59,
+    "patternNote": "Ends in -ité, always feminine"
+  },
+  {
+    "word": "école",
+    "gender": "feminine",
+    "translation": "school",
+    "rank": 60,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "chef",
+    "gender": "masculine",
+    "translation": "head",
+    "rank": 61,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "propos",
+    "gender": "masculine",
+    "translation": "aim, intention",
+    "rank": 62,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "semaine",
+    "gender": "feminine",
+    "translation": "week",
+    "rank": 63,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "journée",
+    "gender": "feminine",
+    "translation": "day",
+    "rank": 64,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "madame",
+    "gender": "feminine",
+    "translation": "lady, woman",
+    "rank": 65,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "téléphone",
+    "gender": "masculine",
+    "translation": "telephone",
+    "rank": 66,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "affaires",
+    "gender": "feminine",
+    "translation": "belongings",
+    "rank": 67,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "meilleur",
+    "gender": "masculine",
+    "translation": "best",
+    "rank": 68,
+    "patternNote": "Agent/doer ending -eur, masculine"
+  },
+  {
+    "word": "dessus",
+    "gender": "masculine",
+    "translation": "upside; top side",
+    "rank": 69,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "équipe",
+    "gender": "feminine",
+    "translation": "team",
+    "rank": 70,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "manger",
+    "gender": "masculine",
+    "translation": "food, foodstuff",
+    "rank": 71,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "guerre",
+    "gender": "feminine",
+    "translation": "war",
+    "rank": 72,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "marche",
+    "gender": "feminine",
+    "translation": "march",
+    "rank": 73,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "sécurité",
+    "gender": "feminine",
+    "translation": "security, safety",
+    "rank": 74,
+    "patternNote": "Ends in -ité, always feminine"
+  },
+  {
+    "word": "garçon",
+    "gender": "masculine",
+    "translation": "boy",
+    "rank": 75,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "fort",
+    "gender": "masculine",
+    "translation": "a fort",
+    "rank": 76,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "plein",
+    "gender": "masculine",
+    "translation": "full tank",
+    "rank": 77,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "derrière",
+    "gender": "masculine",
+    "translation": "rear of an object",
+    "rank": 78,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "mariage",
+    "gender": "masculine",
+    "translation": "marriage",
+    "rank": 79,
+    "patternNote": "Ends in -age, usually masculine"
+  },
+  {
+    "word": "envie",
+    "gender": "feminine",
+    "translation": "desire, lust, urge",
+    "rank": 80,
+    "patternNote": "Ends in -ie, usually feminine"
+  },
+  {
+    "word": "fête",
+    "gender": "feminine",
+    "translation": "winter holidays",
+    "rank": 81,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "pays",
+    "gender": "masculine",
+    "translation": "land; region; home ground; homeland; home country; country; nation",
+    "rank": 82,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "garde",
+    "gender": "feminine",
+    "translation": "a handle",
+    "rank": 83,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "cours",
+    "gender": "masculine",
+    "translation": "stream of water, river",
+    "rank": 84,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "numéro",
+    "gender": "masculine",
+    "translation": "number",
+    "rank": 85,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "parfait",
+    "gender": "masculine",
+    "translation": "perfect tense",
+    "rank": 86,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "retour",
+    "gender": "masculine",
+    "translation": "return",
+    "rank": 87,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "peine",
+    "gender": "feminine",
+    "translation": "punishment",
+    "rank": 88,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "minute",
+    "gender": "feminine",
+    "translation": "minute",
+    "rank": 89,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "plan",
+    "gender": "masculine",
+    "translation": "map",
+    "rank": 90,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "instant",
+    "gender": "masculine",
+    "translation": "instant, minute, moment",
+    "rank": 91,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "prison",
+    "gender": "feminine",
+    "translation": "prison",
+    "rank": 92,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "arme",
+    "gender": "feminine",
+    "translation": "weapon",
+    "rank": 93,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "choix",
+    "gender": "masculine",
+    "translation": "choice",
+    "rank": 94,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "film",
+    "gender": "masculine",
+    "translation": "movie, film",
+    "rank": 95,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "abord",
+    "gender": "masculine",
+    "translation": "the surroundings of a place",
+    "rank": 96,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "faute",
+    "gender": "feminine",
+    "translation": "error, mistake",
+    "rank": 97,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "plaisir",
+    "gender": "masculine",
+    "translation": "pleasure",
+    "rank": 98,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "heureux",
+    "gender": "masculine",
+    "translation": "happy person",
+    "rank": 99,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "tour",
+    "gender": "feminine",
+    "translation": "tower",
+    "rank": 100,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "agent",
+    "gender": "masculine",
+    "translation": "agent",
+    "rank": 101,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "amie",
+    "gender": "feminine",
+    "translation": "friend",
+    "rank": 102,
+    "patternNote": "Ends in -ie, usually feminine"
+  },
+  {
+    "word": "route",
+    "gender": "feminine",
+    "translation": "road",
+    "rank": 103,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "lieu",
+    "gender": "masculine",
+    "translation": "place",
+    "rank": 104,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "année",
+    "gender": "feminine",
+    "translation": "year",
+    "rank": 105,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "service",
+    "gender": "masculine",
+    "translation": "service",
+    "rank": 106,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "devoir",
+    "gender": "masculine",
+    "translation": "duty",
+    "rank": 107,
+    "patternNote": "Ends in -oir, usually masculine"
+  },
+  {
+    "word": "drôle",
+    "gender": "masculine",
+    "translation": "rascal, scoundrel",
+    "rank": 108,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "pire",
+    "gender": "masculine",
+    "translation": "the worst",
+    "rank": 109,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "sujet",
+    "gender": "masculine",
+    "translation": "subject",
+    "rank": 110,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "état",
+    "gender": "masculine",
+    "translation": "state, condition",
+    "rank": 111,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "impossible",
+    "gender": "masculine",
+    "translation": "the impossible",
+    "rank": 112,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "sorte",
+    "gender": "feminine",
+    "translation": "sort, kind, type",
+    "rank": 113,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "coeur",
+    "gender": "masculine",
+    "translation": "nonstandard spelling of cœur",
+    "rank": 114,
+    "patternNote": "Agent/doer ending -eur, masculine"
+  },
+  {
+    "word": "chien",
+    "gender": "masculine",
+    "translation": "dog",
+    "rank": 115,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "café",
+    "gender": "masculine",
+    "translation": "coffee",
+    "rank": 116,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "calme",
+    "gender": "masculine",
+    "translation": "calmness, stillness",
+    "rank": 117,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "photo",
+    "gender": "feminine",
+    "translation": "photo",
+    "rank": 118,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "ferme",
+    "gender": "feminine",
+    "translation": "roof truss",
+    "rank": 119,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "cœur",
+    "gender": "masculine",
+    "translation": "heart",
+    "rank": 120,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "verre",
+    "gender": "masculine",
+    "translation": "glass",
+    "rank": 121,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "doute",
+    "gender": "masculine",
+    "translation": "doubt",
+    "rank": 122,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "musique",
+    "gender": "feminine",
+    "translation": "music",
+    "rank": 123,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "courant",
+    "gender": "masculine",
+    "translation": "current",
+    "rank": 124,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "moyen",
+    "gender": "masculine",
+    "translation": "way, method, mean of doing something",
+    "rank": 125,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "avis",
+    "gender": "masculine",
+    "translation": "opinion",
+    "rank": 126,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "hôpital",
+    "gender": "masculine",
+    "translation": "hospital",
+    "rank": 127,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "meurtre",
+    "gender": "masculine",
+    "translation": "murder",
+    "rank": 128,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "seconde",
+    "gender": "feminine",
+    "translation": "second",
+    "rank": 129,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "esprit",
+    "gender": "masculine",
+    "translation": "immaterial or incorporeal substance",
+    "rank": 130,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "marché",
+    "gender": "masculine",
+    "translation": "market",
+    "rank": 131,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "haut",
+    "gender": "masculine",
+    "translation": "top",
+    "rank": 132,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "salle",
+    "gender": "feminine",
+    "translation": "hall",
+    "rank": 133,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "gentil",
+    "gender": "masculine",
+    "translation": "pagan, heretic",
+    "rank": 134,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "simple",
+    "gender": "masculine",
+    "translation": "single",
+    "rank": 135,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "seigneur",
+    "gender": "masculine",
+    "translation": "lord",
+    "rank": 136,
+    "patternNote": "Agent/doer ending -eur, masculine"
+  },
+  {
+    "word": "dîner",
+    "gender": "masculine",
+    "translation": "dinner, evening meal",
+    "rank": 137,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "chemin",
+    "gender": "masculine",
+    "translation": "path, way, road",
+    "rank": 138,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "bras",
+    "gender": "masculine",
+    "translation": "arm",
+    "rank": 139,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "visage",
+    "gender": "masculine",
+    "translation": "face",
+    "rank": 140,
+    "patternNote": "Ends in -age, usually masculine"
+  },
+  {
+    "word": "meilleure",
+    "gender": "feminine",
+    "translation": "female equivalent of meilleur",
+    "rank": 141,
+    "patternNote": "Ends in -ure, usually feminine"
+  },
+  {
+    "word": "face",
+    "gender": "feminine",
+    "translation": "face",
+    "rank": 142,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "soirée",
+    "gender": "feminine",
+    "translation": "evening",
+    "rank": 143,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "surtout",
+    "gender": "masculine",
+    "translation": "surtout",
+    "rank": 144,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "retard",
+    "gender": "masculine",
+    "translation": "delay",
+    "rank": 145,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "écrit",
+    "gender": "masculine",
+    "translation": "writing",
+    "rank": 146,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "livre",
+    "gender": "masculine",
+    "translation": "book",
+    "rank": 147,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "rapport",
+    "gender": "masculine",
+    "translation": "ratio",
+    "rank": 148,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "chéri",
+    "gender": "masculine",
+    "translation": "dear, darling, honey, sweetheart",
+    "rank": 149,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "message",
+    "gender": "masculine",
+    "translation": "message",
+    "rank": 150,
+    "patternNote": "Ends in -age, usually masculine"
+  },
+  {
+    "word": "président",
+    "gender": "masculine",
+    "translation": "president",
+    "rank": 151,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "bois",
+    "gender": "masculine",
+    "translation": "wood",
+    "rank": 152,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "erreur",
+    "gender": "feminine",
+    "translation": "mistake",
+    "rank": 153,
+    "patternNote": "Abstract quality noun ending in -eur, feminine"
+  },
+  {
+    "word": "rendez-vous",
+    "gender": "masculine",
+    "translation": "date",
+    "rank": 154,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "joue",
+    "gender": "feminine",
+    "translation": "cheek",
+    "rank": 155,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "pauvre",
+    "gender": "masculine",
+    "translation": "poor person; pauper",
+    "rank": 156,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "devenir",
+    "gender": "masculine",
+    "translation": "future",
+    "rank": 157,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "sort",
+    "gender": "masculine",
+    "translation": "lot",
+    "rank": 158,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "pièce",
+    "gender": "feminine",
+    "translation": "room in a house, etc.",
+    "rank": 159,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "reçu",
+    "gender": "masculine",
+    "translation": "receipt",
+    "rank": 160,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "mets",
+    "gender": "masculine",
+    "translation": "dish",
+    "rank": 161,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "intérieur",
+    "gender": "masculine",
+    "translation": "interior, inside",
+    "rank": 162,
+    "patternNote": "Agent/doer ending -eur, masculine"
+  },
+  {
+    "word": "honneur",
+    "gender": "masculine",
+    "translation": "honor",
+    "rank": 163,
+    "patternNote": "Agent/doer ending -eur, masculine"
+  },
+  {
+    "word": "faux",
+    "gender": "masculine",
+    "translation": "fabrication, forgery",
+    "rank": 164,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "groupe",
+    "gender": "masculine",
+    "translation": "group",
+    "rank": 165,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "rêve",
+    "gender": "masculine",
+    "translation": "dream",
+    "rank": 166,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "carte",
+    "gender": "feminine",
+    "translation": "card",
+    "rank": 167,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "appel",
+    "gender": "masculine",
+    "translation": "call",
+    "rank": 168,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "manque",
+    "gender": "masculine",
+    "translation": "lack, absence",
+    "rank": 169,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "envoyé",
+    "gender": "masculine",
+    "translation": "envoy",
+    "rank": 170,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "début",
+    "gender": "masculine",
+    "translation": "start, beginning",
+    "rank": 171,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "secret",
+    "gender": "masculine",
+    "translation": "secret",
+    "rank": 172,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "venue",
+    "gender": "feminine",
+    "translation": "coming, arrival",
+    "rank": 173,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "effet",
+    "gender": "masculine",
+    "translation": "effect",
+    "rank": 174,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "voix",
+    "gender": "feminine",
+    "translation": "voice",
+    "rank": 175,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "noël",
+    "gender": "masculine",
+    "translation": "A Christmas gift.",
+    "rank": 176,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "grâce",
+    "gender": "feminine",
+    "translation": "grace, charm",
+    "rank": 177,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "maître",
+    "gender": "masculine",
+    "translation": "master",
+    "rank": 178,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "prix",
+    "gender": "masculine",
+    "translation": "prize",
+    "rank": 179,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "général",
+    "gender": "masculine",
+    "translation": "general",
+    "rank": 180,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "long",
+    "gender": "masculine",
+    "translation": "length",
+    "rank": 181,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "noir",
+    "gender": "masculine",
+    "translation": "a black person",
+    "rank": 182,
+    "patternNote": "Ends in -oir, usually masculine"
+  },
+  {
+    "word": "patron",
+    "gender": "masculine",
+    "translation": "a boss, employer,",
+    "rank": 183,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "avocat",
+    "gender": "masculine",
+    "translation": "lawyer, attorney",
+    "rank": 184,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "force",
+    "gender": "feminine",
+    "translation": "force",
+    "rank": 185,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "accident",
+    "gender": "masculine",
+    "translation": "accident",
+    "rank": 186,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "bout",
+    "gender": "masculine",
+    "translation": "end, extremity, tip",
+    "rank": 187,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "ordre",
+    "gender": "masculine",
+    "translation": "order",
+    "rank": 188,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "armes",
+    "gender": "feminine",
+    "translation": "coat of arms",
+    "rank": 189,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "voyage",
+    "gender": "masculine",
+    "translation": "trip, journey, voyage",
+    "rank": 190,
+    "patternNote": "Ends in -age, usually masculine"
+  },
+  {
+    "word": "oublie",
+    "gender": "feminine",
+    "translation": "wafer",
+    "rank": 191,
+    "patternNote": "Ends in -ie, usually feminine"
+  },
+  {
+    "word": "bienvenue",
+    "gender": "feminine",
+    "translation": "welcome",
+    "rank": 192,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "disparu",
+    "gender": "masculine",
+    "translation": "missing in action person",
+    "rank": 193,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "situation",
+    "gender": "feminine",
+    "translation": "situation",
+    "rank": 194,
+    "patternNote": "Ends in -tion, always feminine"
+  },
+  {
+    "word": "scène",
+    "gender": "feminine",
+    "translation": "stage",
+    "rank": 195,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "sœur",
+    "gender": "feminine",
+    "translation": "sister",
+    "rank": 196,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "oncle",
+    "gender": "masculine",
+    "translation": "uncle",
+    "rank": 197,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "liste",
+    "gender": "feminine",
+    "translation": "list",
+    "rank": 198,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "soeur",
+    "gender": "feminine",
+    "translation": "nonstandard spelling of sœur",
+    "rank": 199,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "complètement",
+    "gender": "masculine",
+    "translation": "completion",
+    "rank": 200,
+    "patternNote": "Ends in -ment, always masculine"
+  },
+  {
+    "word": "armée",
+    "gender": "feminine",
+    "translation": "army",
+    "rank": 201,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "paix",
+    "gender": "feminine",
+    "translation": "peace",
+    "rank": 202,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "anniversaire",
+    "gender": "masculine",
+    "translation": "birthday",
+    "rank": 203,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "bouge",
+    "gender": "masculine",
+    "translation": "hovel; dive",
+    "rank": 204,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "contrôle",
+    "gender": "masculine",
+    "translation": "control",
+    "rank": 205,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "arrêté",
+    "gender": "masculine",
+    "translation": "agreement, resolution, a thing agreed on, resolved upon",
+    "rank": 206,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "hôtel",
+    "gender": "masculine",
+    "translation": "mansion, town house, hotel",
+    "rank": 207,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "idiot",
+    "gender": "masculine",
+    "translation": "idiot",
+    "rank": 208,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "victime",
+    "gender": "feminine",
+    "translation": "victim",
+    "rank": 209,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "impression",
+    "gender": "feminine",
+    "translation": "an impression, the overall effect of something",
+    "rank": 210,
+    "patternNote": "Ends in -sion, always feminine"
+  },
+  {
+    "word": "avion",
+    "gender": "masculine",
+    "translation": "airplane",
+    "rank": 211,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "bordel",
+    "gender": "masculine",
+    "translation": "brothel",
+    "rank": 212,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "habitude",
+    "gender": "feminine",
+    "translation": "habit",
+    "rank": 213,
+    "patternNote": "Ends in -ude, always feminine"
+  },
+  {
+    "word": "table",
+    "gender": "feminine",
+    "translation": "table",
+    "rank": 214,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "rouge",
+    "gender": "masculine",
+    "translation": "red",
+    "rank": 215,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "système",
+    "gender": "masculine",
+    "translation": "system",
+    "rank": 216,
+    "patternNote": "Greek-origin -ème words are masculine"
+  },
+  {
+    "word": "bateau",
+    "gender": "masculine",
+    "translation": "a vessel of any size, a ship or boat",
+    "rank": 217,
+    "patternNote": "Ends in -eau, always masculine"
+  },
+  {
+    "word": "faim",
+    "gender": "feminine",
+    "translation": "hunger",
+    "rank": 218,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "autour",
+    "gender": "masculine",
+    "translation": "goshawk",
+    "rank": 219,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "fond",
+    "gender": "masculine",
+    "translation": "back",
+    "rank": 220,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "surprise",
+    "gender": "feminine",
+    "translation": "surprise",
+    "rank": 221,
+    "patternNote": "Ends in -ise, usually feminine"
+  },
+  {
+    "word": "ligne",
+    "gender": "feminine",
+    "translation": "line",
+    "rank": 222,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "porter",
+    "gender": "masculine",
+    "translation": "porter",
+    "rank": 223,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "colère",
+    "gender": "feminine",
+    "translation": "anger, rage",
+    "rank": 224,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "clair",
+    "gender": "masculine",
+    "translation": "light",
+    "rank": 225,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "balle",
+    "gender": "feminine",
+    "translation": "ball",
+    "rank": 226,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "risque",
+    "gender": "masculine",
+    "translation": "risk",
+    "rank": 227,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "mission",
+    "gender": "feminine",
+    "translation": "mission",
+    "rank": 228,
+    "patternNote": "Ends in -sion, always feminine"
+  },
+  {
+    "word": "présent",
+    "gender": "masculine",
+    "translation": "the now, the present moment",
+    "rank": 229,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "cadeau",
+    "gender": "masculine",
+    "translation": "present, gift",
+    "rank": 230,
+    "patternNote": "Ends in -eau, always masculine"
+  },
+  {
+    "word": "gauche",
+    "gender": "feminine",
+    "translation": "the left, the left-hand side",
+    "rank": 231,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "inspecteur",
+    "gender": "masculine",
+    "translation": "inspector",
+    "rank": 232,
+    "patternNote": "Agent/doer ending -eur, masculine"
+  },
+  {
+    "word": "réponse",
+    "gender": "feminine",
+    "translation": "response, answer, reply",
+    "rank": 233,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "lumière",
+    "gender": "feminine",
+    "translation": "light",
+    "rank": 234,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "montre",
+    "gender": "feminine",
+    "translation": "watch, wristwatch",
+    "rank": 235,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "pied",
+    "gender": "masculine",
+    "translation": "foot",
+    "rank": 236,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "espèce",
+    "gender": "feminine",
+    "translation": "type, sort, kind",
+    "rank": 237,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "soleil",
+    "gender": "masculine",
+    "translation": "sun",
+    "rank": 238,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "camp",
+    "gender": "masculine",
+    "translation": "camp",
+    "rank": 239,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "coin",
+    "gender": "masculine",
+    "translation": "wedge, cornerpiece",
+    "rank": 240,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "moitié",
+    "gender": "feminine",
+    "translation": "half",
+    "rank": 241,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "grosse",
+    "gender": "feminine",
+    "translation": "gross",
+    "rank": 242,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "vouloir",
+    "gender": "masculine",
+    "translation": "will",
+    "rank": 243,
+    "patternNote": "Ends in -oir, usually masculine"
+  },
+  {
+    "word": "sortie",
+    "gender": "feminine",
+    "translation": "exit; way out",
+    "rank": 244,
+    "patternNote": "Ends in -ie, usually feminine"
+  },
+  {
+    "word": "recherche",
+    "gender": "feminine",
+    "translation": "research",
+    "rank": 245,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "arrière",
+    "gender": "masculine",
+    "translation": "back; rear",
+    "rank": 246,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "lire",
+    "gender": "feminine",
+    "translation": "lira",
+    "rank": 247,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "avance",
+    "gender": "feminine",
+    "translation": "early",
+    "rank": 248,
+    "patternNote": "Ends in -ance, always feminine"
+  },
+  {
+    "word": "club",
+    "gender": "masculine",
+    "translation": "club",
+    "rank": 249,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "arrivée",
+    "gender": "feminine",
+    "translation": "arrival",
+    "rank": 250,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "chaud",
+    "gender": "masculine",
+    "translation": "heat, warmth",
+    "rank": 251,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "professeur",
+    "gender": "masculine",
+    "translation": "teacher",
+    "rank": 252,
+    "patternNote": "Agent/doer ending -eur, masculine"
+  },
+  {
+    "word": "tueur",
+    "gender": "masculine",
+    "translation": "killer",
+    "rank": 253,
+    "patternNote": "Agent/doer ending -eur, masculine"
+  },
+  {
+    "word": "lettre",
+    "gender": "feminine",
+    "translation": "letter",
+    "rank": 254,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "forme",
+    "gender": "feminine",
+    "translation": "shape",
+    "rank": 255,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "conseil",
+    "gender": "masculine",
+    "translation": "piece of advice",
+    "rank": 256,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "danger",
+    "gender": "masculine",
+    "translation": "danger",
+    "rank": 257,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "folle",
+    "gender": "feminine",
+    "translation": "madwoman",
+    "rank": 258,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "tiré",
+    "gender": "masculine",
+    "translation": "down bow",
+    "rank": 259,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "offre",
+    "gender": "feminine",
+    "translation": "offer",
+    "rank": 260,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "froid",
+    "gender": "masculine",
+    "translation": "cold, chill",
+    "rank": 261,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "gamin",
+    "gender": "masculine",
+    "translation": "street urchin, street kid",
+    "rank": 262,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "classe",
+    "gender": "feminine",
+    "translation": "class, type, group",
+    "rank": 263,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "poste",
+    "gender": "feminine",
+    "translation": "post office",
+    "rank": 264,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "attaque",
+    "gender": "feminine",
+    "translation": "attack",
+    "rank": 265,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "boîte",
+    "gender": "feminine",
+    "translation": "box",
+    "rank": 266,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "enquête",
+    "gender": "feminine",
+    "translation": "inquest, investigation, examination",
+    "rank": 267,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "visite",
+    "gender": "feminine",
+    "translation": "visit",
+    "rank": 268,
+    "patternNote": "Medical ending -ite, usually feminine"
+  },
+  {
+    "word": "juge",
+    "gender": "masculine",
+    "translation": "judge",
+    "rank": 269,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "bord",
+    "gender": "masculine",
+    "translation": "border, edge, limit; boundary",
+    "rank": 270,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "preuve",
+    "gender": "feminine",
+    "translation": "evidence, proof",
+    "rank": 271,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "vivant",
+    "gender": "masculine",
+    "translation": "living person",
+    "rank": 272,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "ciel",
+    "gender": "masculine",
+    "translation": "sky",
+    "rank": 273,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "touche",
+    "gender": "feminine",
+    "translation": "touch",
+    "rank": 274,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "télé",
+    "gender": "feminine",
+    "translation": "TV, telly",
+    "rank": 275,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "change",
+    "gender": "masculine",
+    "translation": "exchange",
+    "rank": 276,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "droite",
+    "gender": "feminine",
+    "translation": "straight line",
+    "rank": 277,
+    "patternNote": "Medical ending -ite, usually feminine"
+  },
+  {
+    "word": "gueule",
+    "gender": "feminine",
+    "translation": "gullet, snout, face",
+    "rank": 278,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "tombe",
+    "gender": "feminine",
+    "translation": "tomb, grave",
+    "rank": 279,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "travers",
+    "gender": "masculine",
+    "translation": "outside",
+    "rank": 280,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "santé",
+    "gender": "feminine",
+    "translation": "health",
+    "rank": 281,
+    "patternNote": "Ends in -té, always feminine"
+  },
+  {
+    "word": "dossier",
+    "gender": "masculine",
+    "translation": "back of furniture, to rest the sitter's back on",
+    "rank": 282,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "coucher",
+    "gender": "masculine",
+    "translation": "going to bed",
+    "rank": 283,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "cuisine",
+    "gender": "feminine",
+    "translation": "kitchen",
+    "rank": 284,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "monte",
+    "gender": "feminine",
+    "translation": "copulation, mating season",
+    "rank": 285,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "relation",
+    "gender": "feminine",
+    "translation": "relation",
+    "rank": 286,
+    "patternNote": "Ends in -tion, always feminine"
+  },
+  {
+    "word": "centre",
+    "gender": "masculine",
+    "translation": "centre, center",
+    "rank": 287,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "dame",
+    "gender": "feminine",
+    "translation": "lady",
+    "rank": 288,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "chanson",
+    "gender": "feminine",
+    "translation": "song",
+    "rank": 289,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "foutre",
+    "gender": "masculine",
+    "translation": "spunk, sperm, cum",
+    "rank": 290,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "blanc",
+    "gender": "masculine",
+    "translation": "white",
+    "rank": 291,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "manière",
+    "gender": "feminine",
+    "translation": "manner, way",
+    "rank": 292,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "flic",
+    "gender": "masculine",
+    "translation": "police officer; copper; pig; rozzer",
+    "rank": 293,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "décision",
+    "gender": "feminine",
+    "translation": "decision",
+    "rank": 294,
+    "patternNote": "Ends in -sion, always feminine"
+  },
+  {
+    "word": "compagnie",
+    "gender": "feminine",
+    "translation": "company",
+    "rank": 295,
+    "patternNote": "Ends in -ie, usually feminine"
+  },
+  {
+    "word": "déjeuner",
+    "gender": "masculine",
+    "translation": "lunch, luncheon",
+    "rank": 296,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "tire",
+    "gender": "feminine",
+    "translation": "verbal noun of tirer; pulling, drawing",
+    "rank": 297,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "vaisseau",
+    "gender": "masculine",
+    "translation": "ship, vessel",
+    "rank": 298,
+    "patternNote": "Ends in -eau, always masculine"
+  },
+  {
+    "word": "enfer",
+    "gender": "masculine",
+    "translation": "Hell",
+    "rank": 299,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "nulle",
+    "gender": "feminine",
+    "translation": "female equivalent of nul",
+    "rank": 300,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "signe",
+    "gender": "masculine",
+    "translation": "sign",
+    "rank": 301,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "lieutenant",
+    "gender": "masculine",
+    "translation": "lieutenant",
+    "rank": 302,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "diable",
+    "gender": "masculine",
+    "translation": "devil",
+    "rank": 303,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "honte",
+    "gender": "feminine",
+    "translation": "shame",
+    "rank": 304,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "bouche",
+    "gender": "feminine",
+    "translation": "mouth",
+    "rank": 305,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "rire",
+    "gender": "masculine",
+    "translation": "laugh",
+    "rank": 306,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "soin",
+    "gender": "masculine",
+    "translation": "care",
+    "rank": 307,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "milieu",
+    "gender": "masculine",
+    "translation": "middle; center",
+    "rank": 308,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "appartement",
+    "gender": "masculine",
+    "translation": "apartment, flat",
+    "rank": 309,
+    "patternNote": "Ends in -ment, always masculine"
+  },
+  {
+    "word": "prochain",
+    "gender": "masculine",
+    "translation": "fellow man, fellow human being, neighbour",
+    "rank": 310,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "cerveau",
+    "gender": "masculine",
+    "translation": "brain",
+    "rank": 311,
+    "patternNote": "Ends in -eau, always masculine"
+  },
+  {
+    "word": "blague",
+    "gender": "feminine",
+    "translation": "pouch, especially for tobacco",
+    "rank": 312,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "époque",
+    "gender": "feminine",
+    "translation": "epoch",
+    "rank": 313,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "voie",
+    "gender": "feminine",
+    "translation": "way, track",
+    "rank": 314,
+    "patternNote": "Ends in -ie, usually feminine"
+  },
+  {
+    "word": "réunion",
+    "gender": "feminine",
+    "translation": "meeting",
+    "rank": 315,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "connu",
+    "gender": "masculine",
+    "translation": "a well-known person",
+    "rank": 316,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "allée",
+    "gender": "feminine",
+    "translation": "path, lane, allée",
+    "rank": 317,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "intérêt",
+    "gender": "masculine",
+    "translation": "interest",
+    "rank": 318,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "cheval",
+    "gender": "masculine",
+    "translation": "horse",
+    "rank": 319,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "combat",
+    "gender": "masculine",
+    "translation": "combat",
+    "rank": 320,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "silence",
+    "gender": "masculine",
+    "translation": "silence",
+    "rank": 321,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "trou",
+    "gender": "masculine",
+    "translation": "hole",
+    "rank": 322,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "public",
+    "gender": "masculine",
+    "translation": "public",
+    "rank": 323,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "oeil",
+    "gender": "masculine",
+    "translation": "nonstandard spelling of œil",
+    "rank": 324,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "amoureux",
+    "gender": "masculine",
+    "translation": "lover",
+    "rank": 325,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "drogue",
+    "gender": "feminine",
+    "translation": "drug",
+    "rank": 326,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "commandant",
+    "gender": "masculine",
+    "translation": "commander",
+    "rank": 327,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "prise",
+    "gender": "feminine",
+    "translation": "socket, wall socket",
+    "rank": 328,
+    "patternNote": "Ends in -ise, usually feminine"
+  },
+  {
+    "word": "gouvernement",
+    "gender": "masculine",
+    "translation": "government",
+    "rank": 329,
+    "patternNote": "Ends in -ment, always masculine"
+  },
+  {
+    "word": "client",
+    "gender": "masculine",
+    "translation": "client, retainer, follower",
+    "rank": 330,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "adresse",
+    "gender": "feminine",
+    "translation": "direction",
+    "rank": 331,
+    "patternNote": "Ends in -esse, usually feminine"
+  },
+  {
+    "word": "journal",
+    "gender": "masculine",
+    "translation": "diary, journal",
+    "rank": 332,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "contact",
+    "gender": "masculine",
+    "translation": "contact; contact",
+    "rank": 333,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "base",
+    "gender": "feminine",
+    "translation": "base",
+    "rank": 334,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "peau",
+    "gender": "feminine",
+    "translation": "skin of a person or animal",
+    "rank": 335,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "peuple",
+    "gender": "masculine",
+    "translation": "people",
+    "rank": 336,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "exemple",
+    "gender": "masculine",
+    "translation": "example",
+    "rank": 337,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "fiche",
+    "gender": "feminine",
+    "translation": "record",
+    "rank": 338,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "blessé",
+    "gender": "masculine",
+    "translation": "injured",
+    "rank": 339,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "société",
+    "gender": "feminine",
+    "translation": "company, frequentation",
+    "rank": 340,
+    "patternNote": "Ends in -té, always feminine"
+  },
+  {
+    "word": "tort",
+    "gender": "masculine",
+    "translation": "fault",
+    "rank": 341,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "héros",
+    "gender": "masculine",
+    "translation": "hero",
+    "rank": 342,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "bière",
+    "gender": "feminine",
+    "translation": "beer",
+    "rank": 343,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "robe",
+    "gender": "feminine",
+    "translation": "dress, frock",
+    "rank": 344,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "opération",
+    "gender": "feminine",
+    "translation": "operation",
+    "rank": 345,
+    "patternNote": "Ends in -tion, always feminine"
+  },
+  {
+    "word": "pute",
+    "gender": "feminine",
+    "translation": "whore, slut",
+    "rank": 346,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "entrée",
+    "gender": "feminine",
+    "translation": "entry, act of entering",
+    "rank": 347,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "dommage",
+    "gender": "masculine",
+    "translation": "damage",
+    "rank": 348,
+    "patternNote": "Ends in -age, usually masculine"
+  },
+  {
+    "word": "colonel",
+    "gender": "masculine",
+    "translation": "a colonel, highest commissioned officer below generals",
+    "rank": 349,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "justice",
+    "gender": "feminine",
+    "translation": "justice",
+    "rank": 350,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "découvert",
+    "gender": "masculine",
+    "translation": "overdraft",
+    "rank": 351,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "départ",
+    "gender": "masculine",
+    "translation": "departure, start",
+    "rank": 352,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "bruit",
+    "gender": "masculine",
+    "translation": "a noise",
+    "rank": 353,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "secours",
+    "gender": "masculine",
+    "translation": "aid; assistance; help",
+    "rank": 354,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "enceinte",
+    "gender": "feminine",
+    "translation": "enclosure, compound",
+    "rank": 355,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "mise",
+    "gender": "feminine",
+    "translation": "placement; (act of) putting",
+    "rank": 356,
+    "patternNote": "Ends in -ise, usually feminine"
+  },
+  {
+    "word": "témoin",
+    "gender": "masculine",
+    "translation": "witness",
+    "rank": 357,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "directeur",
+    "gender": "masculine",
+    "translation": "director",
+    "rank": 358,
+    "patternNote": "Agent/doer ending -eur, masculine"
+  },
+  {
+    "word": "excuse",
+    "gender": "feminine",
+    "translation": "excuse",
+    "rank": 359,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "environ",
+    "gender": "masculine",
+    "translation": "a surrounding area",
+    "rank": 360,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "danse",
+    "gender": "feminine",
+    "translation": "dance",
+    "rank": 361,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "position",
+    "gender": "feminine",
+    "translation": "position",
+    "rank": 362,
+    "patternNote": "Ends in -tion, always feminine"
+  },
+  {
+    "word": "humain",
+    "gender": "masculine",
+    "translation": "human",
+    "rank": 363,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "avenir",
+    "gender": "masculine",
+    "translation": "future",
+    "rank": 364,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "bête",
+    "gender": "feminine",
+    "translation": "beast, animal",
+    "rank": 365,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "bravo",
+    "gender": "masculine",
+    "translation": "applause, cheers",
+    "rank": 366,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "approche",
+    "gender": "feminine",
+    "translation": "approach",
+    "rank": 367,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "nourriture",
+    "gender": "feminine",
+    "translation": "food, nourishment",
+    "rank": 368,
+    "patternNote": "Ends in -ure, usually feminine"
+  },
+  {
+    "word": "fric",
+    "gender": "masculine",
+    "translation": "dosh, dough, bread",
+    "rank": 369,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "plupart",
+    "gender": "feminine",
+    "translation": "main part, majority",
+    "rank": 370,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "lycée",
+    "gender": "masculine",
+    "translation": "a public secondary school",
+    "rank": 371,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "sexe",
+    "gender": "masculine",
+    "translation": "sex",
+    "rank": 372,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "niveau",
+    "gender": "masculine",
+    "translation": "level",
+    "rank": 373,
+    "patternNote": "Ends in -eau, always masculine"
+  },
+  {
+    "word": "banque",
+    "gender": "feminine",
+    "translation": "bank",
+    "rank": 374,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "lune",
+    "gender": "feminine",
+    "translation": "the Moon",
+    "rank": 375,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "pitié",
+    "gender": "feminine",
+    "translation": "pity, mercy",
+    "rank": 376,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "expérience",
+    "gender": "feminine",
+    "translation": "experiment, trial, test",
+    "rank": 377,
+    "patternNote": "Ends in -ence, always feminine"
+  },
+  {
+    "word": "procès",
+    "gender": "masculine",
+    "translation": "lawsuit",
+    "rank": 378,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "radio",
+    "gender": "feminine",
+    "translation": "radio, tuner",
+    "rank": 379,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "pose",
+    "gender": "feminine",
+    "translation": "installation, the act of laying, putting down",
+    "rank": 380,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "revenu",
+    "gender": "masculine",
+    "translation": "revenue",
+    "rank": 381,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "bande",
+    "gender": "feminine",
+    "translation": "band, strip",
+    "rank": 382,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "ridicule",
+    "gender": "masculine",
+    "translation": "ridicule; absurd",
+    "rank": 383,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "nord",
+    "gender": "masculine",
+    "translation": "north",
+    "rank": 384,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "copine",
+    "gender": "feminine",
+    "translation": "female equivalent of copain: female friend, girl friend, chum, pal",
+    "rank": 385,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "baiser",
+    "gender": "masculine",
+    "translation": "kiss",
+    "rank": 386,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "anglais",
+    "gender": "masculine",
+    "translation": "English language",
+    "rank": 387,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "henry",
+    "gender": "masculine",
+    "translation": "henry",
+    "rank": 388,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "rôle",
+    "gender": "masculine",
+    "translation": "role",
+    "rank": 389,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "reine",
+    "gender": "feminine",
+    "translation": "queen",
+    "rank": 390,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "cour",
+    "gender": "feminine",
+    "translation": "courtyard,",
+    "rank": 391,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "église",
+    "gender": "feminine",
+    "translation": "church",
+    "rank": 392,
+    "patternNote": "Ends in -ise, usually feminine"
+  },
+  {
+    "word": "vide",
+    "gender": "masculine",
+    "translation": "space",
+    "rank": 393,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "personnel",
+    "gender": "masculine",
+    "translation": "staff, members of staff, personnel",
+    "rank": 394,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "code",
+    "gender": "masculine",
+    "translation": "code",
+    "rank": 395,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "espoir",
+    "gender": "masculine",
+    "translation": "hope",
+    "rank": 396,
+    "patternNote": "Ends in -oir, usually masculine"
+  },
+  {
+    "word": "vidéo",
+    "gender": "feminine",
+    "translation": "video",
+    "rank": 397,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "défense",
+    "gender": "feminine",
+    "translation": "defence",
+    "rank": 398,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "grand-mère",
+    "gender": "feminine",
+    "translation": "grandmother",
+    "rank": 399,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "match",
+    "gender": "masculine",
+    "translation": "match, game",
+    "rank": 400,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "bombe",
+    "gender": "feminine",
+    "translation": "bomb",
+    "rank": 401,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "zone",
+    "gender": "feminine",
+    "translation": "zone",
+    "rank": 402,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "tante",
+    "gender": "feminine",
+    "translation": "aunt",
+    "rank": 403,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "magasin",
+    "gender": "masculine",
+    "translation": "shop, store",
+    "rank": 404,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "chère",
+    "gender": "feminine",
+    "translation": "visage, face",
+    "rank": 405,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "souvenir",
+    "gender": "masculine",
+    "translation": "memory",
+    "rank": 406,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "douleur",
+    "gender": "feminine",
+    "translation": "pain",
+    "rank": 407,
+    "patternNote": "Abstract quality noun ending in -eur, feminine"
+  },
+  {
+    "word": "presse",
+    "gender": "feminine",
+    "translation": "press, papers",
+    "rank": 408,
+    "patternNote": "Ends in -esse, usually feminine"
+  },
+  {
+    "word": "fenêtre",
+    "gender": "feminine",
+    "translation": "window",
+    "rank": 409,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "terrain",
+    "gender": "masculine",
+    "translation": "ground, landscape",
+    "rank": 410,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "sergent",
+    "gender": "masculine",
+    "translation": "sergeant",
+    "rank": 411,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "projet",
+    "gender": "masculine",
+    "translation": "project",
+    "rank": 412,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "quartier",
+    "gender": "masculine",
+    "translation": "quarter, district (part of town), neighbourhood",
+    "rank": 413,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "planète",
+    "gender": "feminine",
+    "translation": "planet",
+    "rank": 414,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "rapide",
+    "gender": "masculine",
+    "translation": "rapid",
+    "rank": 415,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "rendu",
+    "gender": "masculine",
+    "translation": "an instance of rendering, a render",
+    "rank": 416,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "mignon",
+    "gender": "masculine",
+    "translation": "a small pastry",
+    "rank": 417,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "importance",
+    "gender": "feminine",
+    "translation": "importance",
+    "rank": 418,
+    "patternNote": "Ends in -ance, always feminine"
+  },
+  {
+    "word": "mérite",
+    "gender": "masculine",
+    "translation": "merit",
+    "rank": 419,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "machine",
+    "gender": "feminine",
+    "translation": "machine, device",
+    "rank": 420,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "programme",
+    "gender": "masculine",
+    "translation": "a program",
+    "rank": 421,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "connard",
+    "gender": "masculine",
+    "translation": "bastard, jerk, asshole",
+    "rank": 422,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "occasion",
+    "gender": "feminine",
+    "translation": "occasion, opportunity",
+    "rank": 423,
+    "patternNote": "Ends in -sion, always feminine"
+  },
+  {
+    "word": "glace",
+    "gender": "feminine",
+    "translation": "ice",
+    "rank": 424,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "camion",
+    "gender": "masculine",
+    "translation": "lorry",
+    "rank": 425,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "village",
+    "gender": "masculine",
+    "translation": "village",
+    "rank": 426,
+    "patternNote": "Ends in -age, usually masculine"
+  },
+  {
+    "word": "spectacle",
+    "gender": "masculine",
+    "translation": "a show, a spectacle, a performance, a concert",
+    "rank": 427,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "rose",
+    "gender": "feminine",
+    "translation": "rose",
+    "rank": 428,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "parole",
+    "gender": "feminine",
+    "translation": "word",
+    "rank": 429,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "rencontre",
+    "gender": "feminine",
+    "translation": "encounter",
+    "rank": 430,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "réalité",
+    "gender": "feminine",
+    "translation": "reality; actuality; truth",
+    "rank": 431,
+    "patternNote": "Ends in -ité, always feminine"
+  },
+  {
+    "word": "respect",
+    "gender": "masculine",
+    "translation": "respect",
+    "rank": 432,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "officier",
+    "gender": "masculine",
+    "translation": "officer",
+    "rank": 433,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "bill",
+    "gender": "masculine",
+    "translation": "bill",
+    "rank": 434,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "solution",
+    "gender": "feminine",
+    "translation": "solution",
+    "rank": 435,
+    "patternNote": "Ends in -tion, always feminine"
+  },
+  {
+    "word": "monstre",
+    "gender": "masculine",
+    "translation": "monster",
+    "rank": 436,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "ordinateur",
+    "gender": "masculine",
+    "translation": "a computer, a computing device.",
+    "rank": 437,
+    "patternNote": "Agent/doer ending -eur, masculine"
+  },
+  {
+    "word": "nature",
+    "gender": "feminine",
+    "translation": "nature",
+    "rank": 438,
+    "patternNote": "Ends in -ure, usually feminine"
+  },
+  {
+    "word": "énergie",
+    "gender": "feminine",
+    "translation": "energy",
+    "rank": 439,
+    "patternNote": "Ends in -ie, usually feminine"
+  },
+  {
+    "word": "pierre",
+    "gender": "feminine",
+    "translation": "stone",
+    "rank": 440,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "pression",
+    "gender": "feminine",
+    "translation": "pressure",
+    "rank": 441,
+    "patternNote": "Ends in -sion, always feminine"
+  },
+  {
+    "word": "marié",
+    "gender": "masculine",
+    "translation": "groom",
+    "rank": 442,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "espace",
+    "gender": "masculine",
+    "translation": "space",
+    "rank": 443,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "portable",
+    "gender": "masculine",
+    "translation": "ellipsis of téléphone portable: mobile phone",
+    "rank": 444,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "nécessaire",
+    "gender": "masculine",
+    "translation": "kit",
+    "rank": 445,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "court",
+    "gender": "masculine",
+    "translation": "court",
+    "rank": 446,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "envers",
+    "gender": "masculine",
+    "translation": "reverse",
+    "rank": 447,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "bain",
+    "gender": "masculine",
+    "translation": "bath",
+    "rank": 448,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "charge",
+    "gender": "feminine",
+    "translation": "load, burden",
+    "rank": 449,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "ennemi",
+    "gender": "masculine",
+    "translation": "enemy",
+    "rank": 450,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "grand-père",
+    "gender": "masculine",
+    "translation": "grandfather",
+    "rank": 451,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "test",
+    "gender": "masculine",
+    "translation": "test, the external calciferous shell, or endoskeleton, of an echinoderm",
+    "rank": 452,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "futur",
+    "gender": "masculine",
+    "translation": "future",
+    "rank": 453,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "mademoiselle",
+    "gender": "feminine",
+    "translation": "A form of address or title for an unmarried woman: Miss",
+    "rank": 454,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "copain",
+    "gender": "masculine",
+    "translation": "friend, chum, mate (UK), pal, buddy",
+    "rank": 455,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "salope",
+    "gender": "feminine",
+    "translation": "slut",
+    "rank": 456,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "gosse",
+    "gender": "feminine",
+    "translation": "testicle",
+    "rank": 457,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "ancien",
+    "gender": "masculine",
+    "translation": "an old person",
+    "rank": 458,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "stop",
+    "gender": "masculine",
+    "translation": "stop sign",
+    "rank": 459,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "suspect",
+    "gender": "masculine",
+    "translation": "a suspect",
+    "rank": 460,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "invité",
+    "gender": "masculine",
+    "translation": "guest",
+    "rank": 461,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "politique",
+    "gender": "feminine",
+    "translation": "politics",
+    "rank": 462,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "patient",
+    "gender": "masculine",
+    "translation": "patient, outpatient",
+    "rank": 463,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "repas",
+    "gender": "masculine",
+    "translation": "meal, repast",
+    "rank": 464,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "urgence",
+    "gender": "feminine",
+    "translation": "emergency, urgency",
+    "rank": 465,
+    "patternNote": "Ends in -ence, always feminine"
+  },
+  {
+    "word": "conversation",
+    "gender": "feminine",
+    "translation": "conversation",
+    "rank": 466,
+    "patternNote": "Ends in -tion, always feminine"
+  },
+  {
+    "word": "toucher",
+    "gender": "masculine",
+    "translation": "the act of touching",
+    "rank": 467,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "mémoire",
+    "gender": "feminine",
+    "translation": "memory",
+    "rank": 468,
+    "patternNote": "Feminine exception ending in -oire"
+  },
+  {
+    "word": "série",
+    "gender": "feminine",
+    "translation": "series",
+    "rank": 469,
+    "patternNote": "Ends in -ie, usually feminine"
+  },
+  {
+    "word": "mariée",
+    "gender": "feminine",
+    "translation": "bride",
+    "rank": 470,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "contraire",
+    "gender": "masculine",
+    "translation": "opposite",
+    "rank": 471,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "vent",
+    "gender": "masculine",
+    "translation": "wind",
+    "rank": 472,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "taille",
+    "gender": "feminine",
+    "translation": "the act of cutting, pruning, trimming",
+    "rank": 473,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "chat",
+    "gender": "masculine",
+    "translation": "cat",
+    "rank": 474,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "contrat",
+    "gender": "masculine",
+    "translation": "contract",
+    "rank": 475,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "couteau",
+    "gender": "masculine",
+    "translation": "knife",
+    "rank": 476,
+    "patternNote": "Ends in -eau, always masculine"
+  },
+  {
+    "word": "double",
+    "gender": "masculine",
+    "translation": "double",
+    "rank": 477,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "carrière",
+    "gender": "feminine",
+    "translation": "racecourse",
+    "rank": 478,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "université",
+    "gender": "feminine",
+    "translation": "university",
+    "rank": 479,
+    "patternNote": "Ends in -ité, always feminine"
+  },
+  {
+    "word": "papier",
+    "gender": "masculine",
+    "translation": "paper",
+    "rank": 480,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "vécu",
+    "gender": "masculine",
+    "translation": "experience",
+    "rank": 481,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "courage",
+    "gender": "masculine",
+    "translation": "courage",
+    "rank": 482,
+    "patternNote": "Ends in -age, usually masculine"
+  },
+  {
+    "word": "beauté",
+    "gender": "feminine",
+    "translation": "beauty",
+    "rank": 483,
+    "patternNote": "Ends in -té, always feminine"
+  },
+  {
+    "word": "richard",
+    "gender": "masculine",
+    "translation": "rich man, moneybags, capitalist, bourgeois",
+    "rank": 484,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "étant",
+    "gender": "masculine",
+    "translation": "being",
+    "rank": 485,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "couple",
+    "gender": "masculine",
+    "translation": "two partners in a romantic or sexual relationship",
+    "rank": 486,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "permis",
+    "gender": "masculine",
+    "translation": "permit, licence",
+    "rank": 487,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "différence",
+    "gender": "feminine",
+    "translation": "difference",
+    "rank": 488,
+    "patternNote": "Ends in -ence, always feminine"
+  },
+  {
+    "word": "course",
+    "gender": "feminine",
+    "translation": "run, running",
+    "rank": 489,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "mille",
+    "gender": "masculine",
+    "translation": "mile",
+    "rank": 490,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "accès",
+    "gender": "masculine",
+    "translation": "access",
+    "rank": 491,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "cible",
+    "gender": "feminine",
+    "translation": "target",
+    "rank": 492,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "bonheur",
+    "gender": "masculine",
+    "translation": "goodhap, good fortune",
+    "rank": 493,
+    "patternNote": "Agent/doer ending -eur, masculine"
+  },
+  {
+    "word": "action",
+    "gender": "feminine",
+    "translation": "action, act, deed",
+    "rank": 494,
+    "patternNote": "Ends in -tion, always feminine"
+  },
+  {
+    "word": "taxi",
+    "gender": "masculine",
+    "translation": "taxi",
+    "rank": 495,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "restaurant",
+    "gender": "masculine",
+    "translation": "restaurant",
+    "rank": 496,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "crise",
+    "gender": "feminine",
+    "translation": "crisis",
+    "rank": 497,
+    "patternNote": "Ends in -ise, usually feminine"
+  },
+  {
+    "word": "piste",
+    "gender": "feminine",
+    "translation": "track or trail",
+    "rank": 498,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "blanche",
+    "gender": "feminine",
+    "translation": "minim, half note",
+    "rank": 499,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "coupe",
+    "gender": "feminine",
+    "translation": "goblet, cup",
+    "rank": 500,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "prince",
+    "gender": "masculine",
+    "translation": "prince",
+    "rank": 501,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "maladie",
+    "gender": "feminine",
+    "translation": "illness, disease",
+    "rank": 502,
+    "patternNote": "Ends in -ie, usually feminine"
+  },
+  {
+    "word": "week-end",
+    "gender": "masculine",
+    "translation": "weekend; synonym of fin de semaine",
+    "rank": 503,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "alcool",
+    "gender": "masculine",
+    "translation": "alcohol, especially domestic, medical, methylated spirits",
+    "rank": 504,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "caméra",
+    "gender": "feminine",
+    "translation": "video camera",
+    "rank": 505,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "entier",
+    "gender": "masculine",
+    "translation": "integer, whole number",
+    "rank": 506,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "image",
+    "gender": "feminine",
+    "translation": "picture, image",
+    "rank": 507,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "étage",
+    "gender": "masculine",
+    "translation": "floor, storey",
+    "rank": 508,
+    "patternNote": "Ends in -age, usually masculine"
+  },
+  {
+    "word": "suivi",
+    "gender": "masculine",
+    "translation": "following",
+    "rank": 509,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "langue",
+    "gender": "feminine",
+    "translation": "tongue",
+    "rank": 510,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "direction",
+    "gender": "feminine",
+    "translation": "direction",
+    "rank": 511,
+    "patternNote": "Ends in -tion, always feminine"
+  },
+  {
+    "word": "soldat",
+    "gender": "masculine",
+    "translation": "soldier",
+    "rank": 512,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "couleur",
+    "gender": "feminine",
+    "translation": "color/colour",
+    "rank": 513,
+    "patternNote": "Abstract quality noun ending in -eur, feminine"
+  },
+  {
+    "word": "frappé",
+    "gender": "masculine",
+    "translation": "downbeat",
+    "rank": 514,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "raté",
+    "gender": "masculine",
+    "translation": "a failure, a washout, a loser",
+    "rank": 515,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "épouse",
+    "gender": "feminine",
+    "translation": "female spouse, wife",
+    "rank": 516,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "troisième",
+    "gender": "feminine",
+    "translation": "third class",
+    "rank": 517,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "faible",
+    "gender": "masculine",
+    "translation": "weakness, soft spot",
+    "rank": 518,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "bleu",
+    "gender": "masculine",
+    "translation": "the color blue",
+    "rank": 519,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "failli",
+    "gender": "masculine",
+    "translation": "bankrupt; insolvent.",
+    "rank": 520,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "américain",
+    "gender": "masculine",
+    "translation": "sandwich, generally with ham or pork, and French fries",
+    "rank": 521,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "pont",
+    "gender": "masculine",
+    "translation": "bridge",
+    "rank": 522,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "poisson",
+    "gender": "masculine",
+    "translation": "fish",
+    "rank": 523,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "date",
+    "gender": "feminine",
+    "translation": "date",
+    "rank": 524,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "intention",
+    "gender": "feminine",
+    "translation": "intention",
+    "rank": 525,
+    "patternNote": "Ends in -tion, always feminine"
+  },
+  {
+    "word": "procureur",
+    "gender": "masculine",
+    "translation": "representative, agent",
+    "rank": 526,
+    "patternNote": "Agent/doer ending -eur, masculine"
+  },
+  {
+    "word": "goût",
+    "gender": "masculine",
+    "translation": "taste, flavour",
+    "rank": 527,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "shérif",
+    "gender": "masculine",
+    "translation": "sheriff",
+    "rank": 528,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "arrêt",
+    "gender": "masculine",
+    "translation": "stopping, checking, arrest",
+    "rank": 529,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "sourire",
+    "gender": "masculine",
+    "translation": "smile",
+    "rank": 530,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "lait",
+    "gender": "masculine",
+    "translation": "milk",
+    "rank": 531,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "chasse",
+    "gender": "feminine",
+    "translation": "hunt, hunting",
+    "rank": 532,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "signal",
+    "gender": "masculine",
+    "translation": "signal",
+    "rank": 533,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "destin",
+    "gender": "masculine",
+    "translation": "destiny, fate",
+    "rank": 534,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "marre",
+    "gender": "feminine",
+    "translation": "a sort of hoe",
+    "rank": 535,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "français",
+    "gender": "masculine",
+    "translation": "French",
+    "rank": 536,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "princesse",
+    "gender": "feminine",
+    "translation": "princess",
+    "rank": 537,
+    "patternNote": "Ends in -esse, usually feminine"
+  },
+  {
+    "word": "paie",
+    "gender": "feminine",
+    "translation": "pay, salary",
+    "rank": 538,
+    "patternNote": "Ends in -ie, usually feminine"
+  },
+  {
+    "word": "présence",
+    "gender": "feminine",
+    "translation": "presence",
+    "rank": 539,
+    "patternNote": "Ends in -ence, always feminine"
+  },
+  {
+    "word": "adieu",
+    "gender": "masculine",
+    "translation": "farewell",
+    "rank": 540,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "costume",
+    "gender": "masculine",
+    "translation": "a style of dress characteristic of a particular country, period or people",
+    "rank": 541,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "entreprise",
+    "gender": "feminine",
+    "translation": "company, business",
+    "rank": 542,
+    "patternNote": "Ends in -ise, usually feminine"
+  },
+  {
+    "word": "lien",
+    "gender": "masculine",
+    "translation": "tie, bond",
+    "rank": 543,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "enfoiré",
+    "gender": "masculine",
+    "translation": "dickhead, fuckhead, shithead",
+    "rank": 544,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "discours",
+    "gender": "masculine",
+    "translation": "speech",
+    "rank": 545,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "robert",
+    "gender": "masculine",
+    "translation": "tit",
+    "rank": 546,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "salaud",
+    "gender": "masculine",
+    "translation": "bastard, wretch",
+    "rank": 547,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "magie",
+    "gender": "feminine",
+    "translation": "magic",
+    "rank": 548,
+    "patternNote": "Ends in -ie, usually feminine"
+  },
+  {
+    "word": "bouteille",
+    "gender": "feminine",
+    "translation": "alcohol",
+    "rank": 549,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "tribunal",
+    "gender": "masculine",
+    "translation": "tribunal",
+    "rank": 550,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "superbe",
+    "gender": "feminine",
+    "translation": "pride, arrogance",
+    "rank": 551,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "pause",
+    "gender": "feminine",
+    "translation": "pause, break",
+    "rank": 552,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "identité",
+    "gender": "feminine",
+    "translation": "identity",
+    "rank": 553,
+    "patternNote": "Ends in -ité, always feminine"
+  },
+  {
+    "word": "campagne",
+    "gender": "feminine",
+    "translation": "country (the country, rural area, as opposed to the town or city), countryside",
+    "rank": 554,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "mark",
+    "gender": "masculine",
+    "translation": "mark",
+    "rank": 555,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "morceau",
+    "gender": "masculine",
+    "translation": "piece, slice, bit, morsel",
+    "rank": 556,
+    "patternNote": "Ends in -eau, always masculine"
+  },
+  {
+    "word": "lettres",
+    "gender": "feminine",
+    "translation": "humanities/arts",
+    "rank": 557,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "nombre",
+    "gender": "masculine",
+    "translation": "number",
+    "rank": 558,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "gâteau",
+    "gender": "masculine",
+    "translation": "a cookie",
+    "rank": 559,
+    "patternNote": "Ends in -eau, always masculine"
+  },
+  {
+    "word": "joie",
+    "gender": "feminine",
+    "translation": "joy",
+    "rank": 560,
+    "patternNote": "Ends in -ie, usually feminine"
+  },
+  {
+    "word": "star",
+    "gender": "feminine",
+    "translation": "star",
+    "rank": 561,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "regard",
+    "gender": "masculine",
+    "translation": "look, glance",
+    "rank": 562,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "vendu",
+    "gender": "masculine",
+    "translation": "a sellout",
+    "rank": 563,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "majesté",
+    "gender": "feminine",
+    "translation": "majesty",
+    "rank": 564,
+    "patternNote": "Ends in -té, always feminine"
+  },
+  {
+    "word": "menace",
+    "gender": "feminine",
+    "translation": "threat",
+    "rank": 565,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "appareil",
+    "gender": "masculine",
+    "translation": "apparatus, device",
+    "rank": 566,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "méchant",
+    "gender": "masculine",
+    "translation": "jerk",
+    "rank": 567,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "jambe",
+    "gender": "feminine",
+    "translation": "leg",
+    "rank": 568,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "ange",
+    "gender": "masculine",
+    "translation": "angel",
+    "rank": 569,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "noire",
+    "gender": "feminine",
+    "translation": "quarter note",
+    "rank": 570,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "labo",
+    "gender": "masculine",
+    "translation": "lab",
+    "rank": 571,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "cinéma",
+    "gender": "masculine",
+    "translation": "cinema, filmmaking",
+    "rank": 572,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "martin",
+    "gender": "masculine",
+    "translation": "bird of either the starling family, or of the kingfisher family",
+    "rank": 573,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "produit",
+    "gender": "masculine",
+    "translation": "product",
+    "rank": 574,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "chapeau",
+    "gender": "masculine",
+    "translation": "hat",
+    "rank": 575,
+    "patternNote": "Ends in -eau, always masculine"
+  },
+  {
+    "word": "échange",
+    "gender": "masculine",
+    "translation": "exchange",
+    "rank": 576,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "vitesse",
+    "gender": "feminine",
+    "translation": "speed",
+    "rank": 577,
+    "patternNote": "Ends in -esse, usually feminine"
+  },
+  {
+    "word": "succès",
+    "gender": "masculine",
+    "translation": "success",
+    "rank": 578,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "odeur",
+    "gender": "feminine",
+    "translation": "smell, odour",
+    "rank": 579,
+    "patternNote": "Abstract quality noun ending in -eur, feminine"
+  },
+  {
+    "word": "pain",
+    "gender": "masculine",
+    "translation": "bread",
+    "rank": 580,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "aise",
+    "gender": "feminine",
+    "translation": "satisfaction",
+    "rank": 581,
+    "patternNote": "Ends in -ise, usually feminine"
+  },
+  {
+    "word": "règle",
+    "gender": "feminine",
+    "translation": "rule, regulation",
+    "rank": 582,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "vendredi",
+    "gender": "masculine",
+    "translation": "Friday",
+    "rank": 583,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "lever",
+    "gender": "masculine",
+    "translation": "the act of getting up in the morning",
+    "rank": 584,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "arbre",
+    "gender": "masculine",
+    "translation": "tree",
+    "rank": 585,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "faveur",
+    "gender": "feminine",
+    "translation": "favour",
+    "rank": 586,
+    "patternNote": "Abstract quality noun ending in -eur, feminine"
+  },
+  {
+    "word": "jeté",
+    "gender": "masculine",
+    "translation": "jete",
+    "rank": 587,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "champ",
+    "gender": "masculine",
+    "translation": "field in its various senses, including:",
+    "rank": 588,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "valeur",
+    "gender": "feminine",
+    "translation": "value, worth",
+    "rank": 589,
+    "patternNote": "Abstract quality noun ending in -eur, feminine"
+  },
+  {
+    "word": "réel",
+    "gender": "masculine",
+    "translation": "real",
+    "rank": 590,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "couverture",
+    "gender": "feminine",
+    "translation": "blanket",
+    "rank": 591,
+    "patternNote": "Ends in -ure, usually feminine"
+  },
+  {
+    "word": "article",
+    "gender": "masculine",
+    "translation": "article",
+    "rank": 592,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "parc",
+    "gender": "masculine",
+    "translation": "park",
+    "rank": 593,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "toit",
+    "gender": "masculine",
+    "translation": "roof",
+    "rank": 594,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "unité",
+    "gender": "feminine",
+    "translation": "unity",
+    "rank": 595,
+    "patternNote": "Ends in -ité, always feminine"
+  },
+  {
+    "word": "plage",
+    "gender": "feminine",
+    "translation": "beach",
+    "rank": 596,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "malin",
+    "gender": "masculine",
+    "translation": "shrewd person, smart person",
+    "rank": 597,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "coffre",
+    "gender": "masculine",
+    "translation": "chest, box",
+    "rank": 598,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "mode",
+    "gender": "feminine",
+    "translation": "fashion, trend",
+    "rank": 599,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "folie",
+    "gender": "feminine",
+    "translation": "madness, folly, insanity; silliness, craziness",
+    "rank": 600,
+    "patternNote": "Ends in -ie, usually feminine"
+  },
+  {
+    "word": "extérieur",
+    "gender": "masculine",
+    "translation": "exterior, outside",
+    "rank": 601,
+    "patternNote": "Agent/doer ending -eur, masculine"
+  },
+  {
+    "word": "membre",
+    "gender": "masculine",
+    "translation": "member",
+    "rank": 602,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "cache",
+    "gender": "feminine",
+    "translation": "cache, hiding place for later retrieval",
+    "rank": 603,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "hasard",
+    "gender": "masculine",
+    "translation": "(random) chance",
+    "rank": 604,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "génie",
+    "gender": "masculine",
+    "translation": "genie",
+    "rank": 605,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "jardin",
+    "gender": "masculine",
+    "translation": "garden",
+    "rank": 606,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "saison",
+    "gender": "feminine",
+    "translation": "season",
+    "rank": 607,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "frappe",
+    "gender": "feminine",
+    "translation": "hit",
+    "rank": 608,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "suivant",
+    "gender": "masculine",
+    "translation": "follower, attendant",
+    "rank": 609,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "ouest",
+    "gender": "masculine",
+    "translation": "west",
+    "rank": 610,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "poids",
+    "gender": "masculine",
+    "translation": "weight",
+    "rank": 611,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "poche",
+    "gender": "feminine",
+    "translation": "pocket",
+    "rank": 612,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "source",
+    "gender": "feminine",
+    "translation": "source, spring",
+    "rank": 613,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "samedi",
+    "gender": "masculine",
+    "translation": "Saturday",
+    "rank": 614,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "univers",
+    "gender": "masculine",
+    "translation": "universe",
+    "rank": 615,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "viande",
+    "gender": "feminine",
+    "translation": "meat",
+    "rank": 616,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "amoureuse",
+    "gender": "feminine",
+    "translation": "female equivalent of amoureux",
+    "rank": 617,
+    "patternNote": "Feminine agent ending -euse"
+  },
+  {
+    "word": "changement",
+    "gender": "masculine",
+    "translation": "change",
+    "rank": 618,
+    "patternNote": "Ends in -ment, always masculine"
+  },
+  {
+    "word": "page",
+    "gender": "feminine",
+    "translation": "page",
+    "rank": 619,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "conduit",
+    "gender": "masculine",
+    "translation": "conduit",
+    "rank": 620,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "passage",
+    "gender": "masculine",
+    "translation": "the act of going through a place or event",
+    "rank": 621,
+    "patternNote": "Ends in -age, usually masculine"
+  },
+  {
+    "word": "piège",
+    "gender": "masculine",
+    "translation": "trap, snare, booby trap",
+    "rank": 622,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "Kevin",
+    "gender": "masculine",
+    "translation": "A boorish lower-class person of low intellect",
+    "rank": 623,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "trésor",
+    "gender": "masculine",
+    "translation": "treasure",
+    "rank": 624,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "perte",
+    "gender": "feminine",
+    "translation": "loss",
+    "rank": 625,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "fantôme",
+    "gender": "masculine",
+    "translation": "ghost",
+    "rank": 626,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "naissance",
+    "gender": "feminine",
+    "translation": "birth",
+    "rank": 627,
+    "patternNote": "Ends in -ance, always feminine"
+  },
+  {
+    "word": "retraite",
+    "gender": "feminine",
+    "translation": "retirement",
+    "rank": 628,
+    "patternNote": "Medical ending -ite, usually feminine"
+  },
+  {
+    "word": "étranger",
+    "gender": "masculine",
+    "translation": "foreigner",
+    "rank": 629,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "poulet",
+    "gender": "masculine",
+    "translation": "chicken",
+    "rank": 630,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "marque",
+    "gender": "feminine",
+    "translation": "mark",
+    "rank": 631,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "cent",
+    "gender": "masculine",
+    "translation": "cent",
+    "rank": 632,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "bâtiment",
+    "gender": "masculine",
+    "translation": "building, edifice",
+    "rank": 633,
+    "patternNote": "Ends in -ment, always masculine"
+  },
+  {
+    "word": "tombée",
+    "gender": "feminine",
+    "translation": "fall",
+    "rank": 634,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "animal",
+    "gender": "masculine",
+    "translation": "animal",
+    "rank": 635,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "paradis",
+    "gender": "masculine",
+    "translation": "paradise",
+    "rank": 636,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "émission",
+    "gender": "feminine",
+    "translation": "emission",
+    "rank": 637,
+    "patternNote": "Ends in -sion, always feminine"
+  },
+  {
+    "word": "lance",
+    "gender": "feminine",
+    "translation": "a spear, lance",
+    "rank": 638,
+    "patternNote": "Ends in -ance, always feminine"
+  },
+  {
+    "word": "file",
+    "gender": "feminine",
+    "translation": "a line of objects placed one after the other",
+    "rank": 639,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "dimanche",
+    "gender": "masculine",
+    "translation": "Sunday",
+    "rank": 640,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "conscience",
+    "gender": "feminine",
+    "translation": "conscience",
+    "rank": 641,
+    "patternNote": "Ends in -ence, always feminine"
+  },
+  {
+    "word": "connaissance",
+    "gender": "feminine",
+    "translation": "knowledge",
+    "rank": 642,
+    "patternNote": "Ends in -ance, always feminine"
+  },
+  {
+    "word": "sentiment",
+    "gender": "masculine",
+    "translation": "a sentiment, general thought, sense or feeling",
+    "rank": 643,
+    "patternNote": "Ends in -ment, always masculine"
+  },
+  {
+    "word": "bataille",
+    "gender": "feminine",
+    "translation": "battle",
+    "rank": 644,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "souci",
+    "gender": "masculine",
+    "translation": "worry; concern",
+    "rank": 645,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "note",
+    "gender": "feminine",
+    "translation": "note",
+    "rank": 646,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "doigt",
+    "gender": "masculine",
+    "translation": "finger",
+    "rank": 647,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "mensonge",
+    "gender": "masculine",
+    "translation": "a lie or falsehood",
+    "rank": 648,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "volonté",
+    "gender": "feminine",
+    "translation": "wish, will",
+    "rank": 649,
+    "patternNote": "Ends in -té, always feminine"
+  },
+  {
+    "word": "victoire",
+    "gender": "feminine",
+    "translation": "victory; win",
+    "rank": 650,
+    "patternNote": "Feminine exception ending in -oire"
+  },
+  {
+    "word": "direct",
+    "gender": "masculine",
+    "translation": "live broadcast, live reporting",
+    "rank": 651,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "abandonné",
+    "gender": "masculine",
+    "translation": "abandonee, one who is abandoned",
+    "rank": 652,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "information",
+    "gender": "feminine",
+    "translation": "piece of information; datum",
+    "rank": 653,
+    "patternNote": "Ends in -tion, always feminine"
+  },
+  {
+    "word": "coupé",
+    "gender": "masculine",
+    "translation": "coupé",
+    "rank": 654,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "traitement",
+    "gender": "masculine",
+    "translation": "treatment",
+    "rank": 655,
+    "patternNote": "Ends in -ment, always masculine"
+  },
+  {
+    "word": "cancer",
+    "gender": "masculine",
+    "translation": "cancer",
+    "rank": 656,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "flingue",
+    "gender": "masculine",
+    "translation": "shooter, pistol, gat",
+    "rank": 657,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "cousin",
+    "gender": "masculine",
+    "translation": "cousin",
+    "rank": 658,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "douche",
+    "gender": "feminine",
+    "translation": "shower",
+    "rank": 659,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "interdit",
+    "gender": "masculine",
+    "translation": "something which is prohibited",
+    "rank": 660,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "théorie",
+    "gender": "feminine",
+    "translation": "theory",
+    "rank": 661,
+    "patternNote": "Ends in -ie, usually feminine"
+  },
+  {
+    "word": "trace",
+    "gender": "feminine",
+    "translation": "trace",
+    "rank": 662,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "internet",
+    "gender": "masculine",
+    "translation": "the Internet",
+    "rank": 663,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "salon",
+    "gender": "masculine",
+    "translation": "living room",
+    "rank": 664,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "lancer",
+    "gender": "masculine",
+    "translation": "a throw",
+    "rank": 665,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "protection",
+    "gender": "feminine",
+    "translation": "protection",
+    "rank": 666,
+    "patternNote": "Ends in -tion, always feminine"
+  },
+  {
+    "word": "pantalon",
+    "gender": "masculine",
+    "translation": "trousers",
+    "rank": 667,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "style",
+    "gender": "masculine",
+    "translation": "style",
+    "rank": 668,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "semblant",
+    "gender": "masculine",
+    "translation": "a semblance",
+    "rank": 669,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "acte",
+    "gender": "masculine",
+    "translation": "act",
+    "rank": 670,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "aéroport",
+    "gender": "masculine",
+    "translation": "airport",
+    "rank": 671,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "queue",
+    "gender": "feminine",
+    "translation": "tail",
+    "rank": 672,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "coincé",
+    "gender": "masculine",
+    "translation": "a tightass, an uptight person",
+    "rank": 673,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "innocent",
+    "gender": "masculine",
+    "translation": "an innocent person",
+    "rank": 674,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "supporter",
+    "gender": "masculine",
+    "translation": "supporter, fan",
+    "rank": 675,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "infirmière",
+    "gender": "feminine",
+    "translation": "nurse",
+    "rank": 676,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "métier",
+    "gender": "masculine",
+    "translation": "job, profession, trade",
+    "rank": 677,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "crétin",
+    "gender": "masculine",
+    "translation": "cretin",
+    "rank": 678,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "surveillance",
+    "gender": "feminine",
+    "translation": "surveillance",
+    "rank": 679,
+    "patternNote": "Ends in -ance, always feminine"
+  },
+  {
+    "word": "suicide",
+    "gender": "masculine",
+    "translation": "suicide",
+    "rank": 680,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "militaire",
+    "gender": "masculine",
+    "translation": "military",
+    "rank": 681,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "casse",
+    "gender": "masculine",
+    "translation": "burglary, break-in",
+    "rank": 682,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "pilote",
+    "gender": "masculine",
+    "translation": "pilot",
+    "rank": 683,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "leçon",
+    "gender": "feminine",
+    "translation": "lesson",
+    "rank": 684,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "paquet",
+    "gender": "masculine",
+    "translation": "packet",
+    "rank": 685,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "immeuble",
+    "gender": "masculine",
+    "translation": "building",
+    "rank": 686,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "chinois",
+    "gender": "masculine",
+    "translation": "Chinese",
+    "rank": 687,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "oiseau",
+    "gender": "masculine",
+    "translation": "bird",
+    "rank": 688,
+    "patternNote": "Ends in -eau, always masculine"
+  },
+  {
+    "word": "veste",
+    "gender": "feminine",
+    "translation": "jacket",
+    "rank": 689,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "station",
+    "gender": "feminine",
+    "translation": "station",
+    "rank": 690,
+    "patternNote": "Ends in -tion, always feminine"
+  },
+  {
+    "word": "mandat",
+    "gender": "masculine",
+    "translation": "mandate",
+    "rank": 691,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "assassin",
+    "gender": "masculine",
+    "translation": "an assassin or other murderer",
+    "rank": 692,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "bague",
+    "gender": "feminine",
+    "translation": "ring",
+    "rank": 693,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "tente",
+    "gender": "feminine",
+    "translation": "tent",
+    "rank": 694,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "ventre",
+    "gender": "masculine",
+    "translation": "belly",
+    "rank": 695,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "carter",
+    "gender": "masculine",
+    "translation": "housing",
+    "rank": 696,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "respire",
+    "gender": "masculine",
+    "translation": "alternative spelling of respir",
+    "rank": 697,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "haute",
+    "gender": "feminine",
+    "translation": "high society",
+    "rank": 698,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "terme",
+    "gender": "masculine",
+    "translation": "terms",
+    "rank": 699,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "vert",
+    "gender": "masculine",
+    "translation": "green",
+    "rank": 700,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "hâte",
+    "gender": "feminine",
+    "translation": "haste, impatience",
+    "rank": 701,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "commande",
+    "gender": "feminine",
+    "translation": "order",
+    "rank": 702,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "souris",
+    "gender": "feminine",
+    "translation": "mouse",
+    "rank": 703,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "sport",
+    "gender": "masculine",
+    "translation": "sport",
+    "rank": 704,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "fiston",
+    "gender": "masculine",
+    "translation": "boy, son, sonny, lad, young man",
+    "rank": 705,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "pluie",
+    "gender": "feminine",
+    "translation": "rain",
+    "rank": 706,
+    "patternNote": "Ends in -ie, usually feminine"
+  },
+  {
+    "word": "ombre",
+    "gender": "feminine",
+    "translation": "shade, shadow",
+    "rank": 707,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "épisode",
+    "gender": "masculine",
+    "translation": "episode",
+    "rank": 708,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "talent",
+    "gender": "masculine",
+    "translation": "a talent",
+    "rank": 709,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "chocolat",
+    "gender": "masculine",
+    "translation": "chocolate",
+    "rank": 710,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "assurance",
+    "gender": "feminine",
+    "translation": "self-confidence",
+    "rank": 711,
+    "patternNote": "Ends in -ance, always feminine"
+  },
+  {
+    "word": "couche",
+    "gender": "feminine",
+    "translation": "bed",
+    "rank": 712,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "site",
+    "gender": "masculine",
+    "translation": "site",
+    "rank": 713,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "neige",
+    "gender": "feminine",
+    "translation": "snow, crystalline frozen precipitation",
+    "rank": 714,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "chemise",
+    "gender": "feminine",
+    "translation": "shirt",
+    "rank": 715,
+    "patternNote": "Ends in -ise, usually feminine"
+  },
+  {
+    "word": "emploi",
+    "gender": "masculine",
+    "translation": "job",
+    "rank": 716,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "saint",
+    "gender": "masculine",
+    "translation": "a male saint; masculine of sainte",
+    "rank": 717,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "jury",
+    "gender": "masculine",
+    "translation": "jury",
+    "rank": 718,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "voleur",
+    "gender": "masculine",
+    "translation": "robber, thief",
+    "rank": 719,
+    "patternNote": "Agent/doer ending -eur, masculine"
+  },
+  {
+    "word": "chaise",
+    "gender": "feminine",
+    "translation": "chair, seat",
+    "rank": 720,
+    "patternNote": "Ends in -ise, usually feminine"
+  },
+  {
+    "word": "accusé",
+    "gender": "masculine",
+    "translation": "accused",
+    "rank": 721,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "zéro",
+    "gender": "masculine",
+    "translation": "zero, nought, oh",
+    "rank": 722,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "mouvement",
+    "gender": "masculine",
+    "translation": "movement",
+    "rank": 723,
+    "patternNote": "Ends in -ment, always masculine"
+  },
+  {
+    "word": "sommeil",
+    "gender": "masculine",
+    "translation": "sleep",
+    "rank": 724,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "traduction",
+    "gender": "feminine",
+    "translation": "translation",
+    "rank": 725,
+    "patternNote": "Ends in -tion, always feminine"
+  },
+  {
+    "word": "repos",
+    "gender": "masculine",
+    "translation": "rest, ease, repose",
+    "rank": 726,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "siège",
+    "gender": "masculine",
+    "translation": "seat, chair",
+    "rank": 727,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "policier",
+    "gender": "masculine",
+    "translation": "policeman, police officer",
+    "rank": 728,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "puissance",
+    "gender": "feminine",
+    "translation": "power",
+    "rank": 729,
+    "patternNote": "Ends in -ance, always feminine"
+  },
+  {
+    "word": "second",
+    "gender": "masculine",
+    "translation": "assistant, first mate",
+    "rank": 730,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "cellule",
+    "gender": "feminine",
+    "translation": "cell",
+    "rank": 731,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "violence",
+    "gender": "feminine",
+    "translation": "violence",
+    "rank": 732,
+    "patternNote": "Ends in -ence, always feminine"
+  },
+  {
+    "word": "ours",
+    "gender": "masculine",
+    "translation": "bear",
+    "rank": 733,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "gorge",
+    "gender": "feminine",
+    "translation": "throat",
+    "rank": 734,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "examen",
+    "gender": "masculine",
+    "translation": "examination, inspection, study, analysis",
+    "rank": 735,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "distance",
+    "gender": "feminine",
+    "translation": "distance",
+    "rank": 736,
+    "patternNote": "Ends in -ance, always feminine"
+  },
+  {
+    "word": "titre",
+    "gender": "masculine",
+    "translation": "heading, title",
+    "rank": 737,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "lundi",
+    "gender": "masculine",
+    "translation": "Monday",
+    "rank": 738,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "choc",
+    "gender": "masculine",
+    "translation": "hit, strike",
+    "rank": 739,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "théâtre",
+    "gender": "masculine",
+    "translation": "theatre",
+    "rank": 740,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "paye",
+    "gender": "feminine",
+    "translation": "salary, pay",
+    "rank": 741,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "logique",
+    "gender": "feminine",
+    "translation": "logic",
+    "rank": 742,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "miracle",
+    "gender": "masculine",
+    "translation": "miracle",
+    "rank": 743,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "montagne",
+    "gender": "feminine",
+    "translation": "mountain",
+    "rank": 744,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "plat",
+    "gender": "masculine",
+    "translation": "a flat area of ground; a flat thing; a flat dish or receptacle",
+    "rank": 745,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "lunettes",
+    "gender": "feminine",
+    "translation": "spectacles, eyeglasses",
+    "rank": 746,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "mine",
+    "gender": "feminine",
+    "translation": "mine",
+    "rank": 747,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "pistolet",
+    "gender": "masculine",
+    "translation": "gun, pistol",
+    "rank": 748,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "divorce",
+    "gender": "masculine",
+    "translation": "divorce",
+    "rank": 749,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "forêt",
+    "gender": "feminine",
+    "translation": "forest",
+    "rank": 750,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "fortune",
+    "gender": "feminine",
+    "translation": "fortune; fate, destiny; luck",
+    "rank": 751,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "explosion",
+    "gender": "feminine",
+    "translation": "explosion",
+    "rank": 752,
+    "patternNote": "Ends in -sion, always feminine"
+  },
+  {
+    "word": "responsabilité",
+    "gender": "feminine",
+    "translation": "responsibility",
+    "rank": 753,
+    "patternNote": "Ends in -ité, always feminine"
+  },
+  {
+    "word": "principal",
+    "gender": "masculine",
+    "translation": "someone or something which is important, key, paramount; that which matters most",
+    "rank": 754,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "épée",
+    "gender": "feminine",
+    "translation": "sword",
+    "rank": 755,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "tableau",
+    "gender": "masculine",
+    "translation": "painting",
+    "rank": 756,
+    "patternNote": "Ends in -eau, always masculine"
+  },
+  {
+    "word": "cabinet",
+    "gender": "masculine",
+    "translation": "a study",
+    "rank": 757,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "normale",
+    "gender": "feminine",
+    "translation": "Line perpendicular to a curve",
+    "rank": 758,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "alerte",
+    "gender": "feminine",
+    "translation": "alert",
+    "rank": 759,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "meurtrier",
+    "gender": "masculine",
+    "translation": "murderer",
+    "rank": 760,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "commis",
+    "gender": "masculine",
+    "translation": "clerk",
+    "rank": 761,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "sous-titrage",
+    "gender": "masculine",
+    "translation": "subtitling",
+    "rank": 762,
+    "patternNote": "Ends in -age, usually masculine"
+  },
+  {
+    "word": "rock",
+    "gender": "masculine",
+    "translation": "rock",
+    "rank": 763,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "vision",
+    "gender": "feminine",
+    "translation": "vision, sight",
+    "rank": 764,
+    "patternNote": "Ends in -sion, always feminine"
+  },
+  {
+    "word": "mesure",
+    "gender": "feminine",
+    "translation": "measure",
+    "rank": 765,
+    "patternNote": "Ends in -ure, usually feminine"
+  },
+  {
+    "word": "louis",
+    "gender": "masculine",
+    "translation": "20 francs",
+    "rank": 766,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "secrétaire",
+    "gender": "masculine",
+    "translation": "writing desk, secretaire",
+    "rank": 767,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "fuite",
+    "gender": "feminine",
+    "translation": "escape; getaway; flight",
+    "rank": 768,
+    "patternNote": "Medical ending -ite, usually feminine"
+  },
+  {
+    "word": "amitié",
+    "gender": "feminine",
+    "translation": "friendship, amity",
+    "rank": 769,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "annonce",
+    "gender": "feminine",
+    "translation": "advertisement",
+    "rank": 770,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "idiote",
+    "gender": "feminine",
+    "translation": "female equivalent of idiot",
+    "rank": 771,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "minuit",
+    "gender": "masculine",
+    "translation": "midnight",
+    "rank": 772,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "humeur",
+    "gender": "feminine",
+    "translation": "humour/humor",
+    "rank": 773,
+    "patternNote": "Abstract quality noun ending in -eur, feminine"
+  },
+  {
+    "word": "physique",
+    "gender": "masculine",
+    "translation": "physique",
+    "rank": 774,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "permission",
+    "gender": "feminine",
+    "translation": "permission",
+    "rank": 775,
+    "patternNote": "Ends in -sion, always feminine"
+  },
+  {
+    "word": "vente",
+    "gender": "feminine",
+    "translation": "sale",
+    "rank": 776,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "vache",
+    "gender": "feminine",
+    "translation": "cow",
+    "rank": 777,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "courses",
+    "gender": "feminine",
+    "translation": "shopping, usually for groceries, rarely for clothes.",
+    "rank": 778,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "modèle",
+    "gender": "masculine",
+    "translation": "model, example, design",
+    "rank": 779,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "version",
+    "gender": "feminine",
+    "translation": "version; model",
+    "rank": 780,
+    "patternNote": "Ends in -sion, always feminine"
+  },
+  {
+    "word": "concert",
+    "gender": "masculine",
+    "translation": "concert",
+    "rank": 781,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "blessure",
+    "gender": "feminine",
+    "translation": "wound",
+    "rank": 782,
+    "patternNote": "Ends in -ure, usually feminine"
+  },
+  {
+    "word": "chauffeur",
+    "gender": "masculine",
+    "translation": "stoker; fireman",
+    "rank": 783,
+    "patternNote": "Agent/doer ending -eur, masculine"
+  },
+  {
+    "word": "midi",
+    "gender": "masculine",
+    "translation": "noon, midday",
+    "rank": 784,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "moteur",
+    "gender": "masculine",
+    "translation": "motor, engine",
+    "rank": 785,
+    "patternNote": "Agent/doer ending -eur, masculine"
+  },
+  {
+    "word": "dessous",
+    "gender": "masculine",
+    "translation": "underside; bottom",
+    "rank": 786,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "souffle",
+    "gender": "masculine",
+    "translation": "blowing",
+    "rank": 787,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "démon",
+    "gender": "masculine",
+    "translation": "demon",
+    "rank": 788,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "pousse",
+    "gender": "feminine",
+    "translation": "clipping of pousse-pousse",
+    "rank": 789,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "cesse",
+    "gender": "feminine",
+    "translation": "end",
+    "rank": 790,
+    "patternNote": "Ends in -esse, usually feminine"
+  },
+  {
+    "word": "gare",
+    "gender": "feminine",
+    "translation": "railway station",
+    "rank": 791,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "rentrée",
+    "gender": "feminine",
+    "translation": "return",
+    "rank": 792,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "bosse",
+    "gender": "feminine",
+    "translation": "bump",
+    "rank": 793,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "couilles",
+    "gender": "feminine",
+    "translation": "balls; courage, bravery",
+    "rank": 794,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "soutien",
+    "gender": "masculine",
+    "translation": "support",
+    "rank": 795,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "usine",
+    "gender": "feminine",
+    "translation": "factory",
+    "rank": 796,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "château",
+    "gender": "masculine",
+    "translation": "castle",
+    "rank": 797,
+    "patternNote": "Ends in -eau, always masculine"
+  },
+  {
+    "word": "garage",
+    "gender": "masculine",
+    "translation": "garage",
+    "rank": 798,
+    "patternNote": "Ends in -age, usually masculine"
+  },
+  {
+    "word": "oreille",
+    "gender": "feminine",
+    "translation": "ear",
+    "rank": 799,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "virus",
+    "gender": "masculine",
+    "translation": "virus",
+    "rank": 800,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "crédit",
+    "gender": "masculine",
+    "translation": "credit",
+    "rank": 801,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "ambulance",
+    "gender": "feminine",
+    "translation": "ambulance",
+    "rank": 802,
+    "patternNote": "Ends in -ance, always feminine"
+  },
+  {
+    "word": "puce",
+    "gender": "feminine",
+    "translation": "flea",
+    "rank": 803,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "canon",
+    "gender": "masculine",
+    "translation": "cannon, (big) gun",
+    "rank": 804,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "liquide",
+    "gender": "masculine",
+    "translation": "liquid",
+    "rank": 805,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "particulier",
+    "gender": "masculine",
+    "translation": "an individual; a specified person",
+    "rank": 806,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "criminel",
+    "gender": "masculine",
+    "translation": "criminal",
+    "rank": 807,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "agence",
+    "gender": "feminine",
+    "translation": "agency",
+    "rank": 808,
+    "patternNote": "Ends in -ence, always feminine"
+  },
+  {
+    "word": "comportement",
+    "gender": "masculine",
+    "translation": "behaviour/behavior, demeanour/demeanor",
+    "rank": 809,
+    "patternNote": "Ends in -ment, always masculine"
+  },
+  {
+    "word": "gouverneur",
+    "gender": "masculine",
+    "translation": "governor",
+    "rank": 810,
+    "patternNote": "Agent/doer ending -eur, masculine"
+  },
+  {
+    "word": "paroles",
+    "gender": "feminine",
+    "translation": "lyrics, words",
+    "rank": 811,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "période",
+    "gender": "feminine",
+    "translation": "period; as in interval of time",
+    "rank": 812,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "fromage",
+    "gender": "masculine",
+    "translation": "cheese",
+    "rank": 813,
+    "patternNote": "Ends in -age, usually masculine"
+  },
+  {
+    "word": "essence",
+    "gender": "feminine",
+    "translation": "essence",
+    "rank": 814,
+    "patternNote": "Ends in -ence, always feminine"
+  },
+  {
+    "word": "ayant",
+    "gender": "masculine",
+    "translation": "haver, holder",
+    "rank": 815,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "côte",
+    "gender": "feminine",
+    "translation": "rib",
+    "rank": 816,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "chaleur",
+    "gender": "feminine",
+    "translation": "heat",
+    "rank": 817,
+    "patternNote": "Abstract quality noun ending in -eur, feminine"
+  },
+  {
+    "word": "champagne",
+    "gender": "masculine",
+    "translation": "champagne",
+    "rank": 818,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "objet",
+    "gender": "masculine",
+    "translation": "thing, object",
+    "rank": 819,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "tournée",
+    "gender": "feminine",
+    "translation": "tour",
+    "rank": 820,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "résultat",
+    "gender": "masculine",
+    "translation": "outcome; result",
+    "rank": 821,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "fusil",
+    "gender": "masculine",
+    "translation": "rifle, gun",
+    "rank": 822,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "gardien",
+    "gender": "masculine",
+    "translation": "guard",
+    "rank": 823,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "vote",
+    "gender": "masculine",
+    "translation": "vote",
+    "rank": 824,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "anciens",
+    "gender": "masculine",
+    "translation": "forefathers",
+    "rank": 825,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "herbe",
+    "gender": "feminine",
+    "translation": "grass",
+    "rank": 826,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "menteur",
+    "gender": "masculine",
+    "translation": "liar",
+    "rank": 827,
+    "patternNote": "Agent/doer ending -eur, masculine"
+  },
+  {
+    "word": "vivante",
+    "gender": "feminine",
+    "translation": "female equivalent of vivant",
+    "rank": 828,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "siècle",
+    "gender": "masculine",
+    "translation": "century",
+    "rank": 829,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "attente",
+    "gender": "feminine",
+    "translation": "wait",
+    "rank": 830,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "piscine",
+    "gender": "feminine",
+    "translation": "swimming pool",
+    "rank": 831,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "lendemain",
+    "gender": "masculine",
+    "translation": "the day after, the next day, the morrow",
+    "rank": 832,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "concours",
+    "gender": "masculine",
+    "translation": "competition; contest; competitive examination",
+    "rank": 833,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "coach",
+    "gender": "masculine",
+    "translation": "coach, trainer, instructor",
+    "rank": 834,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "chair",
+    "gender": "feminine",
+    "translation": "flesh",
+    "rank": 835,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "chaîne",
+    "gender": "feminine",
+    "translation": "chain",
+    "rank": 836,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "chèque",
+    "gender": "masculine",
+    "translation": "cheque",
+    "rank": 837,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "réseau",
+    "gender": "masculine",
+    "translation": "network",
+    "rank": 838,
+    "patternNote": "Ends in -eau, always masculine"
+  },
+  {
+    "word": "enfance",
+    "gender": "feminine",
+    "translation": "childhood",
+    "rank": 839,
+    "patternNote": "Ends in -ance, always feminine"
+  },
+  {
+    "word": "science",
+    "gender": "feminine",
+    "translation": "science",
+    "rank": 840,
+    "patternNote": "Ends in -ence, always feminine"
+  },
+  {
+    "word": "revenue",
+    "gender": "feminine",
+    "translation": "a (physical) return; arrival",
+    "rank": 841,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "billet",
+    "gender": "masculine",
+    "translation": "note, a brief message",
+    "rank": 842,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "crâne",
+    "gender": "masculine",
+    "translation": "skull, cranium",
+    "rank": 843,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "arrestation",
+    "gender": "feminine",
+    "translation": "arrest",
+    "rank": 844,
+    "patternNote": "Ends in -tion, always feminine"
+  },
+  {
+    "word": "caisse",
+    "gender": "feminine",
+    "translation": "box, crate",
+    "rank": 845,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "russe",
+    "gender": "masculine",
+    "translation": "Russian language",
+    "rank": 846,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "traité",
+    "gender": "masculine",
+    "translation": "treatise",
+    "rank": 847,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "promesse",
+    "gender": "feminine",
+    "translation": "promise",
+    "rank": 848,
+    "patternNote": "Ends in -esse, usually feminine"
+  },
+  {
+    "word": "sénateur",
+    "gender": "masculine",
+    "translation": "senator",
+    "rank": 849,
+    "patternNote": "Agent/doer ending -eur, masculine"
+  },
+  {
+    "word": "sucre",
+    "gender": "masculine",
+    "translation": "sugar",
+    "rank": 850,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "attrape",
+    "gender": "feminine",
+    "translation": "trap",
+    "rank": 851,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "cloche",
+    "gender": "feminine",
+    "translation": "bell",
+    "rank": 852,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "réputation",
+    "gender": "feminine",
+    "translation": "reputation",
+    "rank": 853,
+    "patternNote": "Ends in -tion, always feminine"
+  },
+  {
+    "word": "trompe",
+    "gender": "feminine",
+    "translation": "trumpet",
+    "rank": 854,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "chute",
+    "gender": "feminine",
+    "translation": "fall",
+    "rank": 855,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "demi",
+    "gender": "masculine",
+    "translation": "half",
+    "rank": 856,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "plainte",
+    "gender": "feminine",
+    "translation": "complaint",
+    "rank": 857,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "sorcière",
+    "gender": "feminine",
+    "translation": "witch, sorceress",
+    "rank": 858,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "venant",
+    "gender": "masculine",
+    "translation": "comer",
+    "rank": 859,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "tenue",
+    "gender": "feminine",
+    "translation": "maintenance, upkeep",
+    "rank": 860,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "département",
+    "gender": "masculine",
+    "translation": "department",
+    "rank": 861,
+    "patternNote": "Ends in -ment, always masculine"
+  },
+  {
+    "word": "peinture",
+    "gender": "feminine",
+    "translation": "painting",
+    "rank": 862,
+    "patternNote": "Ends in -ure, usually feminine"
+  },
+  {
+    "word": "opinion",
+    "gender": "feminine",
+    "translation": "opinion",
+    "rank": 863,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "geste",
+    "gender": "masculine",
+    "translation": "gesture",
+    "rank": 864,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "gaffe",
+    "gender": "feminine",
+    "translation": "gaffe, blunder, goof-up",
+    "rank": 865,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "empire",
+    "gender": "masculine",
+    "translation": "empire",
+    "rank": 866,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "pizza",
+    "gender": "feminine",
+    "translation": "pizza",
+    "rank": 867,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "poitrine",
+    "gender": "feminine",
+    "translation": "chest, thorax, torso",
+    "rank": 868,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "remonte",
+    "gender": "feminine",
+    "translation": "upstream movement",
+    "rank": 869,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "aventure",
+    "gender": "feminine",
+    "translation": "adventure",
+    "rank": 870,
+    "patternNote": "Ends in -ure, usually feminine"
+  },
+  {
+    "word": "barre",
+    "gender": "feminine",
+    "translation": "bar, cake, ingot",
+    "rank": 871,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "foyer",
+    "gender": "masculine",
+    "translation": "hearth",
+    "rank": 872,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "jean",
+    "gender": "masculine",
+    "translation": "a pair of jeans",
+    "rank": 873,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "uniforme",
+    "gender": "masculine",
+    "translation": "a uniform",
+    "rank": 874,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "cauchemar",
+    "gender": "masculine",
+    "translation": "nightmare",
+    "rank": 875,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "soupe",
+    "gender": "feminine",
+    "translation": "soup",
+    "rank": 876,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "prêtre",
+    "gender": "masculine",
+    "translation": "priest",
+    "rank": 877,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "corde",
+    "gender": "feminine",
+    "translation": "rope",
+    "rank": 878,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "champion",
+    "gender": "masculine",
+    "translation": "champion",
+    "rank": 879,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "somme",
+    "gender": "feminine",
+    "translation": "sum; total",
+    "rank": 880,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "conférence",
+    "gender": "feminine",
+    "translation": "conference",
+    "rank": 881,
+    "patternNote": "Ends in -ence, always feminine"
+  },
+  {
+    "word": "complet",
+    "gender": "masculine",
+    "translation": "a suit",
+    "rank": 882,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "crème",
+    "gender": "feminine",
+    "translation": "cream",
+    "rank": 883,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "entraînement",
+    "gender": "masculine",
+    "translation": "training",
+    "rank": 884,
+    "patternNote": "Ends in -ment, always masculine"
+  },
+  {
+    "word": "joueur",
+    "gender": "masculine",
+    "translation": "player",
+    "rank": 885,
+    "patternNote": "Agent/doer ending -eur, masculine"
+  },
+  {
+    "word": "couloir",
+    "gender": "masculine",
+    "translation": "corridor, hallway",
+    "rank": 886,
+    "patternNote": "Ends in -oir, usually masculine"
+  },
+  {
+    "word": "horreur",
+    "gender": "feminine",
+    "translation": "horror",
+    "rank": 887,
+    "patternNote": "Abstract quality noun ending in -eur, feminine"
+  },
+  {
+    "word": "propriété",
+    "gender": "feminine",
+    "translation": "property",
+    "rank": 888,
+    "patternNote": "Ends in -té, always feminine"
+  },
+  {
+    "word": "matériel",
+    "gender": "masculine",
+    "translation": "equipment, supplies",
+    "rank": 889,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "foule",
+    "gender": "feminine",
+    "translation": "crowd",
+    "rank": 890,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "réaction",
+    "gender": "feminine",
+    "translation": "reaction",
+    "rank": 891,
+    "patternNote": "Ends in -tion, always feminine"
+  },
+  {
+    "word": "hiver",
+    "gender": "masculine",
+    "translation": "winter",
+    "rank": 892,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "manteau",
+    "gender": "masculine",
+    "translation": "coat",
+    "rank": 893,
+    "patternNote": "Ends in -eau, always masculine"
+  },
+  {
+    "word": "conseiller",
+    "gender": "masculine",
+    "translation": "counsellor, advisor",
+    "rank": 894,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "humanité",
+    "gender": "feminine",
+    "translation": "humanity",
+    "rank": 895,
+    "patternNote": "Ends in -ité, always feminine"
+  },
+  {
+    "word": "studio",
+    "gender": "masculine",
+    "translation": "studio",
+    "rank": 896,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "lapin",
+    "gender": "masculine",
+    "translation": "rabbit",
+    "rank": 897,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "désert",
+    "gender": "masculine",
+    "translation": "desert",
+    "rank": 898,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "boutique",
+    "gender": "feminine",
+    "translation": "shop; boutique",
+    "rank": 899,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "fonds",
+    "gender": "masculine",
+    "translation": "fund, funds",
+    "rank": 900,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "discussion",
+    "gender": "feminine",
+    "translation": "debate, argument",
+    "rank": 901,
+    "patternNote": "Ends in -sion, always feminine"
+  },
+  {
+    "word": "fiancée",
+    "gender": "feminine",
+    "translation": "female equivalent of fiancé (“fiancé”): a fiancée",
+    "rank": 902,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "incendie",
+    "gender": "masculine",
+    "translation": "fire",
+    "rank": 903,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "surface",
+    "gender": "feminine",
+    "translation": "surface",
+    "rank": 904,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "curieux",
+    "gender": "masculine",
+    "translation": "rubbernecker",
+    "rank": 905,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "ascenseur",
+    "gender": "masculine",
+    "translation": "lift, elevator",
+    "rank": 906,
+    "patternNote": "Agent/doer ending -eur, masculine"
+  },
+  {
+    "word": "mars",
+    "gender": "masculine",
+    "translation": "March",
+    "rank": 907,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "abri",
+    "gender": "masculine",
+    "translation": "a shelter or refuge against the elements or physical danger",
+    "rank": 908,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "marine",
+    "gender": "feminine",
+    "translation": "navy",
+    "rank": 909,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "cadavre",
+    "gender": "masculine",
+    "translation": "corpse, cadaver",
+    "rank": 910,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "front",
+    "gender": "masculine",
+    "translation": "forehead",
+    "rank": 911,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "parking",
+    "gender": "masculine",
+    "translation": "car park, parking lot",
+    "rank": 912,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "américaine",
+    "gender": "feminine",
+    "translation": "madison",
+    "rank": 913,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "gloire",
+    "gender": "feminine",
+    "translation": "glory",
+    "rank": 914,
+    "patternNote": "Feminine exception ending in -oire"
+  },
+  {
+    "word": "communauté",
+    "gender": "feminine",
+    "translation": "community",
+    "rank": 915,
+    "patternNote": "Ends in -té, always feminine"
+  },
+  {
+    "word": "déclaration",
+    "gender": "feminine",
+    "translation": "declaration",
+    "rank": 916,
+    "patternNote": "Ends in -tion, always feminine"
+  },
+  {
+    "word": "frontière",
+    "gender": "feminine",
+    "translation": "boundary, frontier, border",
+    "rank": 917,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "saute",
+    "gender": "feminine",
+    "translation": "swing",
+    "rank": 918,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "prénom",
+    "gender": "masculine",
+    "translation": "first name, given name",
+    "rank": 919,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "liaison",
+    "gender": "feminine",
+    "translation": "link, bond",
+    "rank": 920,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "cérémonie",
+    "gender": "feminine",
+    "translation": "ceremony",
+    "rank": 921,
+    "patternNote": "Ends in -ie, usually feminine"
+  },
+  {
+    "word": "océan",
+    "gender": "masculine",
+    "translation": "an ocean",
+    "rank": 922,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "vélo",
+    "gender": "masculine",
+    "translation": "bike, bicycle, cycle",
+    "rank": 923,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "poupée",
+    "gender": "feminine",
+    "translation": "doll",
+    "rank": 924,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "navire",
+    "gender": "masculine",
+    "translation": "ship",
+    "rank": 925,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "prisonnier",
+    "gender": "masculine",
+    "translation": "prisoner",
+    "rank": 926,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "ménage",
+    "gender": "masculine",
+    "translation": "housework, housekeeping",
+    "rank": 927,
+    "patternNote": "Ends in -age, usually masculine"
+  },
+  {
+    "word": "bouton",
+    "gender": "masculine",
+    "translation": "button",
+    "rank": 928,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "acteur",
+    "gender": "masculine",
+    "translation": "actor",
+    "rank": 929,
+    "patternNote": "Agent/doer ending -eur, masculine"
+  },
+  {
+    "word": "show",
+    "gender": "masculine",
+    "translation": "show",
+    "rank": 930,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "mardi",
+    "gender": "masculine",
+    "translation": "Tuesday",
+    "rank": 931,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "juré",
+    "gender": "masculine",
+    "translation": "juror",
+    "rank": 932,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "médecine",
+    "gender": "feminine",
+    "translation": "medicine",
+    "rank": 933,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "chargé",
+    "gender": "masculine",
+    "translation": "boss; chief",
+    "rank": 934,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "au-delà",
+    "gender": "masculine",
+    "translation": "the afterlife",
+    "rank": 935,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "bite",
+    "gender": "feminine",
+    "translation": "knob, cock, dick",
+    "rank": 936,
+    "patternNote": "Medical ending -ite, usually feminine"
+  },
+  {
+    "word": "baisse",
+    "gender": "feminine",
+    "translation": "drop; decrease",
+    "rank": 937,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "véhicule",
+    "gender": "masculine",
+    "translation": "vehicle",
+    "rank": 938,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "emmerde",
+    "gender": "feminine",
+    "translation": "trouble",
+    "rank": 939,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "estomac",
+    "gender": "masculine",
+    "translation": "stomach",
+    "rank": 940,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "tâche",
+    "gender": "feminine",
+    "translation": "task",
+    "rank": 941,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "réserve",
+    "gender": "feminine",
+    "translation": "reservation",
+    "rank": 942,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "chou",
+    "gender": "masculine",
+    "translation": "cabbage",
+    "rank": 943,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "origine",
+    "gender": "feminine",
+    "translation": "origin",
+    "rank": 944,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "tapis",
+    "gender": "masculine",
+    "translation": "carpet; mat; rug",
+    "rank": 945,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "absence",
+    "gender": "feminine",
+    "translation": "absence",
+    "rank": 946,
+    "patternNote": "Ends in -ence, always feminine"
+  },
+  {
+    "word": "lâcher",
+    "gender": "masculine",
+    "translation": "synonym of lâchage",
+    "rank": 947,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "tempête",
+    "gender": "feminine",
+    "translation": "storm, tempest",
+    "rank": 948,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "écran",
+    "gender": "masculine",
+    "translation": "screen",
+    "rank": 949,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "enterrement",
+    "gender": "masculine",
+    "translation": "burial",
+    "rank": 950,
+    "patternNote": "Ends in -ment, always masculine"
+  },
+  {
+    "word": "inconnu",
+    "gender": "masculine",
+    "translation": "an unknown person, place, or thing; a stranger",
+    "rank": 951,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "rythme",
+    "gender": "masculine",
+    "translation": "rhythm",
+    "rank": 952,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "pratique",
+    "gender": "feminine",
+    "translation": "practice",
+    "rank": 953,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "whisky",
+    "gender": "masculine",
+    "translation": "whisky, whiskey",
+    "rank": 954,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "ballon",
+    "gender": "masculine",
+    "translation": "ball",
+    "rank": 955,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "équipage",
+    "gender": "masculine",
+    "translation": "crew (of a boat), ship's company",
+    "rank": 956,
+    "patternNote": "Ends in -age, usually masculine"
+  },
+  {
+    "word": "récompense",
+    "gender": "feminine",
+    "translation": "reward, recompense",
+    "rank": 957,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "loup",
+    "gender": "masculine",
+    "translation": "wolf",
+    "rank": 958,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "traite",
+    "gender": "feminine",
+    "translation": "milking",
+    "rank": 959,
+    "patternNote": "Medical ending -ite, usually feminine"
+  },
+  {
+    "word": "vengeance",
+    "gender": "feminine",
+    "translation": "revenge, vengeance",
+    "rank": 960,
+    "patternNote": "Ends in -ance, always feminine"
+  },
+  {
+    "word": "lutte",
+    "gender": "feminine",
+    "translation": "struggle, fight, battle",
+    "rank": 961,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "opportunité",
+    "gender": "feminine",
+    "translation": "a state of opportuneness; fortuity",
+    "rank": 962,
+    "patternNote": "Ends in -ité, always feminine"
+  },
+  {
+    "word": "personnage",
+    "gender": "masculine",
+    "translation": "character",
+    "rank": 963,
+    "patternNote": "Ends in -age, usually masculine"
+  },
+  {
+    "word": "limite",
+    "gender": "feminine",
+    "translation": "limit",
+    "rank": 964,
+    "patternNote": "Medical ending -ite, usually feminine"
+  },
+  {
+    "word": "panique",
+    "gender": "feminine",
+    "translation": "panic",
+    "rank": 965,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "technologie",
+    "gender": "feminine",
+    "translation": "technology",
+    "rank": 966,
+    "patternNote": "Ends in -ie, usually feminine"
+  },
+  {
+    "word": "région",
+    "gender": "feminine",
+    "translation": "region; area",
+    "rank": 967,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "salaire",
+    "gender": "masculine",
+    "translation": "salary, wage",
+    "rank": 968,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "veille",
+    "gender": "feminine",
+    "translation": "the day before, the eve",
+    "rank": 969,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "ceinture",
+    "gender": "feminine",
+    "translation": "belt",
+    "rank": 970,
+    "patternNote": "Ends in -ure, usually feminine"
+  },
+  {
+    "word": "explication",
+    "gender": "feminine",
+    "translation": "explanation",
+    "rank": 971,
+    "patternNote": "Ends in -tion, always feminine"
+  },
+  {
+    "word": "professionnel",
+    "gender": "masculine",
+    "translation": "professional",
+    "rank": 972,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "casier",
+    "gender": "masculine",
+    "translation": "locker",
+    "rank": 973,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "roman",
+    "gender": "masculine",
+    "translation": "a novel",
+    "rank": 974,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "sandwich",
+    "gender": "masculine",
+    "translation": "sandwich",
+    "rank": 975,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "nana",
+    "gender": "feminine",
+    "translation": "chick, bird",
+    "rank": 976,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "incident",
+    "gender": "masculine",
+    "translation": "incident",
+    "rank": 977,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "comité",
+    "gender": "masculine",
+    "translation": "committee",
+    "rank": 978,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "technique",
+    "gender": "feminine",
+    "translation": "technique, technology",
+    "rank": 979,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "haine",
+    "gender": "feminine",
+    "translation": "hatred; hate",
+    "rank": 980,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "portée",
+    "gender": "feminine",
+    "translation": "reach, range, scope",
+    "rank": 981,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "fleur",
+    "gender": "feminine",
+    "translation": "flowering plant; angiosperm; the plant with flowers itself",
+    "rank": 982,
+    "patternNote": "Abstract quality noun ending in -eur, feminine"
+  },
+  {
+    "word": "palais",
+    "gender": "masculine",
+    "translation": "palace",
+    "rank": 983,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "lady",
+    "gender": "feminine",
+    "translation": "lady",
+    "rank": 984,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "jeudi",
+    "gender": "masculine",
+    "translation": "Thursday",
+    "rank": 985,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "abruti",
+    "gender": "masculine",
+    "translation": "moron, idiot, fool",
+    "rank": 986,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "canapé",
+    "gender": "masculine",
+    "translation": "sofa",
+    "rank": 987,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "pêche",
+    "gender": "feminine",
+    "translation": "peach",
+    "rank": 988,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "masque",
+    "gender": "masculine",
+    "translation": "mask",
+    "rank": 989,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "couvert",
+    "gender": "masculine",
+    "translation": "Set of cutlery, place setting",
+    "rank": 990,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "malheur",
+    "gender": "masculine",
+    "translation": "mishap, misfortune",
+    "rank": 991,
+    "patternNote": "Agent/doer ending -eur, masculine"
+  },
+  {
+    "word": "royaume",
+    "gender": "masculine",
+    "translation": "kingdom",
+    "rank": 992,
+    "patternNote": "No simple rule — must be memorised"
+  },
+  {
+    "word": "porc",
+    "gender": "masculine",
+    "translation": "pork",
+    "rank": 993,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "entretien",
+    "gender": "masculine",
+    "translation": "upkeep",
+    "rank": 994,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "gêne",
+    "gender": "feminine",
+    "translation": "embarrassment",
+    "rank": 995,
+    "patternNote": "Ends in -e; often feminine in French"
+  },
+  {
+    "word": "bloc",
+    "gender": "masculine",
+    "translation": "a block",
+    "rank": 996,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "final",
+    "gender": "masculine",
+    "translation": "finale",
+    "rank": 997,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "business",
+    "gender": "masculine",
+    "translation": "business, firm, company",
+    "rank": 998,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "sauté",
+    "gender": "masculine",
+    "translation": "sauté",
+    "rank": 999,
+    "patternNote": "Does not end in -e; usually masculine"
+  },
+  {
+    "word": "alarme",
+    "gender": "feminine",
+    "translation": "alarm",
+    "rank": 1000,
+    "patternNote": "Ends in -e; often feminine in French"
+  }
+]
