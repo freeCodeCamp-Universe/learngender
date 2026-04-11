@@ -49,10 +49,22 @@ Rebuild only the Portuguese list with the pt-BR pipeline:
 pnpm data:extract:pt
 ```
 
+Rebuild only the Spanish list with the cleaner Spanish pipeline:
+
+```bash
+pnpm data:extract:es
+```
+
 Rebuild the Portuguese list and reapply `patternNote`:
 
 ```bash
 pnpm data:refresh:pt
+```
+
+Rebuild the Spanish list and reapply `patternNote`:
+
+```bash
+pnpm data:refresh:es
 ```
 
 Generate pattern notes for existing wordlists:
@@ -70,3 +82,13 @@ The Portuguese list is rebuilt from:
 - local overrides in `scripts/config/ptbr-manual-overrides.json` for known bad senses and pt-PT exclusions
 
 The generated app data lives in `src/data/words_pt.json`.
+
+## Spanish Wordlist
+
+The Spanish list is rebuilt from:
+
+- `doozan/spanish_data` `frequency.csv` for noun-form frequency
+- Kaikki Spanish entries for gender and seed translations
+- local overrides in `scripts/config/es-manual-overrides.json` for bad homographs, vulgar outliers, and common translation fixes
+
+The generated app data lives in `src/data/words_es.json`.
