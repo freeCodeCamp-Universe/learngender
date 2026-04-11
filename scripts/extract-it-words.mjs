@@ -1,22 +1,20 @@
 /**
- * Rebuild the Portuguese list specifically for pt-BR.
+ * Rebuild the Italian list with PAISÀ lemma frequencies.
  *
- * Source of truth for ranking:
- *   Linguateca Corpus Brasileiro noun lemmas
+ * Ranking source:
+ *   PAISÀ corpus lemma frequency list
  *
- * Source of truth for gender + seed translations:
- *   Kaikki English Wiktionary Portuguese dump
- *
- * Output shape matches the app contract in src/types.ts.
+ * Gender + seed translations:
+ *   Kaikki English Wiktionary Italian dump
  *
  * Usage:
- *   node scripts/extract-ptbr-words.mjs
+ *   node scripts/extract-it-words.mjs
  */
 
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs'
-import { createInterface } from 'readline'
-import { createGunzip } from 'zlib'
 import { createReadStream } from 'fs'
+import { createInterface } from 'readline'
+import { createGunzip, gunzipSync } from 'zlib'
 import http from 'http'
 import https from 'https'
 import path from 'path'
@@ -31,141 +29,81 @@ const CONFIG_DIR = path.join(__dirname, 'config')
 mkdirSync(DATA_DIR, { recursive: true })
 mkdirSync(CACHE_DIR, { recursive: true })
 
-const PT_OUT_PATH = path.join(DATA_DIR, 'words_pt.json')
-const REPORT_PATH = path.join(CACHE_DIR, 'ptbr_rebuild_report.json')
-const OVERRIDES_PATH = path.join(CONFIG_DIR, 'ptbr-manual-overrides.json')
+const IT_OUT_PATH = path.join(DATA_DIR, 'words_it.json')
+const REPORT_PATH = path.join(CACHE_DIR, 'it_rebuild_report.json')
+const OVERRIDES_PATH = path.join(CONFIG_DIR, 'it-manual-overrides.json')
 
-const LINGUATECA_URL = 'https://www.linguateca.pt/acesso/tokens/lista.lemas.cbras.N.txt'
-const LINGUATECA_CACHE = path.join(CACHE_DIR, 'ptbr_linguateca_lemas_N.txt')
-const KAIKKI_URL = 'https://kaikki.org/dictionary/Portuguese/kaikki.org-dictionary-Portuguese.jsonl.gz'
-const KAIKKI_CACHE = path.join(CACHE_DIR, 'pt_kaikki.jsonl.gz')
+const PAISA_URL =
+  'https://clarin.eurac.edu/repository/xmlui/bitstream/handle/20.500.12124/3/lemma-WITHOUTnumberssymbols-frequencies-paisa.txt.gz?isAllowed=y&sequence=6'
+const PAISA_CACHE = path.join(CACHE_DIR, 'it_paisa_lemma_frequencies.txt.gz')
+const KAIKKI_URL = 'https://kaikki.org/dictionary/Italian/kaikki.org-dictionary-Italian.jsonl.gz'
+const KAIKKI_CACHE = path.join(CACHE_DIR, 'it_kaikki.jsonl.gz')
 
 const TARGET_COUNT = 1000
-const MAX_SCAN_CANDIDATES = 12000
-
-const WORD_RE = /^[a-záàâãéêíóôõúüç]+(?:-[a-záàâãéêíóôõúüç]+)*$/i
-const STOP_WORDS = new Set([
-  '%',
-  'p',
-  'p.',
-  'r$',
-  'sr',
-  'sra',
-  'dr',
-  'dra',
-  'i',
-  'ii',
-  'iii',
-  'iv',
-  'v',
-  'vi',
-  'vii',
-  'viii',
-  'ix',
-  'x',
-  'nº',
-  'n°',
-  'no',
-  'etc',
-])
+const MAX_SCAN_CANDIDATES = 25000
+const WORD_RE = /^[a-zàèéìíîòóùú'-]+$/i
+const INFINITIVE_RE = /(?:are|ere|ire)$/i
 
 const BAD_GLOSS_PATTERNS = [
   /^(alternative|obsolete|archaic|plural|singular|misspelling|abbreviation|initialism|acronym) of\b/i,
+  /^alternative letter-case form of\b/i,
+  /^ellipsis of\b/i,
   /^inflection of\b/i,
   /^female equivalent of\b/i,
   /^male equivalent of\b/i,
-  /^ellipsis of\b/i,
+  /^nonstandard spelling of\b/i,
   /^only used in\b/i,
-  /^pre-reform spelling\b/i,
-  /^european portuguese standard (?:form|spelling) of\b/i,
-  /^alternative letter-case form of\b/i,
+  /^synonym of\b/i,
+  /^the name of the latin script letter\b/i,
 ]
 
-const BRAZIL_ALT_OF_PATTERN =
-  /^brazilian portuguese (?:standard )?(?:form|spelling) of ([^,;()]+)/i
-
-const EQUIVALENT_TAIL_PATTERN = /,\s*(?:female|male) equivalent of .+$/i
 const HARD_REJECT_LABELS = new Set(['derogatory', 'offensive', 'pejorative', 'slur', 'vulgar'])
 const OFFENSIVE_TRANSLATION_PATTERNS = [
-  /\b(?:asshole|bastard|bitch|crazy person|drunkard|fat man|fat woman|idiot|madman|madwoman|moron|slut|twit|whore)\b/i,
+  /\b(?:asshole|bastard|bitch|crazy person|drunkard|fat man|fat woman|idiot|madman|madwoman|moron|slut|turd|whore)\b/i,
 ]
 
 function loadOverrides() {
   return JSON.parse(readFileSync(OVERRIDES_PATH, 'utf8'))
 }
 
-function requestBuffer(url, { allowInvalidCert = false, redirects = 0 } = {}) {
+function requestBuffer(url, redirects = 0) {
   return new Promise((resolve, reject) => {
     const client = url.startsWith('https:') ? https : http
-    const req = client.get(
-      url,
-      url.startsWith('https:')
-        ? {
-            rejectUnauthorized: !allowInvalidCert,
-            headers: { 'user-agent': 'LearnNounGender data rebuild' },
-          }
-        : { headers: { 'user-agent': 'LearnNounGender data rebuild' } },
-      (res) => {
-        const status = res.statusCode ?? 0
+    const req = client.get(url, { headers: { 'user-agent': 'LearnNounGender data rebuild' } }, (res) => {
+      const status = res.statusCode ?? 0
 
-        if (status >= 300 && status < 400 && res.headers.location) {
-          if (redirects >= 5) {
-            reject(new Error(`Too many redirects while fetching ${url}`))
-            return
-          }
-          const nextUrl = new URL(res.headers.location, url).toString()
-          resolve(requestBuffer(nextUrl, { allowInvalidCert, redirects: redirects + 1 }))
+      if (status >= 300 && status < 400 && res.headers.location) {
+        if (redirects >= 5) {
+          reject(new Error(`Too many redirects while fetching ${url}`))
           return
         }
 
-        if (status < 200 || status >= 300) {
-          reject(new Error(`HTTP ${status} for ${url}`))
-          return
-        }
+        const nextUrl = new URL(res.headers.location, url).toString()
+        resolve(requestBuffer(nextUrl, redirects + 1))
+        return
+      }
 
-        const chunks = []
-        res.on('data', (chunk) => chunks.push(chunk))
-        res.on('end', () => resolve(Buffer.concat(chunks)))
-      },
-    )
+      if (status < 200 || status >= 300) {
+        reject(new Error(`HTTP ${status} for ${url}`))
+        return
+      }
+
+      const chunks = []
+      res.on('data', (chunk) => chunks.push(chunk))
+      res.on('end', () => resolve(Buffer.concat(chunks)))
+    })
 
     req.on('error', reject)
   })
 }
 
-async function ensureCacheFile(cachePath, url, options = {}) {
+async function ensureCacheFile(cachePath, url) {
   if (existsSync(cachePath)) return cachePath
 
   console.log(`Downloading ${url} ...`)
-  const buffer = await requestBuffer(url, options)
+  const buffer = await requestBuffer(url)
   writeFileSync(cachePath, buffer)
   return cachePath
-}
-
-function parseLinguatecaCandidates(buffer, rejectWords) {
-  const text = buffer.toString('latin1')
-  const candidates = []
-  const seen = new Set()
-
-  for (const line of text.split('\n')) {
-    if (!line.includes('\t')) continue
-
-    const [countStr, rawLemma] = line.split('\t', 2)
-    if (!/^\d+$/.test(countStr)) continue
-
-    const word = rawLemma.trim().toLowerCase()
-    if (seen.has(word)) continue
-    if (rejectWords.has(word)) continue
-    if (STOP_WORDS.has(word)) continue
-    if (word.length < 3 || word.length > 30) continue
-    if (!WORD_RE.test(word)) continue
-
-    seen.add(word)
-    candidates.push({ word, freq: Number(countStr) })
-    if (candidates.length >= MAX_SCAN_CANDIDATES) break
-  }
-
-  return candidates
 }
 
 function extractGender(entry) {
@@ -206,7 +144,7 @@ function collectSenseLabels(sense) {
 
 function cleanTranslation(gloss) {
   return gloss
-    .replace(EQUIVALENT_TAIL_PATTERN, '')
+    .replace(/[;,]\s*(?:female|male) equivalent of .+$/i, '')
     .replace(/\s+/g, ' ')
     .replace(/\s*\([^)]*\)\s*$/, '')
     .trim()
@@ -244,12 +182,43 @@ async function buildKaikkiIndex(cachePath) {
   return entries
 }
 
+function parsePaisaCandidates(cachePath, index, rejectWords) {
+  const text = gunzipSync(readFileSync(cachePath)).toString('utf8')
+  const lines = text.split('\n')
+  const candidates = []
+  const seen = new Set()
+
+  for (const line of lines) {
+    if (!line || line.startsWith('#')) continue
+
+    const commaIndex = line.lastIndexOf(',')
+    if (commaIndex <= 0) continue
+
+    const word = line.slice(0, commaIndex).trim().toLowerCase()
+    const countStr = line.slice(commaIndex + 1).trim()
+    if (!/^\d+$/.test(countStr)) continue
+    if (seen.has(word)) continue
+    if (rejectWords.has(word)) continue
+    if (word.length < 3 || word.length > 30) continue
+    if (!WORD_RE.test(word)) continue
+    if (INFINITIVE_RE.test(word)) continue
+    if (!index.has(word)) continue
+
+    seen.add(word)
+    candidates.push({ word, freq: Number(countStr) })
+
+    if (candidates.length >= MAX_SCAN_CANDIDATES) break
+  }
+
+  return candidates
+}
+
 function createResolver(index, overrides) {
   const memo = new Map()
 
-  function resolveWord(word, depth = 0) {
+  function resolveWord(word) {
     if (memo.has(word)) return memo.get(word)
-    if (depth > 2) return null
+    if ((overrides.rejectWords ?? []).includes(word)) return null
 
     const translationOverride = overrides.translationOverrides[word]
     if (translationOverride) {
@@ -277,44 +246,21 @@ function createResolver(index, overrides) {
           (sense.glosses ?? []).find((value) => typeof value === 'string' && value.trim()) ?? '',
         )
         if (!gloss) return
-
         if (BAD_GLOSS_PATTERNS.some((pattern) => pattern.test(gloss))) return
 
-        const altMatch = gloss.match(BRAZIL_ALT_OF_PATTERN)
-        if (altMatch) {
-          const target = altMatch[1].trim().toLowerCase()
-          const base = resolveWord(target, depth + 1)
-          if (!base) return
-
-          const candidate = {
-            gender,
-            translation: base.translation,
-            score: 90 - senseIndex * 5,
-            source: `brazil-alt-of:${target}`,
-          }
-
-          if (!best || candidate.score > best.score) best = candidate
-          return
-        }
-
         const labels = collectSenseLabels(sense)
+        if (labels.has('form-of') || labels.has('alt-of') || labels.has('ellipsis')) return
         if (Array.from(HARD_REJECT_LABELS).some((label) => labels.has(label))) return
         if (OFFENSIVE_TRANSLATION_PATTERNS.some((pattern) => pattern.test(gloss))) return
-        let score = 100 - senseIndex * 5
 
-        if (
-          labels.has('portugal') ||
-          labels.has('european portuguese') ||
-          labels.has('african portuguese')
-        ) {
-          score -= 100
-        }
+        let score = 100 - senseIndex * 5
 
         if (
           labels.has('dated') ||
           labels.has('obsolete') ||
           labels.has('archaic') ||
           labels.has('historical') ||
+          labels.has('rare') ||
           labels.has('proscribed')
         ) {
           score -= 50
@@ -322,16 +268,15 @@ function createResolver(index, overrides) {
 
         if (
           labels.has('slang') ||
-          labels.has('vulgar') ||
           labels.has('colloquial') ||
-          labels.has('euphemistic')
+          labels.has('euphemistic') ||
+          labels.has('vulgar')
         ) {
-          score -= 20
+          score -= 30
         }
 
-        if (labels.has('brazil') || labels.has('brazilian portuguese')) {
-          score += 5
-        }
+        if (labels.has('sports')) score -= 8
+        if (labels.has('poetic')) score -= 12
 
         if (gloss.length <= 28) score += 4
         if ((gloss.match(/,/g) ?? []).length > 2) score -= 6
@@ -339,18 +284,14 @@ function createResolver(index, overrides) {
         if (gloss.includes('(')) score -= 5
         if (gloss.length > 90) score -= 12
 
-        if (score < 0) return
-
         const candidate = {
           gender,
           translation: gloss,
           score,
-          source:
-            labels.has('brazil') || labels.has('brazilian portuguese')
-              ? 'kaikki-brazil'
-              : 'kaikki-generic',
+          source: 'kaikki',
         }
 
+        if (score < 0) return
         if (!best || candidate.score > best.score) best = candidate
       })
     }
@@ -366,34 +307,38 @@ function writeJson(filePath, value) {
   writeFileSync(filePath, `${JSON.stringify(value, null, 2)}\n`, 'utf8')
 }
 
-console.log('=== LearnNounGender — pt-BR word rebuild ===\n')
+console.log('=== LearnNounGender — Italian word rebuild ===\n')
 
 const overrides = loadOverrides()
 const rejectWords = new Set(overrides.rejectWords ?? [])
 
-await ensureCacheFile(LINGUATECA_CACHE, LINGUATECA_URL, { allowInvalidCert: true })
+await ensureCacheFile(PAISA_CACHE, PAISA_URL)
 await ensureCacheFile(KAIKKI_CACHE, KAIKKI_URL)
-
-console.log('Loading Linguateca candidates...')
-const candidates = parseLinguatecaCandidates(readFileSync(LINGUATECA_CACHE), rejectWords)
-console.log(`  Loaded ${candidates.length} noun candidates from Corpus Brasileiro`)
 
 console.log('Indexing Kaikki noun entries...')
 const index = await buildKaikkiIndex(KAIKKI_CACHE)
-console.log(`  Indexed ${index.size} Portuguese noun headwords`)
+console.log(`  Indexed ${index.size} Italian noun headwords`)
+
+console.log('Loading PAISÀ candidates...')
+const candidates = parsePaisaCandidates(PAISA_CACHE, index, rejectWords)
+console.log(`  Loaded ${candidates.length} Italian noun candidates`)
 
 const resolveWord = createResolver(index, overrides)
 
 const accepted = []
 const rejected = []
+const seen = new Set()
 
 for (const candidate of candidates) {
+  if (seen.has(candidate.word)) continue
+
   const resolved = resolveWord(candidate.word)
   if (!resolved) {
     rejected.push({ word: candidate.word, reason: 'no-acceptable-kaikki-sense' })
     continue
   }
 
+  seen.add(candidate.word)
   accepted.push({
     word: candidate.word,
     translation: resolved.translation,
@@ -405,21 +350,21 @@ for (const candidate of candidates) {
 }
 
 if (accepted.length < TARGET_COUNT) {
-  throw new Error(`Only produced ${accepted.length} pt-BR words; expected ${TARGET_COUNT}`)
+  throw new Error(`Only produced ${accepted.length} Italian words; expected ${TARGET_COUNT}`)
 }
 
-writeJson(PT_OUT_PATH, accepted)
+writeJson(IT_OUT_PATH, accepted)
 writeJson(REPORT_PATH, {
   generatedAt: new Date().toISOString(),
   source: {
-    linguateca: LINGUATECA_URL,
+    paisa: PAISA_URL,
     kaikki: KAIKKI_URL,
   },
   acceptedCount: accepted.length,
   scannedCandidates: candidates.length,
-  acceptedSample: accepted.slice(0, 150),
+  acceptedSample: accepted.slice(0, 200),
   rejectedSample: rejected.slice(0, 300),
 })
 
-console.log(`\nWrote ${accepted.length} pt-BR words to ${PT_OUT_PATH}`)
+console.log(`\nWrote ${accepted.length} Italian words to ${IT_OUT_PATH}`)
 console.log(`Report written to ${REPORT_PATH}`)
