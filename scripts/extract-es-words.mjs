@@ -55,6 +55,10 @@ const BAD_GLOSS_PATTERNS = [
 ]
 
 const EQUIVALENT_TAIL_PATTERN = /[;,]\s*(?:female|male) equivalent of .+$/i
+const HARD_REJECT_LABELS = new Set(['derogatory', 'offensive', 'pejorative', 'slur', 'vulgar'])
+const OFFENSIVE_TRANSLATION_PATTERNS = [
+  /\b(?:asshole|bastard|bitch|crazy person|drunkard|fat man|fat woman|idiot|madman|madwoman|moron|puto|slut|twit|whore)\b/i,
+]
 
 function loadOverrides() {
   return JSON.parse(readFileSync(OVERRIDES_PATH, 'utf8'))
@@ -245,6 +249,8 @@ function createResolver(index, overrides) {
 
         const labels = collectSenseLabels(sense)
         if (labels.has('form-of') || labels.has('alt-of') || labels.has('ellipsis')) return
+        if (Array.from(HARD_REJECT_LABELS).some((label) => labels.has(label))) return
+        if (OFFENSIVE_TRANSLATION_PATTERNS.some((pattern) => pattern.test(gloss))) return
 
         let score = 100 - senseIndex * 5
 

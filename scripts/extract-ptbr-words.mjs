@@ -85,6 +85,10 @@ const BRAZIL_ALT_OF_PATTERN =
   /^brazilian portuguese (?:standard )?(?:form|spelling) of ([^,;()]+)/i
 
 const EQUIVALENT_TAIL_PATTERN = /,\s*(?:female|male) equivalent of .+$/i
+const HARD_REJECT_LABELS = new Set(['derogatory', 'offensive', 'pejorative', 'slur', 'vulgar'])
+const OFFENSIVE_TRANSLATION_PATTERNS = [
+  /\b(?:asshole|bastard|bitch|crazy person|drunkard|fat man|fat woman|idiot|madman|madwoman|moron|slut|twit|whore)\b/i,
+]
 
 function loadOverrides() {
   return JSON.parse(readFileSync(OVERRIDES_PATH, 'utf8'))
@@ -294,6 +298,8 @@ function createResolver(index, overrides) {
         }
 
         const labels = collectSenseLabels(sense)
+        if (Array.from(HARD_REJECT_LABELS).some((label) => labels.has(label))) return
+        if (OFFENSIVE_TRANSLATION_PATTERNS.some((pattern) => pattern.test(gloss))) return
         let score = 100 - senseIndex * 5
 
         if (
