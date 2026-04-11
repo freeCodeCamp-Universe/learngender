@@ -8,15 +8,17 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "data:extract": "node scripts/extract-words.mjs",
+    "data:extract": "node scripts/extract-ptbr-words.mjs && node scripts/extract-es-words.mjs && node scripts/extract-fr-words.mjs && node scripts/extract-it-words.mjs",
     "data:extract:es": "node scripts/extract-es-words.mjs",
     "data:extract:fr": "node scripts/extract-fr-words.mjs",
+    "data:extract:it": "node scripts/extract-it-words.mjs",
     "data:extract:pt": "node scripts/extract-ptbr-words.mjs",
     "data:refresh:es": "node scripts/extract-es-words.mjs && node scripts/add-pattern-notes.mjs",
     "data:refresh:fr": "node scripts/extract-fr-words.mjs && node scripts/add-pattern-notes.mjs",
+    "data:refresh:it": "node scripts/extract-it-words.mjs && node scripts/add-pattern-notes.mjs",
     "data:refresh:pt": "node scripts/extract-ptbr-words.mjs && node scripts/add-pattern-notes.mjs",
     "data:explain": "node scripts/generate-explanations.mjs",
-    "data:all": "node scripts/extract-words.mjs && node scripts/generate-explanations.mjs"
+    "data:all": "node scripts/extract-ptbr-words.mjs && node scripts/extract-es-words.mjs && node scripts/extract-fr-words.mjs && node scripts/extract-it-words.mjs && node scripts/add-pattern-notes.mjs"
   },
   "dependencies": {
     "react": "^19.2.4",

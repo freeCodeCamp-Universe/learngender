@@ -37,7 +37,7 @@ pnpm build
 
 ## Data Scripts
 
-Rebuild all language wordlists with the original extractor:
+Rebuild all language wordlists with the dedicated pipelines:
 
 ```bash
 pnpm data:extract
@@ -61,6 +61,12 @@ Rebuild only the French list with the Lexique-based French pipeline:
 pnpm data:extract:fr
 ```
 
+Rebuild only the Italian list with the PAISÀ-based Italian pipeline:
+
+```bash
+pnpm data:extract:it
+```
+
 Rebuild the Portuguese list and reapply `patternNote`:
 
 ```bash
@@ -77,6 +83,12 @@ Rebuild the French list and reapply `patternNote`:
 
 ```bash
 pnpm data:refresh:fr
+```
+
+Rebuild the Italian list and reapply `patternNote`:
+
+```bash
+pnpm data:refresh:it
 ```
 
 Generate pattern notes for existing wordlists:
@@ -114,3 +126,13 @@ The French list is rebuilt from:
 - local overrides in `scripts/config/fr-manual-overrides.json` for bad homographs, nonstandard spellings, and translation fixes
 
 The generated app data lives in `src/data/words_fr.json`.
+
+## Italian Wordlist
+
+The Italian list is rebuilt from:
+
+- PAISÀ lemma frequencies for ranking
+- Kaikki Italian entries for gender and seed translations
+- local overrides in `scripts/config/it-manual-overrides.json` for bad homographs, offensive outliers, and translation fixes
+
+The generated app data lives in `src/data/words_it.json`.
