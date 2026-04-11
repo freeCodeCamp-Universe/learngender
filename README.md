@@ -55,6 +55,12 @@ Rebuild only the Spanish list with the cleaner Spanish pipeline:
 pnpm data:extract:es
 ```
 
+Rebuild only the French list with the Lexique-based French pipeline:
+
+```bash
+pnpm data:extract:fr
+```
+
 Rebuild the Portuguese list and reapply `patternNote`:
 
 ```bash
@@ -65,6 +71,12 @@ Rebuild the Spanish list and reapply `patternNote`:
 
 ```bash
 pnpm data:refresh:es
+```
+
+Rebuild the French list and reapply `patternNote`:
+
+```bash
+pnpm data:refresh:fr
 ```
 
 Generate pattern notes for existing wordlists:
@@ -92,3 +104,13 @@ The Spanish list is rebuilt from:
 - local overrides in `scripts/config/es-manual-overrides.json` for bad homographs, vulgar outliers, and common translation fixes
 
 The generated app data lives in `src/data/words_es.json`.
+
+## French Wordlist
+
+The French list is rebuilt from:
+
+- Lexique 3.83 for noun frequency and grammatical gender
+- Kaikki French entries for seed translations
+- local overrides in `scripts/config/fr-manual-overrides.json` for bad homographs, nonstandard spellings, and translation fixes
+
+The generated app data lives in `src/data/words_fr.json`.
