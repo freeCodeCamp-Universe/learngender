@@ -9,25 +9,33 @@ interface WordCardProps {
 }
 
 const FLICK_VELOCITY = 0.4  // px/ms
-const MIN_DISTANCE   = 80   // px
+const MIN_DISTANCE   = 70   // px
+
+const BOUNCE_DURATION = 580 // ms — must match CSS animation duration
 
 export function WordCard({ word, onSwipe, showTranslationByDefault }: WordCardProps) {
   const [translationRevealed, setTranslationRevealed] = useState(showTranslationByDefault)
-  const [dragX, setDragX]   = useState(0)
-  const [anim, setAnim]     = useState<'idle' | 'fly-left' | 'fly-right' | 'bounce-left' | 'bounce-right'>('idle')
-  const [ready, setReady]   = useState(false)
+  const [dragX, setDragX]         = useState(0)
+  const [dragY, setDragY]         = useState(0)
+  const [anim, setAnim]           = useState<'idle' | 'fly-left' | 'fly-right' | 'bounce-left' | 'bounce-right'>('idle')
+  const [bouncePx, setBouncePx]   = useState(100)
+  const [ready, setReady]         = useState(false)
 
-  const pointerStartX = useRef<number | null>(null)
-  const lastX         = useRef(0)
-  const lastTime      = useRef(0)
-  const velocity      = useRef(0)
-  const handled       = useRef(false)
+  const cardRef          = useRef<HTMLDivElement>(null)
+  const pointerStartX    = useRef<number | null>(null)
+  const pointerStartY    = useRef<number | null>(null)
+  const cardTopOnPress   = useRef(0)   // card's top edge when drag started
+  const lastX            = useRef(0)
+  const lastTime         = useRef(0)
+  const velocity         = useRef(0)
+  const handled          = useRef(false)
 
   // New word arrives → snap to centre instantly, then re-enable transitions
   useEffect(() => {
     setReady(false)
     setTranslationRevealed(showTranslationByDefault)
     setDragX(0)
+    setDragY(0)
     setAnim('idle')
     handled.current = false
     const raf = requestAnimationFrame(() => setReady(true))
@@ -38,6 +46,7 @@ export function WordCard({ word, onSwipe, showTranslationByDefault }: WordCardPr
     if (handled.current) return
     handled.current = true
     setDragX(0)
+    setDragY(0)
 
     const gender: Gender = dir === 'right' ? 'masculine' : 'feminine'
     const correct = onSwipe(gender, translationRevealed && !showTranslationByDefault)
@@ -45,12 +54,25 @@ export function WordCard({ word, onSwipe, showTranslationByDefault }: WordCardPr
     if (correct) {
       setAnim(dir === 'right' ? 'fly-right' : 'fly-left')
     } else {
-      // Bounce: shoot ~40% in the direction then spring back
+      // Measure distance from card edge to the app container edge (not window width,
+      // which breaks on desktop where .app is narrower than the viewport).
+      let edgePx = 100
+      if (cardRef.current) {
+        const rect      = cardRef.current.getBoundingClientRect()
+        const appEl     = cardRef.current.closest('.app') ?? document.body
+        const appRect   = appEl.getBoundingClientRect()
+        edgePx = dir === 'right'
+          ? Math.max(0, appRect.right  - rect.right - 8)
+          : Math.max(0, rect.left - appRect.left  - 8)
+      }
+      setBouncePx(edgePx)
       setAnim(dir === 'right' ? 'bounce-right' : 'bounce-left')
       setTimeout(() => {
         setAnim('idle')
+        setDragX(0)
+        setDragY(0)
         handled.current = false
-      }, 420)
+      }, BOUNCE_DURATION)
     }
   }
 
@@ -69,18 +91,29 @@ export function WordCard({ word, onSwipe, showTranslationByDefault }: WordCardPr
     if (handled.current) return
     e.currentTarget.setPointerCapture(e.pointerId)
     pointerStartX.current = e.clientX
+    pointerStartY.current = e.clientY
+    // Record card top so we can clamp upward drag to stay below the topbar
+    cardTopOnPress.current = cardRef.current
+      ? cardRef.current.getBoundingClientRect().top
+      : 80
     lastX.current    = e.clientX
     lastTime.current = e.timeStamp
     velocity.current = 0
   }
 
   function onPointerMove(e: React.PointerEvent<HTMLDivElement>) {
-    if (pointerStartX.current === null || handled.current) return
+    if (pointerStartX.current === null || pointerStartY.current === null || handled.current) return
     const dt = e.timeStamp - lastTime.current
     if (dt > 0) velocity.current = (e.clientX - lastX.current) / dt
     lastX.current    = e.clientX
     lastTime.current = e.timeStamp
+
+    const rawDy = e.clientY - pointerStartY.current
+    // Don't let the card's top edge cross above the topbar (≈64px from viewport top)
+    const TOPBAR_BOTTOM = 64
+    const maxUpward = TOPBAR_BOTTOM - cardTopOnPress.current  // negative number
     setDragX(e.clientX - pointerStartX.current)
+    setDragY(Math.max(rawDy, maxUpward))
   }
 
   function onPointerUp(e: React.PointerEvent<HTMLDivElement>) {
@@ -88,54 +121,80 @@ export function WordCard({ word, onSwipe, showTranslationByDefault }: WordCardPr
     const dx  = e.clientX - pointerStartX.current
     const vel = velocity.current
     pointerStartX.current = null
+    pointerStartY.current = null
 
     if (Math.abs(vel) > FLICK_VELOCITY || Math.abs(dx) >= MIN_DISTANCE) {
       commit((vel !== 0 ? vel : dx) > 0 ? 'right' : 'left')
     } else {
-      setDragX(0) // snap back
+      setDragX(0)
+      setDragY(0)
     }
   }
 
   function onPointerCancel() {
     pointerStartX.current = null
+    pointerStartY.current = null
     setDragX(0)
+    setDragY(0)
   }
 
   const showTranslation = translationRevealed || showTranslationByDefault
-  const isFlying  = anim === 'fly-left'    || anim === 'fly-right'
+  const isFlying   = anim === 'fly-left'    || anim === 'fly-right'
   const isBouncing = anim === 'bounce-left' || anim === 'bounce-right'
-  const isMoving  = dragX !== 0
+  const isMoving   = dragX !== 0 || dragY !== 0
 
-  // Compute visual transform
-  let tx: string
-  let rotate: number
-  let transition: string
+  // When bouncing, the CSS keyframe animation drives the transform.
+  // For all other states, inline style drives it.
+  const usingCssAnim = isBouncing && ready
+
+  let inlineTransform = ''
+  let transition = ''
   let opacity = 1
 
   if (!ready) {
-    tx = '0px'; rotate = 0; transition = 'none'
+    inlineTransform = 'translateX(0) translateY(0) rotate(0deg)'
+    transition = 'none'
+  } else if (usingCssAnim) {
+    inlineTransform = '' // CSS animation takes over
   } else if (anim === 'fly-right') {
-    tx = '150%'; rotate = 18; opacity = 0; transition = 'transform 0.26s ease-in, opacity 0.26s ease-in'
+    // translateY is always 0 here (zeroed in commit before setAnim);
+    // 'none' prevents any lingering Y from the drag interpolating into the fly path
+    inlineTransform = 'translateX(150%) translateY(0) rotate(18deg)'
+    opacity = 0
+    transition = 'transform 0.26s ease-in, opacity 0.26s ease-in'
   } else if (anim === 'fly-left') {
-    tx = '-150%'; rotate = -18; opacity = 0; transition = 'transform 0.26s ease-in, opacity 0.26s ease-in'
-  } else if (anim === 'bounce-right') {
-    tx = '38%'; rotate = 8; transition = 'transform 0.12s ease-out'
-  } else if (anim === 'bounce-left') {
-    tx = '-38%'; rotate = -8; transition = 'transform 0.12s ease-out'
+    inlineTransform = 'translateX(-150%) translateY(0) rotate(-18deg)'
+    opacity = 0
+    transition = 'transform 0.26s ease-in, opacity 0.26s ease-in'
   } else if (isMoving) {
-    tx = `${dragX}px`; rotate = dragX / 15; transition = 'none'
+    inlineTransform = `translateX(${dragX}px) translateY(${dragY}px) rotate(${dragX / 15}deg)`
+    transition = 'none'
   } else {
-    // idle / snap-back
-    tx = '0px'; rotate = 0; transition = 'transform 0.18s ease-out'
+    // Snap back: X snaps with spring, Y snaps instantly so card never floats above topbar
+    inlineTransform = 'translateX(0) translateY(0) rotate(0deg)'
+    transition = 'transform 0.18s ease-out'
   }
 
-  const dragPct    = Math.min(Math.abs(dragX) / MIN_DISTANCE, 1)
+  const dragPct     = Math.min(Math.abs(dragX) / MIN_DISTANCE, 1)
   const hintOpacity = isFlying || isBouncing ? 0 : dragPct
+
+  const cssAnimClass = anim === 'bounce-right'
+    ? 'word-card--bounce-right'
+    : anim === 'bounce-left'
+      ? 'word-card--bounce-left'
+      : ''
 
   return (
     <div
-      className="word-card"
-      style={{ transform: `translateX(${tx}) rotate(${rotate}deg)`, opacity, transition, cursor: isMoving ? 'grabbing' : 'grab' }}
+      ref={cardRef}
+      className={`word-card${cssAnimClass ? ` ${cssAnimClass}` : ''}`}
+      style={{
+        '--bounce-px': `${bouncePx}px`,
+        ...(inlineTransform ? { transform: inlineTransform } : {}),
+        opacity,
+        transition: usingCssAnim ? undefined : transition,
+        cursor: isMoving ? 'grabbing' : 'grab',
+      } as React.CSSProperties}
       onPointerDown={onPointerDown}
       onPointerMove={onPointerMove}
       onPointerUp={onPointerUp}

@@ -475,15 +475,41 @@ html, body, #root {
   backdrop-filter: blur(10px);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 2.5rem 2rem;
+  padding: 2rem 1.5rem;
   text-align: center;
   width: 100%;
-  max-width: 320px;
+  max-width: 240px;
   cursor: grab;
   user-select: none;
   -webkit-user-select: none;
-  touch-action: pan-y;
+  touch-action: none;
   -webkit-user-drag: none;
+}
+
+/* Bounce-to-edge animations — driven by --bounce-px CSS variable set inline */
+@keyframes bounceEdgeRight {
+  0%   { transform: translateX(0)                              rotate(0deg); }
+  30%  { transform: translateX(var(--bounce-px))               rotate(6deg); }
+  42%  { transform: translateX(calc(var(--bounce-px) - 9px))   rotate(5deg); }
+  54%  { transform: translateX(var(--bounce-px))               rotate(6deg); }
+  66%  { transform: translateX(calc(var(--bounce-px) - 9px))   rotate(5deg); }
+  78%  { transform: translateX(var(--bounce-px))               rotate(6deg); }
+  100% { transform: translateX(0)                              rotate(0deg); }
+}
+@keyframes bounceEdgeLeft {
+  0%   { transform: translateX(0)                                       rotate(0deg); }
+  30%  { transform: translateX(calc(-1 * var(--bounce-px)))             rotate(-6deg); }
+  42%  { transform: translateX(calc(-1 * var(--bounce-px) + 9px))       rotate(-5deg); }
+  54%  { transform: translateX(calc(-1 * var(--bounce-px)))             rotate(-6deg); }
+  66%  { transform: translateX(calc(-1 * var(--bounce-px) + 9px))       rotate(-5deg); }
+  78%  { transform: translateX(calc(-1 * var(--bounce-px)))             rotate(-6deg); }
+  100% { transform: translateX(0)                                       rotate(0deg); }
+}
+.word-card--bounce-right {
+  animation: bounceEdgeRight 0.58s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+.word-card--bounce-left {
+  animation: bounceEdgeLeft  0.58s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
 
 .word-card__hint {

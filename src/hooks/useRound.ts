@@ -78,10 +78,9 @@ export function useRound(language: Language, onDone: (summary: RoundSummary) => 
             navigator.vibrate(200)
           }
 
-          // Queue the word to reappear 2 cards later
+          // Keep the word at current position; also queue a copy to reappear 2 cards later
           const newDeck = [...prev.deck]
-          newDeck.splice(prev.currentIndex, 1)
-          const insertAt = Math.min(prev.currentIndex + 2, newDeck.length)
+          const insertAt = Math.min(prev.currentIndex + 3, newDeck.length)
           newDeck.splice(insertAt, 0, currentWord)
 
           const newLives = prev.lives - 1
@@ -114,36 +113,44 @@ export function useRound(language: Language, onDone: (summary: RoundSummary) => 
           return { ...prev, lives: newLives, rows: newRows, deck: newDeck, isShaking: true }
         }
 
-        // Correct answer
+        // Correct answer — update score/rows immediately, but delay the word advance
+        // so the fly-off animation has time to play (260ms) before the new word appears.
         cardScoresRef.current.push(cardScore)
         resultsRef.current.push({ word: currentWord, correct: true, translationUsed, masteryPct })
 
         const newScore = prev.score + 1
         const newRows  = Math.max(0, prev.rows - 1)
         const newIndex = prev.currentIndex + 1
-
         const roundEnded = newIndex >= prev.deck.length
+        const deckSnapshot = prev.deck
 
-        if (roundEnded) {
-          const { points, passed } = scoreRound(newScore, cardScoresRef.current)
-          const scoreAfterData = addScore(language, points)
-          const levelAfter = getLevelFromScore(scoreAfterData.score)
-          const summary: RoundSummary = {
-            language,
-            cards: resultsRef.current,
-            score: newScore,
-            pointsEarned: points,
-            scoreBefore: scoreBeforeRef.current,
-            scoreAfter: scoreAfterData.score,
-            levelBefore: levelBeforeRef.current,
-            levelAfter,
-            passed,
-          }
-          setTimeout(() => onDone(summary), 0)
-          return { ...prev, score: newScore, rows: newRows, currentIndex: newIndex, results: resultsRef.current, phase: 'done', summary }
-        }
+        setTimeout(() => {
+          setState((s) => {
+            if (s.phase === 'done') return s
+            if (roundEnded) {
+              const { points, passed } = scoreRound(newScore, cardScoresRef.current)
+              const scoreAfterData = addScore(language, points)
+              const levelAfter = getLevelFromScore(scoreAfterData.score)
+              const summary: RoundSummary = {
+                language,
+                cards: resultsRef.current,
+                score: newScore,
+                pointsEarned: points,
+                scoreBefore: scoreBeforeRef.current,
+                scoreAfter: scoreAfterData.score,
+                levelBefore: levelBeforeRef.current,
+                levelAfter,
+                passed,
+              }
+              setTimeout(() => onDone(summary), 0)
+              return { ...s, currentIndex: newIndex, deck: deckSnapshot, phase: 'done', summary }
+            }
+            return { ...s, currentIndex: newIndex, deck: deckSnapshot }
+          })
+        }, 290) // fly animation is 260ms; 290ms gives a clean gap
 
-        return { ...prev, score: newScore, rows: newRows, currentIndex: newIndex, results: resultsRef.current }
+        // Return immediately with score/rows updated but index unchanged
+        return { ...prev, score: newScore, rows: newRows, results: resultsRef.current }
       })
 
       return correct
