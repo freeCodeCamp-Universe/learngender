@@ -6,6 +6,14 @@ import { getLevelProgress } from '../lib/levels'
 import { SettingsPanel } from './SettingsPanel'
 
 const LANGUAGES: Language[] = ['pt', 'es', 'fr', 'it']
+const SEGMENT_COUNT = 5
+
+const LANG_COLOR: Record<Language, string> = {
+  pt: 'var(--lang-pt)',
+  es: 'var(--lang-es)',
+  fr: 'var(--lang-fr)',
+  it: 'var(--lang-it)',
+}
 
 interface HomeScreenProps {
   onStartRound: (language: Language) => void
@@ -20,24 +28,12 @@ export function HomeScreen({ onStartRound, onMyWords }: HomeScreenProps) {
     <div className="home-screen">
       {/* Header */}
       <div className="home-screen__header">
-        <button
-          className="icon-btn"
-          onClick={onMyWords}
-          aria-label="My words"
-        >
-          ☰
-        </button>
+        <button className="icon-btn" onClick={onMyWords} aria-label="My words">☰</button>
         <div className="home-screen__title">
           <h1>LearnNounGender</h1>
           <p className="home-screen__tagline">Master noun gender in 4 languages</p>
         </div>
-        <button
-          className="icon-btn"
-          onClick={() => setSettingsOpen(true)}
-          aria-label="Settings"
-        >
-          ⚙️
-        </button>
+        <button className="icon-btn" onClick={() => setSettingsOpen(true)} aria-label="Settings">⚙️</button>
       </div>
 
       {/* Streak */}
@@ -46,42 +42,49 @@ export function HomeScreen({ onStartRound, onMyWords }: HomeScreenProps) {
         <span className="streak-label">day streak</span>
       </div>
 
-      {/* Language bars */}
-      <div className="home-screen__languages">
+      {/* Elevate-style skill rows */}
+      <div className="skill-list">
         {LANGUAGES.map((lang) => {
           const labels = LANGUAGE_LABELS[lang]
           const scoreData = getScore(lang)
-          const hasPlayed = scoreData.score > 0
           const progress = getLevelProgress(scoreData.score)
+          const color = LANG_COLOR[lang]
+          // level is 1-based; segments are 0-indexed
+          const completedLevels = progress.level - 1  // fully lit segments
+          const currentPct = progress.pct             // partial fill of current segment
 
           return (
             <button
               key={lang}
-              className="language-bar"
+              className="skill-row"
               onClick={() => onStartRound(lang)}
-              aria-label={`Play ${labels.name}`}
+              aria-label={`Play ${labels.name} — ${progress.name}`}
             >
-              <div className="language-bar__info">
-                <span className="language-bar__flag">{labels.flag}</span>
-                <span className="language-bar__name">{labels.name}</span>
-                {hasPlayed ? (
-                  <span className="language-bar__level">{progress.name}</span>
-                ) : (
-                  <span className="language-bar__start">Start</span>
-                )}
+              <div className="skill-row__header">
+                <span className="skill-row__score" style={{ color }}>{scoreData.score}</span>
+                <span className="skill-row__name">{labels.name}</span>
+                <span className="skill-row__level">{progress.name.toUpperCase()}</span>
               </div>
 
-              {hasPlayed && (
-                <div className="language-bar__progress">
-                  <div className="language-bar__score">{scoreData.score} pts</div>
-                  <div className="language-bar__track">
-                    <div
-                      className="language-bar__fill"
-                      style={{ width: `${progress.pct}%` }}
-                    />
-                  </div>
-                </div>
-              )}
+              <div className="skill-row__segments" aria-hidden="true">
+                {Array.from({ length: SEGMENT_COUNT }).map((_, i) => {
+                  const full = i < completedLevels
+                  const active = i === completedLevels
+                  return (
+                    <div key={i} className="skill-row__seg">
+                      {(full || active) && (
+                        <div
+                          className="skill-row__seg-fill"
+                          style={{
+                            background: color,
+                            width: full ? '100%' : `${currentPct}%`,
+                          }}
+                        />
+                      )}
+                    </div>
+                  )
+                })}
+              </div>
             </button>
           )
         })}

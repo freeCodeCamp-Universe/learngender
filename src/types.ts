@@ -28,11 +28,11 @@ export interface LanguageScore {
 export type LevelName = 'Rookie' | 'Apprentice' | 'Scholar' | 'Linguist' | 'Polyglot'
 
 export const LEVEL_THRESHOLDS: { xp: number; name: LevelName }[] = [
-  { xp: 0, name: 'Rookie' },
-  { xp: 500, name: 'Apprentice' },
-  { xp: 2000, name: 'Scholar' },
-  { xp: 6000, name: 'Linguist' },
-  { xp: 16000, name: 'Polyglot' },
+  { xp: 0,     name: 'Rookie' },
+  { xp: 2000,  name: 'Apprentice' },
+  { xp: 6000,  name: 'Scholar' },
+  { xp: 13000, name: 'Linguist' },
+  { xp: 20000, name: 'Polyglot' },
 ]
 
 export const LANGUAGE_LABELS: Record<
