@@ -67,7 +67,7 @@ html {
 html, body, #root {
   height: 100%;
   font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background: var(--bg);
+  background: #05050f;
   color: var(--text);
   -webkit-font-smoothing: antialiased;
   line-height: 1.5;
@@ -81,6 +81,7 @@ html, body, #root {
   margin: 0 auto;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 0 0 1px #2a2a45, 0 0 60px rgba(0, 0, 0, 0.6);
 }
 
 /* ================================================================
@@ -176,6 +177,7 @@ html, body, #root {
   flex-direction: column;
   min-height: 100svh;
   padding: 0 0 2rem;
+  background: linear-gradient(180deg, #1f1f4a 0%, #0a0a23 40%);
 }
 
 .home-screen__header {
@@ -361,6 +363,11 @@ html, body, #root {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  background-color: #0a0a23;
+  background-image:
+    radial-gradient(ellipse at 50% 0%, #1f1f4a 0%, transparent 65%),
+    radial-gradient(circle, #2a2a50 1px, transparent 1px);
+  background-size: 100% 100%, 28px 28px;
 }
 
 .game-screen--shake {
@@ -392,82 +399,7 @@ html, body, #root {
 }
 
 /* Mountain background */
-.mountain-bg {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-}
-.mountain-svg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.block-wall {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  flex-direction: column-reverse;
-}
-.block-row {
-  height: 12.5%; /* 100% / 8 rows */
-  background: repeating-linear-gradient(
-    90deg,
-    #1b1b32 0px, #1b1b32 59px,
-    #0a0a23 59px, #0a0a23 60px
-  );
-  border-top: 1px solid var(--gray-75);
-}
-.block-row--fall {
-  animation: blockFall 0.35s ease-in forwards;
-}
-.block-row--rise {
-  animation: blockRise 0.35s ease-out forwards;
-}
-@keyframes blockFall {
-  0%   { transform: translateY(0); opacity: 1; }
-  100% { transform: translateY(80px); opacity: 0; }
-}
-@keyframes blockRise {
-  0%   { transform: translateY(80px); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
-}
-.summit-flag {
-  animation: flagAppear 0.5s ease-out;
-}
-@keyframes flagAppear {
-  from { opacity: 0; transform: scale(0.5) translateY(-10px); }
-  to   { opacity: 1; transform: scale(1) translateY(0); }
-}
 
-/* Gender bands */
-.gender-band {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 44px;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.gender-band--left {
-  left: 0;
-  background: linear-gradient(90deg, rgba(255,173,173,0.7) 0%, rgba(255,173,173,0) 100%);
-}
-.gender-band--right {
-  right: 0;
-  background: linear-gradient(270deg, rgba(153,201,255,0.7) 0%, rgba(153,201,255,0) 100%);
-}
-.gender-band__article {
-  font-size: 1rem;
-  font-weight: 900;
-  color: var(--gray-00);
-  letter-spacing: 1px;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-}
 
 /* Card area */
 .game-screen__card-area {
@@ -485,9 +417,9 @@ html, body, #root {
 /* Word card */
 .word-card {
   position: relative;
-  background: rgba(27, 27, 50, 0.92);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--border);
+  background: #2e2e52;
+  border: 1px solid #4a4a70;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
   border-radius: var(--radius);
   padding: 2rem 1.5rem;
   text-align: center;
@@ -580,9 +512,11 @@ html, body, #root {
 
 /* Swipe hint */
 .swipe-hint {
-  font-size: 0.722rem;
-  color: rgba(255,255,255,0.35);
-  letter-spacing: 1px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.65);
+  letter-spacing: 2px;
+  margin-top: 1rem;
 }
 
 /* Progress */

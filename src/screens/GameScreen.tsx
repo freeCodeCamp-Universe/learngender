@@ -1,7 +1,6 @@
 import type { Language, RoundSummary } from '../types'
 import { LANGUAGE_LABELS } from '../types'
 import { useRound } from '../hooks/useRound'
-import { MountainBackground } from '../components/MountainBackground'
 import { WordCard } from '../components/WordCard'
 import { Lives } from '../components/Lives'
 import { getSettings } from '../lib/storage'
@@ -27,8 +26,6 @@ export function GameScreen({ language, onRoundEnd, onHome }: GameScreenProps) {
 
   return (
     <div className={`game-screen ${state.isShaking ? 'game-screen--shake' : ''}`}>
-      <MountainBackground rows={state.rows} />
-
       {/* Top bar */}
       <div className="game-screen__topbar">
         <button
@@ -39,14 +36,6 @@ export function GameScreen({ language, onRoundEnd, onHome }: GameScreenProps) {
           ☰
         </button>
         <Lives count={state.lives} />
-      </div>
-
-      {/* Gender bands */}
-      <div className="gender-band gender-band--left" aria-label={`Feminine: ${labels.feminine}`}>
-        <span className="gender-band__article">{labels.feminine}</span>
-      </div>
-      <div className="gender-band gender-band--right" aria-label={`Masculine: ${labels.masculine}`}>
-        <span className="gender-band__article">{labels.masculine}</span>
       </div>
 
       {/* Card area */}

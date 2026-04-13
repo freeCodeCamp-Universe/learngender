@@ -11,7 +11,7 @@ export function Lives({ count }: LivesProps) {
           className={`heart ${i < count ? 'heart--active' : 'heart--lost'}`}
           aria-hidden="true"
         >
-          {i < count ? '❤️' : '🖤'}
+          {i < count ? '❤️' : '🩶'}
         </span>
       ))}
     </div>
