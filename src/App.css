@@ -106,6 +106,12 @@ html, body, #root {
   outline: 2px solid var(--focus-ring);
   outline-offset: 2px;
 }
+.icon-btn--dark {
+  color: #3a3028;
+}
+.icon-btn--dark:hover {
+  background: rgba(0,0,0,0.07);
+}
 
 .btn {
   padding: 14px 28px;
@@ -363,11 +369,15 @@ html, body, #root {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background-color: #0a0a23;
-  background-image:
-    radial-gradient(ellipse at 50% 0%, #1f1f4a 0%, transparent 65%),
-    radial-gradient(circle, #2a2a50 1px, transparent 1px);
-  background-size: 100% 100%, 28px 28px;
+  background: #e8e2d9;
+}
+
+/* Mountain SVG fills the background absolutely */
+.mountain-svg-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 0;
 }
 
 .game-screen--shake {
@@ -398,8 +408,36 @@ html, body, #root {
   padding: 1rem;
 }
 
-/* Mountain background */
+/* Gender bands (light theme) */
+.game-screen__card-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
 
+.gender-band {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gender-band--left  { left: 0;  background: rgba(176, 196, 172, 0.9); border-radius: 0 12px 12px 0; }
+.gender-band--right { right: 0; background: rgba(176, 196, 172, 0.9); border-radius: 12px 0 0 12px; }
+
+.gender-band__article {
+  font-size: 0.667rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.gender-band--left  .gender-band__article { color: #2d3e2a; }
+.gender-band--right .gender-band__article { color: #2d3e2a; }
 
 /* Card area */
 .game-screen__card-area {
@@ -409,22 +447,22 @@ html, body, #root {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-  padding: 0 60px 2rem;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 0 0 3.5rem;
 }
 
-/* Word card */
+/* Word card — light theme */
 .word-card {
   position: relative;
-  background: #2e2e52;
-  border: 1px solid #4a4a70;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.93);
+  border: 0.5px solid rgba(0,0,0,0.1);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
   border-radius: var(--radius);
-  padding: 2rem 1.5rem;
+  padding: 1.25rem 1.5rem;
   text-align: center;
-  width: 100%;
-  max-width: 240px;
+  width: 62%;
+  max-width: 260px;
   cursor: grab;
   user-select: none;
   -webkit-user-select: none;
@@ -458,53 +496,31 @@ html, body, #root {
   animation: bounceEdgeLeft  0.58s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
 
-.word-card__hint {
-  position: absolute;
-  top: 12px;
-  font-size: 0.667rem;
-  font-weight: 900;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  padding: 4px 10px;
-  border-radius: 6px;
-  border: 2px solid;
-  pointer-events: none;
-}
-.word-card__hint--left {
-  left: 12px;
-  color: var(--feminine);
-  border-color: var(--feminine);
-}
-.word-card__hint--right {
-  right: 12px;
-  color: var(--masculine);
-  border-color: var(--masculine);
-}
 
 .word-card__noun {
   font-size: 2.5rem;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.1;
   margin-bottom: 1rem;
-  color: var(--gray-00);
+  color: #1a1612;
 }
 .word-card__translation {
   font-size: 0.944rem;
-  color: var(--text-muted);
+  color: #6b5e52;
   font-style: italic;
 }
 .word-card__reveal-btn {
   background: none;
-  border: 1px solid var(--border);
+  border: 0.5px solid rgba(0,0,0,0.2);
   border-radius: 20px;
   padding: 6px 16px;
-  color: var(--text-muted);
+  color: #6b5e52;
   font-size: 0.944rem;
   font-family: inherit;
   cursor: pointer;
   transition: background 0.15s;
 }
-.word-card__reveal-btn:hover { background: rgba(255,255,255,0.08); }
+.word-card__reveal-btn:hover { background: rgba(0,0,0,0.05); }
 .word-card__reveal-btn:focus-visible {
   outline: 2px solid var(--focus-ring);
   outline-offset: 2px;
@@ -512,10 +528,10 @@ html, body, #root {
 
 /* Swipe hint */
 .swipe-hint {
-  font-size: 1rem;
-  font-weight: 700;
-  color: rgba(255,255,255,0.65);
-  letter-spacing: 2px;
+  font-size: 0.889rem;
+  font-weight: 500;
+  color: rgba(58, 48, 40, 0.5);
+  letter-spacing: 1px;
   margin-top: 1rem;
 }
 
@@ -526,7 +542,88 @@ html, body, #root {
   text-align: center;
   padding: 0.75rem;
   font-size: 0.833rem;
-  color: var(--text-muted);
+  color: rgba(58,48,40,0.5);
+}
+
+/* Summit overlay */
+.summit-overlay {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  animation: riseUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: 0.4s;
+  opacity: 0;
+}
+@keyframes riseUp {
+  from { opacity: 0; transform: translateX(-50%) translateY(20px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+.summit-badge {
+  background: rgba(255,255,255,0.95);
+  border: 0.5px solid rgba(0,0,0,0.1);
+  border-radius: 16px;
+  padding: 18px 32px;
+  text-align: center;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.1);
+  min-width: 200px;
+}
+.summit-badge__emoji { font-size: 2rem; margin-bottom: 4px; }
+.summit-badge__label {
+  font-size: 0.667rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #6b5e52;
+  margin-bottom: 4px;
+}
+.summit-badge__score {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1612;
+  margin-bottom: 4px;
+}
+.summit-badge__pts {
+  font-size: 0.833rem;
+  color: #6b5e52;
+}
+
+.summit-actions {
+  display: flex;
+  gap: 10px;
+}
+.summit-actions .btn {
+  border-radius: 24px;
+  padding: 10px 24px;
+  font-size: 0.889rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+.summit-actions .btn--primary {
+  background: #3a3028;
+  color: white;
+}
+.summit-actions .btn--secondary {
+  background: rgba(255,255,255,0.85);
+  color: #3a3028;
+  border: 1px solid rgba(0,0,0,0.15);
+}
+
+/* Hiker summit bounce animation */
+.hiker-summit {
+  animation: hikerBounce 1s ease-in-out infinite;
+}
+@keyframes hikerBounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-4px); }
 }
 
 /* ================================================================

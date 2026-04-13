@@ -202,9 +202,6 @@ export function WordCard({ word, onSwipe, showTranslationByDefault }: WordCardPr
       role="main"
       aria-label={`Word: ${word.word}`}
     >
-      <div className="word-card__hint word-card__hint--left"  style={{ opacity: dragX < 0 ? hintOpacity : 0 }}>fem</div>
-      <div className="word-card__hint word-card__hint--right" style={{ opacity: dragX > 0 ? hintOpacity : 0 }}>masc</div>
-
       <p className="word-card__noun">{word.word}</p>
 
       {showTranslation ? (

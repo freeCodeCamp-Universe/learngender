@@ -60,6 +60,7 @@ export default function App() {
         <GameScreen
           language={state.language}
           onRoundEnd={onRoundEnd}
+          onPlayAgain={() => startRound(state.language!)}
           onHome={goHome}
         />
       )}
