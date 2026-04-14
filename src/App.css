@@ -528,7 +528,7 @@ html, body, #root {
   gap: 1rem;
   padding: 0;
   /* Push card below mountain peak — works on all screen heights */
-  margin-top: 45vh;
+  margin-top: 35vh;
 }
 
 /* Word card — light theme */
