@@ -7,7 +7,7 @@ import { scoreCard, scoreRound } from '../lib/scoring'
 import { getLevelFromMastered } from '../lib/levels'
 import { getWords } from '../lib/wordLoader'
 
-const TOTAL_LIVES   = 3
+const TOTAL_LIVES   = 5
 const SUMMIT_STEP   = 8   // hiker must reach this step to win
 
 export type RoundPhase = 'loading' | 'playing' | 'summit' | 'done'

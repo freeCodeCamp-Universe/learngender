@@ -1,5 +1,6 @@
 import type { Language, Word } from '../types'
-import { getSRSCard } from './storage'
+import { getManuallyMastered, getSRSCard } from './storage'
+import { getMastery } from './srs'
 
 // Dynamically import word JSON files (bundled at build time)
 const wordFiles: Record<Language, () => Promise<{ default: unknown[] }>> = {
@@ -20,13 +21,16 @@ export async function getWords(language: Language): Promise<Word[]> {
 
 export async function drawRound(language: Language): Promise<Word[]> {
   const allWords = await getWords(language)
+  const manuallyMastered = getManuallyMastered(language)
 
   const dueWords: { word: Word; dueDate: Date }[] = []
   const newWords: Word[] = []
 
   for (const word of allWords) {
+    if (manuallyMastered.has(word.word)) continue
     const card = getSRSCard(language, word.word)
     if (card && card.reps > 0) {
+      if (getMastery(card) >= 80) continue // SRS mastered — skip
       const due = new Date(card.due)
       if (due <= new Date()) {
         dueWords.push({ word, dueDate: due })

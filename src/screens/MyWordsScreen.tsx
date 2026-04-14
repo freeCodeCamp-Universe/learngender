@@ -2,15 +2,18 @@ import { useEffect, useState } from 'react'
 import type { Language, Word } from '../types'
 import { LANGUAGE_LABELS } from '../types'
 import { getMastery } from '../lib/srs'
-import { getSeenWords, getSRSCard, getSettings } from '../lib/storage'
+import { addScore, getScore, getSeenWords, getSRSCard, getMasteredCount, isManuallyMastered, toggleManuallyMastered } from '../lib/storage'
 import { getWords } from '../lib/wordLoader'
 import { MasteryCircle } from '../components/MasteryCircle'
+import { getLevelProgressFromMastered } from '../lib/levels'
 
 const LANGUAGES: Language[] = ['pt', 'es', 'fr', 'it']
+const SEGMENT_COUNT = 5
 
 interface WordEntry {
   word: Word
   masteryPct: number
+  manuallyMastered: boolean
 }
 
 interface MyWordsScreenProps {
@@ -19,36 +22,51 @@ interface MyWordsScreenProps {
 
 export function MyWordsScreen({ onHome }: MyWordsScreenProps) {
   const [selectedLang, setSelectedLang] = useState<Language>('pt')
+  const [tab, setTab] = useState<'learning' | 'mastered'>('learning')
   const [entries, setEntries] = useState<WordEntry[]>([])
-  const settings = getSettings()
+  async function load(lang: Language) {
+    const allWords = await getWords(lang)
+    const seen = getSeenWords(lang)
 
-  useEffect(() => {
-    async function load() {
-      const allWords = await getWords(selectedLang)
-      const seen = getSeenWords(selectedLang)
+    const wordEntries: WordEntry[] = allWords
+      .filter((w) => seen.has(w.word))
+      .map((w) => {
+        const card = getSRSCard(lang, w.word)
+        return {
+          word: w,
+          masteryPct: getMastery(card),
+          manuallyMastered: isManuallyMastered(lang, w.word),
+        }
+      })
+      .sort((a, b) => a.masteryPct - b.masteryPct)
 
-      const wordEntries: WordEntry[] = allWords
-        .filter((w) => seen.has(w.word))
-        .map((w) => {
-          const card = getSRSCard(selectedLang, w.word)
-          return { word: w, masteryPct: getMastery(card) }
-        })
-        .sort((a, b) => a.masteryPct - b.masteryPct) // least mastered first
+    setEntries(wordEntries)
+  }
 
-      setEntries(wordEntries)
-    }
-    load()
-  }, [selectedLang])
+  useEffect(() => { load(selectedLang) }, [selectedLang])
 
-  const mastered = entries.filter((e) => e.masteryPct >= 80).length
+  async function handleToggleMastered(word: string) {
+    toggleManuallyMastered(selectedLang, word)
+    // Recalculate and persist masteredCount so home screen level bar updates
+    const allWords = await getWords(selectedLang)
+    const wordList = allWords.map(w => w.word)
+    const newMasteredCount = getMasteredCount(selectedLang, wordList)
+    const { level: newLevel } = getLevelProgressFromMastered(newMasteredCount)
+    addScore(selectedLang, 0, newMasteredCount, newLevel)
+    load(selectedLang)
+  }
+
+  const learningEntries = entries.filter(e => !e.manuallyMastered && e.masteryPct < 80)
+  const masteredEntries = entries.filter(e => e.manuallyMastered || e.masteryPct >= 80)
+
+  const scoreData = getScore(selectedLang)
+  const masteredProgress = getLevelProgressFromMastered(scoreData.masteredCount ?? 0)
 
   return (
     <div className="my-words-screen">
       {/* Header */}
       <div className="my-words-screen__header">
-        <button className="icon-btn" onClick={onHome} aria-label="Home">
-          ☰
-        </button>
+        <button className="icon-btn" onClick={onHome} aria-label="Home">☰</button>
         <h1>My Words</h1>
       </div>
 
@@ -67,37 +85,118 @@ export function MyWordsScreen({ onHome }: MyWordsScreenProps) {
         ))}
       </div>
 
-      {/* Summary */}
-      <p className="my-words-summary">
-        {entries.length} words seen · {mastered} mastered
-      </p>
-
-      {/* Word list */}
-      {entries.length === 0 ? (
-        <p className="my-words-empty">
-          No words yet — play a round in {LANGUAGE_LABELS[selectedLang].name} to get started!
-        </p>
-      ) : (
-        <ul className="my-words-list">
-          {entries.map(({ word, masteryPct }) => {
-            const labels = LANGUAGE_LABELS[selectedLang]
-            const article = word.gender === 'feminine' ? labels.feminine : labels.masculine
-
+      {/* Mastered progress bar */}
+      <div className="my-words-progress">
+        <div className="my-words-progress__header">
+          <span className="my-words-progress__level">{masteredProgress.name.toUpperCase()}</span>
+          <span className="my-words-progress__count">
+            {scoreData.masteredCount ?? 0}{masteredProgress.nextThreshold ? ` / ${masteredProgress.nextThreshold}` : ''} mastered
+          </span>
+        </div>
+        <div className="my-words-progress__segments">
+          {Array.from({ length: SEGMENT_COUNT }).map((_, i) => {
+            const full = i < masteredProgress.level - 1
+            const active = i === masteredProgress.level - 1
             return (
-              <li key={word.word} className="my-words-item">
-                <MasteryCircle pct={masteryPct} size={40} />
-                <div className="my-words-item__info">
-                  <span className="my-words-item__article">{article}</span>
-                  <span className="my-words-item__noun">{word.word}</span>
-                  {settings.showTranslationByDefault && (
-                    <span className="my-words-item__translation">{word.translation}</span>
-                  )}
-                </div>
-              </li>
+              <div key={i} className="my-words-progress__seg">
+                {(full || active) && (
+                  <div
+                    className="my-words-progress__seg-fill"
+                    style={{ width: full ? '100%' : `${masteredProgress.pct}%` }}
+                  />
+                )}
+              </div>
             )
           })}
-        </ul>
+        </div>
+        <p className="my-words-summary">{entries.length} seen · {masteredEntries.length} mastered</p>
+      </div>
+
+      {/* Learning / Mastered tabs */}
+      <div className="my-words-tabs" role="tablist">
+        <button
+          role="tab"
+          aria-selected={tab === 'learning'}
+          className={`my-words-tab ${tab === 'learning' ? 'my-words-tab--active' : ''}`}
+          onClick={() => setTab('learning')}
+        >
+          Learning ({learningEntries.length})
+        </button>
+        <button
+          role="tab"
+          aria-selected={tab === 'mastered'}
+          className={`my-words-tab ${tab === 'mastered' ? 'my-words-tab--active' : ''}`}
+          onClick={() => setTab('mastered')}
+        >
+          Mastered ({masteredEntries.length})
+        </button>
+      </div>
+
+      {tab === 'learning' && (
+        learningEntries.length === 0
+          ? <p className="my-words-empty">No words in learning yet — play a round in {LANGUAGE_LABELS[selectedLang].name}!</p>
+          : <ul className="my-words-list">
+              {learningEntries.map(({ word, masteryPct }) => (
+                <WordRow
+                  key={word.word}
+                  word={word}
+                  masteryPct={masteryPct}
+                  isMastered={false}
+
+                  language={selectedLang}
+                  onToggle={handleToggleMastered}
+                />
+              ))}
+            </ul>
+      )}
+
+      {tab === 'mastered' && (
+        masteredEntries.length === 0
+          ? <p className="my-words-empty">No mastered words yet — keep playing!</p>
+          : <ul className="my-words-list">
+              {masteredEntries.map(({ word, masteryPct, manuallyMastered }) => (
+                <WordRow
+                  key={word.word}
+                  word={word}
+                  masteryPct={masteryPct}
+                  isMastered={true}
+                  isManual={manuallyMastered}
+
+                  language={selectedLang}
+                  onToggle={handleToggleMastered}
+                />
+              ))}
+            </ul>
       )}
     </div>
+  )
+}
+
+interface WordRowProps {
+  word: Word
+  masteryPct: number
+  isMastered: boolean
+  isManual?: boolean
+  language: Language
+  onToggle: (word: string) => void
+}
+
+function WordRow({ word, masteryPct, isMastered, language, onToggle }: WordRowProps) {
+  const labels = LANGUAGE_LABELS[language]
+  const article = word.gender === 'feminine' ? labels.feminine : labels.masculine
+
+  return (
+    <li className="my-words-item">
+      <MasteryCircle pct={masteryPct} size={34} />
+      <span className="my-words-item__article">{article}</span>
+      <span className="my-words-item__noun">{word.word}</span>
+      <span className="my-words-item__translation">{word.translation}</span>
+      <button
+        className="my-words-item__toggle"
+        onClick={() => onToggle(word.word)}
+      >
+        {isMastered ? 'Move to learning' : 'Mark as mastered'}
+      </button>
+    </li>
   )
 }

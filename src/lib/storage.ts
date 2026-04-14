@@ -45,10 +45,12 @@ export function setSRSCard(language: Language, word: string, card: Card): void {
   safeSet(`lng_srs_${language}_${word}`, card)
 }
 
-// Count words with mastery ≥ 80% for a given language
+// Count words with mastery ≥ 80% (SRS) OR manually mastered
 export function getMasteredCount(language: Language, wordList: string[]): number {
+  const manual = getManuallyMastered(language)
   let count = 0
   for (const word of wordList) {
+    if (manual.has(word)) { count++; continue }
     const card = getSRSCard(language, word)
     if (getMastery(card) >= 80) count++
   }
@@ -114,4 +116,29 @@ export function markWordSeen(language: Language, word: string): void {
   const seen = getSeenWords(language)
   seen.add(word)
   safeSet(`lng_seen_${language}`, Array.from(seen))
+}
+
+export function getSeenCount(language: Language): number {
+  return getSeenWords(language).size
+}
+
+// Manually mastered words
+export function getManuallyMastered(language: Language): Set<string> {
+  const arr = safeGet<string[]>(`lng_manual_mastered_${language}`, [])
+  return new Set(arr)
+}
+
+export function toggleManuallyMastered(language: Language, word: string): boolean {
+  const set = getManuallyMastered(language)
+  if (set.has(word)) {
+    set.delete(word)
+  } else {
+    set.add(word)
+  }
+  safeSet(`lng_manual_mastered_${language}`, Array.from(set))
+  return set.has(word)
+}
+
+export function isManuallyMastered(language: Language, word: string): boolean {
+  return getManuallyMastered(language).has(word)
 }

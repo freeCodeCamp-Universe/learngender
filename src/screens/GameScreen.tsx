@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import translateIcon from '../components/icons/translate.svg'
 import type { Language, RoundSummary } from '../types'
 import { useRound } from '../hooks/useRound'
 import { MountainBackground } from '../components/MountainBackground'
@@ -49,7 +50,7 @@ export function GameScreen({ language, onRoundEnd, onPlayAgain, onHome }: GameSc
           onClick={() => setShowTranslation(v => !v)}
           aria-label="Toggle translation"
         >
-          <img src="/src/components/icons/translate.svg" alt="" width="16" height="16" />
+          <img src={translateIcon} alt="" width="16" height="16" />
         </button>
       </div>
 

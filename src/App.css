@@ -258,7 +258,7 @@ html, body, #root {
   display: flex;
   align-items: baseline;
   gap: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 4px;
 }
 
 .skill-row__score {
@@ -299,6 +299,56 @@ html, body, #root {
 }
 
 .skill-row__seg-fill {
+  position: absolute;
+  inset: 0;
+  border-radius: 2px;
+  transition: width 0.5s ease-out;
+}
+
+/* Mastered words mini-bar */
+.skill-row__mastered-badge {
+  font-size: 0.667rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-top: 2px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.skill-row__mastered-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+  cursor: pointer;
+  padding: 2px 0;
+}
+
+.skill-row__mastered-label {
+  font-size: 0.667rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.skill-row__mastered-segments {
+  display: flex;
+  gap: 3px;
+  flex: 1;
+}
+
+.skill-row__mastered-seg {
+  flex: 1;
+  height: 5px;
+  background: var(--gray-75);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skill-row__mastered-seg-fill {
   position: absolute;
   inset: 0;
   border-radius: 2px;
@@ -474,9 +524,11 @@ html, body, #root {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 1rem;
-  padding: 0 0 11rem;
+  padding: 0;
+  /* Push card below mountain peak — works on all screen heights */
+  margin-top: 45vh;
 }
 
 /* Word card — light theme */
@@ -786,22 +838,17 @@ html, body, #root {
   overflow-y: auto;
 }
 
-.result-badge {
-  text-align: center;
-  padding: 1rem 0;
-}
 .result-badge__emoji {
-  font-size: 3rem;
-  display: block;
-  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
 }
 .result-badge__label {
-  font-size: 1.75rem;
-  font-weight: 900;
+  font-size: 1rem;
+  font-weight: 700;
   color: var(--accent);
 }
 .result-badge__levelup {
-  margin-top: 0.5rem;
+  text-align: center;
+  padding: 0.25rem 0 0.5rem;
   font-size: 0.944rem;
   color: var(--accent-cta);
   font-weight: 700;
@@ -816,8 +863,9 @@ html, body, #root {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 10px;
   font-size: 1rem;
+  padding: 1rem 0 0.5rem;
 }
 .result-score__value {
   font-size: 1.5rem;
@@ -977,10 +1025,57 @@ html, body, #root {
   border-color: var(--accent);
 }
 
-.my-words-summary {
-  font-size: 0.833rem;
+.my-words-progress {
+  padding: 0.75rem 1rem 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.my-words-progress__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 6px;
+}
+
+.my-words-progress__level {
+  font-size: 0.722rem;
+  font-weight: 700;
   color: var(--text-muted);
-  padding: 0.75rem 1rem;
+  letter-spacing: 0.04em;
+}
+
+.my-words-progress__count {
+  font-size: 0.722rem;
+  color: var(--text-muted);
+}
+
+.my-words-progress__segments {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 8px;
+}
+
+.my-words-progress__seg {
+  flex: 1;
+  height: 7px;
+  background: var(--gray-75);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.my-words-progress__seg-fill {
+  position: absolute;
+  inset: 0;
+  border-radius: 2px;
+  background: var(--accent);
+  transition: width 0.5s ease-out;
+}
+
+.my-words-summary {
+  font-size: 0.778rem;
+  color: var(--text-muted);
+  margin: 0;
 }
 .my-words-empty {
   flex: 1;
@@ -994,7 +1089,7 @@ html, body, #root {
 }
 .my-words-list {
   list-style: none;
-  padding: 0 1rem;
+  padding: 0;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -1002,31 +1097,82 @@ html, body, #root {
 .my-words-item {
   display: flex;
   align-items: center;
-  gap: 12px;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  padding: 10px 14px;
+  gap: 8px;
+  padding: 7px 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  overflow: hidden;
 }
-.my-words-item__info {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
+.my-words-item:nth-child(even) { background: var(--bg-card); }
 .my-words-item__article {
-  font-size: 0.667rem;
-  color: var(--text-muted);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-.my-words-item__noun {
-  font-size: 1rem;
-  font-weight: 700;
-}
-.my-words-item__translation {
-  font-size: 0.778rem;
+  font-size: 0.833rem;
   color: var(--text-muted);
   font-style: italic;
+  flex-shrink: 0;
+  width: 28px;
+  margin-left: 4px;
+}
+.my-words-item__noun {
+  font-size: clamp(0.85rem, 4vw, 1rem);
+  font-weight: 700;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.my-words-item__translation {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-style: italic;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.my-words-item__toggle {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.667rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 3px 7px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.my-words-item__toggle:hover {
+  color: var(--text);
+  border-color: var(--text-muted);
+}
+
+.my-words-tabs {
+  display: flex;
+  border-bottom: 2px solid var(--border);
+  margin-top: 4px;
+}
+
+.my-words-tab {
+  flex: 1;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  padding: 12px 10px;
+  font-size: 0.833rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+  margin-bottom: -2px;
+}
+
+.my-words-tab--active {
+  color: var(--text);
+  border-bottom-color: var(--accent);
+}
+
+.my-words-tab:not(.my-words-tab--active):hover {
+  color: var(--text);
 }

@@ -10,14 +10,15 @@ interface ResultScreenProps {
   onHome: () => void
 }
 
-function getBadge(score: number): { label: string; emoji: string } {
+function getBadge(score: number, passed: boolean): { label: string; emoji: string } {
+  if (!passed) return { label: 'Good Try!', emoji: '💪' }
   if (score >= 9) return { label: 'Excellent Job', emoji: '🏆' }
   if (score >= 7) return { label: 'Great Job', emoji: '⭐' }
   return { label: 'Good Job', emoji: '👍' }
 }
 
 export function ResultScreen({ summary, onPlayAgain, onHome }: ResultScreenProps) {
-  const badge = getBadge(summary.score)
+  const badge = getBadge(summary.score, summary.passed)
   const labels = LANGUAGE_LABELS[summary.language]
   const levelUp = summary.levelAfter > summary.levelBefore
 
@@ -41,25 +42,21 @@ export function ResultScreen({ summary, onPlayAgain, onHome }: ResultScreenProps
 
   return (
     <div className="result-screen">
-      {/* Badge */}
-      <div className="result-badge">
-        <span className="result-badge__emoji">{badge.emoji}</span>
-        <h1 className="result-badge__label">{badge.label}</h1>
-        {levelUp && (
-          <div className="result-badge__levelup">
-            Level Up! → {getLevelName(summary.levelAfter)}
-          </div>
-        )}
-      </div>
-
-      {/* Score */}
+      {/* Score + badge in one row */}
       <div className="result-score">
+        <span className="result-badge__emoji">{badge.emoji}</span>
+        <span className="result-badge__label">{badge.label}</span>
         <span className="result-score__value">{summary.score}/10</span>
         <span className={`result-score__status ${summary.passed ? 'passed' : 'failed'}`}>
           {summary.passed ? 'Passed' : 'Failed'}
         </span>
         <span className="result-score__points">+{summary.pointsEarned} pts</span>
       </div>
+      {levelUp && (
+        <div className="result-badge__levelup">
+          Level Up! → {getLevelName(summary.levelAfter)}
+        </div>
+      )}
 
       {/* Level progress bar */}
       <div className="result-progress">

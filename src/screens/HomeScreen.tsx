@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import type { Language } from '../types'
 import { LANGUAGE_LABELS } from '../types'
-import { getScore, getStreak } from '../lib/storage'
+import { getScore, getSeenCount, getStreak } from '../lib/storage'
 import { getLevelProgressFromMastered } from '../lib/levels'
 import { SettingsPanel } from './SettingsPanel'
 
@@ -47,29 +47,40 @@ export function HomeScreen({ onStartRound, onMyWords }: HomeScreenProps) {
         {LANGUAGES.map((lang) => {
           const labels = LANGUAGE_LABELS[lang]
           const scoreData = getScore(lang)
-          const progress = getLevelProgressFromMastered(scoreData.masteredCount ?? 0)
+          const seenCount = getSeenCount(lang)
+          const masteredCount = scoreData.masteredCount ?? 0
+          const seenProgress = getLevelProgressFromMastered(seenCount)
           const color = LANG_COLOR[lang]
-          // level is 1-based; segments are 0-indexed
-          const completedLevels = progress.level - 1  // fully lit segments
-          const currentPct = progress.pct             // partial fill of current segment
+          const seenCompletedLevels = seenProgress.level - 1
 
           return (
             <button
               key={lang}
               className="skill-row"
               onClick={() => onStartRound(lang)}
-              aria-label={`Play ${labels.name} — ${progress.name}`}
+              aria-label={`Play ${labels.name} — ${seenProgress.name}`}
             >
               <div className="skill-row__header">
                 <span className="skill-row__score" style={{ color }}>{scoreData.score}</span>
                 <span className="skill-row__name">{labels.name}</span>
-                <span className="skill-row__level">{progress.name.toUpperCase()}</span>
+                <span className="skill-row__level">{seenProgress.name.toUpperCase()}</span>
               </div>
 
+              {/* Mastered count badge */}
+              <div
+                className="skill-row__mastered-badge"
+                onClick={(e) => { e.stopPropagation(); onMyWords() }}
+                role="button"
+                aria-label={`${masteredCount} words mastered — view My Words`}
+              >
+                ⭐ {masteredCount} mastered
+              </div>
+
+              {/* Seen words bar (fast progress) */}
               <div className="skill-row__segments" aria-hidden="true">
                 {Array.from({ length: SEGMENT_COUNT }).map((_, i) => {
-                  const full = i < completedLevels
-                  const active = i === completedLevels
+                  const full = i < seenCompletedLevels
+                  const active = i === seenCompletedLevels
                   return (
                     <div key={i} className="skill-row__seg">
                       {(full || active) && (
@@ -77,7 +88,7 @@ export function HomeScreen({ onStartRound, onMyWords }: HomeScreenProps) {
                           className="skill-row__seg-fill"
                           style={{
                             background: color,
-                            width: full ? '100%' : `${currentPct}%`,
+                            width: full ? '100%' : `${seenProgress.pct}%`,
                           }}
                         />
                       )}
@@ -85,6 +96,7 @@ export function HomeScreen({ onStartRound, onMyWords }: HomeScreenProps) {
                   )
                 })}
               </div>
+
             </button>
           )
         })}
