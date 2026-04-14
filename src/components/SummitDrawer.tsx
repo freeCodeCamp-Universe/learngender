@@ -1,5 +1,5 @@
 import type { Language, RoundSummary } from '../types'
-import { LANGUAGE_LABELS, LEVEL_THRESHOLDS } from '../types'
+import { LANGUAGE_LABELS } from '../types'
 import { getLevelProgressFromMastered } from '../lib/levels'
 import { MasteryCircle } from './MasteryCircle'
 
