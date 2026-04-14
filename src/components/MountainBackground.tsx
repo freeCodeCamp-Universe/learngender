@@ -116,6 +116,7 @@ export function MountainBackground({ hikerStep, isSummit }: MountainBackgroundPr
 
       {/* Hiker — summit/celebrating pose */}
       {isSummit && (
+        <g transform="translate(-25, -65)">
         <g className="hiker-summit">
           <ellipse cx="162" cy="156" rx="5" ry="7" fill="#e07840"/>
           <circle cx="162" cy="146" r="5" fill="#f5c5a0"/>
@@ -126,6 +127,7 @@ export function MountainBackground({ hikerStep, isSummit }: MountainBackgroundPr
           <rect x="165" y="149" width="6" height="9" fill="#4a7c59" rx="2"/>
           <line x1="160" y1="163" x2="157" y2="172" stroke="#3a3028" strokeWidth="2.5" strokeLinecap="round"/>
           <line x1="164" y1="163" x2="167" y2="172" stroke="#3a3028" strokeWidth="2.5" strokeLinecap="round"/>
+        </g>
         </g>
       )}
     </svg>

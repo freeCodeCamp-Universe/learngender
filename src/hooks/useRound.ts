@@ -2,9 +2,10 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import type { CardResult, Gender, Language, RoundSummary, Word } from '../types'
 import { drawRound } from '../lib/wordLoader'
 import { createCard, getMastery, rateCard } from '../lib/srs'
-import { addScore, getScore, getSRSCard, markWordSeen, setSRSCard } from '../lib/storage'
+import { addScore, getMasteredCount, getScore, getSRSCard, markWordSeen, setSRSCard } from '../lib/storage'
 import { scoreCard, scoreRound } from '../lib/scoring'
-import { getLevelFromScore } from '../lib/levels'
+import { getLevelFromMastered } from '../lib/levels'
+import { getWords } from '../lib/wordLoader'
 
 const TOTAL_LIVES   = 3
 const SUMMIT_STEP   = 8   // hiker must reach this step to win
@@ -23,7 +24,7 @@ export interface RoundState {
   summary: RoundSummary | null
 }
 
-export function useRound(language: Language, onDone: (summary: RoundSummary) => void) {
+export function useRound(language: Language, onDone: (summary: RoundSummary) => void, initialDeck?: Word[]) {
   const [state, setState] = useState<RoundState>({
     phase: 'loading',
     deck: [],
@@ -36,33 +37,52 @@ export function useRound(language: Language, onDone: (summary: RoundSummary) => 
     summary: null,
   })
 
-  const cardScoresRef  = useRef<ReturnType<typeof scoreCard>[]>([])
-  const resultsRef     = useRef<CardResult[]>([])
-  const scoreBeforeRef = useRef(0)
-  const levelBeforeRef = useRef(1)
+  const cardScoresRef     = useRef<ReturnType<typeof scoreCard>[]>([])
+  const resultsRef        = useRef<CardResult[]>([])
+  const masteredBeforeRef = useRef(0)
+  const levelBeforeRef    = useRef(1)
+  const wordListRef       = useRef<string[]>([])
 
   useEffect(() => {
     async function init() {
-      const scoreBefore = getScore(language)
-      scoreBeforeRef.current = scoreBefore.score
-      levelBeforeRef.current = getLevelFromScore(scoreBefore.score)
-      const deck = await drawRound(language)
-      setState((s) => ({ ...s, phase: 'playing', deck }))
+      const allWords = await getWords(language)
+      wordListRef.current = allWords.map(w => w.word)
+      const masteredBefore = getMasteredCount(language, wordListRef.current)
+      masteredBeforeRef.current = masteredBefore
+      levelBeforeRef.current = getLevelFromMastered(masteredBefore)
+      cardScoresRef.current = []
+      resultsRef.current = []
+      const deck = initialDeck ?? await drawRound(language)
+      setState({
+        phase: 'playing',
+        deck,
+        currentIndex: 0,
+        score: 0,
+        lives: TOTAL_LIVES,
+        hikerStep: 0,
+        results: [],
+        isShaking: false,
+        summary: null,
+      })
     }
     init()
-  }, [language])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [language, initialDeck])
 
-  const buildSummary = (score: number, points: number, passed: boolean, scoreAfterData: { score: number }): RoundSummary => ({
-    language,
-    cards: resultsRef.current,
-    score,
-    pointsEarned: points,
-    scoreBefore: scoreBeforeRef.current,
-    scoreAfter: scoreAfterData.score,
-    levelBefore: levelBeforeRef.current,
-    levelAfter: getLevelFromScore(scoreAfterData.score),
-    passed,
-  })
+  const buildSummary = (score: number, points: number, passed: boolean): RoundSummary => {
+    const masteredAfter = getMasteredCount(language, wordListRef.current)
+    return {
+      language,
+      cards: resultsRef.current,
+      score,
+      pointsEarned: points,
+      masteredBefore: masteredBeforeRef.current,
+      masteredAfter,
+      levelBefore: levelBeforeRef.current,
+      levelAfter: getLevelFromMastered(masteredAfter),
+      passed,
+    }
+  }
 
   const answer = useCallback(
     (gender: Gender, translationUsed: boolean): boolean => {
@@ -76,14 +96,15 @@ export function useRound(language: Language, onDone: (summary: RoundSummary) => 
 
         // SRS update
         const existingCard = getSRSCard(language, currentWord.word) ?? createCard()
+        const masteryBefore = getMastery(existingCard)
         const updatedCard  = rateCard(existingCard, correct)
         setSRSCard(language, currentWord.word, updatedCard)
         markWordSeen(language, currentWord.word)
 
-        const masteryPct = getMastery(updatedCard)
+        const masteryAfter = getMastery(updatedCard)
         const cardScore  = scoreCard(correct, translationUsed)
         cardScoresRef.current.push(cardScore)
-        resultsRef.current.push({ word: currentWord, correct, translationUsed, masteryPct })
+        resultsRef.current.push({ word: currentWord, correct, translationUsed, masteryBefore, masteryAfter })
 
         if (!correct) {
           if (typeof navigator !== 'undefined' && 'vibrate' in navigator) {
@@ -99,9 +120,9 @@ export function useRound(language: Language, onDone: (summary: RoundSummary) => 
           const newHikerStep = Math.max(0, prev.hikerStep - 1)
 
           if (newLives <= 0) {
-            const { points, passed } = scoreRound(prev.score, cardScoresRef.current)
-            const scoreAfterData = addScore(language, points)
-            const summary = buildSummary(prev.score, points, passed, scoreAfterData)
+            const { passed } = scoreRound(prev.score, cardScoresRef.current)
+            const summary = buildSummary(prev.score, 0, passed)
+            addScore(language, 0, summary.masteredAfter, summary.levelAfter)
             setTimeout(() => onDone(summary), 0)
             return { ...prev, lives: 0, hikerStep: newHikerStep, deck: newDeck, isShaking: true, phase: 'done', summary }
           }
@@ -119,8 +140,8 @@ export function useRound(language: Language, onDone: (summary: RoundSummary) => 
         // Reached the summit — show summit overlay (don't call onDone yet)
         if (newHikerStep >= SUMMIT_STEP) {
           const { points, passed } = scoreRound(newScore, cardScoresRef.current)
-          const scoreAfterData = addScore(language, points)
-          const summary = buildSummary(newScore, points, passed, scoreAfterData)
+          const summary = buildSummary(newScore, points, passed)
+          addScore(language, points, summary.masteredAfter, summary.levelAfter)
           setTimeout(() => setState((s) => ({
             ...s, currentIndex: newIndex, deck: deckSnapshot,
             phase: 'summit', summary, hikerStep: SUMMIT_STEP,

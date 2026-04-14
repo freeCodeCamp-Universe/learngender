@@ -1,5 +1,6 @@
 import type { Card } from 'ts-fsrs'
 import type { Language, LanguageScore, Settings, StreakData } from '../types'
+import { getMastery } from './srs'
 
 const DEFAULT_SETTINGS: Settings = {
   soundEnabled: true,
@@ -43,6 +44,16 @@ export function setSRSCard(language: Language, word: string, card: Card): void {
   safeSet(`lng_srs_${language}_${word}`, card)
 }
 
+// Count words with mastery ≥ 80% for a given language
+export function getMasteredCount(language: Language, wordList: string[]): number {
+  let count = 0
+  for (const word of wordList) {
+    const card = getSRSCard(language, word)
+    if (getMastery(card) >= 80) count++
+  }
+  return count
+}
+
 // Score / level
 export function getScore(language: Language): LanguageScore {
   return safeGet(`lng_score_${language}`, DEFAULT_SCORE)
@@ -52,11 +63,12 @@ export function setScore(language: Language, data: LanguageScore): void {
   safeSet(`lng_score_${language}`, data)
 }
 
-export function addScore(language: Language, points: number): LanguageScore {
+export function addScore(language: Language, points: number, masteredCount?: number, level?: number): LanguageScore {
   const current = getScore(language)
   const updated: LanguageScore = {
-    ...current,
     score: current.score + points,
+    level: level ?? current.level,
+    masteredCount: masteredCount ?? current.masteredCount ?? 0,
   }
   setScore(language, updated)
   return updated

@@ -14,6 +14,7 @@ interface AppState {
   screen: Screen
   language: Language | null
   lastSummary: RoundSummary | null
+  roundKey: number
 }
 
 export default function App() {
@@ -21,10 +22,11 @@ export default function App() {
     screen: 'home',
     language: null,
     lastSummary: null,
+    roundKey: 0,
   })
 
   function startRound(language: Language) {
-    setState({ screen: 'game', language, lastSummary: null })
+    setState((s) => ({ screen: 'game', language, lastSummary: null, roundKey: s.roundKey + 1 }))
   }
 
   function onRoundEnd(summary: RoundSummary) {
@@ -43,7 +45,7 @@ export default function App() {
   }
 
   function goHome() {
-    setState({ screen: 'home', language: null, lastSummary: null })
+    setState((s) => ({ ...s, screen: 'home', language: null, lastSummary: null }))
   }
 
   function goMyWords() {
@@ -58,6 +60,7 @@ export default function App() {
 
       {state.screen === 'game' && state.language && (
         <GameScreen
+          key={state.roundKey}
           language={state.language}
           onRoundEnd={onRoundEnd}
           onPlayAgain={() => startRound(state.language!)}

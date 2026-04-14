@@ -21,18 +21,20 @@ export interface StreakData {
 }
 
 export interface LanguageScore {
-  score: number
-  level: number // 1–5
+  score: number         // accumulated decorative points
+  level: number         // 1–5, derived from masteredCount
+  masteredCount: number // words with mastery ≥ 80%
 }
 
 export type LevelName = 'Rookie' | 'Apprentice' | 'Scholar' | 'Linguist' | 'Polyglot'
 
-export const LEVEL_THRESHOLDS: { xp: number; name: LevelName }[] = [
-  { xp: 0,     name: 'Rookie' },
-  { xp: 2000,  name: 'Apprentice' },
-  { xp: 6000,  name: 'Scholar' },
-  { xp: 13000, name: 'Linguist' },
-  { xp: 20000, name: 'Polyglot' },
+// Thresholds based on number of mastered words (mastery ≥ 80%) per language
+export const LEVEL_THRESHOLDS: { mastered: number; name: LevelName }[] = [
+  { mastered: 0,     name: 'Rookie' },
+  { mastered: 50,    name: 'Apprentice' },
+  { mastered: 200,   name: 'Scholar' },
+  { mastered: 600,   name: 'Linguist' },
+  { mastered: 1500,  name: 'Polyglot' },
 ]
 
 export const LANGUAGE_LABELS: Record<
@@ -49,7 +51,8 @@ export interface CardResult {
   word: Word
   correct: boolean
   translationUsed: boolean
-  masteryPct: number
+  masteryBefore: number
+  masteryAfter: number
 }
 
 export interface RoundSummary {
@@ -57,8 +60,8 @@ export interface RoundSummary {
   cards: CardResult[]
   score: number // correct count out of 10
   pointsEarned: number
-  scoreBefore: number
-  scoreAfter: number
+  masteredBefore: number  // words mastered before the round
+  masteredAfter: number   // words mastered after the round
   levelBefore: number
   levelAfter: number
   passed: boolean
