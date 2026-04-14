@@ -40,8 +40,8 @@ const LINGUATECA_CACHE = path.join(CACHE_DIR, 'ptbr_linguateca_lemas_N.txt')
 const KAIKKI_URL = 'https://kaikki.org/dictionary/Portuguese/kaikki.org-dictionary-Portuguese.jsonl.gz'
 const KAIKKI_CACHE = path.join(CACHE_DIR, 'pt_kaikki.jsonl.gz')
 
-const TARGET_COUNT = 1000
-const MAX_SCAN_CANDIDATES = 12000
+const TARGET_COUNT = 2000
+const MAX_SCAN_CANDIDATES = 25000
 
 const WORD_RE = /^[a-záàâãéêíóôõúüç]+(?:-[a-záàâãéêíóôõúüç]+)*$/i
 const STOP_WORDS = new Set([
@@ -204,6 +204,37 @@ function collectSenseLabels(sense) {
   return labels
 }
 
+function entryHasPluralOnlyHead(entry) {
+  for (const head of entry.head_templates ?? []) {
+    const expansion = String(head.expansion ?? '').toLowerCase()
+    if (expansion.includes('plural only')) return true
+
+    for (const value of Object.values(head.args ?? {})) {
+      const normalized = String(value).toLowerCase()
+      if (/^(?:m|f|mf)-p$/.test(normalized)) return true
+    }
+  }
+
+  return false
+}
+
+function senseIsBlockedPlural(sense) {
+  const labels = collectSenseLabels(sense)
+  if (labels.has('invariable')) return false
+  if (labels.has('form-of') || labels.has('alt-of')) return true
+  return labels.has('plural') || labels.has('plural-only')
+}
+
+function entrySupportsNonPluralSense(entry) {
+  if (entryHasPluralOnlyHead(entry)) return false
+
+  for (const sense of entry.senses ?? []) {
+    if (!senseIsBlockedPlural(sense)) return true
+  }
+
+  return false
+}
+
 function cleanTranslation(gloss) {
   return gloss
     .replace(EQUIVALENT_TAIL_PATTERN, '')
@@ -253,10 +284,10 @@ function createResolver(index, overrides) {
 
     const translationOverride = overrides.translationOverrides[word]
     if (translationOverride) {
-      const wrappedEntries = index.get(word)
-      if (wrappedEntries?.length) {
+      const wrappedEntry = (index.get(word) ?? []).find(({ entry }) => entrySupportsNonPluralSense(entry))
+      if (wrappedEntry) {
         const resolved = {
-          gender: wrappedEntries[0].gender,
+          gender: wrappedEntry.gender,
           translation: translationOverride,
           score: 999,
           source: 'manual-override',
@@ -271,12 +302,14 @@ function createResolver(index, overrides) {
 
     for (const wrapped of wrappedEntries) {
       const { entry, gender } = wrapped
+      if (!entrySupportsNonPluralSense(entry)) continue
 
       ;(entry.senses ?? []).forEach((sense, senseIndex) => {
         const gloss = cleanTranslation(
           (sense.glosses ?? []).find((value) => typeof value === 'string' && value.trim()) ?? '',
         )
         if (!gloss) return
+        if (senseIsBlockedPlural(sense)) return
 
         if (BAD_GLOSS_PATTERNS.some((pattern) => pattern.test(gloss))) return
 
@@ -386,14 +419,21 @@ const resolveWord = createResolver(index, overrides)
 
 const accepted = []
 const rejected = []
+const seen = new Set()
 
 for (const candidate of candidates) {
+  if (seen.has(candidate.word)) {
+    rejected.push({ word: candidate.word, reason: 'duplicate-candidate' })
+    continue
+  }
+
   const resolved = resolveWord(candidate.word)
   if (!resolved) {
     rejected.push({ word: candidate.word, reason: 'no-acceptable-kaikki-sense' })
     continue
   }
 
+  seen.add(candidate.word)
   accepted.push({
     word: candidate.word,
     translation: resolved.translation,

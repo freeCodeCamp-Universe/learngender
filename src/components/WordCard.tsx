@@ -3,9 +3,8 @@ import type { Gender, Word } from '../types'
 
 interface WordCardProps {
   word: Word
-  // Returns true if the answer was correct
   onSwipe: (gender: Gender, translationUsed: boolean) => boolean
-  showTranslationByDefault: boolean
+  showTranslation: boolean
 }
 
 const FLICK_VELOCITY = 0.4  // px/ms
@@ -13,8 +12,7 @@ const MIN_DISTANCE   = 70   // px
 
 const BOUNCE_DURATION = 580 // ms — must match CSS animation duration
 
-export function WordCard({ word, onSwipe, showTranslationByDefault }: WordCardProps) {
-  const [translationRevealed, setTranslationRevealed] = useState(showTranslationByDefault)
+export function WordCard({ word, onSwipe, showTranslation }: WordCardProps) {
   const [dragX, setDragX]         = useState(0)
   const [dragY, setDragY]         = useState(0)
   const [anim, setAnim]           = useState<'idle' | 'fly-left' | 'fly-right' | 'bounce-left' | 'bounce-right'>('idle')
@@ -33,14 +31,13 @@ export function WordCard({ word, onSwipe, showTranslationByDefault }: WordCardPr
   // New word arrives → snap to centre instantly, then re-enable transitions
   useEffect(() => {
     setReady(false)
-    setTranslationRevealed(showTranslationByDefault)
     setDragX(0)
     setDragY(0)
     setAnim('idle')
     handled.current = false
     const raf = requestAnimationFrame(() => setReady(true))
     return () => cancelAnimationFrame(raf)
-  }, [word.word, showTranslationByDefault])
+  }, [word.word])
 
   function commit(dir: 'left' | 'right') {
     if (handled.current) return
@@ -49,7 +46,7 @@ export function WordCard({ word, onSwipe, showTranslationByDefault }: WordCardPr
     setDragY(0)
 
     const gender: Gender = dir === 'right' ? 'masculine' : 'feminine'
-    const correct = onSwipe(gender, translationRevealed && !showTranslationByDefault)
+    const correct = onSwipe(gender, showTranslation)
 
     if (correct) {
       setAnim(dir === 'right' ? 'fly-right' : 'fly-left')
@@ -85,7 +82,7 @@ export function WordCard({ word, onSwipe, showTranslationByDefault }: WordCardPr
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [translationRevealed, showTranslationByDefault])
+  }, [showTranslation])
 
   function onPointerDown(e: React.PointerEvent<HTMLDivElement>) {
     if (handled.current) return
@@ -138,7 +135,6 @@ export function WordCard({ word, onSwipe, showTranslationByDefault }: WordCardPr
     setDragY(0)
   }
 
-  const showTranslation = translationRevealed || showTranslationByDefault
   const isFlying   = anim === 'fly-left'    || anim === 'fly-right'
   const isBouncing = anim === 'bounce-left' || anim === 'bounce-right'
   const isMoving   = dragX !== 0 || dragY !== 0
@@ -202,22 +198,8 @@ export function WordCard({ word, onSwipe, showTranslationByDefault }: WordCardPr
       role="main"
       aria-label={`Word: ${word.word}`}
     >
-      <div className="word-card__hint word-card__hint--left"  style={{ opacity: dragX < 0 ? hintOpacity : 0 }}>fem</div>
-      <div className="word-card__hint word-card__hint--right" style={{ opacity: dragX > 0 ? hintOpacity : 0 }}>masc</div>
-
       <p className="word-card__noun">{word.word}</p>
-
-      {showTranslation ? (
-        <p className="word-card__translation">{word.translation}</p>
-      ) : (
-        <button
-          className="word-card__reveal-btn"
-          onClick={() => setTranslationRevealed(true)}
-          aria-label="Reveal translation"
-        >
-          👁️
-        </button>
-      )}
+      {showTranslation && <p className="word-card__translation">{word.translation}</p>}
     </div>
   )
 }

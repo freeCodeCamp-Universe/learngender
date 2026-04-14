@@ -39,7 +39,7 @@ const PAISA_CACHE = path.join(CACHE_DIR, 'it_paisa_lemma_frequencies.txt.gz')
 const KAIKKI_URL = 'https://kaikki.org/dictionary/Italian/kaikki.org-dictionary-Italian.jsonl.gz'
 const KAIKKI_CACHE = path.join(CACHE_DIR, 'it_kaikki.jsonl.gz')
 
-const TARGET_COUNT = 1000
+const TARGET_COUNT = 2000
 const MAX_SCAN_CANDIDATES = 25000
 const WORD_RE = /^[a-zàèéìíîòóùú'-]+$/i
 const INFINITIVE_RE = /(?:are|ere|ire)$/i
@@ -142,6 +142,52 @@ function collectSenseLabels(sense) {
   return labels
 }
 
+function entryHasPluralOnlyHead(entry) {
+  for (const head of entry.head_templates ?? []) {
+    const expansion = String(head.expansion ?? '').toLowerCase()
+    if (expansion.includes('plural only')) return true
+
+    for (const value of Object.values(head.args ?? {})) {
+      const normalized = String(value).toLowerCase()
+      if (/^(?:m|f|mf)-p$/.test(normalized)) return true
+    }
+  }
+
+  return false
+}
+
+function senseIsBlockedPlural(sense) {
+  const labels = collectSenseLabels(sense)
+  if (labels.has('invariable')) return false
+  if (labels.has('form-of') || labels.has('alt-of') || labels.has('ellipsis')) return true
+  return labels.has('plural') || labels.has('plural-only')
+}
+
+function entrySupportsNonPluralSense(entry) {
+  if (entryHasPluralOnlyHead(entry)) return false
+
+  for (const sense of entry.senses ?? []) {
+    if (!senseIsBlockedPlural(sense)) return true
+  }
+
+  return false
+}
+
+function translationHasBlockedSense(entry, translation) {
+  for (const sense of entry.senses ?? []) {
+    const gloss = cleanTranslation(
+      (sense.glosses ?? []).find((value) => typeof value === 'string' && value.trim()) ?? '',
+    )
+    if (!gloss || gloss !== translation) continue
+
+    const labels = collectSenseLabels(sense)
+    if (Array.from(HARD_REJECT_LABELS).some((label) => labels.has(label))) return true
+    if (OFFENSIVE_TRANSLATION_PATTERNS.some((pattern) => pattern.test(gloss))) return true
+  }
+
+  return false
+}
+
 function cleanTranslation(gloss) {
   return gloss
     .replace(/[;,]\s*(?:female|male) equivalent of .+$/i, '')
@@ -222,10 +268,10 @@ function createResolver(index, overrides) {
 
     const translationOverride = overrides.translationOverrides[word]
     if (translationOverride) {
-      const wrappedEntries = index.get(word)
-      if (wrappedEntries?.length) {
+      const wrappedEntry = (index.get(word) ?? []).find(({ entry }) => entrySupportsNonPluralSense(entry))
+      if (wrappedEntry) {
         const resolved = {
-          gender: wrappedEntries[0].gender,
+          gender: wrappedEntry.gender,
           translation: translationOverride,
           score: 999,
           source: 'manual-override',
@@ -240,16 +286,17 @@ function createResolver(index, overrides) {
 
     for (const wrapped of wrappedEntries) {
       const { entry, gender } = wrapped
+      if (!entrySupportsNonPluralSense(entry)) continue
 
       ;(entry.senses ?? []).forEach((sense, senseIndex) => {
         const gloss = cleanTranslation(
           (sense.glosses ?? []).find((value) => typeof value === 'string' && value.trim()) ?? '',
         )
         if (!gloss) return
+        if (senseIsBlockedPlural(sense)) return
         if (BAD_GLOSS_PATTERNS.some((pattern) => pattern.test(gloss))) return
 
         const labels = collectSenseLabels(sense)
-        if (labels.has('form-of') || labels.has('alt-of') || labels.has('ellipsis')) return
         if (Array.from(HARD_REJECT_LABELS).some((label) => labels.has(label))) return
         if (OFFENSIVE_TRANSLATION_PATTERNS.some((pattern) => pattern.test(gloss))) return
 
@@ -291,6 +338,7 @@ function createResolver(index, overrides) {
           source: 'kaikki',
         }
 
+        if (translationHasBlockedSense(entry, candidate.translation)) return
         if (score < 0) return
         if (!best || candidate.score > best.score) best = candidate
       })
@@ -330,7 +378,10 @@ const rejected = []
 const seen = new Set()
 
 for (const candidate of candidates) {
-  if (seen.has(candidate.word)) continue
+  if (seen.has(candidate.word)) {
+    rejected.push({ word: candidate.word, reason: 'duplicate-candidate' })
+    continue
+  }
 
   const resolved = resolveWord(candidate.word)
   if (!resolved) {

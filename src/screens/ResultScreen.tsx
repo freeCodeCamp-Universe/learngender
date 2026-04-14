@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import type { RoundSummary } from '../types'
 import { LANGUAGE_LABELS } from '../types'
 import { MasteryCircle } from '../components/MasteryCircle'
-import { getLevelName, getLevelProgress } from '../lib/levels'
+import { getLevelName, getLevelProgressFromMastered } from '../lib/levels'
 
 interface ResultScreenProps {
   summary: RoundSummary
@@ -21,9 +21,14 @@ export function ResultScreen({ summary, onPlayAgain, onHome }: ResultScreenProps
   const labels = LANGUAGE_LABELS[summary.language]
   const levelUp = summary.levelAfter > summary.levelBefore
 
+  const uniqueCards = summary.cards.reduce<typeof summary.cards>((acc, r) => {
+    if (!acc.find(x => x.word.word === r.word.word)) acc.push(r)
+    return acc
+  }, [])
+
   // Animated progress bar
-  const progressBefore = getLevelProgress(summary.scoreBefore)
-  const progressAfter = getLevelProgress(summary.scoreAfter)
+  const progressBefore = getLevelProgressFromMastered(summary.masteredBefore)
+  const progressAfter = getLevelProgressFromMastered(summary.masteredAfter)
   const [barPct, setBarPct] = useState(progressBefore.pct)
   const animated = useRef(false)
 
@@ -60,8 +65,8 @@ export function ResultScreen({ summary, onPlayAgain, onHome }: ResultScreenProps
       <div className="result-progress">
         <div className="result-progress__labels">
           <span>{getLevelName(summary.levelAfter)}</span>
-          {progressAfter.nextXP && (
-            <span>{progressAfter.nextXP - progressAfter.currentXP} pts to next level</span>
+          {progressAfter.nextThreshold && (
+            <span>{progressAfter.masteredCount} / {progressAfter.nextThreshold} words</span>
           )}
         </div>
         <div className="result-progress__track">
@@ -73,29 +78,26 @@ export function ResultScreen({ summary, onPlayAgain, onHome }: ResultScreenProps
       </div>
 
       {/* Word list */}
-      <ul className="result-word-list">
-        {summary.cards.map((card, i) => (
-          <li
-            key={`${card.word.word}-${i}`}
-            className={`result-word-item ${card.correct ? 'result-word-item--correct' : 'result-word-item--incorrect'}`}
-          >
-            <MasteryCircle pct={card.masteryPct} size={40} />
-            <div className="result-word-item__info">
-              <span className="result-word-item__article">
-                {card.word.gender === 'feminine' ? labels.feminine : labels.masculine}
-              </span>
-              <span className="result-word-item__noun">{card.word.word}</span>
-              <span className="result-word-item__translation">{card.word.translation}</span>
-              {card.word.patternNote && (
-                <span className="result-word-item__note">{card.word.patternNote}</span>
+      <div className="result-word-list">
+        {uniqueCards.map((r, i) => {
+          const article = r.word.gender === 'feminine' ? labels.feminine : labels.masculine
+          const delta = r.masteryAfter - r.masteryBefore
+          return (
+            <div key={i} className={`result-word-row ${r.correct ? 'result-word-row--correct' : 'result-word-row--wrong'}`}>
+              <MasteryCircle pct={r.masteryAfter} size={34} />
+              {delta !== 0 && (
+                <span className={`result-word-row__delta ${delta > 0 ? 'result-word-row__delta--up' : 'result-word-row__delta--down'}`}>
+                  {delta > 0 ? '↑' : '↓'}{Math.abs(delta)}%
+                </span>
               )}
+              <span className="result-word-row__article">{article}</span>
+              <span className="result-word-row__noun">{r.word.word}</span>
+              <span className="result-word-row__translation">{r.word.translation}</span>
+              <span className="result-word-row__result">{r.correct ? '✓' : '✗'}</span>
             </div>
-            <span className="result-word-item__indicator">
-              {card.correct ? '✓' : '✗'}
-            </span>
-          </li>
-        ))}
-      </ul>
+          )
+        })}
+      </div>
 
       {/* Actions */}
       <div className="result-actions">

@@ -1,9 +1,10 @@
 interface MasteryCircleProps {
   pct: number // 0–100
   size?: number
+  textColor?: string
 }
 
-export function MasteryCircle({ pct, size = 36 }: MasteryCircleProps) {
+export function MasteryCircle({ pct, size = 36, textColor = 'white' }: MasteryCircleProps) {
   const r = (size - 4) / 2
   const circumference = 2 * Math.PI * r
   const filled = (pct / 100) * circumference
@@ -23,7 +24,7 @@ export function MasteryCircle({ pct, size = 36 }: MasteryCircleProps) {
       role="img"
     >
       {/* Background track */}
-      <circle cx={cx} cy={cy} r={r} fill="none" stroke="#374151" strokeWidth="3" />
+      <circle cx={cx} cy={cy} r={r} fill="none" stroke="#d1ccc7" strokeWidth="3" />
       {/* Progress arc */}
       <circle
         cx={cx}
@@ -42,7 +43,7 @@ export function MasteryCircle({ pct, size = 36 }: MasteryCircleProps) {
         y={cy + 4}
         textAnchor="middle"
         fontSize={size * 0.28}
-        fill="white"
+        fill={textColor}
         fontWeight="600"
       >
         {pct}

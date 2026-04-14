@@ -2,7 +2,7 @@ import { useState } from 'react'
 import type { Language } from '../types'
 import { LANGUAGE_LABELS } from '../types'
 import { getScore, getStreak } from '../lib/storage'
-import { getLevelProgress } from '../lib/levels'
+import { getLevelProgressFromMastered } from '../lib/levels'
 import { SettingsPanel } from './SettingsPanel'
 
 const LANGUAGES: Language[] = ['pt', 'es', 'fr', 'it']
@@ -47,7 +47,7 @@ export function HomeScreen({ onStartRound, onMyWords }: HomeScreenProps) {
         {LANGUAGES.map((lang) => {
           const labels = LANGUAGE_LABELS[lang]
           const scoreData = getScore(lang)
-          const progress = getLevelProgress(scoreData.score)
+          const progress = getLevelProgressFromMastered(scoreData.masteredCount ?? 0)
           const color = LANG_COLOR[lang]
           // level is 1-based; segments are 0-indexed
           const completedLevels = progress.level - 1  // fully lit segments
