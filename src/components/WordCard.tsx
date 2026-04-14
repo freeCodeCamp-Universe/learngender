@@ -135,7 +135,6 @@ export function WordCard({ word, onSwipe, showTranslation }: WordCardProps) {
     setDragY(0)
   }
 
-  const isFlying   = anim === 'fly-left'    || anim === 'fly-right'
   const isBouncing = anim === 'bounce-left' || anim === 'bounce-right'
   const isMoving   = dragX !== 0 || dragY !== 0
 
@@ -171,8 +170,7 @@ export function WordCard({ word, onSwipe, showTranslation }: WordCardProps) {
     transition = 'transform 0.18s ease-out'
   }
 
-  const dragPct     = Math.min(Math.abs(dragX) / MIN_DISTANCE, 1)
-  const hintOpacity = isFlying || isBouncing ? 0 : dragPct
+
 
   const cssAnimClass = anim === 'bounce-right'
     ? 'word-card--bounce-right'

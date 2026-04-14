@@ -15,6 +15,7 @@ const DEFAULT_STREAK: StreakData = {
 const DEFAULT_SCORE: LanguageScore = {
   score: 0,
   level: 1,
+  masteredCount: 0,
 }
 
 function safeGet<T>(key: string, fallback: T): T {
