@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import translateIcon from '../components/icons/translate.svg'
 import type { Language, RoundSummary } from '../types'
-import { useRound } from '../hooks/useRound'
+import { useRound, TOTAL_LIVES } from '../hooks/useRound'
 import { MountainBackground } from '../components/MountainBackground'
 import { WordCard } from '../components/WordCard'
 import { Lives } from '../components/Lives'
@@ -40,7 +40,7 @@ export function GameScreen({ language, onRoundEnd, onPlayAgain, onHome }: GameSc
       {/* Top bar */}
       <div className="game-screen__topbar">
         <button className="icon-btn icon-btn--dark" onClick={onHome} aria-label="Return to home">☰</button>
-        <Lives count={state.lives} />
+        <Lives count={state.lives} total={TOTAL_LIVES} />
       </div>
 
       {/* Translate toggle — below topbar, right-aligned */}
