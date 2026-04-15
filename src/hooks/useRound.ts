@@ -2,9 +2,9 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import type { CardResult, Gender, Language, RoundSummary, Word } from '../types'
 import { drawRound } from '../lib/wordLoader'
 import { createCard, getMastery, rateCard } from '../lib/srs'
-import { addScore, getMasteredCount, getSRSCard, markWordSeen, setSRSCard } from '../lib/storage'
+import { addScore, getMasteredCount, getScore, getSRSCard, markWordSeen, setSRSCard } from '../lib/storage'
 import { scoreCard, scoreRound } from '../lib/scoring'
-import { getLevelFromMastered } from '../lib/levels'
+import { getLevelFromXP } from '../lib/levels'
 import { getWords } from '../lib/wordLoader'
 
 export const TOTAL_LIVES = 5
@@ -49,7 +49,8 @@ export function useRound(language: Language, onDone: (summary: RoundSummary) => 
       wordListRef.current = allWords.map(w => w.word)
       const masteredBefore = getMasteredCount(language, wordListRef.current)
       masteredBeforeRef.current = masteredBefore
-      levelBeforeRef.current = getLevelFromMastered(masteredBefore)
+      const xpBefore = getScore(language).score
+      levelBeforeRef.current = getLevelFromXP(xpBefore)
       cardScoresRef.current = []
       resultsRef.current = []
       const deck = initialDeck ?? await drawRound(language)
@@ -71,6 +72,7 @@ export function useRound(language: Language, onDone: (summary: RoundSummary) => 
 
   const buildSummary = (score: number, points: number, passed: boolean): RoundSummary => {
     const masteredAfter = getMasteredCount(language, wordListRef.current)
+    const xpAfter = getScore(language).score + points
     return {
       language,
       cards: resultsRef.current,
@@ -79,7 +81,7 @@ export function useRound(language: Language, onDone: (summary: RoundSummary) => 
       masteredBefore: masteredBeforeRef.current,
       masteredAfter,
       levelBefore: levelBeforeRef.current,
-      levelAfter: getLevelFromMastered(masteredAfter),
+      levelAfter: getLevelFromXP(xpAfter),
       passed,
     }
   }

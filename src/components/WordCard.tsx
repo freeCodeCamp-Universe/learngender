@@ -82,7 +82,7 @@ export function WordCard({ word, onSwipe, showTranslation }: WordCardProps) {
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [showTranslation])
+  }, [])
 
   function onPointerDown(e: React.PointerEvent<HTMLDivElement>) {
     if (handled.current) return

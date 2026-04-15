@@ -1,12 +1,14 @@
 import { useState } from 'react'
+import homeIcon from '../components/icons/home.svg'
 import translateIcon from '../components/icons/translate.svg'
 import type { Language, RoundSummary } from '../types'
 import { useRound, TOTAL_LIVES } from '../hooks/useRound'
+import { getSettings } from '../lib/storage'
 import { MountainBackground } from '../components/MountainBackground'
 import { WordCard } from '../components/WordCard'
 import { Lives } from '../components/Lives'
+import { LevelBadge } from '../components/LevelBadge'
 import { SummitDrawer } from '../components/SummitDrawer'
-import { getSettings } from '../lib/storage'
 import { LANGUAGE_LABELS } from '../types'
 
 interface GameScreenProps {
@@ -17,10 +19,9 @@ interface GameScreenProps {
 }
 
 export function GameScreen({ language, onRoundEnd, onPlayAgain, onHome }: GameScreenProps) {
-  const settings = getSettings()
   const { state, currentWord, answer } = useRound(language, onRoundEnd)
   const labels = LANGUAGE_LABELS[language]
-  const [showTranslation, setShowTranslation] = useState(settings.showTranslationByDefault)
+  const [showTranslation, setShowTranslation] = useState(() => getSettings().showTranslationByDefault)
 
   const isSummit = state.phase === 'summit'
   const isDone   = state.phase === 'done'
@@ -39,19 +40,13 @@ export function GameScreen({ language, onRoundEnd, onPlayAgain, onHome }: GameSc
 
       {/* Top bar */}
       <div className="game-screen__topbar">
-        <button className="icon-btn icon-btn--dark" onClick={onHome} aria-label="Return to home">☰</button>
+        <div className="game-screen__topbar-left">
+          <button className="game-screen__home-btn" onClick={onHome} aria-label="Return to home">
+            <img src={homeIcon} alt="" width="20" height="20" />
+          </button>
+          <LevelBadge language={language} />
+        </div>
         <Lives count={state.lives} total={TOTAL_LIVES} />
-      </div>
-
-      {/* Translate toggle — below topbar, right-aligned */}
-      <div className="game-screen__translate-row">
-        <button
-          className={`icon-btn icon-btn--dark game-screen__translate-btn${showTranslation ? ' game-screen__translate-btn--active' : ''}`}
-          onClick={() => setShowTranslation(v => !v)}
-          aria-label="Toggle translation"
-        >
-          <img src={translateIcon} alt="" width="16" height="16" />
-        </button>
       </div>
 
       {!isSummit && !isDone && (
@@ -78,6 +73,13 @@ export function GameScreen({ language, onRoundEnd, onPlayAgain, onHome }: GameSc
             <p className="swipe-hint" aria-hidden="true">
               ← {labels.feminine} &nbsp;&nbsp; {labels.masculine} →
             </p>
+            <button
+              className={`game-screen__translate-btn${showTranslation ? ' game-screen__translate-btn--active' : ''}`}
+              onClick={() => setShowTranslation(v => !v)}
+              aria-label="Toggle translation"
+            >
+              <img src={translateIcon} alt="" width="20" height="20" />
+            </button>
           </div>
 
         </>

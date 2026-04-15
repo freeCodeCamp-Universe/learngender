@@ -455,35 +455,164 @@ html, body, #root {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 0.75rem 1rem;
 }
 
-.game-screen__translate-row {
-  position: relative;
-  z-index: 3;
+.game-screen__topbar-left {
   display: flex;
-  justify-content: flex-end;
-  padding: 0 1rem;         /* ← ajuste horizontal aqui */
-  margin-top: -0.75rem;    /* ← ajuste vertical aqui */
+  align-items: center;
+  gap: 8px;
 }
+
+.game-screen__left-col {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.game-screen__home-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.5);
+  border: none;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.game-screen__lang-name {
+  font-size: 0.833rem;
+  font-weight: 700;
+  color: #3a3028;
+  white-space: nowrap;
+}
+
 .game-screen__translate-btn {
   display: flex;
   align-items: center;
-  gap: 5px;
-  background: rgba(124, 165, 170, 0.424);
+  justify-content: center;
+  background: rgba(255,255,255,0.5);
   border: none;
-  border-radius: 20px;
-  padding: 4px 10px;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
   cursor: pointer;
+  flex-shrink: 0;
   opacity: 0.7;
-  font-size: 0.75rem;
-  color: #3a3028;
-  font-family: inherit;
 }
 .game-screen__translate-btn--active {
   opacity: 1;
-  background: rgba(0,0,0,0.22);
+  background: rgba(0,0,0,0.15);
 }
+
+/* Level badge */
+.level-badge {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.level-badge__circle {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #e8a020;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.833rem;
+  font-weight: 900;
+  color: #fff;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.25);
+}
+
+.level-badge__bar-track {
+  width: 50px;
+  height: 13px;
+  background: rgba(31, 31, 31, 0.15);
+  border-radius: 0 4px 4px 0;
+  overflow: hidden;
+  margin-left: -1px; /* tuck under circle edge */
+}
+
+.level-badge__bar-fill {
+  height: 100%;
+  background: #e8a020;
+  border-radius: 0 4px 4px 0;
+  transition: width 0.4s ease-out;
+}
+
+/* Lives bar */
+.lives-bar {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.lives-bar__circle {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
+.lives-bar__heart { display: block; }
+
+.lives-bar__segments {
+  display: flex;
+  gap: 2px;
+  margin-right: -4px; /* tuck under circle edge */
+}
+
+.lives-bar__seg {
+  width: 12px;
+  height: 8px;
+  border-radius: 2px;
+}
+.lives-bar__seg:first-child { border-radius: 4px 2px 2px 4px; }
+
+.lives-bar__seg--active { background: #e05555; }
+.lives-bar__seg--lost   { background: rgba(58,48,40,0.15); }
+
+/* Lives bar */
+.lives-bar {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.lives-bar__icon { display: block; flex-shrink: 0; }
+
+.lives-bar__segments {
+  display: flex;
+  gap: 2px;
+}
+
+.lives-bar__seg {
+  width: 14px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+.lives-bar__seg--active { background: #e05555; }
+.lives-bar__seg--lost   { background: rgba(58,48,40,0.2); }
 
 /* Gender bands (light theme) */
 .game-screen__card-row {
@@ -542,6 +671,12 @@ html, body, #root {
   text-align: center;
   width: 62%;
   max-width: 260px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
   cursor: grab;
   user-select: none;
   -webkit-user-select: none;
@@ -580,7 +715,6 @@ html, body, #root {
   font-size: clamp(1rem, 6.5vw, 1.8rem);
   font-weight: 700;
   line-height: 1.15;
-  margin-bottom: 1rem;
   color: #1a1612;
   overflow-wrap: break-word;
 }
@@ -589,6 +723,20 @@ html, body, #root {
   color: #6b5e52;
   font-style: italic;
 }
+
+.word-card__translate-btn {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  opacity: 0.3;
+  line-height: 0;
+}
+.word-card__translate-btn--active { opacity: 0.8; }
 .word-card__reveal-btn {
   background: none;
   border: none;
