@@ -10,7 +10,7 @@ import { getWords } from '../lib/wordLoader'
 export const TOTAL_LIVES = 5
 export const SUMMIT_STEP = 8   // hiker must reach this step to win
 
-export type RoundPhase = 'loading' | 'playing' | 'summit' | 'done'
+export type RoundPhase = 'loading' | 'playing' | 'summit' | 'done' | 'init_failed'
 
 export interface RoundState {
   phase: RoundPhase
@@ -50,27 +50,42 @@ export function useRound(language: Language, onDone: (summary: RoundSummary) => 
   const wordListRef       = useRef<string[]>([])
 
   useEffect(() => {
-    async function init() {
-      const allWords = await getWords(language)
-      wordListRef.current = allWords.map(w => w.word)
-      const masteredBefore = getMasteredCount(language, wordListRef.current)
-      masteredBeforeRef.current = masteredBefore
-      const xpBefore = getScore(language).score
-      levelBeforeRef.current = getLevelFromXP(xpBefore)
-      resultsRef.current = []
-      const deck = initialDeck ?? await drawRound(language)
-      setState({
-        phase: 'playing',
-        deck,
-        currentIndex: 0,
-        score: 0,
-        lives: TOTAL_LIVES,
-        hikerStep: 0,
-        results: [],
-        isShaking: false,
-        summary: null,
-      })
+    async function attempt(): Promise<boolean> {
+      try {
+        const allWords = await getWords(language)
+        wordListRef.current = allWords.map(w => w.word)
+        const masteredBefore = getMasteredCount(language, wordListRef.current)
+        masteredBeforeRef.current = masteredBefore
+        const xpBefore = getScore(language).score
+        levelBeforeRef.current = getLevelFromXP(xpBefore)
+        resultsRef.current = []
+        const deck = initialDeck ?? await drawRound(language)
+        if (deck.length < SUMMIT_STEP) return false
+        setState({
+          phase: 'playing',
+          deck,
+          currentIndex: 0,
+          score: 0,
+          lives: TOTAL_LIVES,
+          hikerStep: 0,
+          results: [],
+          isShaking: false,
+          summary: null,
+        })
+        return true
+      } catch {
+        return false
+      }
     }
+
+    async function init() {
+      const ok = await attempt()
+      if (!ok) {
+        const retry = await attempt()
+        if (!retry) setState((s) => ({ ...s, phase: 'init_failed' }))
+      }
+    }
+
     init()
   }, [language, initialDeck])
 

@@ -29,7 +29,16 @@ export function GameScreen({ language, onRoundEnd, onPlayAgain, onHome }: GameSc
     ? `${language}-summit-${state.summary.pointsEarned}-${state.summary.levelAfter}`
     : `${language}-live`
 
-  if (state.phase === 'loading' || (!currentWord && !isSummit && !isDone)) {
+  if (state.phase === 'init_failed') {
+    return (
+      <div className="game-screen game-screen--loading">
+        <p>Couldn't start the next round.</p>
+        <button onClick={onHome}>Home</button>
+      </div>
+    )
+  }
+
+  if (state.phase === 'loading') {
     return (
       <div className="game-screen game-screen--loading">
         <p>Loading...</p>

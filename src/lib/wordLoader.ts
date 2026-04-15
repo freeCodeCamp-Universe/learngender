@@ -48,11 +48,24 @@ export async function drawRound(language: Language): Promise<Word[]> {
 
   const combined: Word[] = [...dueWords.map((d) => d.word), ...newWords]
 
-  // Fallback: if not enough cards, fill with soonest-due words
+  // Fallback tier 2: not-yet-due SRS words, soonest first
   if (combined.length < 10) {
     notYetDueWords.sort((a, b) => a.dueDate.getTime() - b.dueDate.getTime())
-    const needed = 10 - combined.length
-    combined.push(...notYetDueWords.slice(0, needed).map((d) => d.word))
+    combined.push(...notYetDueWords.slice(0, 10 - combined.length).map((d) => d.word))
+  }
+
+  // Fallback tier 3: SRS-mastered words, nearest due first (last resort)
+  if (combined.length < 10) {
+    const masteredWords: { word: Word; dueDate: Date }[] = []
+    for (const word of allWords) {
+      if (manuallyMastered.has(word.word)) continue
+      const card = getSRSCard(language, word.word)
+      if (card && getMastery(card) >= 80) {
+        masteredWords.push({ word, dueDate: new Date(card.due) })
+      }
+    }
+    masteredWords.sort((a, b) => a.dueDate.getTime() - b.dueDate.getTime())
+    combined.push(...masteredWords.slice(0, 10 - combined.length).map((d) => d.word))
   }
 
   return combined.slice(0, 10)
