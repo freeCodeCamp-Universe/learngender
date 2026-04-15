@@ -84,6 +84,7 @@ export function GameScreen({ language, onRoundEnd, onPlayAgain, onHome }: GameSc
 
               {currentWord && (
                 <WordCard
+                  key={`${state.currentIndex}-${currentWord.word}`}
                   word={currentWord}
                   onSwipe={answer}
                   showTranslation={showTranslation}

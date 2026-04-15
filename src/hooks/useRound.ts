@@ -31,6 +31,19 @@ function getScoredResults(results: CardResult[]): CardResult[] {
   }, [])
 }
 
+function pickFallbackWord(deck: Word[], allWords: Word[], currentWord: Word): Word {
+  const futureWords = new Set(deck.map((entry) => entry.word))
+  const unseenCandidate = allWords.find(
+    (entry) => entry.word !== currentWord.word && !futureWords.has(entry.word)
+  )
+  if (unseenCandidate) return unseenCandidate
+
+  const alternateCandidate = deck.find((entry) => entry.word !== currentWord.word)
+  if (alternateCandidate) return alternateCandidate
+
+  return currentWord
+}
+
 export function useRound(language: Language, initialDeck?: Word[]) {
   const [state, setState] = useState<RoundState>({
     phase: 'loading',
@@ -48,11 +61,13 @@ export function useRound(language: Language, initialDeck?: Word[]) {
   const masteredBeforeRef = useRef(0)
   const levelBeforeRef    = useRef(1)
   const wordListRef       = useRef<string[]>([])
+  const allWordsRef       = useRef<Word[]>([])
 
   useEffect(() => {
     async function attempt(): Promise<boolean> {
       try {
         const allWords = await getWords(language)
+        allWordsRef.current = allWords
         wordListRef.current = allWords.map(w => w.word)
         const masteredBefore = getMasteredCount(language, wordListRef.current)
         masteredBeforeRef.current = masteredBefore
@@ -178,6 +193,9 @@ export function useRound(language: Language, initialDeck?: Word[]) {
         const newScore     = prev.score + 1
         const newHikerStep = prev.hikerStep + 1
         const newIndex     = prev.currentIndex + 1
+        const nextDeck = newIndex < prev.deck.length
+          ? prev.deck
+          : [...prev.deck, pickFallbackWord(prev.deck, allWordsRef.current, currentWord)]
 
         // Reached the summit — show summit overlay (don't call onDone yet)
         if (newHikerStep >= SUMMIT_STEP) {
@@ -194,7 +212,7 @@ export function useRound(language: Language, initialDeck?: Word[]) {
         setTimeout(() => {
           setState((s) => {
             if (s.phase === 'done' || s.phase === 'summit') return s
-            return { ...s, currentIndex: newIndex }
+            return { ...s, deck: nextDeck, currentIndex: newIndex }
           })
         }, 290)
 
@@ -205,6 +223,21 @@ export function useRound(language: Language, initialDeck?: Word[]) {
     },
     [buildSummary, language]
   )
+
+  useEffect(() => {
+    if (state.phase !== 'playing') return
+    if (state.currentIndex < state.deck.length) return
+
+    setState((prev) => {
+      if (prev.phase !== 'playing' || prev.currentIndex < prev.deck.length) return prev
+      const currentWord = prev.deck[prev.deck.length - 1]
+      if (!currentWord) return prev
+      return {
+        ...prev,
+        deck: [...prev.deck, pickFallbackWord(prev.deck, allWordsRef.current, currentWord)],
+      }
+    })
+  }, [state.currentIndex, state.deck, state.phase])
 
   const currentWord = state.deck[state.currentIndex] ?? null
   return { state, currentWord, answer }

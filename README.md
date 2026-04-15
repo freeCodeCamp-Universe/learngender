@@ -35,6 +35,19 @@ Build for production:
 pnpm build
 ```
 
+## Game Mechanics
+
+- A playable round must start with at least `SUMMIT_STEP` cards, because the game should never enter `playing` without enough cards to reach a full summit.
+- `useRound.attempt()` rejects any deck shorter than `SUMMIT_STEP`.
+- Round initialization retries automatically once. If the second attempt also fails, the round transitions to `init_failed`.
+- `drawRound()` fills the deck in this order:
+  - due review cards
+  - new unseen cards
+  - not-yet-due SRS cards, nearest due first
+  - SRS-mastered cards, nearest due first, as a last resort
+- `loading` is used only while round initialization is actively running.
+- If round initialization fails twice, the game shows a final `Couldn't start the next round.` state with a `Home` action.
+
 ## Data Scripts
 
 Rebuild all language wordlists with the dedicated pipelines:

@@ -125,8 +125,9 @@ html, body, #root {
 }
 .btn:active { transform: scale(0.97); }
 .btn:focus-visible {
-  outline: 2px solid var(--focus-ring);
-  outline-offset: 3px;
+  outline: 1px solid rgba(25, 142, 238, 0.7);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(25, 142, 238, 0.14);
 }
 .btn--primary {
   background: var(--accent-cta);
@@ -622,7 +623,7 @@ html, body, #root {
 .level-badge__bar-track {
   width: 50px;
   height: 13px;
-  background: rgba(232, 233, 235, 0.15);
+  background: rgba(198, 199, 201, 0.15);
   border-radius: 0 4px 4px 0;
   overflow: hidden;
   margin-left: -1px; /* tuck under circle edge */
@@ -719,7 +720,7 @@ html, body, #root {
 .lives-bar__seg:first-child { border-radius: 4px 2px 2px 4px; }
 
 .lives-bar__seg--active { background: #e05555; }
-.lives-bar__seg--lost   { background: rgba(58,48,40,0.15); }
+.lives-bar__seg--lost   { background: #3b3b4f; }
 
 /* Lives bar */
 .lives-bar {
@@ -743,7 +744,7 @@ html, body, #root {
 }
 
 .lives-bar__seg--active { background: #e05555; }
-.lives-bar__seg--lost   { background: rgba(58,48,40,0.2); }
+.lives-bar__seg--lost   { background: #3b3b4f; }
 
 /* Gender bands (light theme) */
 .game-screen__card-row {

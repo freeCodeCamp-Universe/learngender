@@ -52,6 +52,7 @@ export function SummitDrawer({
   onExit,
 }: SummitDrawerProps) {
   const labels = LANGUAGE_LABELS[language]
+  const nextButtonRef = useRef<HTMLButtonElement>(null)
 
   // Deduplicated cards — first attempt per word (most honest result)
   const uniqueCards = summary.cards.reduce<typeof summary.cards>((acc, r) => {
@@ -73,6 +74,11 @@ export function SummitDrawer({
     const timer = setTimeout(() => setShowScore(true), 900)
     return () => clearTimeout(timer)
   }, [showScoreSection])
+
+  useEffect(() => {
+    const raf = requestAnimationFrame(() => nextButtonRef.current?.focus())
+    return () => cancelAnimationFrame(raf)
+  }, [])
 
   return (
     <div className={`summit-drawer summit-drawer--${mode}`}>
@@ -139,7 +145,7 @@ export function SummitDrawer({
 
       {/* Actions */}
       <div className="summit-drawer__actions">
-        <button className="btn btn--primary" onClick={onNext}>
+        <button ref={nextButtonRef} className="btn btn--primary" onClick={onNext}>
           {mode === 'loss' ? 'Retry' : 'Next →'}
         </button>
       </div>
