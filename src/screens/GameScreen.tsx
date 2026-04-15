@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import homeIcon from '../components/icons/home.svg'
 import translateIcon from '../components/icons/translate.svg'
 import type { Language, RoundSummary } from '../types'
@@ -19,15 +19,23 @@ interface GameScreenProps {
 }
 
 export function GameScreen({ language, onRoundEnd, onPlayAgain, onHome }: GameScreenProps) {
-  const { state, currentWord, answer } = useRound(language, onRoundEnd)
+  const { state, currentWord, answer } = useRound(language)
   const labels = LANGUAGE_LABELS[language]
   const [showTranslation, setShowTranslation] = useState(() => getSettings().showTranslationByDefault)
+  const handledSummaryRef = useRef<RoundSummary | null>(null)
 
   const isSummit = state.phase === 'summit'
   const isDone   = state.phase === 'done'
   const levelBadgeKey = isSummit && state.summary
     ? `${language}-summit-${state.summary.pointsEarned}-${state.summary.levelAfter}`
     : `${language}-live`
+
+  useEffect(() => {
+    if (!state.summary || (state.phase !== 'summit' && state.phase !== 'done')) return
+    if (handledSummaryRef.current === state.summary) return
+    handledSummaryRef.current = state.summary
+    onRoundEnd(state.summary)
+  }, [onRoundEnd, state.phase, state.summary])
 
   if (state.phase === 'init_failed') {
     return (
@@ -101,11 +109,11 @@ export function GameScreen({ language, onRoundEnd, onPlayAgain, onHome }: GameSc
         </>
       )}
 
-      {/* Summit drawer */}
-      {isSummit && state.summary && (
+      {(isSummit || isDone) && state.summary && (
         <SummitDrawer
           summary={state.summary}
           language={language}
+          mode={isDone ? 'loss' : 'win'}
           onNext={onPlayAgain}
           onExit={onHome}
         />

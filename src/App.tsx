@@ -2,18 +2,16 @@ import { useState } from 'react'
 import type { Language, RoundSummary } from './types'
 import { HomeScreen } from './screens/HomeScreen'
 import { GameScreen } from './screens/GameScreen'
-import { ResultScreen } from './screens/ResultScreen'
 import { MyWordsScreen } from './screens/MyWordsScreen'
 import { updateStreak } from './lib/storage'
 import { playCorrect, playIncorrect, playLevelUp } from './lib/sounds'
 import './App.css'
 
-type Screen = 'home' | 'game' | 'result' | 'words'
+type Screen = 'home' | 'game' | 'words'
 
 interface AppState {
   screen: Screen
   language: Language | null
-  lastSummary: RoundSummary | null
   roundKey: number
 }
 
@@ -21,12 +19,11 @@ export default function App() {
   const [state, setState] = useState<AppState>({
     screen: 'home',
     language: null,
-    lastSummary: null,
     roundKey: 0,
   })
 
   function startRound(language: Language) {
-    setState((s) => ({ screen: 'game', language, lastSummary: null, roundKey: s.roundKey + 1 }))
+    setState((s) => ({ screen: 'game', language, roundKey: s.roundKey + 1 }))
   }
 
   function onRoundEnd(summary: RoundSummary) {
@@ -40,12 +37,10 @@ export default function App() {
     } else {
       playIncorrect()
     }
-
-    setState((s) => ({ ...s, screen: 'result', lastSummary: summary }))
   }
 
   function goHome() {
-    setState((s) => ({ ...s, screen: 'home', language: null, lastSummary: null }))
+    setState((s) => ({ ...s, screen: 'home', language: null }))
   }
 
   function goMyWords() {
@@ -64,14 +59,6 @@ export default function App() {
           language={state.language}
           onRoundEnd={onRoundEnd}
           onPlayAgain={() => startRound(state.language!)}
-          onHome={goHome}
-        />
-      )}
-
-      {state.screen === 'result' && state.lastSummary && (
-        <ResultScreen
-          summary={state.lastSummary}
-          onPlayAgain={() => startRound(state.lastSummary!.language)}
           onHome={goHome}
         />
       )}

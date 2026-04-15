@@ -49,7 +49,7 @@ export function HomeScreen({ onStartRound, onMyWords }: HomeScreenProps) {
           <span className="home-screen__xp-label">xp</span>
         </div>
         <button className="icon-btn" onClick={() => setSettingsOpen(true)} aria-label="Settings">
-          <img src={settingsIcon} alt="" width="22" height="22" />
+          <img src={settingsIcon} alt="" width="22" height="22" className="home-screen__settings-icon" />
         </button>
       </div>
 
@@ -137,7 +137,7 @@ export function HomeScreen({ onStartRound, onMyWords }: HomeScreenProps) {
       {/* Bottom nav */}
       <div className="home-screen__bottom-nav">
         <button className="bottom-nav__btn bottom-nav__btn--active" aria-label="Home">
-          <img src={homeIcon} alt="" width="22" height="22" className="bottom-nav__icon" />
+          <img src={homeIcon} alt="" width="22" height="22" className="bottom-nav__icon bottom-nav__icon--home" />
           <span>Home</span>
         </button>
         <button className="bottom-nav__btn" onClick={onMyWords} aria-label="My Words">

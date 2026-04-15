@@ -31,7 +31,7 @@ function getScoredResults(results: CardResult[]): CardResult[] {
   }, [])
 }
 
-export function useRound(language: Language, onDone: (summary: RoundSummary) => void, initialDeck?: Word[]) {
+export function useRound(language: Language, initialDeck?: Word[]) {
   const [state, setState] = useState<RoundState>({
     phase: 'loading',
     deck: [],
@@ -147,7 +147,18 @@ export function useRound(language: Language, onDone: (summary: RoundSummary) => 
           if (newLives <= 0) {
             const summary = buildSummary({ pointsOverride: 0 })
             addScore(language, 0, summary.masteredAfter, summary.levelAfter)
-            setTimeout(() => onDone(summary), DISMISS_DELAY)
+            setTimeout(() => {
+              setState((s) => ({
+                ...s,
+                currentIndex: prev.currentIndex + 1,
+                lives: 0,
+                hikerStep: newHikerStep,
+                deck: newDeck,
+                isShaking: false,
+                phase: 'done',
+                summary,
+              }))
+            }, DISMISS_DELAY)
             return { ...prev, lives: 0, hikerStep: newHikerStep, deck: newDeck, isShaking: true, phase: 'done', summary }
           }
 
@@ -192,7 +203,7 @@ export function useRound(language: Language, onDone: (summary: RoundSummary) => 
 
       return correct
     },
-    [buildSummary, language, onDone]
+    [buildSummary, language]
   )
 
   const currentWord = state.deck[state.currentIndex] ?? null

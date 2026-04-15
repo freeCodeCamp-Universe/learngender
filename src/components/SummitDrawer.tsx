@@ -8,11 +8,13 @@ import { SUMMIT_STEP } from '../hooks/useRound'
 interface SummitDrawerProps {
   summary: RoundSummary
   language: Language
+  mode?: 'win' | 'loss'
   onNext: () => void
   onExit: () => void
 }
 
-function getBadge(score: number, perfect: boolean) {
+function getBadge(score: number, perfect: boolean, mode: 'win' | 'loss') {
+  if (mode === 'loss') return { emoji: '💔', label: 'Out of Lives' }
   if (perfect) return { emoji: '🏆', label: 'Perfect Round!' }
   if (score >= 7) return { emoji: '🏆', label: 'Excellent Job!' }
   if (score >= 5) return { emoji: '⭐', label: 'Great Job!' }
@@ -42,7 +44,13 @@ function AnimatedBar({ pctBefore, pctAfter }: { pctBefore: number; pctAfter: num
   )
 }
 
-export function SummitDrawer({ summary, language, onNext, onExit }: SummitDrawerProps) {
+export function SummitDrawer({
+  summary,
+  language,
+  mode = 'win',
+  onNext,
+  onExit,
+}: SummitDrawerProps) {
   const labels = LANGUAGE_LABELS[language]
 
   // Deduplicated cards — first attempt per word (most honest result)
@@ -53,19 +61,21 @@ export function SummitDrawer({ summary, language, onNext, onExit }: SummitDrawer
 
   const breakdown = getRoundScoreBreakdown(uniqueCards, { perfectTarget: SUMMIT_STEP })
   const uniqueCorrect = uniqueCards.filter(r => r.correct).length
-  const badge = getBadge(uniqueCorrect, breakdown.perfect)
+  const badge = getBadge(uniqueCorrect, breakdown.perfect, mode)
   const maxPoints = getRoundPointCap(SUMMIT_STEP, { includePerfectBonus: true })
   const scorePct = Math.min(100, Math.round((breakdown.points / maxPoints) * 100))
+  const showScoreSection = mode === 'win' && breakdown.points > 0
 
   // Score pill pop — show after drawer finishes rising
   const [showScore, setShowScore] = useState(false)
   useEffect(() => {
+    if (!showScoreSection) return
     const timer = setTimeout(() => setShowScore(true), 900)
     return () => clearTimeout(timer)
-  }, [])
+  }, [showScoreSection])
 
   return (
-    <div className="summit-drawer">
+    <div className={`summit-drawer summit-drawer--${mode}`}>
       <div className="summit-drawer__handle" />
 
       {/* Badge */}
@@ -75,30 +85,32 @@ export function SummitDrawer({ summary, language, onNext, onExit }: SummitDrawer
       </div>
 
       {/* Score section */}
-      <div className="summit-drawer__score">
-        <div className="summit-drawer__score-row">
-          <span className="summit-drawer__score-label">Score</span>
-          <span
-            className={`summit-drawer__score-pill${showScore ? ' summit-drawer__score-pill--visible' : ''}`}
-          >
-            {breakdown.points} / {maxPoints} pts
-          </span>
+      {showScoreSection && (
+        <div className="summit-drawer__score">
+          <div className="summit-drawer__score-row">
+            <span className="summit-drawer__score-label">Score</span>
+            <span
+              className={`summit-drawer__score-pill${showScore ? ' summit-drawer__score-pill--visible' : ''}`}
+            >
+              {breakdown.points} / {maxPoints} pts
+            </span>
+          </div>
+          <div className="summit-drawer__bar-track">
+            <AnimatedBar pctBefore={0} pctAfter={scorePct} />
+          </div>
+          <div className="summit-drawer__score-breakdown">
+            <span className="summit-drawer__score-chip">
+              {breakdown.correctCount} correct +{breakdown.correctPoints}
+            </span>
+            <span className="summit-drawer__score-chip">
+              bonus {breakdown.passBonus ? `+${breakdown.passBonus}` : ' -'}
+            </span>
+            <span className="summit-drawer__score-chip">
+              no translation {breakdown.noTranslationBonus ? `+${breakdown.noTranslationBonus}` : ' -'}
+            </span>
+          </div>
         </div>
-        <div className="summit-drawer__bar-track">
-          <AnimatedBar pctBefore={0} pctAfter={scorePct} />
-        </div>
-        <div className="summit-drawer__score-breakdown">
-          <span className="summit-drawer__score-chip">
-            {breakdown.correctCount} correct +{breakdown.correctPoints}
-          </span>
-          <span className="summit-drawer__score-chip">
-            bonus {breakdown.passBonus ? `+${breakdown.passBonus}` : ' -'}
-          </span>
-          <span className="summit-drawer__score-chip">
-            no translation {breakdown.noTranslationBonus ? `+${breakdown.noTranslationBonus}` : ' -'}
-          </span>
-        </div>
-      </div>
+      )}
 
       {/* Word list */}
       <div className="summit-drawer__words">
@@ -106,7 +118,7 @@ export function SummitDrawer({ summary, language, onNext, onExit }: SummitDrawer
           const article = r.word.gender === 'feminine' ? labels.feminine : labels.masculine
           return (
             <div key={i} className={`summit-drawer__word-row ${r.correct ? 'summit-drawer__word-row--correct' : 'summit-drawer__word-row--wrong'}`}>
-              <MasteryCircle pct={r.masteryAfter} size={34} textColor="#1a1612" />
+              <MasteryCircle pct={r.masteryAfter} size={34} />
               {(() => {
                 const delta = r.masteryAfter - r.masteryBefore
                 if (delta === 0) return null
@@ -128,11 +140,11 @@ export function SummitDrawer({ summary, language, onNext, onExit }: SummitDrawer
       {/* Actions */}
       <div className="summit-drawer__actions">
         <button className="btn btn--primary" onClick={onNext}>
-          Next →
+          {mode === 'loss' ? 'Retry' : 'Next →'}
         </button>
       </div>
       <button className="summit-drawer__exit-btn" onClick={onExit}>
-        Exit
+        {mode === 'loss' ? 'Home' : 'Exit'}
       </button>
     </div>
   )

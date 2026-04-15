@@ -199,7 +199,7 @@ export function MyWordsScreen({ onHome }: MyWordsScreenProps) {
       {/* Bottom nav */}
       <div className="home-screen__bottom-nav">
         <button className="bottom-nav__btn" onClick={onHome} aria-label="Home">
-          <img src={homeIcon} alt="" width="22" height="22" className="bottom-nav__icon" />
+          <img src={homeIcon} alt="" width="22" height="22" className="bottom-nav__icon bottom-nav__icon--home" />
           <span>Home</span>
         </button>
         <button className="bottom-nav__btn bottom-nav__btn--active" aria-label="My Words">
