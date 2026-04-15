@@ -178,182 +178,188 @@ html, body, #root {
    Home Screen
    ================================================================ */
 
+/* ================================================================
+   Home Screen
+   ================================================================ */
+
 .home-screen {
   display: flex;
   flex-direction: column;
   min-height: 100svh;
-  padding: 0 0 2rem;
-  background: linear-gradient(180deg, #1f1f4a 0%, #0a0a23 40%);
+  background: #f0f0f0;
+  padding-bottom: 5rem;
 }
 
-.home-screen__header {
+/* Top bar */
+.home-screen__topbar {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
-  padding: 1rem 1rem 0;
+  padding: 0.875rem 1rem 0;
 }
 
+.home-screen__xp-pill {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: #fff;
+  border: 1.5px solid #e0d8c8;
+  border-radius: 999px;
+  padding: 4px 12px 4px 8px;
+  font-size: 0.9rem;
+}
+.home-screen__flame { font-size: 1.1rem; line-height: 1; }
+.home-screen__streak-count {
+  font-weight: 900;
+  color: #e8630a;
+  font-size: 1rem;
+}
+.home-screen__xp-sep { color: #bbb; margin: 0 2px; }
+.home-screen__xp-count {
+  font-weight: 700;
+  color: #3a3028;
+}
+.home-screen__xp-label {
+  font-size: 0.75rem;
+  color: #888;
+  font-weight: 600;
+}
+
+/* Title */
 .home-screen__title {
   text-align: center;
-  flex: 1;
-  padding: 0 0.5rem;
+  padding: 1.25rem 1rem 0.75rem;
 }
 .home-screen__title h1 {
   font-size: 1.55rem;
   font-weight: 900;
-  color: var(--accent);
+  color: #1a1612;
   line-height: 1.2;
   letter-spacing: -0.02em;
 }
 .home-screen__tagline {
   font-size: 0.833rem;
-  color: var(--text-muted);
+  color: #888;
   margin-top: 2px;
 }
 
-.home-screen__streak {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  padding: 1rem;
-  font-size: 1rem;
-}
-.streak-count {
-  font-size: 1.5rem;
-  font-weight: 900;
-  color: var(--accent-cta);
-}
-.streak-label {
-  color: var(--text-muted);
-  font-size: 0.833rem;
-}
-
-/* Elevate-style skill list */
+/* Language card list */
 .skill-list {
   display: flex;
   flex-direction: column;
-  padding: 0.75rem 1.25rem 0;
-}
-
-.skill-row {
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid var(--border);
-  padding: 1.1rem 0;
-  cursor: pointer;
-  text-align: left;
-  width: 100%;
-  transition: background 0.12s;
-}
-.skill-row:first-child { border-top: 1px solid var(--border); }
-.skill-row:active { background: var(--bg-card); }
-.skill-row:focus-visible {
-  outline: 2px solid var(--focus-ring);
-  outline-offset: -2px;
-  border-radius: var(--radius-sm);
-}
-
-.skill-row__header {
-  display: flex;
-  align-items: baseline;
   gap: 10px;
-  margin-bottom: 4px;
+  padding: 0 1rem;
 }
 
-.skill-row__score {
-  font-size: 1.333rem;
-  font-weight: 900;
-  line-height: 1;
-  min-width: 3ch;
+.skill-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1rem 1.1rem 0.875rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
 }
 
-.skill-row__name {
-  font-size: 0.889rem;
-  font-weight: 700;
-  color: var(--text);
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  flex: 1;
-}
-
-.skill-row__level {
-  font-size: 0.722rem;
-  font-weight: 700;
-  color: var(--text-muted);
-  letter-spacing: 0.08em;
-}
-
-.skill-row__segments {
-  display: flex;
-  gap: 3px;
-}
-
-.skill-row__seg {
-  flex: 1;
-  height: 9px;
-  border-radius: 2px;
-  background: var(--gray-75);
-  overflow: hidden;
-  position: relative;
-}
-
-.skill-row__seg-fill {
-  position: absolute;
-  inset: 0;
-  border-radius: 2px;
-  transition: width 0.5s ease-out;
-}
-
-/* Mastered words mini-bar */
-.skill-row__mastered-badge {
-  font-size: 0.667rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  margin-top: 2px;
-  margin-bottom: 6px;
-  cursor: pointer;
-  align-self: flex-start;
-}
-
-.skill-row__mastered-row {
+.skill-card__header {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-top: 6px;
-  cursor: pointer;
-  padding: 2px 0;
+  margin-bottom: 10px;
+}
+.skill-card__flag { font-size: 1.3rem; line-height: 1; flex-shrink: 0; }
+.skill-card__name {
+  flex: 1;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1a1612;
+}
+.skill-card__level-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  border: 1.5px solid;
+  border-radius: 999px;
+  padding: 2px 10px;
+  letter-spacing: 0.02em;
 }
 
-.skill-row__mastered-label {
-  font-size: 0.667rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
-.skill-row__mastered-segments {
+/* 5-segment progress bar */
+.skill-card__segments {
   display: flex;
-  gap: 3px;
-  flex: 1;
+  gap: 4px;
+  margin-bottom: 10px;
 }
-
-.skill-row__mastered-seg {
+.skill-card__seg {
   flex: 1;
-  height: 5px;
-  background: var(--gray-75);
-  border-radius: 2px;
+  height: 10px;
+  border-radius: 3px;
+  background: #e8e8e8;
   overflow: hidden;
   position: relative;
 }
-
-.skill-row__mastered-seg-fill {
+.skill-card__seg-fill {
   position: absolute;
   inset: 0;
-  border-radius: 2px;
+  border-radius: 3px;
   transition: width 0.5s ease-out;
 }
+.skill-card__segments--empty .skill-card__seg { background: #e8e8e8; }
+
+/* Footer row */
+.skill-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.skill-card__mastered {
+  font-size: 0.833rem;
+  color: #888;
+}
+.skill-card__mastered strong {
+  color: #3a3028;
+  font-weight: 700;
+}
+.skill-card__cta {
+  font-size: 0.9rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 16px;
+  cursor: pointer;
+  background: #f1be32;
+  color: #1a1612;
+  font-family: inherit;
+  transition: opacity 0.12s;
+}
+.skill-card__cta:hover { background: #e8b020; }
+.skill-card__cta:active { opacity: 0.7; }
+
+/* Bottom nav */
+.home-screen__bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  background: #fff;
+  border-top: 1px solid #e8e8e8;
+  padding: 0.5rem 0 0.75rem;
+}
+.bottom-nav__btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #aaa;
+  font-family: inherit;
+}
+.bottom-nav__btn--active { color: #3a3028; }
+.bottom-nav__icon { display: block; }
 
 /* ================================================================
    Settings Panel
@@ -1127,104 +1133,127 @@ html, body, #root {
    My Words Screen
    ================================================================ */
 
+/* ================================================================
+   My Words Screen — light theme
+   ================================================================ */
+
 .my-words-screen {
   min-height: 100svh;
   display: flex;
   flex-direction: column;
-  padding-bottom: 2rem;
-}
-.my-words-screen__header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 1rem 1rem 0.5rem;
-}
-.my-words-screen__header h1 {
-  font-size: 1.25rem;
-  font-weight: 900;
+  background: #f0f0f0;
+  padding-bottom: 5rem;
 }
 
+.my-words-screen__header {
+  padding: 1.1rem 1rem 0.5rem;
+}
+.my-words-screen__header h1 {
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: #1a1612;
+}
+
+/* Language tabs */
 .lang-tabs {
   display: flex;
   gap: 8px;
-  padding: 0.75rem 1rem;
-  border-bottom: 1px solid var(--border);
+  padding: 0.5rem 1rem 0.75rem;
 }
 .lang-tab {
   flex: 1;
-  padding: 8px 4px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  background: var(--bg-card);
-  color: var(--text-muted);
-  font-size: 0.778rem;
+  padding: 7px 4px;
+  border: 1.5px solid #ddd;
+  border-radius: 10px;
+  background: #fff;
+  color: #888;
+  font-size: 0.75rem;
   font-family: inherit;
   font-weight: 700;
   cursor: pointer;
-  transition: background 0.15s;
-}
-.lang-tab:focus-visible {
-  outline: 2px solid var(--focus-ring);
-  outline-offset: 2px;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
 }
 .lang-tab--active {
-  background: var(--bg-surface);
-  color: var(--accent);
-  border-color: var(--accent);
+  background: #fff;
+  color: #3a3028;
+  border-color: #3a3028;
 }
 
+/* Progress card */
 .my-words-progress {
-  padding: 0.75rem 1rem 0.5rem;
-  border-bottom: 1px solid var(--border);
+  margin: 0 1rem 0.75rem;
+  background: #fff;
+  border-radius: 14px;
+  padding: 0.875rem 1rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
 }
-
 .my-words-progress__header {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 6px;
-}
-
-.my-words-progress__level {
-  font-size: 0.722rem;
-  font-weight: 700;
-  color: var(--text-muted);
-  letter-spacing: 0.04em;
-}
-
-.my-words-progress__count {
-  font-size: 0.722rem;
-  color: var(--text-muted);
-}
-
-.my-words-progress__segments {
-  display: flex;
-  gap: 3px;
   margin-bottom: 8px;
 }
-
+.my-words-progress__level {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #3a3028;
+  letter-spacing: 0.05em;
+}
+.my-words-progress__count {
+  font-size: 0.75rem;
+  color: #888;
+}
+.my-words-progress__segments {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 8px;
+}
 .my-words-progress__seg {
   flex: 1;
-  height: 7px;
-  background: var(--gray-75);
-  border-radius: 2px;
+  height: 9px;
+  background: #e8e8e8;
+  border-radius: 3px;
   overflow: hidden;
   position: relative;
 }
-
 .my-words-progress__seg-fill {
   position: absolute;
   inset: 0;
-  border-radius: 2px;
-  background: var(--accent);
-  transition: width 0.5s ease-out;
+  border-radius: 3px;
+  background: #6c63ff;
 }
-
 .my-words-summary {
-  font-size: 0.778rem;
-  color: var(--text-muted);
+  font-size: 0.75rem;
+  color: #888;
   margin: 0;
 }
+
+/* Learning / Mastered tabs */
+.my-words-tabs {
+  display: flex;
+  background: #fff;
+  border-bottom: 1px solid #e8e8e8;
+}
+.my-words-tab {
+  flex: 1;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  padding: 11px 10px;
+  font-size: 0.833rem;
+  font-weight: 600;
+  color: #aaa;
+  cursor: pointer;
+  font-family: inherit;
+  transition: color 0.15s, border-color 0.15s;
+  margin-bottom: -1px;
+}
+.my-words-tab--active {
+  color: #1a1612;
+  border-bottom-color: #3a3028;
+}
+
+/* Word list */
 .my-words-empty {
   flex: 1;
   display: flex;
@@ -1232,36 +1261,35 @@ html, body, #root {
   justify-content: center;
   text-align: center;
   padding: 2rem 1rem;
-  color: var(--text-muted);
-  font-size: 1rem;
+  color: #888;
+  font-size: 0.95rem;
 }
 .my-words-list {
   list-style: none;
   padding: 0;
+  background: #fff;
   display: flex;
   flex-direction: column;
-  gap: 8px;
 }
 .my-words-item {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 7px 14px;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding: 9px 14px;
+  border-bottom: 1px solid #f0f0f0;
   overflow: hidden;
 }
-.my-words-item:nth-child(even) { background: var(--bg-card); }
 .my-words-item__article {
-  font-size: 0.833rem;
-  color: var(--text-muted);
+  font-size: 0.8rem;
+  color: #aaa;
   font-style: italic;
   flex-shrink: 0;
-  width: 28px;
-  margin-left: 4px;
+  width: 24px;
 }
 .my-words-item__noun {
-  font-size: clamp(0.85rem, 4vw, 1rem);
+  font-size: 0.95rem;
   font-weight: 700;
+  color: #1a1612;
   flex: 1;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1269,58 +1297,28 @@ html, body, #root {
 }
 .my-words-item__translation {
   font-size: 0.72rem;
-  color: var(--text-muted);
+  color: #aaa;
   font-style: italic;
   flex: 1;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-
 .my-words-item__toggle {
   background: none;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  font-size: 0.667rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.65rem;
   font-weight: 600;
-  color: var(--text-muted);
+  color: #888;
   cursor: pointer;
-  padding: 3px 7px;
+  padding: 3px 8px;
   white-space: nowrap;
   flex-shrink: 0;
+  font-family: inherit;
   transition: color 0.15s, border-color 0.15s;
 }
-
 .my-words-item__toggle:hover {
-  color: var(--text);
-  border-color: var(--text-muted);
-}
-
-.my-words-tabs {
-  display: flex;
-  border-bottom: 2px solid var(--border);
-  margin-top: 4px;
-}
-
-.my-words-tab {
-  flex: 1;
-  background: none;
-  border: none;
-  border-bottom: 3px solid transparent;
-  padding: 12px 10px;
-  font-size: 0.833rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  cursor: pointer;
-  transition: color 0.15s, border-color 0.15s;
-  margin-bottom: -2px;
-}
-
-.my-words-tab--active {
-  color: var(--text);
-  border-bottom-color: var(--accent);
-}
-
-.my-words-tab:not(.my-words-tab--active):hover {
-  color: var(--text);
+  color: #3a3028;
+  border-color: #3a3028;
 }

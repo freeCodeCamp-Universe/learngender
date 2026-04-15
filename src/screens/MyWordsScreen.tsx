@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react'
+import homeIcon from '../components/icons/home.svg'
+import starIcon from '../components/icons/star.svg'
 import type { Language, Word } from '../types'
 import { LANGUAGE_LABELS } from '../types'
 import { getMastery } from '../lib/srs'
-import { addScore, getScore, getSeenWords, getSRSCard, getMasteredCount, isManuallyMastered, toggleManuallyMastered } from '../lib/storage'
+import { addScore, getSeenWords, getSRSCard, getMasteredCount, isManuallyMastered, toggleManuallyMastered } from '../lib/storage'
 import { getWords } from '../lib/wordLoader'
 import { MasteryCircle } from '../components/MasteryCircle'
 import { getLevelProgressFromMastered } from '../lib/levels'
@@ -43,7 +45,32 @@ export function MyWordsScreen({ onHome }: MyWordsScreenProps) {
     setEntries(wordEntries)
   }
 
-  useEffect(() => { load(selectedLang) }, [selectedLang])
+  useEffect(() => {
+    let cancelled = false
+
+    setEntries([])
+    getWords(selectedLang).then((allWords) => {
+      if (cancelled) return
+      const seen = getSeenWords(selectedLang)
+      const wordEntries: WordEntry[] = allWords
+        .filter((w) => seen.has(w.word))
+        .map((w) => {
+          const card = getSRSCard(selectedLang, w.word)
+          return {
+            word: w,
+            masteryPct: getMastery(card),
+            manuallyMastered: isManuallyMastered(selectedLang, w.word),
+          }
+        })
+        .sort((a, b) => a.masteryPct - b.masteryPct)
+
+      setEntries(wordEntries)
+    })
+
+    return () => {
+      cancelled = true
+    }
+  }, [selectedLang])
 
   async function handleToggleMastered(word: string) {
     toggleManuallyMastered(selectedLang, word)
@@ -58,15 +85,13 @@ export function MyWordsScreen({ onHome }: MyWordsScreenProps) {
 
   const learningEntries = entries.filter(e => !e.manuallyMastered && e.masteryPct < 80)
   const masteredEntries = entries.filter(e => e.manuallyMastered || e.masteryPct >= 80)
-
-  const scoreData = getScore(selectedLang)
-  const masteredProgress = getLevelProgressFromMastered(scoreData.masteredCount ?? 0)
+  const masteredCount = masteredEntries.length
+  const masteredProgress = getLevelProgressFromMastered(masteredCount)
 
   return (
     <div className="my-words-screen">
       {/* Header */}
       <div className="my-words-screen__header">
-        <button className="icon-btn" onClick={onHome} aria-label="Home">☰</button>
         <h1>My Words</h1>
       </div>
 
@@ -90,10 +115,10 @@ export function MyWordsScreen({ onHome }: MyWordsScreenProps) {
         <div className="my-words-progress__header">
           <span className="my-words-progress__level">{masteredProgress.name.toUpperCase()}</span>
           <span className="my-words-progress__count">
-            {scoreData.masteredCount ?? 0}{masteredProgress.nextThreshold ? ` / ${masteredProgress.nextThreshold}` : ''} mastered
+            {masteredCount}{masteredProgress.nextThreshold ? ` / ${masteredProgress.nextThreshold}` : ''} mastered
           </span>
         </div>
-        <div className="my-words-progress__segments">
+        <div className="my-words-progress__segments" aria-hidden="true">
           {Array.from({ length: SEGMENT_COUNT }).map((_, i) => {
             const full = i < masteredProgress.level - 1
             const active = i === masteredProgress.level - 1
@@ -109,7 +134,7 @@ export function MyWordsScreen({ onHome }: MyWordsScreenProps) {
             )
           })}
         </div>
-        <p className="my-words-summary">{entries.length} seen · {masteredEntries.length} mastered</p>
+        <p className="my-words-summary">{entries.length} seen · {masteredCount} mastered</p>
       </div>
 
       {/* Learning / Mastered tabs */}
@@ -168,6 +193,17 @@ export function MyWordsScreen({ onHome }: MyWordsScreenProps) {
               ))}
             </ul>
       )}
+      {/* Bottom nav */}
+      <div className="home-screen__bottom-nav">
+        <button className="bottom-nav__btn" onClick={onHome} aria-label="Home">
+          <img src={homeIcon} alt="" width="22" height="22" className="bottom-nav__icon" />
+          <span>Home</span>
+        </button>
+        <button className="bottom-nav__btn bottom-nav__btn--active" aria-label="My Words">
+          <img src={starIcon} alt="" width="22" height="22" className="bottom-nav__icon" />
+          <span>Words</span>
+        </button>
+      </div>
     </div>
   )
 }
