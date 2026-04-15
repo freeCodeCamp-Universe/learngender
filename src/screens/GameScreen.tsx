@@ -25,6 +25,9 @@ export function GameScreen({ language, onRoundEnd, onPlayAgain, onHome }: GameSc
 
   const isSummit = state.phase === 'summit'
   const isDone   = state.phase === 'done'
+  const levelBadgeKey = isSummit && state.summary
+    ? `${language}-summit-${state.summary.pointsEarned}-${state.summary.levelAfter}`
+    : `${language}-live`
 
   if (state.phase === 'loading' || (!currentWord && !isSummit && !isDone)) {
     return (
@@ -44,7 +47,11 @@ export function GameScreen({ language, onRoundEnd, onPlayAgain, onHome }: GameSc
           <button className="game-screen__home-btn" onClick={onHome} aria-label="Return to home">
             <img src={homeIcon} alt="" width="20" height="20" />
           </button>
-          <LevelBadge language={language} />
+          <LevelBadge
+            key={levelBadgeKey}
+            language={language}
+            summary={isSummit ? state.summary : null}
+          />
         </div>
         <Lives count={state.lives} total={TOTAL_LIVES} />
       </div>

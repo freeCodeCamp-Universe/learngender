@@ -15,7 +15,7 @@ const BOUNCE_DURATION = 580 // ms — must match CSS animation duration
 export function WordCard({ word, onSwipe, showTranslation }: WordCardProps) {
   const [dragX, setDragX]         = useState(0)
   const [dragY, setDragY]         = useState(0)
-  const [anim, setAnim]           = useState<'idle' | 'fly-left' | 'fly-right' | 'bounce-left' | 'bounce-right'>('idle')
+  const [anim, setAnim]           = useState<'idle' | 'enter' | 'fly-left' | 'fly-right' | 'bounce-left' | 'bounce-right' | 'dismiss-left' | 'dismiss-right'>('idle')
   const [bouncePx, setBouncePx]   = useState(100)
   const [ready, setReady]         = useState(false)
 
@@ -28,14 +28,17 @@ export function WordCard({ word, onSwipe, showTranslation }: WordCardProps) {
   const velocity         = useRef(0)
   const handled          = useRef(false)
 
-  // New word arrives → snap to centre instantly, then re-enable transitions
+  // New word arrives → drop-in animation
   useEffect(() => {
     setReady(false)
     setDragX(0)
     setDragY(0)
-    setAnim('idle')
+    setAnim('enter')
     handled.current = false
-    const raf = requestAnimationFrame(() => setReady(true))
+    const raf = requestAnimationFrame(() => {
+      setReady(true)
+      setTimeout(() => setAnim(a => a === 'enter' ? 'idle' : a), 220)
+    })
     return () => cancelAnimationFrame(raf)
   }, [word.word])
 
@@ -65,10 +68,7 @@ export function WordCard({ word, onSwipe, showTranslation }: WordCardProps) {
       setBouncePx(edgePx)
       setAnim(dir === 'right' ? 'bounce-right' : 'bounce-left')
       setTimeout(() => {
-        setAnim('idle')
-        setDragX(0)
-        setDragY(0)
-        handled.current = false
+        setAnim(dir === 'right' ? 'dismiss-right' : 'dismiss-left')
       }, BOUNCE_DURATION)
     }
   }
@@ -135,12 +135,14 @@ export function WordCard({ word, onSwipe, showTranslation }: WordCardProps) {
     setDragY(0)
   }
 
-  const isBouncing = anim === 'bounce-left' || anim === 'bounce-right'
+  const isBouncing   = anim === 'bounce-left'   || anim === 'bounce-right'
+  const isDismissing = anim === 'dismiss-left'  || anim === 'dismiss-right'
+  const isEntering   = anim === 'enter'
   const isMoving   = dragX !== 0 || dragY !== 0
 
   // When bouncing, the CSS keyframe animation drives the transform.
   // For all other states, inline style drives it.
-  const usingCssAnim = isBouncing && ready
+  const usingCssAnim = (isBouncing || isDismissing || isEntering) && ready
 
   let inlineTransform = ''
   let transition = ''
@@ -172,11 +174,13 @@ export function WordCard({ word, onSwipe, showTranslation }: WordCardProps) {
 
 
 
-  const cssAnimClass = anim === 'bounce-right'
-    ? 'word-card--bounce-right'
-    : anim === 'bounce-left'
-      ? 'word-card--bounce-left'
-      : ''
+  const cssAnimClass =
+    anim === 'bounce-right'   ? 'word-card--bounce-right'   :
+    anim === 'bounce-left'    ? 'word-card--bounce-left'    :
+    anim === 'dismiss-right'  ? 'word-card--dismiss-right'  :
+    anim === 'dismiss-left'   ? 'word-card--dismiss-left'   :
+    anim === 'enter'          ? 'word-card--enter'          :
+    ''
 
   return (
     <div

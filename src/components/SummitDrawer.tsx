@@ -1,7 +1,9 @@
+import { useEffect, useRef, useState } from 'react'
 import type { Language, RoundSummary } from '../types'
 import { LANGUAGE_LABELS } from '../types'
-import { getLevelProgressFromMastered } from '../lib/levels'
 import { MasteryCircle } from './MasteryCircle'
+import { getRoundPointCap, getRoundScoreBreakdown } from '../lib/scoring'
+import { SUMMIT_STEP } from '../hooks/useRound'
 
 interface SummitDrawerProps {
   summary: RoundSummary
@@ -10,10 +12,34 @@ interface SummitDrawerProps {
   onExit: () => void
 }
 
-function getBadge(score: number) {
+function getBadge(score: number, perfect: boolean) {
+  if (perfect) return { emoji: '🏆', label: 'Perfect Round!' }
   if (score >= 7) return { emoji: '🏆', label: 'Excellent Job!' }
   if (score >= 5) return { emoji: '⭐', label: 'Great Job!' }
   return { emoji: '👍', label: 'Good Job!' }
+}
+
+// Animated bar: starts at pctBefore, animates to pctAfter after a delay
+function AnimatedBar({ pctBefore, pctAfter }: { pctBefore: number; pctAfter: number }) {
+  const [width, setWidth] = useState(pctBefore)
+  const raf = useRef<number>(0)
+
+  useEffect(() => {
+    // drawer rise = 0.5s delay + 0.5s animation = ~1s before we start filling
+    const timer = setTimeout(() => {
+      raf.current = requestAnimationFrame(() => {
+        raf.current = requestAnimationFrame(() => setWidth(pctAfter))
+      })
+    }, 1000)
+    return () => {
+      clearTimeout(timer)
+      cancelAnimationFrame(raf.current)
+    }
+  }, [pctBefore, pctAfter])
+
+  return (
+    <div className="summit-drawer__bar-fill" style={{ width: `${width}%` }} />
+  )
 }
 
 export function SummitDrawer({ summary, language, onNext, onExit }: SummitDrawerProps) {
@@ -25,13 +51,18 @@ export function SummitDrawer({ summary, language, onNext, onExit }: SummitDrawer
     return acc
   }, [])
 
+  const breakdown = getRoundScoreBreakdown(uniqueCards, { perfectTarget: SUMMIT_STEP })
   const uniqueCorrect = uniqueCards.filter(r => r.correct).length
-  const uniqueTotal   = uniqueCards.length
-  const badge = getBadge(uniqueCorrect)
+  const badge = getBadge(uniqueCorrect, breakdown.perfect)
+  const maxPoints = getRoundPointCap(SUMMIT_STEP, { includePerfectBonus: true })
+  const scorePct = Math.min(100, Math.round((breakdown.points / maxPoints) * 100))
 
-  const leveledUp = summary.levelAfter > summary.levelBefore
-  const progress = getLevelProgressFromMastered(summary.masteredAfter)
-  const { name: levelName, pct, masteredCount, nextThreshold } = progress
+  // Score pill pop — show after drawer finishes rising
+  const [showScore, setShowScore] = useState(false)
+  useEffect(() => {
+    const timer = setTimeout(() => setShowScore(true), 900)
+    return () => clearTimeout(timer)
+  }, [])
 
   return (
     <div className="summit-drawer">
@@ -41,19 +72,31 @@ export function SummitDrawer({ summary, language, onNext, onExit }: SummitDrawer
       <div className="summit-drawer__badge">
         <span className="summit-drawer__badge-emoji">{badge.emoji}</span>
         <span className="summit-drawer__badge-label">{badge.label}</span>
-        <span className="summit-drawer__badge-score">{uniqueCorrect} / {uniqueTotal}</span>
       </div>
 
-      {/* XP + level bar */}
-      <div className="summit-drawer__xp">
-        <div className="summit-drawer__xp-row">
-          <span className="summit-drawer__level-name">{levelName}</span>
-          <span className="summit-drawer__pts">
-            {masteredCount}{nextThreshold ? ` / ${nextThreshold}` : ''} words{leveledUp ? '  🎉 Level up!' : ''}
+      {/* Score section */}
+      <div className="summit-drawer__score">
+        <div className="summit-drawer__score-row">
+          <span className="summit-drawer__score-label">Score</span>
+          <span
+            className={`summit-drawer__score-pill${showScore ? ' summit-drawer__score-pill--visible' : ''}`}
+          >
+            {breakdown.points} / {maxPoints} pts
           </span>
         </div>
         <div className="summit-drawer__bar-track">
-          <div className="summit-drawer__bar-fill" style={{ width: `${pct}%` }} />
+          <AnimatedBar pctBefore={0} pctAfter={scorePct} />
+        </div>
+        <div className="summit-drawer__score-breakdown">
+          <span className="summit-drawer__score-chip">
+            {breakdown.correctCount} correct +{breakdown.correctPoints}
+          </span>
+          <span className="summit-drawer__score-chip">
+            bonus {breakdown.passBonus ? `+${breakdown.passBonus}` : ' -'}
+          </span>
+          <span className="summit-drawer__score-chip">
+            no translation {breakdown.noTranslationBonus ? `+${breakdown.noTranslationBonus}` : ' -'}
+          </span>
         </div>
       </div>
 

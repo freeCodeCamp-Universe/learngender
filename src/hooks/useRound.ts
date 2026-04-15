@@ -3,12 +3,12 @@ import type { CardResult, Gender, Language, RoundSummary, Word } from '../types'
 import { drawRound } from '../lib/wordLoader'
 import { createCard, getMastery, rateCard } from '../lib/srs'
 import { addScore, getMasteredCount, getScore, getSRSCard, markWordSeen, setSRSCard } from '../lib/storage'
-import { scoreCard, scoreRound } from '../lib/scoring'
+import { getRoundScoreBreakdown } from '../lib/scoring'
 import { getLevelFromXP } from '../lib/levels'
 import { getWords } from '../lib/wordLoader'
 
 export const TOTAL_LIVES = 5
-const SUMMIT_STEP   = 8   // hiker must reach this step to win
+export const SUMMIT_STEP = 8   // hiker must reach this step to win
 
 export type RoundPhase = 'loading' | 'playing' | 'summit' | 'done'
 
@@ -24,6 +24,13 @@ export interface RoundState {
   summary: RoundSummary | null
 }
 
+function getScoredResults(results: CardResult[]): CardResult[] {
+  return results.reduce<CardResult[]>((acc, result) => {
+    if (!acc.find((entry) => entry.word.word === result.word.word)) acc.push(result)
+    return acc
+  }, [])
+}
+
 export function useRound(language: Language, onDone: (summary: RoundSummary) => void, initialDeck?: Word[]) {
   const [state, setState] = useState<RoundState>({
     phase: 'loading',
@@ -37,7 +44,6 @@ export function useRound(language: Language, onDone: (summary: RoundSummary) => 
     summary: null,
   })
 
-  const cardScoresRef     = useRef<ReturnType<typeof scoreCard>[]>([])
   const resultsRef        = useRef<CardResult[]>([])
   const masteredBeforeRef = useRef(0)
   const levelBeforeRef    = useRef(1)
@@ -51,7 +57,6 @@ export function useRound(language: Language, onDone: (summary: RoundSummary) => 
       masteredBeforeRef.current = masteredBefore
       const xpBefore = getScore(language).score
       levelBeforeRef.current = getLevelFromXP(xpBefore)
-      cardScoresRef.current = []
       resultsRef.current = []
       const deck = initialDeck ?? await drawRound(language)
       setState({
@@ -67,24 +72,26 @@ export function useRound(language: Language, onDone: (summary: RoundSummary) => 
       })
     }
     init()
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [language, initialDeck])
 
-  const buildSummary = (score: number, points: number, passed: boolean): RoundSummary => {
+  const buildSummary = useCallback((options?: { pointsOverride?: number }): RoundSummary => {
+    const scoredResults = getScoredResults(resultsRef.current)
+    const breakdown = getRoundScoreBreakdown(scoredResults, { perfectTarget: SUMMIT_STEP })
     const masteredAfter = getMasteredCount(language, wordListRef.current)
-    const xpAfter = getScore(language).score + points
+    const pointsEarned = options?.pointsOverride ?? breakdown.points
+    const xpAfter = getScore(language).score + pointsEarned
     return {
       language,
       cards: resultsRef.current,
-      score,
-      pointsEarned: points,
+      score: breakdown.correctCount,
+      pointsEarned,
       masteredBefore: masteredBeforeRef.current,
       masteredAfter,
       levelBefore: levelBeforeRef.current,
       levelAfter: getLevelFromXP(xpAfter),
-      passed,
+      passed: breakdown.passed,
     }
-  }
+  }, [language])
 
   const answer = useCallback(
     (gender: Gender, translationUsed: boolean): boolean => {
@@ -104,8 +111,6 @@ export function useRound(language: Language, onDone: (summary: RoundSummary) => 
         markWordSeen(language, currentWord.word)
 
         const masteryAfter = getMastery(updatedCard)
-        const cardScore  = scoreCard(correct, translationUsed)
-        cardScoresRef.current.push(cardScore)
         resultsRef.current.push({ word: currentWord, correct, translationUsed, masteryBefore, masteryAfter })
 
         if (!correct) {
@@ -121,15 +126,25 @@ export function useRound(language: Language, onDone: (summary: RoundSummary) => 
           const newLives    = prev.lives - 1
           const newHikerStep = Math.max(0, prev.hikerStep - 1)
 
+          // BOUNCE_DURATION (580ms) + dismiss fly (290ms) = 870ms before next card
+          const DISMISS_DELAY = 870
+
           if (newLives <= 0) {
-            const { passed } = scoreRound(prev.score, cardScoresRef.current)
-            const summary = buildSummary(prev.score, 0, passed)
+            const summary = buildSummary({ pointsOverride: 0 })
             addScore(language, 0, summary.masteredAfter, summary.levelAfter)
-            setTimeout(() => onDone(summary), 0)
+            setTimeout(() => onDone(summary), DISMISS_DELAY)
             return { ...prev, lives: 0, hikerStep: newHikerStep, deck: newDeck, isShaking: true, phase: 'done', summary }
           }
 
-          setTimeout(() => setState((s) => ({ ...s, isShaking: false })), 500)
+          // Advance to next card after dismiss animation completes
+          const nextIndex = prev.currentIndex + 1
+          setTimeout(() => {
+            setState((s) => {
+              if (s.phase === 'done' || s.phase === 'summit') return s
+              return { ...s, currentIndex: nextIndex, isShaking: false }
+            })
+          }, DISMISS_DELAY)
+
           return { ...prev, lives: newLives, hikerStep: newHikerStep, deck: newDeck, isShaking: true }
         }
 
@@ -137,15 +152,13 @@ export function useRound(language: Language, onDone: (summary: RoundSummary) => 
         const newScore     = prev.score + 1
         const newHikerStep = prev.hikerStep + 1
         const newIndex     = prev.currentIndex + 1
-        const deckSnapshot = prev.deck
 
         // Reached the summit — show summit overlay (don't call onDone yet)
         if (newHikerStep >= SUMMIT_STEP) {
-          const { points, passed } = scoreRound(newScore, cardScoresRef.current)
-          const summary = buildSummary(newScore, points, passed)
-          addScore(language, points, summary.masteredAfter, summary.levelAfter)
+          const summary = buildSummary()
+          addScore(language, summary.pointsEarned, summary.masteredAfter, summary.levelAfter)
           setTimeout(() => setState((s) => ({
-            ...s, currentIndex: newIndex, deck: deckSnapshot,
+            ...s, currentIndex: newIndex,
             phase: 'summit', summary, hikerStep: SUMMIT_STEP,
           })), 290)
           return { ...prev, score: newScore, hikerStep: newHikerStep }
@@ -155,7 +168,7 @@ export function useRound(language: Language, onDone: (summary: RoundSummary) => 
         setTimeout(() => {
           setState((s) => {
             if (s.phase === 'done' || s.phase === 'summit') return s
-            return { ...s, currentIndex: newIndex, deck: deckSnapshot }
+            return { ...s, currentIndex: newIndex }
           })
         }, 290)
 
@@ -164,7 +177,7 @@ export function useRound(language: Language, onDone: (summary: RoundSummary) => 
 
       return correct
     },
-    [language, onDone]
+    [buildSummary, language, onDone]
   )
 
   const currentWord = state.deck[state.currentIndex] ?? null

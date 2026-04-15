@@ -24,6 +24,7 @@ export async function drawRound(language: Language): Promise<Word[]> {
   const manuallyMastered = getManuallyMastered(language)
 
   const dueWords: { word: Word; dueDate: Date }[] = []
+  const notYetDueWords: { word: Word; dueDate: Date }[] = []
   const newWords: Word[] = []
 
   for (const word of allWords) {
@@ -34,8 +35,9 @@ export async function drawRound(language: Language): Promise<Word[]> {
       const due = new Date(card.due)
       if (due <= new Date()) {
         dueWords.push({ word, dueDate: due })
+      } else {
+        notYetDueWords.push({ word, dueDate: due })
       }
-      // seen but not due — skip for now, SRS will resurface them
     } else {
       newWords.push(word) // never seen, ordered by rank (most frequent first)
     }
@@ -45,5 +47,13 @@ export async function drawRound(language: Language): Promise<Word[]> {
   dueWords.sort((a, b) => a.dueDate.getTime() - b.dueDate.getTime())
 
   const combined: Word[] = [...dueWords.map((d) => d.word), ...newWords]
+
+  // Fallback: if not enough cards, fill with soonest-due words
+  if (combined.length < 10) {
+    notYetDueWords.sort((a, b) => a.dueDate.getTime() - b.dueDate.getTime())
+    const needed = 10 - combined.length
+    combined.push(...notYetDueWords.slice(0, needed).map((d) => d.word))
+  }
+
   return combined.slice(0, 10)
 }

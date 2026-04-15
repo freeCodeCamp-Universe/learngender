@@ -38,7 +38,7 @@ Intermediate learners of Portuguese, Spanish, French, or Italian who are native 
 | learner | see which words I got wrong and why after a round | I can learn the gender rule I missed |
 | learner | see a mastery circle per word on the result screen | I know how well I know each word |
 | learner | have difficult words appear more often in future rounds | I can improve on my weak spots without manual configuration |
-| learner | see my level and score per language on the home screen | I can track my long-term progress |
+| learner | see my score per language and mastery band on the home screen | I can track my long-term progress |
 | learner | maintain a daily streak | I am motivated to practise every day |
 | learner | open the app in my browser immediately | I do not have to install anything |
 | learner | pick up where I left off in a later session | my progress is not lost when I close the tab |
@@ -60,7 +60,7 @@ A round consists of 10 cards drawn from the top-1000 most frequent nouns for the
 The game screen background displays a mountain SVG illustration with a wall of 8 rows of blocks overlaid on top, obscuring the mountain. Each correct answer removes one row from the bottom of the wall, revealing more of the mountain. Each incorrect answer adds one row back. If all 8 rows are removed, the mountain is fully revealed and a flag appears at the summit. The wall animates (shakes) on both correct and incorrect answers.
 
 **F4 — Lives system**
-The learner has 3 lives per round, displayed as hearts in the top-right corner. Each incorrect answer costs one life. Losing all 3 lives ends the round immediately. A word answered incorrectly is returned to the deck and may appear again in the same round.
+The learner has 5 lives per round, displayed as hearts in the top-right corner. Each incorrect answer costs one life. Losing all 5 lives ends the round immediately. A word answered incorrectly is returned to the deck and may appear again in the same round.
 
 **F5 — Gender indicators**
 The article/pronoun for each gender is displayed on the left and right edges of the game screen as a persistent guide (e.g. "la" on the left, "el" on the right for Spanish; "la" / "le" for French; "a" / "o" for Portuguese; "la" / "il" for Italian). These are always visible.
@@ -68,11 +68,11 @@ The article/pronoun for each gender is displayed on the left and right edges of 
 **F6 — Translation toggle**
 By default, no translation is shown. A small icon (👁️) on the card allows the learner to reveal the English translation inline for that specific card. A global setting (ON/OFF) on the home screen sets whether translations are shown by default on every card.
 
-**F7 — Round result screen**
-After all 10 cards are answered (or the learner runs out of lives), the result screen shows:
+**F7 — Post-round summary**
+After the learner reaches the summit (or runs out of lives), the game shows a post-round summary:
 - A performance badge: Good Job / Great Job / Excellent Job (based on score)
-- Score (e.g. 8/10) and pass/fail status (pass = ≥7/10)
-- An animated level progress bar filling with points earned in the round
+- Score summary with points earned in the round and score breakdown bonuses
+- An animated numeric player-level progress bar filling with XP earned in the round
 - A list of every word from the round with its translation, correct gender, a brief pattern explanation, and a mastery circle showing the learner's SRS mastery percentage for that word
 
 **F8 — Spaced repetition scheduling**
@@ -81,8 +81,8 @@ The app uses ts-fsrs to schedule each word independently. Words answered incorre
 **F9 — Progress persistence**
 All SRS state, round history, level scores, and streak data are stored in localStorage. No account or login is required.
 
-**F10 — Level and score system**
-Each language has an independent score and level. Levels progress as: Rookie → Apprentice → Scholar → Linguist → Polyglot. Score accumulates based on correct answers and round bonuses as defined in the Levels and Score System section. The home screen displays a segmented progress bar per language showing the current score, level name, and progress toward the next level threshold.
+**F10 — Score, player level, and mastery system**
+Each language has an independent XP score and numeric player level used in-game. Separately, each language also has a mastery band based on mastered words. Score accumulates from correct answers and round bonuses as defined in the Levels and Score System section. The home screen displays mastery-band progress by language, while the in-game level badge displays the numeric player level and XP progress.
 
 **F11 — Daily streak**
 The app tracks consecutive days on which the learner completes at least one round. The streak count is displayed on the home screen.
@@ -102,7 +102,7 @@ Sound plays on correct answers, incorrect answers, and level-up events. A mute t
 A gear icon (⚙️) in the top-right corner of the home screen opens a slide-out settings panel with controls for: sound ON/OFF, and default translation display ON/OFF.
 
 **F16 — Navigation**
-A hamburger icon (☰) in the top-left corner of the game screen allows the learner to return to the home screen mid-round.
+A home button in the top-left corner of the game screen allows the learner to return to the home screen mid-round. My Words is accessed from the home screen navigation.
 
 ### P2 — Nice to Have
 
@@ -140,7 +140,7 @@ Each word entry contains:
 - Its grammatical gender (masculine / feminine)
 - Its frequency rank
 
-Gender pattern explanations (shown on the result screen) are hand-authored per language, covering the most common rules (e.g. "-tion is feminine in French", "-o is usually masculine in Italian").
+Gender pattern explanations are hand-authored per language, covering the most common rules (e.g. "-tion is feminine in French", "-o is usually masculine in Italian").
 
 ---
 
@@ -149,14 +149,15 @@ Gender pattern explanations (shown on the result screen) are hand-authored per l
 ```
 Home Screen
   └── Tap language bar → Game Screen
-        └── Round ends (10 cards or 0 lives) → Result Screen
-              └── Tap "Play Again" → Game Screen (same language)
-              └── Tap "Home" → Home Screen
+        └── Reach summit → Summit / Victory Drawer
+              └── Tap "Next" → Game Screen (same language)
+              └── Tap "Exit" → Home Screen
+        └── Lose all lives → Round ends
   └── Tap ⚙️ → Settings Panel (slide-out overlay)
-  └── Tap ☰ → My Words Screen
+  └── Tap "Words" → My Words Screen
 
 Game Screen
-  └── Tap ☰ → My Words Screen
+  └── Tap Home → Home Screen
 
 My Words Screen
   └── Tap ☰ → Home Screen
@@ -170,13 +171,13 @@ My Words Screen
 - App name and tagline at the top
 - 🔥 Daily streak counter
 - 4 segmented progress bars, one per language (PT / ES / FR / IT)
-  - Each bar shows: language name, numeric score, level name (Rookie → Polyglot), and progress toward next level
+  - Each bar shows: language name, mastery band name (Rookie → Polyglot), and progress toward the next mastery band
   - Tapping a bar starts a round in that language
 - Languages with no rounds played show "Start" instead of a score
 
 ### Game Screen
-- **Top-left**: ☰ hamburger (returns to home screen)
-- **Top-right**: ⚙️ gear (opens settings), 3 hearts (lives)
+- **Top-left**: home button plus numeric player-level badge
+- **Top-right**: lives
 - **Background**: Mountain SVG with block wall overlay (8 rows)
 - **Centre**: Word card
   - Large noun text
@@ -186,15 +187,15 @@ My Words Screen
 - **Right edge**: Masculine article/pronoun in a coloured band
 - **Bottom**: Clean swipe area with subtle ← swipe → hint (fades after first use)
 
-### Result Screen
-- Performance badge (Good Job / Great Job / Excellent Job) with icon
-- Score (X/10) and pass/fail status
-- Animated level progress bar showing points earned
-- Word list: each word from the round showing noun, translation, correct gender article, pattern note, and mastery circle (% filled based on SRS state)
-- "Play Again" and "Home" buttons
+### Summit / Victory Drawer
+- Performance badge (Good Job / Great Job / Excellent Job, or Perfect Round) with icon
+- Score bar showing points earned and bonus breakdown
+- Numeric player-level XP animation remains in the in-game top badge
+- Word list: each word from the round showing noun, translation, correct gender article, and mastery circle (% filled based on SRS state)
+- "Next" and "Exit" actions
 
 ### My Words Screen
-- Accessible via ☰ hamburger from any screen
+- Accessible from the home screen
 - Language selector at the top (PT / ES / FR / IT)
 - Only displays words the learner has encountered at least once — never-seen words are hidden
 - Each word entry shows:
@@ -209,17 +210,28 @@ My Words Screen
 
 ## Levels and Score System
 
-Each language has an independent score and level. Score accumulates from correct answers and bonuses earned during rounds.
+The app currently uses two separate progression systems per language:
 
-### Level Thresholds
+1. Player XP level
+- Used in the in-game numeric level badge.
+- Driven by XP earned from rounds.
+- Progression is numeric (`1, 2, 3...`), not named tiers.
+- XP needed to go from level `n` to `n + 1` is calculated as `floor(95 * n^1.70)`.
 
-| Level | Name | XP Required (cumulative) | Approximate days at 1 round/day |
-|---|---|---|---|
-| 1 | Rookie | 0 | Day 0 |
-| 2 | Apprentice | 500 | ~5 days |
-| 3 | Scholar | 2.000 | ~20 days |
-| 4 | Linguist | 6.000 | ~60 days |
-| 5 | Polyglot | 16.000 | ~160 days |
+2. Mastery bands
+- Used on the Home and My Words screens.
+- Driven by how many words are considered mastered.
+- Displayed with named tiers: Rookie → Apprentice → Scholar → Linguist → Polyglot.
+
+### Mastery Level Thresholds
+
+| Band | Name | Mastered words required |
+|---|---|---|
+| 1 | Rookie | 0 |
+| 2 | Apprentice | 50 |
+| 3 | Scholar | 200 |
+| 4 | Linguist | 600 |
+| 5 | Polyglot | 1500 |
 
 ### Points Per Round
 
@@ -228,15 +240,15 @@ Each language has an independent score and level. Score accumulates from correct
 | Correct answer | +10 |
 | Correct answer without using translation | +5 bonus |
 | Round completed with no errors (perfect round) | +50 bonus |
-| Round passed (≥7/10) | +20 bonus |
+| Summit reached / round passed | +20 bonus |
 
-A perfect round without translation = (10 + 5) × 10 + 50 = 200 points.
+A perfect 8/8 summit round without translation = `(10 + 5) × 8 + 20 + 50 = 190` points.
 A typical pass round (8 correct, translation used) = 8 × 10 + 20 = 100 points.
 
 ### Level-up Behaviour
-- Level-up is detected at the end of a round on the result screen
-- If the learner crosses a level threshold during a round, the progress bar on the result screen animates past the threshold and triggers a level-up celebration (badge + sound)
-- Levels are per language and stored independently in localStorage
+- Numeric player-level up is detected at the end of a round and animated in the in-game top badge.
+- If the learner crosses a numeric player-level threshold during a winning round, the XP bar animates and a level-up celebration appears near the badge.
+- Mastery bands do not level up in the same way during the round; they are used as progress labels on Home and My Words.
 
 ---
 
@@ -303,9 +315,9 @@ When drawing 10 cards for a round, the selection order is:
 
 | ID | Criterion |
 |---|---|
-| AC1 | Learner can complete a full 10-card round from cold start with no errors or crashes |
+| AC1 | Learner can complete a full round from cold start with no errors or crashes |
 | AC2 | A round with ≥7 correct answers displays "passed"; <7 displays "failed" |
-| AC3 | Post-round screen lists every word with its correct gender, translation, pattern note, and mastery circle |
+| AC3 | Post-round summary lists every word with its correct gender, translation, and mastery circle |
 | AC4 | Closing and reopening the browser preserves SRS state, level score, and streak |
 | AC5 | A word answered incorrectly appears in the next round sooner than a word answered correctly |
 | AC6 | Arrow keys (← feminine, → masculine) produce the same result as swiping |
@@ -313,7 +325,7 @@ When drawing 10 cards for a round, the selection order is:
 | AC8 | All 4 languages are available with ≥1000 words each at launch |
 | AC9 | Incorrect answer triggers screen shake, heart loss, and haptic feedback on mobile |
 | AC10 | Correct answers progressively reveal the mountain background; incorrect answers restore a row |
-| AC11 | After 3 incorrect answers the round ends immediately |
+| AC11 | After 5 incorrect answers the round ends immediately |
 | AC12 | Sound effects play on correct answer, incorrect answer, and level-up; mute toggle works |
 | AC13 | Daily streak increments after completing at least one round per day and persists across sessions |
-| AC14 | Level progress bar on result screen animates to show points earned in the round |
+| AC14 | Numeric player-level XP progress animates during the victory state and score summary reflects round bonuses correctly |

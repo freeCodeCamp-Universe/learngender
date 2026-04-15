@@ -1,6 +1,6 @@
 // XP needed to go from level n to n+1
 export function xpForLevel(n: number): number {
-  return Math.floor(100 * Math.pow(n, 1.8))
+  return Math.floor(95 * Math.pow(n, 1.70))
 }
 
 // Current level given total accumulated XP

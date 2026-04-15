@@ -120,6 +120,16 @@
 
 ---
 
+## Victory Screen Animation (in progress)
+
+- [x] 1. Remover `badge-score` (8/8) e texto de contagem de palavras
+- [x] 2. Adicionar pill `+N xp` com animação pop (scale 0→1, cor dourada)
+- [x] 3. Barra XP anima de `pctBefore` → `pctAfter` com delay após drawer subir
+- [x] 4. Level up condicional: troca de nome com fade + badge "Level up!"
+- [x] 5. CSS: keyframes para pop e level up badge
+
+---
+
 ## Stretch
 
 - [ ] CODE: Onboarding screen (first-launch only, animated demo)

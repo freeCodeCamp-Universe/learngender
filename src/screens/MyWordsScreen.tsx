@@ -48,7 +48,6 @@ export function MyWordsScreen({ onHome }: MyWordsScreenProps) {
   useEffect(() => {
     let cancelled = false
 
-    setEntries([])
     getWords(selectedLang).then((allWords) => {
       if (cancelled) return
       const seen = getSeenWords(selectedLang)
@@ -103,7 +102,11 @@ export function MyWordsScreen({ onHome }: MyWordsScreenProps) {
             role="tab"
             aria-selected={selectedLang === lang}
             className={`lang-tab ${selectedLang === lang ? 'lang-tab--active' : ''}`}
-            onClick={() => setSelectedLang(lang)}
+            onClick={() => {
+              if (selectedLang === lang) return
+              setEntries([])
+              setSelectedLang(lang)
+            }}
           >
             {LANGUAGE_LABELS[lang].flag} {lang.toUpperCase()}
           </button>
