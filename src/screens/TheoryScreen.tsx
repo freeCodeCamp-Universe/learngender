@@ -8,22 +8,7 @@ import type { TheorySlide } from '../data/theory'
 
 const LANGUAGES: Language[] = ['pt', 'es', 'fr', 'it']
 
-// Minimal markdown-lite renderer: **bold**, > blockquote, \n\n paragraph breaks
-function renderBody(text: string) {
-  const paragraphs = text.split('\n\n')
-  return paragraphs.map((para, i) => {
-    if (para.startsWith('> ')) {
-      const inner = para.replace(/^> /gm, '')
-      return (
-        <blockquote key={i} className="theory-slide__blockquote">
-          {renderInline(inner)}
-        </blockquote>
-      )
-    }
-    return <p key={i} className="theory-slide__para">{renderInline(para)}</p>
-  })
-}
-
+// Render **bold** inline
 function renderInline(text: string): React.ReactNode[] {
   const parts = text.split(/(\*\*[^*]+\*\*)/g)
   return parts.map((part, i) => {
@@ -34,9 +19,79 @@ function renderInline(text: string): React.ReactNode[] {
   })
 }
 
-function SlideView({ slide }: { slide: TheorySlide }) {
+// Parse a "> ✓ **o** livro (the book) — masculine" line into parts
+function parseExampleLine(line: string) {
+  // Remove leading "> " and "✓ "
+  const stripped = line.replace(/^> ?✓ ?/, '').trim()
+  // Split on " — " to extract gender label
+  const dashIdx = stripped.lastIndexOf(' — ')
+  if (dashIdx !== -1) {
+    const example = stripped.slice(0, dashIdx)
+    const label = stripped.slice(dashIdx + 3)
+    return { example, label }
+  }
+  return { example: stripped, label: '' }
+}
+
+function renderBody(text: string) {
+  const paragraphs = text.split('\n\n')
+  return paragraphs.map((para, i) => {
+    // Blockquote block — lines starting with "> "
+    if (para.startsWith('> ')) {
+      const lines = para.split('\n')
+      // Check if lines are example items (contain ✓)
+      const isExamples = lines.every(l => l.includes('✓'))
+      if (isExamples) {
+        return (
+          <div key={i} className="theory-slide__examples">
+            {lines.map((line, li) => {
+              const { example, label } = parseExampleLine(line)
+              return (
+                <div key={li} className="theory-slide__example-row">
+                  <span className="theory-slide__check">✓</span>
+                  <span className="theory-slide__example-text">{renderInline(example)}</span>
+                  {label && <span className="theory-slide__example-label">{label}</span>}
+                </div>
+              )
+            })}
+          </div>
+        )
+      }
+      // Generic blockquote (list of words, no ✓)
+      const inner = para.replace(/^> /gm, '')
+      return (
+        <blockquote key={i} className="theory-slide__blockquote">
+          {renderInline(inner)}
+        </blockquote>
+      )
+    }
+
+    // Rule callout — paragraphs starting with **Rule
+    if (para.startsWith('**Rule')) {
+      return (
+        <div key={i} className="theory-slide__rule-callout">
+          <p className="theory-slide__para">{renderInline(para)}</p>
+        </div>
+      )
+    }
+
+    // Memory trick callout
+    if (para.startsWith('**Memory') || para.startsWith('**How to') || para.startsWith('**Rule of thumb')) {
+      return (
+        <div key={i} className="theory-slide__tip-callout">
+          <p className="theory-slide__para">{renderInline(para)}</p>
+        </div>
+      )
+    }
+
+    return <p key={i} className="theory-slide__para">{renderInline(para)}</p>
+  })
+}
+
+function SlideView({ slide, index, total }: { slide: TheorySlide; index: number; total: number }) {
   return (
     <div className={`theory-slide theory-slide--${slide.type}`}>
+      <p className="theory-slide__counter">Slide {index + 1} of {total}</p>
       <h2 className="theory-slide__title">{slide.title}</h2>
 
       {slide.body && (
@@ -66,13 +121,9 @@ function SlideView({ slide }: { slide: TheorySlide }) {
             </tbody>
           </table>
           {slide.table.note && (
-            <p className="theory-slide__table-note">{renderInline(slide.table.note)}</p>
+            <div className="theory-slide__table-note">{renderInline(slide.table.note)}</div>
           )}
         </div>
-      )}
-
-      {slide.note && (
-        <p className="theory-slide__note">{renderInline(slide.note)}</p>
       )}
     </div>
   )
@@ -90,7 +141,6 @@ export function TheoryScreen({ onHome, onMyWords }: TheoryScreenProps) {
   const total = slides.length
   const refIndex = useRef(index)
 
-  // Reset to slide 0 when language changes
   useEffect(() => {
     setIndex(0)
     refIndex.current = 0
@@ -104,12 +154,7 @@ export function TheoryScreen({ onHome, onMyWords }: TheoryScreenProps) {
 
   const goNext = useCallback(() => goTo(refIndex.current + 1), [goTo])
   const goPrev = useCallback(() => goTo(refIndex.current - 1), [goTo])
-  const goRef  = useCallback(() => {
-    const refSlide = slides.findIndex(s => s.isReference)
-    if (refSlide !== -1) goTo(refSlide)
-  }, [slides, goTo])
 
-  // Keyboard navigation
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
       if (e.key === 'ArrowRight') goNext()
@@ -119,7 +164,7 @@ export function TheoryScreen({ onHome, onMyWords }: TheoryScreenProps) {
     return () => window.removeEventListener('keydown', onKey)
   }, [goNext, goPrev])
 
-  // Swipe / drag navigation
+  // Swipe
   const dragStart = useRef<number | null>(null)
   const SWIPE_THRESHOLD = 50
 
@@ -136,19 +181,9 @@ export function TheoryScreen({ onHome, onMyWords }: TheoryScreenProps) {
     else goPrev()
   }
 
-  // Tap left/right edges
-  function onSlideClick(e: React.MouseEvent<HTMLDivElement>) {
-    if (dragStart.current !== null) return // was a drag, not a tap
-    const rect = e.currentTarget.getBoundingClientRect()
-    const x = e.clientX - rect.left
-    const third = rect.width / 3
-    if (x < third) goPrev()
-    else if (x > rect.width - third) goNext()
-  }
-
   const slide = slides[index]
-  const hasRef = slides.some(s => s.isReference)
-  const isAtRef = slide.isReference
+  const atFirst = index === 0
+  const atLast  = index === total - 1
 
   return (
     <div className="theory-screen">
@@ -170,29 +205,41 @@ export function TheoryScreen({ onHome, onMyWords }: TheoryScreenProps) {
         className="theory-screen__slide-area"
         onPointerDown={onPointerDown}
         onPointerUp={onPointerUp}
-        onClick={onSlideClick}
       >
-        <SlideView key={`${lang}-${index}`} slide={slide} />
+        <SlideView key={`${lang}-${index}`} slide={slide} index={index} total={total} />
       </div>
 
-      {/* Progress dots */}
-      <div className="theory-screen__dots" aria-label={`Slide ${index + 1} of ${total}`}>
-        {slides.map((_, i) => (
-          <button
-            key={i}
-            className={`theory-screen__dot${i === index ? ' theory-screen__dot--active' : ''}${slides[i].isReference ? ' theory-screen__dot--ref' : ''}`}
-            onClick={() => goTo(i)}
-            aria-label={`Go to slide ${i + 1}`}
-          />
-        ))}
-      </div>
-
-      {/* Reference shortcut */}
-      {hasRef && !isAtRef && (
-        <button className="theory-screen__ref-btn" onClick={goRef}>
-          Reference →
+      {/* Nav row: ← dots → */}
+      <div className="theory-screen__nav">
+        <button
+          className="theory-screen__nav-arrow theory-screen__nav-arrow--prev"
+          onClick={goPrev}
+          disabled={atFirst}
+          aria-label="Previous slide"
+        >
+          ←
         </button>
-      )}
+
+        <div className="theory-screen__dots">
+          {slides.map((s, i) => (
+            <button
+              key={i}
+              className={`theory-screen__dot${i === index ? ' theory-screen__dot--active' : ''}${s.isReference ? ' theory-screen__dot--ref' : ''}`}
+              onClick={() => goTo(i)}
+              aria-label={`Go to slide ${i + 1}`}
+            />
+          ))}
+        </div>
+
+        <button
+          className="theory-screen__nav-arrow theory-screen__nav-arrow--next"
+          onClick={goNext}
+          disabled={atLast}
+          aria-label="Next slide"
+        >
+          →
+        </button>
+      </div>
 
       {/* Bottom nav */}
       <div className="theory-screen__bottom-nav">

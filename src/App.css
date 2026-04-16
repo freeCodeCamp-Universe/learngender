@@ -1565,8 +1565,8 @@ html, body, #root {
 .theory-screen__slide-area {
   flex: 1;
   overflow-y: auto;
-  padding: 1.5rem 1.25rem 0.5rem;
-  padding-bottom: calc(0.5rem + 80px); /* room for dots + ref btn + nav */
+  padding: 1.25rem 1.25rem 0;
+  padding-bottom: calc(0.5rem + 130px);
   cursor: grab;
   user-select: none;
   -webkit-user-select: none;
@@ -1580,36 +1580,98 @@ html, body, #root {
   margin: 0 auto;
 }
 
+.theory-slide__counter {
+  margin: 0 0 0.35rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-cta);
+}
+
 .theory-slide__title {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 700;
   color: var(--text);
-  margin: 0 0 1rem;
-  line-height: 1.3;
+  margin: 0 0 1.1rem;
+  line-height: 1.25;
 }
 
 .theory-slide__body {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.9rem;
 }
 
 .theory-slide__para {
   margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: var(--text-secondary, var(--text));
+  font-size: 0.93rem;
+  line-height: 1.65;
+  color: var(--text);
 }
 
+/* Example rows: ✓ o livro (the book)   masculine */
+.theory-slide__examples {
+  background: var(--bg-card);
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.theory-slide__example-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.theory-slide__check {
+  color: #acd157;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.theory-slide__example-text {
+  flex: 1;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.theory-slide__example-label {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+/* Generic blockquote (word lists) */
 .theory-slide__blockquote {
   margin: 0;
   padding: 0.75rem 1rem;
-  border-left: 3px solid var(--accent-cta);
+  border-left: 3px solid var(--border);
   background: var(--bg-card);
-  border-radius: 0 6px 6px 0;
-  font-size: 0.9rem;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.88rem;
   line-height: 1.7;
   color: var(--text);
+}
+
+/* Rule callout — amber accent */
+.theory-slide__rule-callout {
+  background: rgba(241, 190, 50, 0.08);
+  border-left: 3px solid var(--accent-cta);
+  border-radius: 0 8px 8px 0;
+  padding: 0.7rem 1rem;
+}
+
+/* Tip / memory trick callout */
+.theory-slide__tip-callout {
+  background: rgba(172, 209, 87, 0.08);
+  border-left: 3px solid #acd157;
+  border-radius: 0 8px 8px 0;
+  padding: 0.7rem 1rem;
 }
 
 /* Table */
@@ -1635,52 +1697,54 @@ html, body, #root {
   text-align: left;
   font-weight: 700;
   color: var(--text-muted);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   border-bottom: 1px solid var(--border);
+  white-space: nowrap;
 }
 
 .theory-slide__table td {
   padding: 0.5rem 0.75rem;
   border-bottom: 1px solid var(--border);
   color: var(--text);
-  line-height: 1.4;
+  line-height: 1.45;
+  vertical-align: top;
 }
 
 .theory-slide__table tbody tr:last-child td { border-bottom: none; }
-
-.theory-slide__table tbody tr:nth-child(even) {
-  background: rgba(255,255,255,0.03);
-}
+.theory-slide__table tbody tr:nth-child(even) { background: rgba(255,255,255,0.025); }
 
 .theory-slide__table-note {
-  margin: 0;
   padding: 0.6rem 0.75rem;
   font-size: 0.8rem;
   color: var(--text-muted);
   border-top: 1px solid var(--border);
   background: var(--bg-card);
+  line-height: 1.5;
 }
 
-.theory-slide__note {
-  margin: 0.75rem 0 0;
-  font-size: 0.82rem;
-  color: var(--text-muted);
+/* Nav row: ← [dots] → */
+.theory-screen__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.25rem 0.5rem;
+  flex-shrink: 0;
+  gap: 0.75rem;
 }
 
-/* Progress dots */
 .theory-screen__dots {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 6px;
-  padding: 0.75rem 0 0.25rem;
-  flex-shrink: 0;
+  flex: 1;
 }
 
 .theory-screen__dot {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   border: none;
   background: var(--border);
@@ -1691,35 +1755,49 @@ html, body, #root {
 
 .theory-screen__dot--active {
   background: var(--accent-cta);
-  transform: scale(1.25);
+  transform: scale(1.3);
 }
 
 .theory-screen__dot--ref {
-  border-radius: 2px; /* square dot for cheat sheet */
+  border-radius: 2px;
 }
 
-/* Reference shortcut button */
-.theory-screen__ref-btn {
-  display: block;
-  margin: 0.25rem auto 0.5rem;
+/* Arrow buttons */
+.theory-screen__nav-arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border);
   background: none;
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 0.3rem 1rem;
-  font-size: 0.78rem;
-  font-weight: 600;
   color: var(--text-muted);
+  font-size: 1.1rem;
   cursor: pointer;
-  font-family: inherit;
-  transition: color 0.15s, border-color 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: opacity 0.2s;
 }
 
-.theory-screen__ref-btn:hover {
-  color: var(--text);
+.theory-screen__nav-arrow:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
+.theory-screen__nav-arrow--next {
+  background: var(--accent-cta);
   border-color: var(--accent-cta);
+  color: #0a0a23;
+  font-weight: 700;
 }
 
-/* Bottom nav (reuses home-screen__bottom-nav structure) */
+.theory-screen__nav-arrow--next:disabled {
+  background: var(--border);
+  border-color: var(--border);
+  color: var(--text-muted);
+}
+
+/* Bottom nav */
 .theory-screen__bottom-nav {
   position: fixed;
   bottom: 0;
