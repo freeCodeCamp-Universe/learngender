@@ -1,7 +1,7 @@
 import type { Language } from '../types'
 import type { TheorySlide } from './theory'
 import { PT_MODULE_1, PT_MODULE_2, PT_MODULE_3, PT_MODULE_4, PT_MODULE_5 } from './theory-pt'
-import { ES_MODULE_1 } from './theory-es'
+import { ES_MODULE_1, ES_MODULE_2, ES_MODULE_3, ES_MODULE_4, ES_MODULE_5, ES_MODULE_6, ES_MODULE_7, ES_MODULE_8 } from './theory-es'
 import { FR_MODULE_1 } from './theory-fr'
 import { IT_MODULE_1 } from './theory-it'
 
@@ -55,22 +55,44 @@ const ES_MODULES: TheoryModule[] = [
   {
     id: 'indefinite-article-singular',
     title: 'Indefinite Article Singular: un / una',
-    slideCount: 4,
+    slideCount: ES_MODULE_2.length,
+    slides: ES_MODULE_2,
   },
   {
     id: 'plural-articles',
     title: 'Plural Articles: los / las / unos / unas',
-    slideCount: 5,
+    slideCount: ES_MODULE_3.length,
+    slides: ES_MODULE_3,
   },
   {
-    id: 'contractions',
-    title: 'Contractions: del, al',
-    slideCount: 3,
+    id: 'pluralising-nouns',
+    title: 'Pluralising Nouns',
+    slideCount: ES_MODULE_4.length,
+    slides: ES_MODULE_4,
   },
   {
     id: 'adjective-agreement',
-    title: 'Adjective Agreement',
-    slideCount: 6,
+    title: 'Gender and Adjectives',
+    slideCount: ES_MODULE_5.length,
+    slides: ES_MODULE_5,
+  },
+  {
+    id: 'contractions',
+    title: 'Contractions: al / del',
+    slideCount: ES_MODULE_6.length,
+    slides: ES_MODULE_6,
+  },
+  {
+    id: 'neuter-article-lo',
+    title: 'The Neuter Article: lo',
+    slideCount: ES_MODULE_7.length,
+    slides: ES_MODULE_7,
+  },
+  {
+    id: 'el-before-feminine',
+    title: 'El Before Feminine Nouns',
+    slideCount: ES_MODULE_8.length,
+    slides: ES_MODULE_8,
   },
 ]
 
