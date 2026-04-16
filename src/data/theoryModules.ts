@@ -1,7 +1,9 @@
 import type { Language } from '../types'
 import type { TheorySlide } from './theory'
-import { THEORY_SLIDES } from './theory'
-import { PT_MODULE_2, PT_MODULE_3, PT_MODULE_4, PT_MODULE_5 } from './theory-pt'
+import { PT_MODULE_1, PT_MODULE_2, PT_MODULE_3, PT_MODULE_4, PT_MODULE_5 } from './theory-pt'
+import { ES_MODULE_1 } from './theory-es'
+import { FR_MODULE_1 } from './theory-fr'
+import { IT_MODULE_1 } from './theory-it'
 
 export interface TheoryModule {
   id: string
@@ -14,8 +16,8 @@ const PT_MODULES: TheoryModule[] = [
   {
     id: 'noun-gender-basics',
     title: 'Noun Gender Basics',
-    slideCount: THEORY_SLIDES.pt.length,
-    slides: THEORY_SLIDES.pt,
+    slideCount: PT_MODULE_1.length,
+    slides: PT_MODULE_1,
   },
   {
     id: 'indefinite-article-singular',
@@ -47,8 +49,8 @@ const ES_MODULES: TheoryModule[] = [
   {
     id: 'noun-gender-basics',
     title: 'Noun Gender Basics',
-    slideCount: THEORY_SLIDES.es.length,
-    slides: THEORY_SLIDES.es,
+    slideCount: ES_MODULE_1.length,
+    slides: ES_MODULE_1,
   },
   {
     id: 'indefinite-article-singular',
@@ -76,8 +78,8 @@ const FR_MODULES: TheoryModule[] = [
   {
     id: 'noun-gender-basics',
     title: 'Noun Gender Basics',
-    slideCount: THEORY_SLIDES.fr.length,
-    slides: THEORY_SLIDES.fr,
+    slideCount: FR_MODULE_1.length,
+    slides: FR_MODULE_1,
   },
   {
     id: 'indefinite-article-singular',
@@ -105,8 +107,8 @@ const IT_MODULES: TheoryModule[] = [
   {
     id: 'noun-gender-basics',
     title: 'Noun Gender Basics',
-    slideCount: THEORY_SLIDES.it.length,
-    slides: THEORY_SLIDES.it,
+    slideCount: IT_MODULE_1.length,
+    slides: IT_MODULE_1,
   },
   {
     id: 'definite-article-singular',

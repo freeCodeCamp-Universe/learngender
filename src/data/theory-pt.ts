@@ -1,5 +1,79 @@
 import type { TheorySlide } from './theory'
 
+export const PT_MODULE_1: TheorySlide[] = [
+  {
+    type: 'intro',
+    title: 'The article is everything',
+    body: `In Portuguese, every noun is either **masculine** (o / um) or **feminine** (a / uma). The article is your anchor — always learn a word with its article.\n\n> ✓ **o** livro (the book) — masculine\n> ✓ **a** casa (the house) — feminine\n\n**Rule #1:** When you learn a new noun, learn the article too. Not "livro" — **o livro**.`,
+  },
+  {
+    type: 'table',
+    title: 'Endings that almost always work',
+    body: 'These endings are **highly reliable**. When you see them, trust them.',
+    table: {
+      headers: ['Ending', 'Gender', 'Examples'],
+      rows: [
+        { cells: ['-ção / -são', 'feminine', 'a nação, a televisão'] },
+        { cells: ['-dade / -tude', 'feminine', 'a cidade, a atitude'] },
+        { cells: ['-eza', 'feminine', 'a beleza, a riqueza'] },
+        { cells: ['-ismo', 'masculine', 'o turismo, o realismo'] },
+        { cells: ['-amento / -imento', 'masculine', 'o departamento, o conhecimento'] },
+      ],
+      note: '**Confidence: very high.** Exceptions exist but are rare.',
+    },
+  },
+  {
+    type: 'table',
+    title: 'Endings that usually work',
+    body: 'These work **most of the time** — but watch for the exceptions on the next slide.',
+    table: {
+      headers: ['Ending', 'Gender', 'Examples'],
+      rows: [
+        { cells: ['-o', 'masculine', 'o livro, o carro'] },
+        { cells: ['-a', 'feminine', 'a mesa, a porta'] },
+        { cells: ['-or', 'masculine', 'o professor, o valor'] },
+        { cells: ['-gem', 'feminine', 'a viagem, a imagem'] },
+      ],
+      note: '**Confidence: medium.** Learn the common exceptions by heart.',
+    },
+  },
+  {
+    type: 'exceptions',
+    title: 'Exceptions everyone gets wrong',
+    body: 'These are the most frequent nouns that **break the rules**. Memorise them.',
+    exceptions: [
+      { article: 'o', word: 'dia', meaning: 'the day', tag: 'ends in -a!', gender: 'masculine' },
+      { article: 'o', word: 'problema', meaning: 'the problem', tag: 'ends in -a!', gender: 'masculine' },
+      { article: 'o', word: 'mapa', meaning: 'the map', tag: 'ends in -a!', gender: 'masculine' },
+      { article: 'o', word: 'tema', meaning: 'the theme', tag: 'ends in -a!', gender: 'masculine' },
+      { article: 'o', word: 'sistema', meaning: 'the system', tag: 'ends in -a!', gender: 'masculine' },
+      { article: 'a', word: 'mão', meaning: 'the hand', tag: 'ends in -ão!', gender: 'feminine' },
+      { article: 'a', word: 'foto', meaning: 'the photo', tag: 'ends in -o!', gender: 'feminine' },
+    ],
+  },
+  {
+    type: 'pattern',
+    title: 'The Greek -ma pattern',
+    body: `Words ending in **-ma** that came from Greek are **masculine** — even though -a usually signals feminine.\n\n> → **o** problema, **o** tema, **o** sistema\n> → **o** clima, **o** programa, **o** idioma\n> → **o** drama, **o** poema, **o** diploma\n\n**How to spot them:** These tend to be abstract or intellectual concepts. If a word ending in -ma feels "academic", it's probably masculine.`,
+  },
+  {
+    type: 'cheatsheet',
+    title: 'Cheat sheet',
+    isReference: true,
+    table: {
+      headers: ['Category', 'Feminine', 'Masculine'],
+      rows: [
+        { cells: ['Article', 'a / uma', 'o / um'] },
+        { cells: ['Strong → fem', '-ção, -dade, -eza, -gem', '—'] },
+        { cells: ['Strong → masc', '—', '-ismo, -mento'] },
+        { cells: ['Typical', '-a (mostly)', '-o (mostly)'] },
+        { cells: ['Greek -ma', '—', 'o problema, o tema…'] },
+        { cells: ['Watch out', 'o dia, o mapa!', 'a mão, a foto!'] },
+      ],
+    },
+  },
+]
+
 export const PT_MODULE_2: TheorySlide[] = [
   {
     type: 'intro',
