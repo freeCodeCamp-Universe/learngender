@@ -21,7 +21,7 @@
 
 - [x] CODE: Initialise project
   - [x] React + TypeScript project with Vite, ESLint, Prettier
-  - [x] Dependencies: `ts-fsrs`, `@anthropic-ai/sdk` (devDep), React, Vite
+  - [x] Dependencies: `ts-fsrs`, React, Vite
   - [x] Build passes: 60kb gzipped ✓
 
 - [x] CODE: Static word list loader (`src/lib/wordLoader.ts`)

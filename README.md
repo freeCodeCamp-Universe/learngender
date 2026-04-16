@@ -104,10 +104,10 @@ Rebuild the Italian list and reapply `patternNote`:
 pnpm data:refresh:it
 ```
 
-Generate pattern notes for existing wordlists:
+Apply rule-based pattern notes to existing wordlists:
 
 ```bash
-pnpm data:explain
+pnpm data:notes
 ```
 
 ## pt-BR Wordlist

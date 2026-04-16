@@ -249,4 +249,4 @@ for (const [lang, config] of Object.entries(LANGUAGES)) {
     console.error(err.stack)
   }
 }
-console.log('\nDone. Run scripts/generate-explanations.mjs next.')
+console.log('\nDone. Run pnpm data:notes next.')
