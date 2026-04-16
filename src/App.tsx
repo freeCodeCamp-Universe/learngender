@@ -3,11 +3,12 @@ import type { Language, RoundSummary } from './types'
 import { HomeScreen } from './screens/HomeScreen'
 import { GameScreen } from './screens/GameScreen'
 import { MyWordsScreen } from './screens/MyWordsScreen'
+import { TheoryScreen } from './screens/TheoryScreen'
 import { updateStreak } from './lib/storage'
 import { playCorrect, playIncorrect, playLevelUp } from './lib/sounds'
 import './App.css'
 
-type Screen = 'home' | 'game' | 'words'
+type Screen = 'home' | 'game' | 'words' | 'theory'
 
 interface AppState {
   screen: Screen
@@ -47,10 +48,14 @@ export default function App() {
     setState((s) => ({ ...s, screen: 'words' }))
   }
 
+  function goTheory() {
+    setState((s) => ({ ...s, screen: 'theory' }))
+  }
+
   return (
     <div className="app">
       {state.screen === 'home' && (
-        <HomeScreen onStartRound={startRound} onMyWords={goMyWords} />
+        <HomeScreen onStartRound={startRound} onMyWords={goMyWords} onTheory={goTheory} />
       )}
 
       {state.screen === 'game' && state.language && (
@@ -64,7 +69,11 @@ export default function App() {
       )}
 
       {state.screen === 'words' && (
-        <MyWordsScreen onHome={goHome} />
+        <MyWordsScreen onHome={goHome} onTheory={goTheory} />
+      )}
+
+      {state.screen === 'theory' && (
+        <TheoryScreen onHome={goHome} onMyWords={goMyWords} />
       )}
     </div>
   )

@@ -30,9 +30,10 @@ const LEVEL_COLOR: Record<string, string> = {
 interface HomeScreenProps {
   onStartRound: (language: Language) => void
   onMyWords: () => void
+  onTheory: () => void
 }
 
-export function HomeScreen({ onStartRound, onMyWords }: HomeScreenProps) {
+export function HomeScreen({ onStartRound, onMyWords, onTheory }: HomeScreenProps) {
   const [settingsOpen, setSettingsOpen] = useState(false)
   const streak = getStreak()
   const totalXP = LANGUAGES.reduce((sum, lang) => sum + getScore(lang).score, 0)
@@ -139,6 +140,12 @@ export function HomeScreen({ onStartRound, onMyWords }: HomeScreenProps) {
         <button className="bottom-nav__btn bottom-nav__btn--active" aria-label="Home">
           <img src={homeIcon} alt="" width="22" height="22" className="bottom-nav__icon bottom-nav__icon--home" />
           <span>Home</span>
+        </button>
+        <button className="bottom-nav__btn" onClick={onTheory} aria-label="Theory">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
+          </svg>
+          <span>Theory</span>
         </button>
         <button className="bottom-nav__btn" onClick={onMyWords} aria-label="My Words">
           <img src={starIcon} alt="" width="22" height="22" className="bottom-nav__icon" />
