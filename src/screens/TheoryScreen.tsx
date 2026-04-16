@@ -1,6 +1,4 @@
 import { useEffect, useRef, useState, useCallback } from 'react'
-import homeIcon from '../components/icons/home.svg'
-import starIcon from '../components/icons/star.svg'
 import type { Language } from '../types'
 import { LANGUAGE_LABELS } from '../types'
 import { THEORY_SLIDES } from '../data/theory'
@@ -19,72 +17,50 @@ function renderInline(text: string): React.ReactNode[] {
   })
 }
 
-// Parse a "> ✓ **o** livro (the book) — masculine" line into parts
+// Parse "→ **o** livro, **o** tema" or "✓ **o** livro (the book) — masculine"
 function parseExampleLine(line: string) {
-  // Remove leading "> " and "✓ "
-  const stripped = line.replace(/^> ?✓ ?/, '').trim()
-  // Split on " — " to extract gender label
+  const stripped = line.replace(/^> ?[✓→] ?/, '').trim()
   const dashIdx = stripped.lastIndexOf(' — ')
   if (dashIdx !== -1) {
-    const example = stripped.slice(0, dashIdx)
-    const label = stripped.slice(dashIdx + 3)
-    return { example, label }
+    return { example: stripped.slice(0, dashIdx), label: stripped.slice(dashIdx + 3), isCheck: line.includes('✓') }
   }
-  return { example: stripped, label: '' }
+  return { example: stripped, label: '', isCheck: line.includes('✓') }
 }
 
 function renderBody(text: string) {
   const paragraphs = text.split('\n\n')
   return paragraphs.map((para, i) => {
-    // Blockquote block — lines starting with "> "
     if (para.startsWith('> ')) {
       const lines = para.split('\n')
-      // Check if lines are example items (contain ✓)
-      const isExamples = lines.every(l => l.includes('✓'))
-      if (isExamples) {
-        return (
-          <div key={i} className="theory-slide__examples">
-            {lines.map((line, li) => {
-              const { example, label } = parseExampleLine(line)
-              return (
-                <div key={li} className="theory-slide__example-row">
-                  <span className="theory-slide__check">✓</span>
-                  <span className="theory-slide__example-text">{renderInline(example)}</span>
+      return (
+        <div key={i} className="theory-slide__example-card">
+          {lines.map((line, li) => {
+            const { example, label, isCheck } = parseExampleLine(line)
+            return (
+              <div key={li} className="theory-slide__example-row">
+                <div className={`theory-slide__example-icon ${isCheck ? 'theory-slide__example-icon--check' : 'theory-slide__example-icon--arrow'}`}>
+                  {isCheck ? '✓' : '→'}
+                </div>
+                <div className="theory-slide__example-text">
+                  {renderInline(example)}
                   {label && <span className="theory-slide__example-label">{label}</span>}
                 </div>
-              )
-            })}
-          </div>
-        )
-      }
-      // Generic blockquote (list of words, no ✓)
-      const inner = para.replace(/^> /gm, '')
-      return (
-        <blockquote key={i} className="theory-slide__blockquote">
-          {renderInline(inner)}
-        </blockquote>
-      )
-    }
-
-    // Rule callout — paragraphs starting with **Rule
-    if (para.startsWith('**Rule')) {
-      return (
-        <div key={i} className="theory-slide__rule-callout">
-          <p className="theory-slide__para">{renderInline(para)}</p>
+              </div>
+            )
+          })}
         </div>
       )
     }
 
-    // Memory trick callout
-    if (para.startsWith('**Memory') || para.startsWith('**How to') || para.startsWith('**Rule of thumb')) {
+    if (para.startsWith('**Rule') || para.startsWith('**Confidence') || para.startsWith('**Important') || para.startsWith('**How to') || para.startsWith('**Memory') || para.startsWith('**Rule of thumb')) {
       return (
-        <div key={i} className="theory-slide__tip-callout">
-          <p className="theory-slide__para">{renderInline(para)}</p>
+        <div key={i} className="theory-slide__rule-box">
+          <p className="theory-slide__rule-text">{renderInline(para)}</p>
         </div>
       )
     }
 
-    return <p key={i} className="theory-slide__para">{renderInline(para)}</p>
+    return <p key={i} className="theory-slide__body-text">{renderInline(para)}</p>
   })
 }
 
@@ -100,13 +76,32 @@ function SlideView({ slide, index, total }: { slide: TheorySlide; index: number;
         </div>
       )}
 
+      {/* Exception cards */}
+      {slide.exceptions && (
+        <div className="theory-slide__exceptions">
+          {slide.exceptions.map((ex, i) => (
+            <div key={i} className={`theory-exception theory-exception--${ex.gender}`}>
+              <div className="theory-exception__left">
+                <div className="theory-exception__word">
+                  <span className={`theory-exception__article theory-exception__article--${ex.gender}`}>{ex.article}</span>
+                  {' '}{ex.word}
+                </div>
+                <div className="theory-exception__meaning">{ex.meaning}</div>
+              </div>
+              <div className={`theory-exception__tag theory-exception__tag--${ex.gender}`}>{ex.tag}</div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* Table */}
       {slide.table && (
         <div className="theory-slide__table-wrap">
           <table className="theory-slide__table">
             <thead>
               <tr>
                 {slide.table.headers.map((h, i) => (
-                  <th key={i}>{renderInline(h)}</th>
+                  <th key={i}>{h}</th>
                 ))}
               </tr>
             </thead>
@@ -114,7 +109,9 @@ function SlideView({ slide, index, total }: { slide: TheorySlide; index: number;
               {slide.table.rows.map((row, ri) => (
                 <tr key={ri}>
                   {row.cells.map((cell, ci) => (
-                    <td key={ci}>{renderInline(cell)}</td>
+                    <td key={ci} className={ci === 0 ? 'theory-slide__table-td--key' : ci === slide.table!.headers.length - 1 ? 'theory-slide__table-td--examples' : ''}>
+                      {renderInline(cell)}
+                    </td>
                   ))}
                 </tr>
               ))}
@@ -164,24 +161,18 @@ export function TheoryScreen({ onHome, onMyWords }: TheoryScreenProps) {
     return () => window.removeEventListener('keydown', onKey)
   }, [goNext, goPrev])
 
-  // Swipe
   const dragStart = useRef<number | null>(null)
   const SWIPE_THRESHOLD = 50
 
-  function onPointerDown(e: React.PointerEvent) {
-    dragStart.current = e.clientX
-  }
-
+  function onPointerDown(e: React.PointerEvent) { dragStart.current = e.clientX }
   function onPointerUp(e: React.PointerEvent) {
     if (dragStart.current === null) return
     const delta = e.clientX - dragStart.current
     dragStart.current = null
     if (Math.abs(delta) < SWIPE_THRESHOLD) return
-    if (delta < 0) goNext()
-    else goPrev()
+    if (delta < 0) goNext(); else goPrev()
   }
 
-  const slide = slides[index]
   const atFirst = index === 0
   const atLast  = index === total - 1
 
@@ -195,66 +186,55 @@ export function TheoryScreen({ onHome, onMyWords }: TheoryScreenProps) {
             className={`theory-screen__lang-tab${lang === l ? ' theory-screen__lang-tab--active' : ''}`}
             onClick={() => setLang(l)}
           >
-            {LANGUAGE_LABELS[l].flag} {LANGUAGE_LABELS[l].name}
+            <span>{LANGUAGE_LABELS[l].flag}</span>
+            <span>{LANGUAGE_LABELS[l].name}</span>
           </button>
         ))}
       </div>
 
-      {/* Slide area */}
-      <div
-        className="theory-screen__slide-area"
-        onPointerDown={onPointerDown}
-        onPointerUp={onPointerUp}
-      >
-        <SlideView key={`${lang}-${index}`} slide={slide} index={index} total={total} />
+      {/* Slide */}
+      <div className="theory-screen__slide-area" onPointerDown={onPointerDown} onPointerUp={onPointerUp}>
+        <SlideView key={`${lang}-${index}`} slide={slides[index]} index={index} total={total} />
       </div>
 
-      {/* Nav row: ← dots → */}
-      <div className="theory-screen__nav">
-        <button
-          className="theory-screen__nav-arrow theory-screen__nav-arrow--prev"
-          onClick={goPrev}
-          disabled={atFirst}
-          aria-label="Previous slide"
-        >
-          ←
-        </button>
-
+      {/* Footer: ← dots → */}
+      <div className="theory-screen__footer">
+        <button className="theory-screen__arrow theory-screen__arrow--prev" onClick={goPrev} disabled={atFirst} aria-label="Previous">←</button>
         <div className="theory-screen__dots">
-          {slides.map((s, i) => (
+          {slides.map((_, i) => (
             <button
               key={i}
-              className={`theory-screen__dot${i === index ? ' theory-screen__dot--active' : ''}${s.isReference ? ' theory-screen__dot--ref' : ''}`}
+              className={`theory-screen__dot${i === index ? ' theory-screen__dot--active' : ''}`}
               onClick={() => goTo(i)}
-              aria-label={`Go to slide ${i + 1}`}
+              aria-label={`Slide ${i + 1}`}
             />
           ))}
         </div>
-
-        <button
-          className="theory-screen__nav-arrow theory-screen__nav-arrow--next"
-          onClick={goNext}
-          disabled={atLast}
-          aria-label="Next slide"
-        >
-          →
+        <button className="theory-screen__arrow theory-screen__arrow--next" onClick={goNext} disabled={atLast} aria-label="Next">
+          {atLast ? '✓' : '→'}
         </button>
       </div>
 
       {/* Bottom nav */}
       <div className="theory-screen__bottom-nav">
         <button className="bottom-nav__btn" onClick={onHome} aria-label="Home">
-          <img src={homeIcon} alt="" width="22" height="22" className="bottom-nav__icon bottom-nav__icon--home" />
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
           <span>Home</span>
         </button>
         <button className="bottom-nav__btn bottom-nav__btn--active" aria-label="Theory">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
           </svg>
           <span>Theory</span>
         </button>
         <button className="bottom-nav__btn" onClick={onMyWords} aria-label="My Words">
-          <img src={starIcon} alt="" width="22" height="22" className="bottom-nav__icon" />
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
           <span>Words</span>
         </button>
       </div>
