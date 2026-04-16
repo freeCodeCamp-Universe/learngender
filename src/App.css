@@ -271,6 +271,7 @@ html, body, #root {
   margin-bottom: 10px;
 }
 .skill-card__flag { font-size: 1.3rem; line-height: 1; flex-shrink: 0; }
+.skill-card__level-ring { flex-shrink: 0; display: block; }
 .skill-card__name {
   flex: 1;
   font-size: 1.05rem;

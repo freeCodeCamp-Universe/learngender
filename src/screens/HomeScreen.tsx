@@ -3,7 +3,7 @@ import settingsIcon from '../components/icons/settings.svg'
 import type { Language } from '../types'
 import { LANGUAGE_LABELS } from '../types'
 import { getScore, getSeenCount, getStreak } from '../lib/storage'
-import { getLevelProgressFromMastered } from '../lib/levels'
+import { getLevelProgressFromMastered, getXPProgress } from '../lib/levels'
 import { SettingsPanel } from './SettingsPanel'
 
 const LANGUAGES: Language[] = ['pt', 'es', 'fr', 'it']
@@ -67,6 +67,7 @@ export function HomeScreen({ onStartRound, onMyWords, onTheory }: HomeScreenProp
           const masteredCount = scoreData.masteredCount ?? 0
           const isNew = seenCount === 0
           const progress = getLevelProgressFromMastered(masteredCount)
+          const xpProgress = getXPProgress(scoreData.score)
           const levelName = isNew ? 'New' : progress.name
           const color = LANG_COLOR[lang]
           const levelColor = LEVEL_COLOR[levelName] ?? '#aaaaaa'
@@ -74,8 +75,23 @@ export function HomeScreen({ onStartRound, onMyWords, onTheory }: HomeScreenProp
 
           return (
             <div key={lang} className="skill-card">
-              {/* Card header: flag + name | level badge */}
+              {/* Card header: flag + level ring + name | level badge */}
               <div className="skill-card__header">
+                {!isNew && (() => {
+                  const size = 28, r = (size - 4) / 2, cx = size / 2, cy = size / 2
+                  const circ = 2 * Math.PI * r
+                  const xpColor = '#e8a020'
+                  const filled = (xpProgress.pct / 100) * circ
+                  return (
+                    <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} className="skill-card__level-ring" aria-label={`Level ${xpProgress.level}`}>
+                      <circle cx={cx} cy={cy} r={r} fill="none" stroke={`${xpColor}33`} strokeWidth="2.5" />
+                      <circle cx={cx} cy={cy} r={r} fill="none" stroke={xpColor} strokeWidth="2.5"
+                        strokeDasharray={`${filled} ${circ}`} strokeLinecap="round"
+                        transform={`rotate(-90 ${cx} ${cy})`} />
+                      <text x={cx} y={cy + 4} textAnchor="middle" fontSize="9" fill="#fff" fontWeight="700">{xpProgress.level}</text>
+                    </svg>
+                  )
+                })()}
                 <span className="skill-card__flag">{labels.flag}</span>
                 <span className="skill-card__name">{labels.name}</span>
                 <span
