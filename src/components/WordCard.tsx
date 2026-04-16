@@ -149,7 +149,8 @@ export function WordCard({ word, onSwipe, showTranslation }: WordCardProps) {
   let opacity = 1
 
   if (!ready) {
-    inlineTransform = 'translateX(0) translateY(0) rotate(0deg)'
+    inlineTransform = 'translateX(0) translateY(-28px) rotate(0deg)'
+    opacity = 0
     transition = 'none'
   } else if (usingCssAnim) {
     inlineTransform = '' // CSS animation takes over
