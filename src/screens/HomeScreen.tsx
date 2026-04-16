@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import homeIcon from '../components/icons/home.svg'
-import starIcon from '../components/icons/star.svg'
 import settingsIcon from '../components/icons/settings.svg'
 import type { Language } from '../types'
 import { LANGUAGE_LABELS } from '../types'
@@ -137,18 +135,22 @@ export function HomeScreen({ onStartRound, onMyWords, onTheory }: HomeScreenProp
 
       {/* Bottom nav */}
       <div className="home-screen__bottom-nav">
-        <button className="bottom-nav__btn bottom-nav__btn--active" aria-label="Home">
-          <img src={homeIcon} alt="" width="22" height="22" className="bottom-nav__icon bottom-nav__icon--home" />
+        <button className="bottom-nav__btn bottom-nav__btn--active bottom-nav__btn--home" aria-label="Home">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+          </svg>
           <span>Home</span>
         </button>
-        <button className="bottom-nav__btn" onClick={onTheory} aria-label="Theory">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
+        <button className="bottom-nav__btn bottom-nav__btn--theory" onClick={onTheory} aria-label="Theory">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
           </svg>
           <span>Theory</span>
         </button>
-        <button className="bottom-nav__btn" onClick={onMyWords} aria-label="My Words">
-          <img src={starIcon} alt="" width="22" height="22" className="bottom-nav__icon" />
+        <button className="bottom-nav__btn bottom-nav__btn--words" onClick={onMyWords} aria-label="My Words">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
           <span>Words</span>
         </button>
       </div>

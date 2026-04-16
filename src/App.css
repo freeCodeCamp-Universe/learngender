@@ -365,6 +365,9 @@ html, body, #root {
   font-family: inherit;
 }
 .bottom-nav__btn--active { color: var(--text); }
+.bottom-nav__btn--active.bottom-nav__btn--home   svg { color: #99c9ff; }
+.bottom-nav__btn--active.bottom-nav__btn--theory svg { color: #dbb8ff; }
+.bottom-nav__btn--active.bottom-nav__btn--words  svg { color: var(--accent-cta); }
 .bottom-nav__icon { display: block; }
 
 /* ================================================================

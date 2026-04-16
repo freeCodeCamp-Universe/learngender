@@ -264,22 +264,20 @@ function ModuleList({ lang, onSelect, onHome, onMyWords, onLangChange, refreshKe
       </div>
 
       <div className="theory-screen__bottom-nav">
-        <button className="bottom-nav__btn" onClick={onHome} aria-label="Home">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
-            <polyline points="9 22 9 12 15 12 15 22"/>
+        <button className="bottom-nav__btn bottom-nav__btn--home" onClick={onHome} aria-label="Home">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
           </svg>
           <span>Home</span>
         </button>
-        <button className="bottom-nav__btn bottom-nav__btn--active" aria-label="Theory">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+        <button className="bottom-nav__btn bottom-nav__btn--active bottom-nav__btn--theory" aria-label="Theory">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
           </svg>
           <span>Theory</span>
         </button>
-        <button className="bottom-nav__btn" onClick={onMyWords} aria-label="My Words">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <button className="bottom-nav__btn bottom-nav__btn--words" onClick={onMyWords} aria-label="My Words">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
           </svg>
           <span>Words</span>
