@@ -2,7 +2,7 @@ import type { Language } from '../types'
 import type { TheorySlide } from './theory'
 import { PT_MODULE_1, PT_MODULE_2, PT_MODULE_3, PT_MODULE_4, PT_MODULE_5 } from './theory-pt'
 import { ES_MODULE_1, ES_MODULE_2, ES_MODULE_3, ES_MODULE_4, ES_MODULE_5, ES_MODULE_6, ES_MODULE_7, ES_MODULE_8 } from './theory-es'
-import { FR_MODULE_1 } from './theory-fr'
+import { FR_MODULE_1, FR_MODULE_2, FR_MODULE_3, FR_MODULE_4, FR_MODULE_5, FR_MODULE_6, FR_MODULE_7, FR_MODULE_8, FR_MODULE_9, FR_MODULE_10 } from './theory-fr'
 import { IT_MODULE_1 } from './theory-it'
 
 export interface TheoryModule {
@@ -106,22 +106,56 @@ const FR_MODULES: TheoryModule[] = [
   {
     id: 'indefinite-article-singular',
     title: 'Indefinite Article Singular: un / une',
-    slideCount: 4,
+    slideCount: FR_MODULE_2.length,
+    slides: FR_MODULE_2,
   },
   {
     id: 'plural-articles',
     title: 'Plural Articles: les / des',
-    slideCount: 4,
+    slideCount: FR_MODULE_3.length,
+    slides: FR_MODULE_3,
   },
   {
-    id: 'partitive-articles',
-    title: 'Partitive Articles: du / de la / de l\'',
-    slideCount: 5,
+    id: 'pluralising-nouns',
+    title: 'Pluralising Nouns',
+    slideCount: FR_MODULE_4.length,
+    slides: FR_MODULE_4,
   },
   {
     id: 'adjective-agreement',
-    title: 'Adjective Agreement',
-    slideCount: 6,
+    title: 'Gender and Adjectives',
+    slideCount: FR_MODULE_5.length,
+    slides: FR_MODULE_5,
+  },
+  {
+    id: 'apostrophe',
+    title: "L'Apostrophe: le/la → l'",
+    slideCount: FR_MODULE_6.length,
+    slides: FR_MODULE_6,
+  },
+  {
+    id: 'contractions',
+    title: 'Contractions: du / au / des / aux',
+    slideCount: FR_MODULE_7.length,
+    slides: FR_MODULE_7,
+  },
+  {
+    id: 'h-muet-aspire',
+    title: 'H Muet vs H Aspiré',
+    slideCount: FR_MODULE_8.length,
+    slides: FR_MODULE_8,
+  },
+  {
+    id: 'gender-without-logic',
+    title: 'Gender Without Logic',
+    slideCount: FR_MODULE_9.length,
+    slides: FR_MODULE_9,
+  },
+  {
+    id: 'partitive-articles',
+    title: "Partitive Articles: du / de la / de l'",
+    slideCount: FR_MODULE_10.length,
+    slides: FR_MODULE_10,
   },
 ]
 
