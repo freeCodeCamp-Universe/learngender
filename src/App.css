@@ -1825,13 +1825,12 @@ html, body, #root {
 
 /* Arrow buttons */
 .theory-screen__arrow {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   border: 0.5px solid rgba(255,255,255,0.15);
   background: rgba(255,255,255,0.05);
-  color: rgba(255,255,255,0.5);
-  font-size: 1rem;
+  color: rgba(255,255,255,0.6);
   cursor: pointer;
   display: flex;
   align-items: center;
