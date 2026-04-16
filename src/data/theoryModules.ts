@@ -3,7 +3,7 @@ import type { TheorySlide } from './theory'
 import { PT_MODULE_1, PT_MODULE_2, PT_MODULE_3, PT_MODULE_4, PT_MODULE_5 } from './theory-pt'
 import { ES_MODULE_1, ES_MODULE_2, ES_MODULE_3, ES_MODULE_4, ES_MODULE_5, ES_MODULE_6, ES_MODULE_7, ES_MODULE_8 } from './theory-es'
 import { FR_MODULE_1, FR_MODULE_2, FR_MODULE_3, FR_MODULE_4, FR_MODULE_5, FR_MODULE_6, FR_MODULE_7, FR_MODULE_8, FR_MODULE_9, FR_MODULE_10 } from './theory-fr'
-import { IT_MODULE_1 } from './theory-it'
+import { IT_MODULE_1, IT_MODULE_2, IT_MODULE_3, IT_MODULE_4, IT_MODULE_5, IT_MODULE_6, IT_MODULE_7, IT_MODULE_8 } from './theory-it'
 
 export interface TheoryModule {
   id: string
@@ -167,24 +167,46 @@ const IT_MODULES: TheoryModule[] = [
     slides: IT_MODULE_1,
   },
   {
-    id: 'definite-article-singular',
-    title: 'Definite Article Singular: il / lo / la / l\'',
-    slideCount: 5,
+    id: 'indefinite-article-singular',
+    title: "Indefinite Article Singular: un / uno / una / un'",
+    slideCount: IT_MODULE_2.length,
+    slides: IT_MODULE_2,
   },
   {
     id: 'plural-articles',
     title: 'Plural Articles: i / gli / le',
-    slideCount: 5,
+    slideCount: IT_MODULE_3.length,
+    slides: IT_MODULE_3,
+  },
+  {
+    id: 'pluralising-nouns',
+    title: 'Pluralising Nouns',
+    slideCount: IT_MODULE_4.length,
+    slides: IT_MODULE_4,
+  },
+  {
+    id: 'adjective-agreement',
+    title: 'Gender and Adjectives',
+    slideCount: IT_MODULE_5.length,
+    slides: IT_MODULE_5,
+  },
+  {
+    id: 'definite-article-singular',
+    title: "The Full Article System: il / lo / l' / la",
+    slideCount: IT_MODULE_6.length,
+    slides: IT_MODULE_6,
   },
   {
     id: 'contractions',
     title: 'Contractions: del, della, nel, nella…',
-    slideCount: 5,
+    slideCount: IT_MODULE_7.length,
+    slides: IT_MODULE_7,
   },
   {
-    id: 'adjective-agreement',
-    title: 'Adjective Agreement',
-    slideCount: 6,
+    id: 'nouns-ending-in-e',
+    title: 'Nouns Ending in -e',
+    slideCount: IT_MODULE_8.length,
+    slides: IT_MODULE_8,
   },
 ]
 
