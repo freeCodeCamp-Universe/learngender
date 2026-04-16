@@ -76,21 +76,30 @@ function SlideView({ slide, index, total }: { slide: TheorySlide; index: number;
         </div>
       )}
 
-      {/* Exception cards */}
+      {/* Exception table */}
       {slide.exceptions && (
-        <div className="theory-slide__exceptions">
-          {slide.exceptions.map((ex, i) => (
-            <div key={i} className={`theory-exception theory-exception--${ex.gender}`}>
-              <div className="theory-exception__left">
-                <div className="theory-exception__word">
-                  <span className={`theory-exception__article theory-exception__article--${ex.gender}`}>{ex.article}</span>
-                  {' '}{ex.word}
-                </div>
-                <div className="theory-exception__meaning">{ex.meaning}</div>
-              </div>
-              <div className={`theory-exception__tag theory-exception__tag--${ex.gender}`}>{ex.tag}</div>
-            </div>
-          ))}
+        <div className="theory-slide__table-wrap">
+          <table className="theory-slide__table">
+            <thead>
+              <tr>
+                <th>Word</th>
+                <th>Meaning</th>
+                <th>Surprise</th>
+              </tr>
+            </thead>
+            <tbody>
+              {slide.exceptions.map((ex, i) => (
+                <tr key={i}>
+                  <td className="theory-slide__table-td--key">
+                    <span className={`theory-exception__article--${ex.gender}`}>{ex.article}</span>
+                    {' '}{ex.word}
+                  </td>
+                  <td>{ex.meaning}</td>
+                  <td className="theory-slide__table-td--examples">{ex.tag}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       )}
 
