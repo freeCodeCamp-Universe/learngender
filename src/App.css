@@ -1570,8 +1570,7 @@ html, body, #root {
 .theory-screen__slide-area {
   flex: 1;
   overflow-y: auto;
-  padding: 24px 24px 0;
-  padding-bottom: 140px;
+  padding: 24px 24px 160px;
   cursor: grab;
   user-select: none;
   -webkit-user-select: none;
@@ -1789,13 +1788,21 @@ html, body, #root {
 
 .theory-slide__table-note strong { color: rgba(255,255,255,0.7); font-weight: 500; }
 
-/* Footer: ← dots → */
+/* Footer: ← dots → — fixed above bottom nav */
 .theory-screen__footer {
+  position: fixed;
+  bottom: calc(56px + env(safe-area-inset-bottom, 0px));
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 480px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 24px 20px;
-  flex-shrink: 0;
+  padding: 14px 24px 14px;
+  background: var(--bg);
+  border-top: 0.5px solid rgba(255,255,255,0.06);
+  z-index: 10;
 }
 
 .theory-screen__dots {
