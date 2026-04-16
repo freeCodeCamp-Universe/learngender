@@ -117,14 +117,19 @@
     "clan",
     "club",
     "computer",
+    "city",
     "design",
     "forum",
     "hall",
     "line",
     "login",
+    "lord",
     "mafioso",
+    "password",
     "performance",
-    "record"
+    "record",
+    "spot",
+    "west"
   ],
   "translationOverrides": {
     "acqua": "water",

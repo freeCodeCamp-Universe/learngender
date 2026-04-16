@@ -52,7 +52,9 @@
     "house",
     "lord",
     "man",
-    "shock"
+    "shock",
+    "go",
+    "re"
   ],
   "translationOverrides": {
     "abuela": "grandmother",
