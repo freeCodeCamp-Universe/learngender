@@ -239,19 +239,15 @@ function ModuleList({ lang, onSelect, onHome, onMyWords, onLangChange, refreshKe
           return (
             <button
               key={mod.id}
-              className={`theory-module-card${!available ? ' theory-module-card--locked' : ''}${done ? ' theory-module-card--done' : ''}`}
-              onClick={() => available && onSelect(mod)}
-              disabled={!available}
+              className={`theory-module-card${done ? ' theory-module-card--done' : ''}`}
+              onClick={() => onSelect(mod)}
             >
               <div className="theory-module-card__main">
                 <span className="theory-module-card__title">{mod.title}</span>
-                <span className="theory-module-card__meta">{mod.slideCount} slides{done ? ' · completed ✓' : ''}</span>
+                <span className="theory-module-card__meta">{mod.slideCount} slides{done ? ' · completed ✓' : !available ? ' · coming soon' : ''}</span>
               </div>
               <div className="theory-module-card__chevron">
-                {available
-                  ? <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-                  : <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-                }
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
               </div>
             </button>
           )
@@ -302,6 +298,24 @@ export function TheoryScreen({ onHome, onMyWords }: TheoryScreenProps) {
   }
 
   if (activeModule) {
+    if (!activeModule.slides) {
+      return (
+        <div className="theory-viewer">
+          <div className="theory-viewer__header">
+            <span className="theory-viewer__module-title">{activeModule.title}</span>
+            <button className="theory-viewer__close" onClick={() => setActiveModule(null)} aria-label="Close">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+            </button>
+          </div>
+          <div className="theory-coming-soon">
+            <p className="theory-coming-soon__label">Coming soon</p>
+            <p className="theory-coming-soon__sub">This module is being prepared.</p>
+          </div>
+        </div>
+      )
+    }
     return (
       <SlideViewer
         lang={lang}
