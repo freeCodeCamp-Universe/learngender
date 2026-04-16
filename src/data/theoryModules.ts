@@ -1,6 +1,7 @@
 import type { Language } from '../types'
 import type { TheorySlide } from './theory'
 import { THEORY_SLIDES } from './theory'
+import { PT_MODULE_2, PT_MODULE_3, PT_MODULE_4, PT_MODULE_5 } from './theory-pt'
 
 export interface TheoryModule {
   id: string
@@ -19,22 +20,26 @@ const PT_MODULES: TheoryModule[] = [
   {
     id: 'indefinite-article-singular',
     title: 'Indefinite Article Singular: um / uma',
-    slideCount: 4,
+    slideCount: PT_MODULE_2.length,
+    slides: PT_MODULE_2,
   },
   {
     id: 'plural-articles',
     title: 'Plural Articles: os / as / uns / umas',
-    slideCount: 5,
+    slideCount: PT_MODULE_3.length,
+    slides: PT_MODULE_3,
   },
   {
-    id: 'contractions',
-    title: 'Contractions: do, da, no, na…',
-    slideCount: 5,
+    id: 'pluralising-nouns',
+    title: 'Pluralising Nouns',
+    slideCount: PT_MODULE_4.length,
+    slides: PT_MODULE_4,
   },
   {
     id: 'adjective-agreement',
-    title: 'Adjective Agreement',
-    slideCount: 6,
+    title: 'Gender and Adjectives',
+    slideCount: PT_MODULE_5.length,
+    slides: PT_MODULE_5,
   },
 ]
 
