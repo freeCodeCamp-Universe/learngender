@@ -855,12 +855,12 @@ html, body, #root {
 
 /* Dismiss — shrinks and fades from the wall position with red glow */
 @keyframes dismissRight {
-  0%   { transform: translateX(var(--bounce-px))          rotate(6deg)  scale(1);    opacity: 1; box-shadow: 0 0 0 3px rgba(255, 173, 173, 0.85); }
-  100% { transform: translateX(var(--bounce-px))          rotate(6deg)  scale(0.7);  opacity: 0; box-shadow: 0 0 0 3px rgba(255, 173, 173, 0.85); }
+  0%   { transform: translateX(var(--bounce-px))          rotate(6deg)  scale(1);    opacity: 1; box-shadow: 0 0 0 3px rgba(255, 173, 173, 0.85); background: rgba(255, 173, 173, 0.18); }
+  100% { transform: translateX(var(--bounce-px))          rotate(6deg)  scale(0.7);  opacity: 0; box-shadow: 0 0 0 3px rgba(255, 173, 173, 0.85); background: rgba(255, 173, 173, 0.18); }
 }
 @keyframes dismissLeft {
-  0%   { transform: translateX(calc(-1 * var(--bounce-px))) rotate(-6deg) scale(1);    opacity: 1; box-shadow: 0 0 0 3px rgba(255, 173, 173, 0.85); }
-  100% { transform: translateX(calc(-1 * var(--bounce-px))) rotate(-6deg) scale(0.7);  opacity: 0; box-shadow: 0 0 0 3px rgba(255, 173, 173, 0.85); }
+  0%   { transform: translateX(calc(-1 * var(--bounce-px))) rotate(-6deg) scale(1);    opacity: 1; box-shadow: 0 0 0 3px rgba(255, 173, 173, 0.85); background: rgba(255, 173, 173, 0.18); }
+  100% { transform: translateX(calc(-1 * var(--bounce-px))) rotate(-6deg) scale(0.7);  opacity: 0; box-shadow: 0 0 0 3px rgba(255, 173, 173, 0.85); background: rgba(255, 173, 173, 0.18); }
 }
 .word-card--dismiss-right {
   animation: dismissRight 0.28s ease-in forwards;
