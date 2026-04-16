@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, useCallback } from 'react'
 import type { Language } from '../types'
 import { LANGUAGE_LABELS } from '../types'
+
 import { THEORY_MODULES, getModuleDone, setModuleDone } from '../data/theoryModules'
 import type { TheoryModule } from '../data/theoryModules'
 import type { TheorySlide } from '../data/theory'
@@ -223,11 +224,15 @@ function ModuleList({ lang, onSelect, onHome, onMyWords, onLangChange, refreshKe
 
   return (
     <div className="theory-screen">
+      <div className="my-words-screen__header">
+        <h1>Theory</h1>
+      </div>
+
       <div className="theory-screen__lang-tabs">
         {LANGUAGES.map(l => (
           <button key={l} className={`theory-screen__lang-tab${lang === l ? ' theory-screen__lang-tab--active' : ''}`} onClick={() => onLangChange(l)}>
             <span>{LANGUAGE_LABELS[l].flag}</span>
-            <span>{LANGUAGE_LABELS[l].name}</span>
+            <span>{l.toUpperCase()}</span>
           </button>
         ))}
       </div>
@@ -239,15 +244,19 @@ function ModuleList({ lang, onSelect, onHome, onMyWords, onLangChange, refreshKe
           return (
             <button
               key={mod.id}
-              className={`theory-module-card${done ? ' theory-module-card--done' : ''}`}
+              className={`theory-module-card${done ? ' theory-module-card--done' : !available ? ' theory-module-card--locked' : ''}`}
               onClick={() => onSelect(mod)}
+              disabled={!available}
             >
+              <div className="theory-module-card__icon">{mod.emoji}</div>
               <div className="theory-module-card__main">
                 <span className="theory-module-card__title">{mod.title}</span>
-                <span className="theory-module-card__meta">{mod.slideCount} slides{done ? ' · completed ✓' : !available ? ' · coming soon' : ''}</span>
+                <span className="theory-module-card__meta">
+                  {done ? 'Completed · ' : ''}{mod.slideCount} slides{!available ? ' · coming soon' : ''}
+                </span>
               </div>
               <div className="theory-module-card__chevron">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
               </div>
             </button>
           )

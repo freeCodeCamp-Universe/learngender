@@ -1537,33 +1537,33 @@ html, body, #root {
 /* Language tabs */
 .theory-screen__lang-tabs {
   display: flex;
-  border-bottom: 1px solid rgba(255,255,255,0.07);
+  gap: 8px;
+  padding: 0.5rem 1rem 0.75rem;
   flex-shrink: 0;
-  padding: 14px 16px 0;
-  gap: 4px;
 }
 
 .theory-screen__lang-tab {
   flex: 1;
-  padding: 10px 4px;
-  background: none;
-  border: none;
-  border-bottom: 2px solid transparent;
-  cursor: pointer;
+  padding: 7px 4px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg-card);
+  color: var(--text-muted);
   font-size: 0.75rem;
-  font-weight: 500;
-  color: rgba(255,255,255,0.35);
   font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 5px;
-  transition: color 0.2s;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
 }
 
 .theory-screen__lang-tab--active {
-  color: #fff;
-  border-bottom-color: var(--accent-cta);
+  background: var(--bg-surface);
+  color: var(--text);
+  border-color: var(--accent-cta);
 }
 
 /* Slide area */
@@ -1889,12 +1889,12 @@ html, body, #root {
 .theory-module-card {
   width: 100%;
   background: rgba(255,255,255,0.04);
-  border: 0.5px solid rgba(255,255,255,0.1);
-  border-radius: 14px;
-  padding: 16px 18px;
+  border: 0.5px solid rgba(255,255,255,0.09);
+  border-radius: 16px;
+  padding: 14px 16px;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   cursor: pointer;
   text-align: left;
   font-family: inherit;
@@ -1903,35 +1903,52 @@ html, body, #root {
 
 .theory-module-card:hover:not(:disabled) {
   background: rgba(255,255,255,0.07);
-  border-color: rgba(255,255,255,0.18);
+  border-color: rgba(255,255,255,0.16);
 }
 
 .theory-module-card--done {
-  border-color: rgba(172,209,87,0.3);
+  border-color: rgba(172,209,87,0.25);
 }
 
 .theory-module-card--locked {
-  opacity: 0.45;
+  opacity: 0.4;
   cursor: default;
+}
+
+.theory-module-card__icon {
+  font-size: 1.5rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .theory-module-card__main {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 3px;
+  min-width: 0;
 }
 
 .theory-module-card__title {
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: 0.95rem;
+  font-weight: 600;
   color: #fff;
-  line-height: 1.35;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .theory-module-card__meta {
-  font-size: 0.72rem;
-  color: rgba(255,255,255,0.4);
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.38);
+  letter-spacing: 0.02em;
 }
 
 .theory-module-card--done .theory-module-card__meta {
@@ -1939,7 +1956,7 @@ html, body, #root {
 }
 
 .theory-module-card__chevron {
-  color: rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.25);
   flex-shrink: 0;
 }
 
@@ -1963,9 +1980,9 @@ html, body, #root {
 }
 
 .theory-viewer__module-title {
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: rgba(255,255,255,0.55);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
   flex: 1;
   white-space: nowrap;
   overflow: hidden;
