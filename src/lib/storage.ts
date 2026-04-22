@@ -37,21 +37,21 @@ function safeSet(key: string, value: unknown): void {
 }
 
 // SRS card state
-export function getSRSCard(language: Language, word: string): Card | null {
-  return safeGet<Card | null>(`lng_srs_${language}_${word}`, null)
+export function getSRSCard(language: Language, wordId: string): Card | null {
+  return safeGet<Card | null>(`lng_srs_${language}_${wordId}`, null)
 }
 
-export function setSRSCard(language: Language, word: string, card: Card): void {
-  safeSet(`lng_srs_${language}_${word}`, card)
+export function setSRSCard(language: Language, wordId: string, card: Card): void {
+  safeSet(`lng_srs_${language}_${wordId}`, card)
 }
 
 // Count words with mastery ≥ 80% (SRS) OR manually mastered
-export function getMasteredCount(language: Language, wordList: string[]): number {
+export function getMasteredCount(language: Language, wordIds: string[]): number {
   const manual = getManuallyMastered(language)
   let count = 0
-  for (const word of wordList) {
-    if (manual.has(word)) { count++; continue }
-    const card = getSRSCard(language, word)
+  for (const wordId of wordIds) {
+    if (manual.has(wordId)) { count++; continue }
+    const card = getSRSCard(language, wordId)
     if (getMastery(card) >= 80) count++
   }
   return count
@@ -112,9 +112,9 @@ export function getSeenWords(language: Language): Set<string> {
   return new Set(arr)
 }
 
-export function markWordSeen(language: Language, word: string): void {
+export function markWordSeen(language: Language, wordId: string): void {
   const seen = getSeenWords(language)
-  seen.add(word)
+  seen.add(wordId)
   safeSet(`lng_seen_${language}`, Array.from(seen))
 }
 
@@ -128,17 +128,17 @@ export function getManuallyMastered(language: Language): Set<string> {
   return new Set(arr)
 }
 
-export function toggleManuallyMastered(language: Language, word: string): boolean {
+export function toggleManuallyMastered(language: Language, wordId: string): boolean {
   const set = getManuallyMastered(language)
-  if (set.has(word)) {
-    set.delete(word)
+  if (set.has(wordId)) {
+    set.delete(wordId)
   } else {
-    set.add(word)
+    set.add(wordId)
   }
   safeSet(`lng_manual_mastered_${language}`, Array.from(set))
-  return set.has(word)
+  return set.has(wordId)
 }
 
-export function isManuallyMastered(language: Language, word: string): boolean {
-  return getManuallyMastered(language).has(word)
+export function isManuallyMastered(language: Language, wordId: string): boolean {
+  return getManuallyMastered(language).has(wordId)
 }

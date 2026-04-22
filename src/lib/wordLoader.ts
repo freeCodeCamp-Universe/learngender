@@ -28,8 +28,8 @@ export async function drawRound(language: Language): Promise<Word[]> {
   const newWords: Word[] = []
 
   for (const word of allWords) {
-    if (manuallyMastered.has(word.word)) continue
-    const card = getSRSCard(language, word.word)
+    if (manuallyMastered.has(word.id)) continue
+    const card = getSRSCard(language, word.id)
     if (card && card.reps > 0) {
       if (getMastery(card) >= 80) continue // SRS mastered — skip
       const due = new Date(card.due)
@@ -58,8 +58,8 @@ export async function drawRound(language: Language): Promise<Word[]> {
   if (combined.length < 10) {
     const masteredWords: { word: Word; dueDate: Date }[] = []
     for (const word of allWords) {
-      if (manuallyMastered.has(word.word)) continue
-      const card = getSRSCard(language, word.word)
+      if (manuallyMastered.has(word.id)) continue
+      const card = getSRSCard(language, word.id)
       if (card && getMastery(card) >= 80) {
         masteredWords.push({ word, dueDate: new Date(card.due) })
       }
