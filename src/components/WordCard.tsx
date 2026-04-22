@@ -40,7 +40,7 @@ export function WordCard({ word, onSwipe, showTranslation }: WordCardProps) {
       setTimeout(() => setAnim(a => a === 'enter' ? 'idle' : a), 220)
     })
     return () => cancelAnimationFrame(raf)
-  }, [word.word])
+  }, [word.id])
 
   function commit(dir: 'left' | 'right') {
     if (handled.current) return
@@ -202,6 +202,7 @@ export function WordCard({ word, onSwipe, showTranslation }: WordCardProps) {
       aria-label={`Word: ${word.word}`}
     >
       <p className="word-card__noun">{word.word}</p>
+      {word.hint && <p className="word-card__hint">{word.hint}</p>}
       {showTranslation && <p className="word-card__translation">{word.translation}</p>}
     </div>
   )

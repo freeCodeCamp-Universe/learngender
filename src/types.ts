@@ -3,9 +3,12 @@ export type Language = 'pt' | 'es' | 'fr' | 'it'
 export type Gender = 'masculine' | 'feminine'
 
 export interface Word {
+  id: string
   word: string
   translation: string
   gender: Gender
+  article: string    // definite article for this word (e.g. 'l\'', 'lo', 'il', 'la')
+  hint?: string      // disambiguation for dual-gender words (e.g. 'purpose')
   rank: number
   patternNote?: string
 }
@@ -39,12 +42,12 @@ export const LEVEL_THRESHOLDS: { mastered: number; name: LevelName }[] = [
 
 export const LANGUAGE_LABELS: Record<
   Language,
-  { name: string; flag: string; feminine: string; masculine: string }
+  { name: string; flag: string }
 > = {
-  pt: { name: 'Portuguese', flag: '🇧🇷', feminine: 'a', masculine: 'o' },
-  es: { name: 'Spanish', flag: '🇪🇸', feminine: 'la', masculine: 'el' },
-  fr: { name: 'French', flag: '🇫🇷', feminine: 'la', masculine: 'le' },
-  it: { name: 'Italian', flag: '🇮🇹', feminine: 'la', masculine: 'il' },
+  pt: { name: 'Portuguese', flag: '🇧🇷' },
+  es: { name: 'Spanish',    flag: '🇪🇸' },
+  fr: { name: 'French',     flag: '🇫🇷' },
+  it: { name: 'Italian',    flag: '🇮🇹' },
 }
 
 export interface CardResult {

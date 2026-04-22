@@ -773,10 +773,22 @@ html, body, #root {
 .gender-band--right { right: 0; background: rgba(153, 201, 255, 0.82); border-radius: 12px 0 0 12px; }
 
 .gender-band__article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
   font-size: 0.667rem;
   font-weight: 800;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  line-height: 1.2;
+}
+.gender-band__article-sub {
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  opacity: 0.8;
 }
 .gender-band--left  .gender-band__article { color: #7a0000; }
 .gender-band--right .gender-band__article { color: #002060; }
@@ -880,6 +892,12 @@ html, body, #root {
   line-height: 1.15;
   color: var(--gray-00);
   overflow-wrap: break-word;
+}
+.word-card__hint {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-top: 2px;
 }
 .word-card__translation {
   font-size: 0.944rem;

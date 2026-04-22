@@ -1,13 +1,11 @@
 import { useEffect, useRef, useState } from 'react'
-import type { Language, RoundSummary } from '../types'
-import { LANGUAGE_LABELS } from '../types'
+import type { RoundSummary } from '../types'
 import { MasteryCircle } from './MasteryCircle'
 import { getRoundPointCap, getRoundScoreBreakdown } from '../lib/scoring'
 import { SUMMIT_STEP } from '../hooks/useRound'
 
 interface SummitDrawerProps {
   summary: RoundSummary
-  language: Language
   mode?: 'win' | 'loss'
   onNext: () => void
   onExit: () => void
@@ -46,17 +44,15 @@ function AnimatedBar({ pctBefore, pctAfter }: { pctBefore: number; pctAfter: num
 
 export function SummitDrawer({
   summary,
-  language,
   mode = 'win',
   onNext,
   onExit,
 }: SummitDrawerProps) {
-  const labels = LANGUAGE_LABELS[language]
   const nextButtonRef = useRef<HTMLButtonElement>(null)
 
   // Deduplicated cards — first attempt per word (most honest result)
   const uniqueCards = summary.cards.reduce<typeof summary.cards>((acc, r) => {
-    if (!acc.find(x => x.word.word === r.word.word)) acc.push(r)
+    if (!acc.find(x => x.word.id === r.word.id)) acc.push(r)
     return acc
   }, [])
 
@@ -121,7 +117,7 @@ export function SummitDrawer({
       {/* Word list */}
       <div className="summit-drawer__words">
         {uniqueCards.map((r, i) => {
-          const article = r.word.gender === 'feminine' ? labels.feminine : labels.masculine
+          const article = r.word.article
           return (
             <div key={i} className={`summit-drawer__word-row ${r.correct ? 'summit-drawer__word-row--correct' : 'summit-drawer__word-row--wrong'}`}>
               <MasteryCircle pct={r.masteryAfter} size={34} />

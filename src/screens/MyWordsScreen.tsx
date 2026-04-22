@@ -37,13 +37,13 @@ export function MyWordsScreen({ onHome, onTheory }: MyWordsScreenProps) {
     const seen = getSeenWords(lang)
 
     const wordEntries: WordEntry[] = allWords
-      .filter((w) => seen.has(w.word))
+      .filter((w) => seen.has(w.id))
       .map((w) => {
-        const card = getSRSCard(lang, w.word)
+        const card = getSRSCard(lang, w.id)
         return {
           word: w,
           masteryPct: getMastery(card),
-          manuallyMastered: isManuallyMastered(lang, w.word),
+          manuallyMastered: isManuallyMastered(lang, w.id),
         }
       })
       .sort((a, b) => a.masteryPct - b.masteryPct)
@@ -58,13 +58,13 @@ export function MyWordsScreen({ onHome, onTheory }: MyWordsScreenProps) {
       if (cancelled) return
       const seen = getSeenWords(selectedLang)
       const wordEntries: WordEntry[] = allWords
-        .filter((w) => seen.has(w.word))
+        .filter((w) => seen.has(w.id))
         .map((w) => {
-          const card = getSRSCard(selectedLang, w.word)
+          const card = getSRSCard(selectedLang, w.id)
           return {
             word: w,
             masteryPct: getMastery(card),
-            manuallyMastered: isManuallyMastered(selectedLang, w.word),
+            manuallyMastered: isManuallyMastered(selectedLang, w.id),
           }
         })
         .sort((a, b) => a.masteryPct - b.masteryPct)
@@ -77,12 +77,12 @@ export function MyWordsScreen({ onHome, onTheory }: MyWordsScreenProps) {
     }
   }, [selectedLang])
 
-  async function handleToggleMastered(word: string) {
-    toggleManuallyMastered(selectedLang, word)
+  async function handleToggleMastered(wordId: string) {
+    toggleManuallyMastered(selectedLang, wordId)
     // Recalculate and persist masteredCount so home screen level bar updates
     const allWords = await getWords(selectedLang)
-    const wordList = allWords.map(w => w.word)
-    const newMasteredCount = getMasteredCount(selectedLang, wordList)
+    const wordIds = allWords.map(w => w.id)
+    const newMasteredCount = getMasteredCount(selectedLang, wordIds)
     const { level: newLevel } = getLevelProgressFromMastered(newMasteredCount)
     addScore(selectedLang, 0, newMasteredCount, newLevel)
     load(selectedLang)
@@ -172,7 +172,7 @@ export function MyWordsScreen({ onHome, onTheory }: MyWordsScreenProps) {
           : <ul className="my-words-list">
               {learningEntries.map(({ word, masteryPct }) => (
                 <WordRow
-                  key={word.word}
+                  key={word.id}
                   word={word}
                   masteryPct={masteryPct}
                   isMastered={false}
@@ -190,7 +190,7 @@ export function MyWordsScreen({ onHome, onTheory }: MyWordsScreenProps) {
           : <ul className="my-words-list">
               {masteredEntries.map(({ word, masteryPct, manuallyMastered }) => (
                 <WordRow
-                  key={word.word}
+                  key={word.id}
                   word={word}
                   masteryPct={masteryPct}
                   isMastered={true}
@@ -233,12 +233,11 @@ interface WordRowProps {
   isMastered: boolean
   isManual?: boolean
   language: Language
-  onToggle: (word: string) => void
+  onToggle: (wordId: string) => void
 }
 
-function WordRow({ word, masteryPct, isMastered, language, onToggle }: WordRowProps) {
-  const labels = LANGUAGE_LABELS[language]
-  const article = word.gender === 'feminine' ? labels.feminine : labels.masculine
+function WordRow({ word, masteryPct, isMastered, onToggle }: WordRowProps) {
+  const article = word.article
 
   return (
     <li className="my-words-item">
@@ -248,7 +247,7 @@ function WordRow({ word, masteryPct, isMastered, language, onToggle }: WordRowPr
       <span className="my-words-item__translation">{word.translation}</span>
       <button
         className="my-words-item__toggle"
-        onClick={() => onToggle(word.word)}
+        onClick={() => onToggle(word.id)}
       >
         {isMastered ? 'Move to learning' : 'Mark as mastered'}
       </button>

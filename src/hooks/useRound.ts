@@ -26,19 +26,19 @@ export interface RoundState {
 
 function getScoredResults(results: CardResult[]): CardResult[] {
   return results.reduce<CardResult[]>((acc, result) => {
-    if (!acc.find((entry) => entry.word.word === result.word.word)) acc.push(result)
+    if (!acc.find((entry) => entry.word.id === result.word.id)) acc.push(result)
     return acc
   }, [])
 }
 
 function pickFallbackWord(deck: Word[], allWords: Word[], currentWord: Word): Word {
-  const futureWords = new Set(deck.map((entry) => entry.word))
+  const futureWords = new Set(deck.map((entry) => entry.id))
   const unseenCandidate = allWords.find(
-    (entry) => entry.word !== currentWord.word && !futureWords.has(entry.word)
+    (entry) => entry.id !== currentWord.id && !futureWords.has(entry.id)
   )
   if (unseenCandidate) return unseenCandidate
 
-  const alternateCandidate = deck.find((entry) => entry.word !== currentWord.word)
+  const alternateCandidate = deck.find((entry) => entry.id !== currentWord.id)
   if (alternateCandidate) return alternateCandidate
 
   return currentWord
@@ -60,7 +60,7 @@ export function useRound(language: Language, initialDeck?: Word[]) {
   const resultsRef        = useRef<CardResult[]>([])
   const masteredBeforeRef = useRef(0)
   const levelBeforeRef    = useRef(1)
-  const wordListRef       = useRef<string[]>([])
+  const wordIdListRef     = useRef<string[]>([])
   const allWordsRef       = useRef<Word[]>([])
 
   useEffect(() => {
@@ -68,8 +68,8 @@ export function useRound(language: Language, initialDeck?: Word[]) {
       try {
         const allWords = await getWords(language)
         allWordsRef.current = allWords
-        wordListRef.current = allWords.map(w => w.word)
-        const masteredBefore = getMasteredCount(language, wordListRef.current)
+        wordIdListRef.current = allWords.map(w => w.id)
+        const masteredBefore = getMasteredCount(language, wordIdListRef.current)
         masteredBeforeRef.current = masteredBefore
         const xpBefore = getScore(language).score
         levelBeforeRef.current = getLevelFromXP(xpBefore)
@@ -107,7 +107,7 @@ export function useRound(language: Language, initialDeck?: Word[]) {
   const buildSummary = useCallback((options?: { pointsOverride?: number }): RoundSummary => {
     const scoredResults = getScoredResults(resultsRef.current)
     const breakdown = getRoundScoreBreakdown(scoredResults, { perfectTarget: SUMMIT_STEP })
-    const masteredAfter = getMasteredCount(language, wordListRef.current)
+    const masteredAfter = getMasteredCount(language, wordIdListRef.current)
     const pointsEarned = options?.pointsOverride ?? breakdown.points
     const xpAfter = getScore(language).score + pointsEarned
     return {
@@ -134,11 +134,11 @@ export function useRound(language: Language, initialDeck?: Word[]) {
         correct = currentWord.gender === gender
 
         // SRS update
-        const existingCard = getSRSCard(language, currentWord.word) ?? createCard()
+        const existingCard = getSRSCard(language, currentWord.id) ?? createCard()
         const masteryBefore = getMastery(existingCard)
         const updatedCard  = rateCard(existingCard, correct)
-        setSRSCard(language, currentWord.word, updatedCard)
-        markWordSeen(language, currentWord.word)
+        setSRSCard(language, currentWord.id, updatedCard)
+        markWordSeen(language, currentWord.id)
 
         const masteryAfter = getMastery(updatedCard)
         resultsRef.current.push({ word: currentWord, correct, translationUsed, masteryBefore, masteryAfter })

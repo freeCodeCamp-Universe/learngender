@@ -9,7 +9,7 @@ import { WordCard } from '../components/WordCard'
 import { Lives } from '../components/Lives'
 import { LevelBadge } from '../components/LevelBadge'
 import { SummitDrawer } from '../components/SummitDrawer'
-import { LANGUAGE_LABELS } from '../types'
+import { getArticlePair } from '../lib/articles'
 
 interface GameScreenProps {
   language: Language
@@ -20,7 +20,6 @@ interface GameScreenProps {
 
 export function GameScreen({ language, onRoundEnd, onPlayAgain, onHome }: GameScreenProps) {
   const { state, currentWord, answer } = useRound(language)
-  const labels = LANGUAGE_LABELS[language]
   const [showTranslation, setShowTranslation] = useState(() => getSettings().showTranslationByDefault)
   const handledSummaryRef = useRef<RoundSummary | null>(null)
 
@@ -78,25 +77,43 @@ export function GameScreen({ language, onRoundEnd, onPlayAgain, onHome }: GameSc
           {/* Card area */}
           <div className="game-screen__card-area">
             <div className="game-screen__card-row">
-              <div className="gender-band gender-band--left" aria-label="Feminine">
-                <span className="gender-band__article">fem</span>
-              </div>
+              {(() => {
+                const pair = currentWord ? getArticlePair(currentWord, language) : null
+                const renderLabel = (article: string, qualifier: 'fém' | 'masc' | null) => (
+                  <span className="gender-band__article">
+                    {article}
+                    {qualifier && <span className="gender-band__article-sub">{qualifier}</span>}
+                  </span>
+                )
+                return (
+                  <>
+                    <div className="gender-band gender-band--left" aria-label="Feminine">
+                      {renderLabel(pair?.fem ?? '←', pair?.ambiguous ? 'fém' : null)}
+                    </div>
 
-              {currentWord && (
-                <WordCard
-                  key={`${state.currentIndex}-${currentWord.word}`}
-                  word={currentWord}
-                  onSwipe={answer}
-                  showTranslation={showTranslation}
-                />
-              )}
+                    {currentWord && (
+                      <WordCard
+                        key={`${state.currentIndex}-${currentWord.id}`}
+                        word={currentWord}
+                        onSwipe={answer}
+                        showTranslation={showTranslation}
+                      />
+                    )}
 
-              <div className="gender-band gender-band--right" aria-label="Masculine">
-                <span className="gender-band__article">masc</span>
-              </div>
+                    <div className="gender-band gender-band--right" aria-label="Masculine">
+                      {renderLabel(pair?.masc ?? '→', pair?.ambiguous ? 'masc' : null)}
+                    </div>
+                  </>
+                )
+              })()}
             </div>
             <p className="swipe-hint" aria-hidden="true">
-              ← {labels.feminine} &nbsp;&nbsp; {labels.masculine} →
+              {currentWord ? (() => {
+                const { fem, masc, ambiguous } = getArticlePair(currentWord, language)
+                const fLabel = ambiguous ? `${fem} (fem)` : fem
+                const mLabel = ambiguous ? `${masc} (masc)` : masc
+                return `← ${fLabel}   ${mLabel} →`
+              })() : ''}
             </p>
             <button
               className={`game-screen__translate-btn${showTranslation ? ' game-screen__translate-btn--active' : ''}`}
@@ -113,7 +130,6 @@ export function GameScreen({ language, onRoundEnd, onPlayAgain, onHome }: GameSc
       {(isSummit || isDone) && state.summary && (
         <SummitDrawer
           summary={state.summary}
-          language={language}
           mode={isDone ? 'loss' : 'win'}
           onNext={onPlayAgain}
           onExit={onHome}

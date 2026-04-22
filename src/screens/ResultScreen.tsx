@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
 import type { RoundSummary } from '../types'
-import { LANGUAGE_LABELS } from '../types'
 import { MasteryCircle } from '../components/MasteryCircle'
 import { getLevelName, getLevelProgressFromMastered } from '../lib/levels'
 
@@ -19,11 +18,10 @@ function getBadge(score: number, passed: boolean): { label: string; emoji: strin
 
 export function ResultScreen({ summary, onPlayAgain, onHome }: ResultScreenProps) {
   const badge = getBadge(summary.score, summary.passed)
-  const labels = LANGUAGE_LABELS[summary.language]
   const levelUp = summary.levelAfter > summary.levelBefore
 
   const uniqueCards = summary.cards.reduce<typeof summary.cards>((acc, r) => {
-    if (!acc.find(x => x.word.word === r.word.word)) acc.push(r)
+    if (!acc.find(x => x.word.id === r.word.id)) acc.push(r)
     return acc
   }, [])
 
@@ -77,7 +75,7 @@ export function ResultScreen({ summary, onPlayAgain, onHome }: ResultScreenProps
       {/* Word list */}
       <div className="result-word-list">
         {uniqueCards.map((r, i) => {
-          const article = r.word.gender === 'feminine' ? labels.feminine : labels.masculine
+          const article = r.word.article
           const delta = r.masteryAfter - r.masteryBefore
           return (
             <div key={i} className={`result-word-row ${r.correct ? 'result-word-row--correct' : 'result-word-row--wrong'}`}>
