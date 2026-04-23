@@ -5,7 +5,7 @@ import { GameScreen } from './screens/GameScreen'
 import { MyWordsScreen } from './screens/MyWordsScreen'
 import { TheoryScreen } from './screens/TheoryScreen'
 import { updateStreak } from './lib/storage'
-import { playCorrect, playIncorrect, playLevelUp } from './lib/sounds'
+import { playLevelUp, playWin, primeAudio } from './lib/sounds'
 import './App.css'
 
 type Screen = 'home' | 'game' | 'words' | 'theory'
@@ -30,14 +30,16 @@ export default function App() {
   function onRoundEnd(summary: RoundSummary) {
     updateStreak()
 
-    // Play sound based on result
+    if (!summary.passed) return
+
     if (summary.levelAfter > summary.levelBefore) {
+      primeAudio()
       playLevelUp()
-    } else if (summary.passed) {
-      playCorrect()
-    } else {
-      playIncorrect()
+      return
     }
+
+    primeAudio()
+    playWin()
   }
 
   function goHome() {

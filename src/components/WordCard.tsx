@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import type { Gender, Word } from '../types'
+import { playCorrect, playIncorrect, primeAudio } from '../lib/sounds'
 
 interface WordCardProps {
   word: Word
@@ -59,13 +60,16 @@ export function WordCard({ word, onSwipe, showTranslation }: WordCardProps) {
     handled.current = true
     setDragX(0)
     setDragY(0)
+    primeAudio()
 
     const gender: Gender = dir === 'right' ? 'masculine' : 'feminine'
     const correct = onSwipe(gender, translationUsedRef.current)
 
     if (correct) {
+      playCorrect()
       setAnim(dir === 'right' ? 'fly-right' : 'fly-left')
     } else {
+      playIncorrect()
       // Measure distance from card edge to the app container edge (not window width,
       // which breaks on desktop where .app is narrower than the viewport).
       let edgePx = 100
@@ -98,6 +102,7 @@ export function WordCard({ word, onSwipe, showTranslation }: WordCardProps) {
 
   function onPointerDown(e: React.PointerEvent<HTMLDivElement>) {
     if (handled.current) return
+    primeAudio()
     e.currentTarget.setPointerCapture(e.pointerId)
     pointerStartX.current = e.clientX
     pointerStartY.current = e.clientY
