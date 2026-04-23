@@ -19,6 +19,7 @@ import http from 'http'
 import https from 'https'
 import path from 'path'
 import { fileURLToPath } from 'url'
+import { finalizeWords, getTargetBuffer } from './lib/finalize-words.mjs'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT_DIR = path.join(__dirname, '..')
@@ -39,6 +40,7 @@ const KAIKKI_URL = 'https://kaikki.org/dictionary/French/kaikki.org-dictionary-F
 const KAIKKI_CACHE = path.join(CACHE_DIR, 'fr_kaikki.jsonl.gz')
 
 const TARGET_COUNT = 2000
+const RAW_TARGET_COUNT = TARGET_COUNT + getTargetBuffer()
 const WORD_RE = /^[a-zàâäçéèêëîïôöùûüÿæœ'-]+$/i
 
 const BAD_GLOSS_PATTERNS = [
@@ -270,19 +272,22 @@ function buildLexiqueCandidates(index, overrides) {
 function createResolver(index, overrides) {
   const memo = new Map()
 
-  function resolveWord(word) {
-    if (memo.has(word)) return memo.get(word)
+  function resolveWord(word, desiredGender = null) {
+    const memoKey = `${word}::${desiredGender ?? 'any'}`
+    if (memo.has(memoKey)) return memo.get(memoKey)
 
     const translationOverride = overrides.translationOverrides[word]
     if (translationOverride) {
-      const wrappedEntry = (index.get(word) ?? []).find(({ entry }) => entrySupportsNonPluralSense(entry))
+      const wrappedEntry = (index.get(word) ?? []).find(({ entry, gender }) => (
+        entrySupportsNonPluralSense(entry) && (!desiredGender || gender === desiredGender)
+      ))
       if (wrappedEntry) {
         const resolved = {
           translation: translationOverride,
           score: 999,
           source: 'manual-override',
         }
-        memo.set(word, resolved)
+        memo.set(memoKey, resolved)
         return resolved
       }
     }
@@ -291,7 +296,8 @@ function createResolver(index, overrides) {
     const wrappedEntries = index.get(word) ?? []
 
     for (const wrapped of wrappedEntries) {
-      const { entry } = wrapped
+      const { entry, gender } = wrapped
+      if (desiredGender && gender !== desiredGender) continue
       if (!entrySupportsNonPluralSense(entry)) continue
 
       ;(entry.senses ?? []).forEach((sense, senseIndex) => {
@@ -354,7 +360,7 @@ function createResolver(index, overrides) {
       })
     }
 
-    memo.set(word, best)
+    memo.set(memoKey, best)
     return best
   }
 
@@ -392,7 +398,7 @@ for (const candidate of candidates) {
     continue
   }
 
-  const resolved = resolveWord(candidate.word) ?? resolveWord(candidate.originalWord)
+  const resolved = resolveWord(candidate.word, candidate.gender) ?? resolveWord(candidate.originalWord, candidate.gender)
   if (!resolved) {
     rejected.push({ word: candidate.word, reason: 'no-acceptable-kaikki-sense' })
     continue
@@ -406,25 +412,28 @@ for (const candidate of candidates) {
     rank: accepted.length + 1,
   })
 
-  if (accepted.length === TARGET_COUNT) break
+  if (accepted.length === RAW_TARGET_COUNT) break
 }
 
-if (accepted.length < TARGET_COUNT) {
-  throw new Error(`Only produced ${accepted.length} French words; expected ${TARGET_COUNT}`)
+if (accepted.length < RAW_TARGET_COUNT) {
+  throw new Error(`Only produced ${accepted.length} raw French words; expected at least ${RAW_TARGET_COUNT}`)
 }
 
-writeJson(FR_OUT_PATH, accepted)
+const finalized = finalizeWords('fr', accepted, { targetCount: TARGET_COUNT })
+
+writeJson(FR_OUT_PATH, finalized)
 writeJson(REPORT_PATH, {
   generatedAt: new Date().toISOString(),
   source: {
     lexique: LEXIQUE_URL,
     kaikki: KAIKKI_URL,
   },
-  acceptedCount: accepted.length,
+  rawAcceptedCount: accepted.length,
+  acceptedCount: finalized.length,
   scannedCandidates: candidates.length,
-  acceptedSample: accepted.slice(0, 200),
+  acceptedSample: finalized.slice(0, 200),
   rejectedSample: rejected.slice(0, 300),
 })
 
-console.log(`\nWrote ${accepted.length} French words to ${FR_OUT_PATH}`)
+console.log(`\nWrote ${finalized.length} French words to ${FR_OUT_PATH}`)
 console.log(`Report written to ${REPORT_PATH}`)

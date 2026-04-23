@@ -21,6 +21,7 @@ import http from 'http'
 import https from 'https'
 import path from 'path'
 import { fileURLToPath } from 'url'
+import { finalizeWords, getTargetBuffer } from './lib/finalize-words.mjs'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT_DIR = path.join(__dirname, '..')
@@ -41,6 +42,7 @@ const KAIKKI_URL = 'https://kaikki.org/dictionary/Spanish/kaikki.org-dictionary-
 const KAIKKI_CACHE = path.join(CACHE_DIR, 'es_kaikki.jsonl.gz')
 
 const TARGET_COUNT = 2000
+const RAW_TARGET_COUNT = TARGET_COUNT + getTargetBuffer()
 const WORD_RE = /^[a-záéíóúüñ]+(?:-[a-záéíóúüñ]+)*$/i
 
 const BAD_GLOSS_PATTERNS = [
@@ -399,25 +401,28 @@ for (const candidate of candidates) {
     rank: accepted.length + 1,
   })
 
-  if (accepted.length === TARGET_COUNT) break
+  if (accepted.length === RAW_TARGET_COUNT) break
 }
 
-if (accepted.length < TARGET_COUNT) {
-  throw new Error(`Only produced ${accepted.length} Spanish words; expected ${TARGET_COUNT}`)
+if (accepted.length < RAW_TARGET_COUNT) {
+  throw new Error(`Only produced ${accepted.length} raw Spanish words; expected at least ${RAW_TARGET_COUNT}`)
 }
 
-writeJson(ES_OUT_PATH, accepted)
+const finalized = finalizeWords('es', accepted, { targetCount: TARGET_COUNT })
+
+writeJson(ES_OUT_PATH, finalized)
 writeJson(REPORT_PATH, {
   generatedAt: new Date().toISOString(),
   source: {
     frequency: FREQUENCY_URL,
     kaikki: KAIKKI_URL,
   },
-  acceptedCount: accepted.length,
+  rawAcceptedCount: accepted.length,
+  acceptedCount: finalized.length,
   scannedCandidates: candidates.length,
-  acceptedSample: accepted.slice(0, 200),
+  acceptedSample: finalized.slice(0, 200),
   rejectedSample: rejected.slice(0, 300),
 })
 
-console.log(`\nWrote ${accepted.length} Spanish words to ${ES_OUT_PATH}`)
+console.log(`\nWrote ${finalized.length} Spanish words to ${ES_OUT_PATH}`)
 console.log(`Report written to ${REPORT_PATH}`)
