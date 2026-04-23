@@ -1,11 +1,12 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import type { CardResult, Gender, Language, RoundSummary, Word } from '../types'
 import { drawRound } from '../lib/wordLoader'
-import { createCard, getMastery, rateCard } from '../lib/srs'
-import { addScore, getMasteredCount, getScore, getSettings, getSRSCard, markWordSeen, setSRSCard } from '../lib/storage'
+import { createCard, isDue, rateCard } from '../lib/srs'
+import { addScore, getMasteredCount, getScore, getSettings, getSRSCard, getWordMastery, markWordSeen, setSRSCard, setWordMastery } from '../lib/storage'
 import { getRoundScoreBreakdown } from '../lib/scoring'
 import { getLevelFromXP } from '../lib/levels'
 import { getWords } from '../lib/wordLoader'
+import { getUpdatedMastery } from '../lib/mastery'
 
 export const TOTAL_LIVES = 5
 export const SUMMIT_STEP = 8   // hiker must reach this step to win
@@ -149,12 +150,18 @@ export function useRound(language: Language, initialDeck?: Word[]) {
 
         // SRS update
         const existingCard = getSRSCard(language, currentWord.id) ?? createCard()
-        const masteryBefore = getMastery(existingCard)
+        const masteryBefore = getWordMastery(language, currentWord.id, existingCard)
+        const wasDueReview = existingCard.reps > 0 && isDue(existingCard)
         const updatedCard  = rateCard(existingCard, isCorrect)
         setSRSCard(language, currentWord.id, updatedCard)
         markWordSeen(language, currentWord.id)
 
-        const masteryAfter = getMastery(updatedCard)
+        const masteryAfter = getUpdatedMastery(masteryBefore, {
+          correct: isCorrect,
+          translationUsed,
+          wasDueReview,
+        })
+        setWordMastery(language, currentWord.id, masteryAfter)
         resultsRef.current.push({ word: currentWord, correct: isCorrect, translationUsed, masteryBefore, masteryAfter })
 
         if (!isCorrect) {

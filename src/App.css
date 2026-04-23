@@ -38,9 +38,9 @@
 
   /* Accents (on dark) */
   --accent:          #dbb8ff;   /* purple — emphasis */
-  --accent-cta:      #f1be32;   /* yellow — CTA / calls-to-action */
+  --accent-cta:      #ffd75a;   /* yellow — CTA / calls-to-action */
   --blue:            #99c9ff;   /* blue   — links, interactive */
-  --correct:         #acd157;   /* green  — success */
+  --correct:         #c8f36b;   /* green  — success */
   --incorrect:       #ffadad;   /* red    — error */
 
   /* Game colours */
@@ -55,9 +55,9 @@
 
   /* Per-language accent colours */
   --lang-pt: #4fc3f7;   /* sky blue   */
-  --lang-es: #f1be32;   /* yellow     */
+  --lang-es: #ffd75a;   /* yellow     */
   --lang-fr: #ff8a65;   /* coral      */
-  --lang-it: #acd157;   /* lime green */
+  --lang-it: #c8f36b;   /* lime green */
 }
 
 html {
@@ -380,12 +380,12 @@ html, body, #root {
   border-radius: 10px;
   padding: 5px 16px;
   cursor: pointer;
-  background: #f1be32;
+  background: var(--accent-cta);
   color: var(--gray-90);
   font-family: inherit;
   transition: opacity 0.12s;
 }
-.skill-card__cta:hover { background: #e8b020; }
+.skill-card__cta:hover { background: #f5cf52; }
 .skill-card__cta:active { opacity: 0.7; }
 
 /* Bottom nav */
@@ -636,8 +636,8 @@ html, body, #root {
 }
 .game-screen__translate-btn--active {
   opacity: 1;
-  background: rgba(241, 190, 50, 0.22);
-  box-shadow: inset 0 0 0 1.5px rgba(241, 190, 50, 0.6);
+  background: rgba(255, 215, 90, 0.28);
+  box-shadow: inset 0 0 0 1.5px rgba(255, 215, 90, 0.72);
 }
 
 /* Level badge */
@@ -655,7 +655,7 @@ html, body, #root {
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: #e8a020;
+  background: var(--accent-cta);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -679,7 +679,7 @@ html, body, #root {
 
 .level-badge__bar-fill {
   height: 100%;
-  background: #e8a020;
+  background: var(--accent-cta);
   border-radius: 0 4px 4px 0;
   transition: width 0.4s ease-out;
 }
@@ -696,7 +696,7 @@ html, body, #root {
   padding: 3px 10px;
   border-radius: 999px;
   background: #fff3cd;
-  border: 1.5px solid #f1be32;
+  border: 1.5px solid var(--accent-cta);
   color: #c8860a;
   font-size: 0.72rem;
   font-weight: 800;
@@ -1089,8 +1089,8 @@ html, body, #root {
   font-size: 0.9rem;
   font-weight: 800;
   color: var(--correct);
-  background: rgba(172, 209, 87, 0.12);
-  border: 1.5px solid rgba(172, 209, 87, 0.35);
+  background: rgba(200, 243, 107, 0.18);
+  border: 1.5px solid rgba(200, 243, 107, 0.5);
   border-radius: 20px;
   padding: 2px 10px;
   letter-spacing: 0.02em;
@@ -1188,7 +1188,7 @@ html, body, #root {
 /* Mastery delta */
 .summit-drawer__delta {
   font-size: 0.7rem;
-  font-weight: 600;
+  font-weight: 700;
   width: 36px;
   text-align: right;
   flex-shrink: 0;
@@ -1217,9 +1217,9 @@ html, body, #root {
   color: var(--gray-90);
 }
 .summit-drawer__actions .btn--secondary {
-  background: rgba(241, 190, 50, 0.1);
+  background: rgba(255, 215, 90, 0.14);
   color: var(--accent-cta);
-  border: 1.5px solid rgba(241, 190, 50, 0.3);
+  border: 1.5px solid rgba(255, 215, 90, 0.42);
 }
 .summit-drawer__exit-btn {
   display: block;
@@ -1296,7 +1296,7 @@ html, body, #root {
   font-size: 0.778rem;
   font-weight: 700;
 }
-.result-score__status.passed  { background: rgba(172,209,87,0.2);  color: var(--correct); }
+.result-score__status.passed  { background: rgba(200,243,107,0.18);  color: var(--correct); }
 .result-score__status.failed  { background: rgba(255,173,173,0.2); color: var(--incorrect); }
 .result-score__points {
   color: var(--accent);
@@ -1347,11 +1347,11 @@ html, body, #root {
 
 .result-word-row__delta {
   font-size: 0.7rem;
-  font-weight: 600;
+  font-weight: 700;
   width: 36px;
   flex-shrink: 0;
 }
-.result-word-row__delta--up   { color: #7a9e72; }
+.result-word-row__delta--up   { color: var(--correct); }
 .result-word-row__delta--down { color: #c97b6a; }
 
 .result-word-row__article {

@@ -78,12 +78,14 @@ export function ResultScreen({ summary, onPlayAgain, onHome }: ResultScreenProps
         {uniqueCards.map((r, i) => {
           const article = r.word.article
           const delta = r.masteryAfter - r.masteryBefore
+          const displayDelta = delta === 0 && r.correct ? 1 : Math.abs(delta)
+          const isPositiveDelta = delta > 0 || (delta === 0 && r.correct)
           return (
             <div key={i} className={`result-word-row ${r.correct ? 'result-word-row--correct' : 'result-word-row--wrong'}`}>
               <MasteryCircle pct={r.masteryAfter} size={34} />
-              {delta !== 0 && (
-                <span className={`result-word-row__delta ${delta > 0 ? 'result-word-row__delta--up' : 'result-word-row__delta--down'}`}>
-                  {delta > 0 ? '↑' : '↓'}{Math.abs(delta)}%
+              {(delta !== 0 || r.correct) && (
+                <span className={`result-word-row__delta ${isPositiveDelta ? 'result-word-row__delta--up' : 'result-word-row__delta--down'}`}>
+                  {isPositiveDelta ? '↑' : '↓'}{displayDelta}%
                 </span>
               )}
               <span className="result-word-row__article">{article}</span>
