@@ -110,6 +110,11 @@ export function SummitDrawer({
             <span className="summit-drawer__score-chip">
               no translation {breakdown.noTranslationBonus ? `+${breakdown.noTranslationBonus}` : ' -'}
             </span>
+            {breakdown.errorPenalty > 0 && (
+              <span className="summit-drawer__score-chip">
+                errors -{breakdown.errorPenalty}
+              </span>
+            )}
           </div>
         </div>
       )}

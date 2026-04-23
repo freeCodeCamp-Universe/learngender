@@ -1,16 +1,17 @@
 /**
- * Points calculation per the PRD:
+ * Points calculation for summit rounds:
  *   Correct answer:                    +10
  *   Correct without translation:       +5 bonus
- *   Round pass (≥7/10):                +20 bonus
- *   Perfect round (0 errors):          +50 bonus
+ *   First-try error in a passed round: -5 penalty
+ *   Round pass (≥7 first-try correct): +20 bonus
+ *   Perfect summit round:              +50 bonus
  *
- * Perfect no-translation round: (10+5)×10 + 50 = 200
- * Min pass with translation:    7×10 + 20 = 90
+ * Perfect no-translation summit: (10+5)×8 + 20 + 50 = 190
  */
 
 export const SCORE_CORRECT_POINTS = 10
 export const SCORE_NO_TRANSLATION_BONUS = 5
+export const SCORE_FIRST_ERROR_PENALTY = 5
 export const SCORE_PASS_BONUS = 20
 export const SCORE_PERFECT_BONUS = 50
 
@@ -30,6 +31,8 @@ export interface RoundScoreBreakdown {
   correctPoints: number
   noTranslationCount: number
   noTranslationBonus: number
+  errorCount: number
+  errorPenalty: number
   passBonus: number
   perfectBonus: number
   points: number
@@ -78,10 +81,12 @@ export function getRoundScoreBreakdown(
   const correctCards = cards.filter((card) => card.correct)
   const correctCount = correctCards.length
   const noTranslationCount = correctCards.filter((card) => !card.translationUsed).length
+  const errorCount = cards.length - correctCount
   const passed = correctCount >= passTarget
   const perfect = correctCount === perfectTarget && cards.length === perfectTarget && cards.every((card) => card.correct)
   const correctPoints = correctCount * SCORE_CORRECT_POINTS
   const noTranslationBonus = noTranslationCount * SCORE_NO_TRANSLATION_BONUS
+  const errorPenalty = passed ? errorCount * SCORE_FIRST_ERROR_PENALTY : 0
   const passBonus = passed ? SCORE_PASS_BONUS : 0
   const perfectBonus = perfect ? SCORE_PERFECT_BONUS : 0
 
@@ -90,9 +95,11 @@ export function getRoundScoreBreakdown(
     correctPoints,
     noTranslationCount,
     noTranslationBonus,
+    errorCount,
+    errorPenalty,
     passBonus,
     perfectBonus,
-    points: correctPoints + noTranslationBonus + passBonus + perfectBonus,
+    points: correctPoints + noTranslationBonus + passBonus + perfectBonus - errorPenalty,
     passed,
     perfect,
   }
@@ -100,15 +107,19 @@ export function getRoundScoreBreakdown(
 
 export function scoreRound(
   correctCount: number,
-  cardScores: CardScore[]
+  cardScores: CardScore[],
+  options: RoundScoreOptions = {}
 ): { points: number; passed: boolean; perfect: boolean } {
-  const passed = correctCount >= 7
-  const perfect = correctCount === 10 && cardScores.every((s) => s.base > 0)
+  const passTarget = options.passTarget ?? 7
+  const perfectTarget = options.perfectTarget ?? 8
+  const passed = correctCount >= passTarget
+  const perfect = correctCount === perfectTarget && cardScores.length === perfectTarget && cardScores.every((s) => s.base > 0)
   const cardTotal = cardScores.reduce((acc, s) => acc + s.total, 0)
+  const errorPenalty = passed ? cardScores.filter((s) => s.base === 0).length * SCORE_FIRST_ERROR_PENALTY : 0
   const passBonus = passed ? SCORE_PASS_BONUS : 0
   const perfectBonus = perfect ? SCORE_PERFECT_BONUS : 0
   return {
-    points: cardTotal + passBonus + perfectBonus,
+    points: cardTotal + passBonus + perfectBonus - errorPenalty,
     passed,
     perfect,
   }

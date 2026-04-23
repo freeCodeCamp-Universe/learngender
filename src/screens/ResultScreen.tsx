@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import type { RoundSummary } from '../types'
 import { MasteryCircle } from '../components/MasteryCircle'
 import { getLevelName, getLevelProgressFromMastered } from '../lib/levels'
+import { SUMMIT_STEP } from '../hooks/useRound'
 
 interface ResultScreenProps {
   summary: RoundSummary
@@ -11,7 +12,7 @@ interface ResultScreenProps {
 
 function getBadge(score: number, passed: boolean): { label: string; emoji: string } {
   if (!passed) return { label: 'Good Try!', emoji: '💪' }
-  if (score >= 9) return { label: 'Excellent Job', emoji: '🏆' }
+  if (score >= SUMMIT_STEP) return { label: 'Excellent Job', emoji: '🏆' }
   if (score >= 7) return { label: 'Great Job', emoji: '⭐' }
   return { label: 'Good Job', emoji: '👍' }
 }
@@ -44,7 +45,7 @@ export function ResultScreen({ summary, onPlayAgain, onHome }: ResultScreenProps
       <div className="result-score">
         <span className="result-badge__emoji">{badge.emoji}</span>
         <span className="result-badge__label">{badge.label}</span>
-        <span className="result-score__value">{summary.score}/10</span>
+        <span className="result-score__value">{summary.score} correct</span>
         <span className={`result-score__status ${summary.passed ? 'passed' : 'failed'}`}>
           {summary.passed ? 'Passed' : 'Failed'}
         </span>
