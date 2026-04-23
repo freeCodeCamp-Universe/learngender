@@ -1,6 +1,6 @@
 import type { Card } from 'ts-fsrs'
 import type { Language, LanguageScore, Settings, StreakData } from '../types'
-import { getMastery } from './srs'
+import { getLegacyMastery, MASTERED_THRESHOLD } from './mastery'
 
 const DEFAULT_SETTINGS: Settings = {
   soundEnabled: true,
@@ -46,14 +46,24 @@ export function setSRSCard(language: Language, wordId: string, card: Card): void
   safeSet(`lng_srs_${language}_${wordId}`, card)
 }
 
-// Count words with mastery ≥ 80% (SRS) OR manually mastered
+export function getWordMastery(language: Language, wordId: string, fallbackCard?: Card | null): number {
+  const stored = safeGet<number | null>(`lng_mastery_${language}_${wordId}`, null)
+  if (stored !== null) return stored
+  const card = fallbackCard === undefined ? getSRSCard(language, wordId) : fallbackCard
+  return getLegacyMastery(card)
+}
+
+export function setWordMastery(language: Language, wordId: string, mastery: number): void {
+  safeSet(`lng_mastery_${language}_${wordId}`, mastery)
+}
+
+// Count words with learner-facing mastery ≥ 80% OR manually mastered
 export function getMasteredCount(language: Language, wordIds: string[]): number {
   const manual = getManuallyMastered(language)
   let count = 0
   for (const wordId of wordIds) {
     if (manual.has(wordId)) { count++; continue }
-    const card = getSRSCard(language, wordId)
-    if (getMastery(card) >= 80) count++
+    if (getWordMastery(language, wordId) >= MASTERED_THRESHOLD) count++
   }
   return count
 }

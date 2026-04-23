@@ -27,12 +27,12 @@ export interface StreakData {
 export interface LanguageScore {
   score: number         // accumulated decorative points
   level: number         // 1–5, derived from masteredCount
-  masteredCount: number // words with mastery ≥ 80%
+  masteredCount: number // words with learner-facing mastery ≥ 80%
 }
 
 export type LevelName = 'Rookie' | 'Apprentice' | 'Scholar' | 'Linguist' | 'Polyglot'
 
-// Thresholds based on number of mastered words (mastery ≥ 80%) per language
+// Thresholds based on number of words with learner-facing mastery ≥ 80% per language
 export const LEVEL_THRESHOLDS: { mastered: number; name: LevelName }[] = [
   { mastered: 0,     name: 'Rookie' },
   { mastered: 50,    name: 'Apprentice' },

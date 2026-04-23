@@ -12,17 +12,17 @@ const SEGMENT_COUNT = 5
 const LANG_COLOR: Record<Language, string> = {
   pt: '#6c63ff',
   es: '#3b8beb',
-  fr: '#34a85a',
-  it: '#e8a020',
+  fr: '#7fd96b',
+  it: '#ffd75a',
 }
 
 const LEVEL_COLOR: Record<string, string> = {
   New:        '#aaaaaa',
-  Rookie:     '#34a85a',
+  Rookie:     '#7fd96b',
   Apprentice: '#3b8beb',
   Scholar:    '#6c63ff',
   Linguist:   '#e8630a',
-  Polyglot:   '#e8a020',
+  Polyglot:   '#ffd75a',
 }
 
 interface HomeScreenProps {

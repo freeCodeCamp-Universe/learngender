@@ -126,15 +126,17 @@ export function SummitDrawer({
       <div className="summit-drawer__words">
         {orderedCards.map((r, i) => {
           const article = r.word.article
+          const delta = r.masteryAfter - r.masteryBefore
+          const displayDelta = delta === 0 && r.correct ? 1 : Math.abs(delta)
+          const isPositiveDelta = delta > 0 || (delta === 0 && r.correct)
           return (
             <div key={i} className={`summit-drawer__word-row ${r.correct ? 'summit-drawer__word-row--correct' : 'summit-drawer__word-row--wrong'}`}>
               <MasteryCircle pct={r.masteryAfter} size={34} />
               {(() => {
-                const delta = r.masteryAfter - r.masteryBefore
-                if (delta === 0) return null
+                if (delta === 0 && !r.correct) return null
                 return (
-                  <span className={`summit-drawer__delta ${delta > 0 ? 'summit-drawer__delta--up' : 'summit-drawer__delta--down'}`}>
-                    {delta > 0 ? '↑' : '↓'}{Math.abs(delta)}%
+                  <span className={`summit-drawer__delta ${isPositiveDelta ? 'summit-drawer__delta--up' : 'summit-drawer__delta--down'}`}>
+                    {isPositiveDelta ? '↑' : '↓'}{displayDelta}%
                   </span>
                 )
               })()}

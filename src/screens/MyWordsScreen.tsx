@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react'
 import type { Language, Word } from '../types'
 import { LANGUAGE_LABELS } from '../types'
-import { getMastery } from '../lib/srs'
-import { addScore, getSeenWords, getSRSCard, getMasteredCount, isManuallyMastered, toggleManuallyMastered } from '../lib/storage'
+import { addScore, getSeenWords, getMasteredCount, getWordMastery, isManuallyMastered, toggleManuallyMastered } from '../lib/storage'
 import { getWords } from '../lib/wordLoader'
 import { MasteryCircle } from '../components/MasteryCircle'
 import { getLevelProgressFromMastered } from '../lib/levels'
+import { MASTERED_THRESHOLD } from '../lib/mastery'
 
 const LANGUAGES: Language[] = ['pt', 'es', 'fr', 'it']
 const SEGMENT_COUNT = 5
@@ -13,8 +13,8 @@ const SEGMENT_COUNT = 5
 const LANG_COLOR: Record<Language, string> = {
   pt: '#6c63ff',
   es: '#3b8beb',
-  fr: '#34a85a',
-  it: '#e8a020',
+  fr: '#7fd96b',
+  it: '#ffd75a',
 }
 
 interface WordEntry {
@@ -39,14 +39,13 @@ export function MyWordsScreen({ onHome, onTheory }: MyWordsScreenProps) {
     const wordEntries: WordEntry[] = allWords
       .filter((w) => seen.has(w.id))
       .map((w) => {
-        const card = getSRSCard(lang, w.id)
         return {
           word: w,
-          masteryPct: getMastery(card),
+          masteryPct: getWordMastery(lang, w.id),
           manuallyMastered: isManuallyMastered(lang, w.id),
         }
       })
-      .sort((a, b) => a.masteryPct - b.masteryPct)
+      .sort((a, b) => b.masteryPct - a.masteryPct)
 
     setEntries(wordEntries)
   }
@@ -60,14 +59,13 @@ export function MyWordsScreen({ onHome, onTheory }: MyWordsScreenProps) {
       const wordEntries: WordEntry[] = allWords
         .filter((w) => seen.has(w.id))
         .map((w) => {
-          const card = getSRSCard(selectedLang, w.id)
           return {
             word: w,
-            masteryPct: getMastery(card),
+            masteryPct: getWordMastery(selectedLang, w.id),
             manuallyMastered: isManuallyMastered(selectedLang, w.id),
           }
         })
-        .sort((a, b) => a.masteryPct - b.masteryPct)
+        .sort((a, b) => b.masteryPct - a.masteryPct)
 
       setEntries(wordEntries)
     })
@@ -88,8 +86,8 @@ export function MyWordsScreen({ onHome, onTheory }: MyWordsScreenProps) {
     load(selectedLang)
   }
 
-  const learningEntries = entries.filter(e => !e.manuallyMastered && e.masteryPct < 80)
-  const masteredEntries = entries.filter(e => e.manuallyMastered || e.masteryPct >= 80)
+  const learningEntries = entries.filter(e => !e.manuallyMastered && e.masteryPct < MASTERED_THRESHOLD)
+  const masteredEntries = entries.filter(e => e.manuallyMastered || e.masteryPct >= MASTERED_THRESHOLD)
   const masteredCount = masteredEntries.length
   const masteredProgress = getLevelProgressFromMastered(masteredCount)
 
