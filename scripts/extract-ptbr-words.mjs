@@ -21,6 +21,7 @@ import http from 'http'
 import https from 'https'
 import path from 'path'
 import { fileURLToPath } from 'url'
+import { finalizeWords, getTargetBuffer } from './lib/finalize-words.mjs'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT_DIR = path.join(__dirname, '..')
@@ -41,6 +42,7 @@ const KAIKKI_URL = 'https://kaikki.org/dictionary/Portuguese/kaikki.org-dictiona
 const KAIKKI_CACHE = path.join(CACHE_DIR, 'pt_kaikki.jsonl.gz')
 
 const TARGET_COUNT = 2000
+const RAW_TARGET_COUNT = TARGET_COUNT + getTargetBuffer()
 const MAX_SCAN_CANDIDATES = 25000
 
 const WORD_RE = /^[a-záàâãéêíóôõúüç]+(?:-[a-záàâãéêíóôõúüç]+)*$/i
@@ -441,25 +443,28 @@ for (const candidate of candidates) {
     rank: accepted.length + 1,
   })
 
-  if (accepted.length === TARGET_COUNT) break
+  if (accepted.length === RAW_TARGET_COUNT) break
 }
 
-if (accepted.length < TARGET_COUNT) {
-  throw new Error(`Only produced ${accepted.length} pt-BR words; expected ${TARGET_COUNT}`)
+if (accepted.length < RAW_TARGET_COUNT) {
+  throw new Error(`Only produced ${accepted.length} raw pt-BR words; expected at least ${RAW_TARGET_COUNT}`)
 }
 
-writeJson(PT_OUT_PATH, accepted)
+const finalized = finalizeWords('pt', accepted, { targetCount: TARGET_COUNT })
+
+writeJson(PT_OUT_PATH, finalized)
 writeJson(REPORT_PATH, {
   generatedAt: new Date().toISOString(),
   source: {
     linguateca: LINGUATECA_URL,
     kaikki: KAIKKI_URL,
   },
-  acceptedCount: accepted.length,
+  rawAcceptedCount: accepted.length,
+  acceptedCount: finalized.length,
   scannedCandidates: candidates.length,
-  acceptedSample: accepted.slice(0, 150),
+  acceptedSample: finalized.slice(0, 150),
   rejectedSample: rejected.slice(0, 300),
 })
 
-console.log(`\nWrote ${accepted.length} pt-BR words to ${PT_OUT_PATH}`)
+console.log(`\nWrote ${finalized.length} pt-BR words to ${PT_OUT_PATH}`)
 console.log(`Report written to ${REPORT_PATH}`)
