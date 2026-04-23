@@ -617,7 +617,7 @@ html, body, #root {
   justify-content: center;
   font-size: 0.833rem;
   font-weight: 900;
-  color: #fff;
+  color: var(--gray-90);
   flex-shrink: 0;
   position: relative;
   z-index: 1;
@@ -788,7 +788,6 @@ html, body, #root {
   font-weight: 700;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  opacity: 0.8;
 }
 .gender-band--left  .gender-band__article { color: #7a0000; }
 .gender-band--right .gender-band__article { color: #002060; }
@@ -1604,7 +1603,7 @@ html, body, #root {
 .theory-slide { max-width: 480px; margin: 0 auto; }
 
 .theory-slide__counter {
-  font-size: 0.69rem;
+  font-size: 0.78rem;
   font-weight: 500;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -1628,7 +1627,7 @@ html, body, #root {
 
 .theory-slide__body-text {
   margin: 0;
-  font-size: 0.94rem;
+  font-size: 1rem;
   line-height: 1.75;
   color: rgba(255,255,255,0.65);
 }
@@ -1677,7 +1676,7 @@ html, body, #root {
 }
 
 .theory-slide__example-text {
-  font-size: 0.875rem;
+  font-size: 0.94rem;
   color: rgba(255,255,255,0.8);
   line-height: 1.4;
 }
@@ -1685,8 +1684,8 @@ html, body, #root {
 .theory-slide__example-text strong { color: var(--accent-cta); font-weight: 600; }
 
 .theory-slide__example-label {
-  font-size: 0.69rem;
-  color: rgba(255,255,255,0.3);
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.55);
   margin-left: 6px;
 }
 
@@ -1700,7 +1699,7 @@ html, body, #root {
 
 .theory-slide__rule-text {
   margin: 0;
-  font-size: 0.875rem;
+  font-size: 0.94rem;
   color: rgba(255,255,255,0.7);
   line-height: 1.65;
 }
@@ -1732,7 +1731,7 @@ html, body, #root {
 .theory-exception__left { flex: 1; }
 
 .theory-exception__word {
-  font-size: 0.94rem;
+  font-size: 1rem;
   font-weight: 500;
   color: #fff;
 }
@@ -1742,13 +1741,13 @@ html, body, #root {
 .theory-exception__article--feminine  { color: #ed93b1; }
 
 .theory-exception__meaning {
-  font-size: 0.75rem;
-  color: rgba(255,255,255,0.4);
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.6);
   margin-top: 2px;
 }
 
 .theory-exception__tag {
-  font-size: 0.625rem;
+  font-size: 0.72rem;
   font-weight: 500;
   border-radius: 6px;
   padding: 3px 8px;
@@ -1774,15 +1773,15 @@ html, body, #root {
 .theory-slide__table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.8rem;
+  font-size: 0.89rem;
 }
 
 .theory-slide__table th {
   text-align: left;
-  font-size: 0.625rem;
+  font-size: 0.72rem;
   font-weight: 500;
   letter-spacing: 1px;
-  color: rgba(255,255,255,0.35);
+  color: rgba(255,255,255,0.55);
   text-transform: uppercase;
   padding: 0 0 8px;
   border-bottom: 0.5px solid rgba(255,255,255,0.08);
@@ -1799,12 +1798,12 @@ html, body, #root {
 
 .theory-slide__table tbody tr:last-child td { border-bottom: none; }
 .theory-slide__table-td--key { color: var(--accent-cta) !important; font-weight: 500; width: 30%; }
-.theory-slide__table-td--examples { color: rgba(255,255,255,0.45) !important; font-size: 0.75rem; }
+.theory-slide__table-td--examples { color: rgba(255,255,255,0.6) !important; font-size: 0.83rem; }
 
 .theory-slide__table-note {
   padding: 10px 0 0;
-  font-size: 0.78rem;
-  color: rgba(255,255,255,0.4);
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.6);
   line-height: 1.5;
 }
 
@@ -1857,9 +1856,9 @@ html, body, #root {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  border: 0.5px solid rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
   background: rgba(255,255,255,0.05);
-  color: rgba(255,255,255,0.6);
+  color: rgba(255,255,255,0.8);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -1874,7 +1873,7 @@ html, body, #root {
 .theory-screen__arrow--next {
   background: var(--accent-cta);
   border-color: var(--accent-cta);
-  color: #fff;
+  color: var(--gray-90);
   font-weight: 700;
 }
 
