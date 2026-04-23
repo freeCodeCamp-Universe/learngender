@@ -160,7 +160,7 @@ export function useRound(language: Language, initialDeck?: Word[]) {
           const newHikerStep = Math.max(0, prev.hikerStep - 1)
 
           // BOUNCE_DURATION (580ms) + dismiss fly (290ms) = 870ms before next card
-          const DISMISS_DELAY = 870
+          const DISMISS_DELAY = 770
 
           if (newLives <= 0) {
             const summary = buildSummary({ pointsOverride: 0 })
@@ -178,7 +178,7 @@ export function useRound(language: Language, initialDeck?: Word[]) {
                 drawerReady: true,
               }))
             }, DISMISS_DELAY)
-            return { ...prev, lives: 0, hikerStep: newHikerStep, deck: newDeck, isShaking: true, phase: 'done', summary, drawerReady: true }
+            return { ...prev, lives: 0, hikerStep: newHikerStep, deck: newDeck, isShaking: true }
           }
 
           // Advance to next card after dismiss animation completes
