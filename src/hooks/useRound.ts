@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import type { CardResult, Gender, Language, RoundSummary, Word } from '../types'
 import { drawRound } from '../lib/wordLoader'
 import { createCard, getMastery, rateCard } from '../lib/srs'
-import { addScore, getMasteredCount, getScore, getSRSCard, markWordSeen, setSRSCard } from '../lib/storage'
+import { addScore, getMasteredCount, getScore, getSettings, getSRSCard, markWordSeen, setSRSCard } from '../lib/storage'
 import { getRoundScoreBreakdown } from '../lib/scoring'
 import { getLevelFromXP } from '../lib/levels'
 import { getWords } from '../lib/wordLoader'
@@ -22,6 +22,7 @@ export interface RoundState {
   results: CardResult[]
   isShaking: boolean
   summary: RoundSummary | null
+  drawerReady: boolean
 }
 
 function getScoredResults(results: CardResult[]): CardResult[] {
@@ -55,6 +56,7 @@ export function useRound(language: Language, initialDeck?: Word[]) {
     results: [],
     isShaking: false,
     summary: null,
+    drawerReady: false,
   })
 
   const resultsRef        = useRef<CardResult[]>([])
@@ -86,6 +88,7 @@ export function useRound(language: Language, initialDeck?: Word[]) {
           results: [],
           isShaking: false,
           summary: null,
+          drawerReady: false,
         })
         return true
       } catch {
@@ -144,7 +147,7 @@ export function useRound(language: Language, initialDeck?: Word[]) {
         resultsRef.current.push({ word: currentWord, correct, translationUsed, masteryBefore, masteryAfter })
 
         if (!correct) {
-          if (typeof navigator !== 'undefined' && 'vibrate' in navigator) {
+          if (getSettings().hapticsEnabled && typeof navigator !== 'undefined' && 'vibrate' in navigator) {
             navigator.vibrate(200)
           }
 
@@ -172,9 +175,10 @@ export function useRound(language: Language, initialDeck?: Word[]) {
                 isShaking: false,
                 phase: 'done',
                 summary,
+                drawerReady: true,
               }))
             }, DISMISS_DELAY)
-            return { ...prev, lives: 0, hikerStep: newHikerStep, deck: newDeck, isShaking: true, phase: 'done', summary }
+            return { ...prev, lives: 0, hikerStep: newHikerStep, deck: newDeck, isShaking: true, phase: 'done', summary, drawerReady: true }
           }
 
           // Advance to next card after dismiss animation completes
@@ -205,6 +209,11 @@ export function useRound(language: Language, initialDeck?: Word[]) {
             ...s, currentIndex: newIndex,
             phase: 'summit', summary, hikerStep: SUMMIT_STEP,
           })), 290)
+          // Let the celebration pose be visible for a beat before the drawer mounts
+          setTimeout(() => setState((s) => {
+            if (s.phase !== 'summit') return s
+            return { ...s, drawerReady: true }
+          }), 290 + 50)
           return { ...prev, score: newScore, hikerStep: newHikerStep }
         }
 

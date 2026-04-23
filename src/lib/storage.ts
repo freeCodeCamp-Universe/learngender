@@ -4,6 +4,7 @@ import { getMastery } from './srs'
 
 const DEFAULT_SETTINGS: Settings = {
   soundEnabled: true,
+  hapticsEnabled: true,
   showTranslationByDefault: false,
 }
 

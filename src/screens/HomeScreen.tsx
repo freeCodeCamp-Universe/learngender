@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import settingsIcon from '../components/icons/settings.svg'
 import type { Language } from '../types'
 import { LANGUAGE_LABELS } from '../types'
@@ -33,19 +33,71 @@ interface HomeScreenProps {
 
 export function HomeScreen({ onStartRound, onMyWords, onTheory }: HomeScreenProps) {
   const [settingsOpen, setSettingsOpen] = useState(false)
+  const [activeTip, setActiveTip] = useState<'streak' | 'xp' | null>(null)
   const streak = getStreak()
   const totalXP = LANGUAGES.reduce((sum, lang) => sum + getScore(lang).score, 0)
+  const streakUnit = streak.count === 1 ? 'day' : 'days'
+
+  useEffect(() => {
+    if (!activeTip) return
+    function onOutside(e: MouseEvent | TouchEvent) {
+      const target = e.target as HTMLElement | null
+      if (!target?.closest('.home-chip')) setActiveTip(null)
+    }
+    function onKey(e: KeyboardEvent) {
+      if (e.key === 'Escape') setActiveTip(null)
+    }
+    document.addEventListener('mousedown', onOutside)
+    document.addEventListener('touchstart', onOutside)
+    document.addEventListener('keydown', onKey)
+    return () => {
+      document.removeEventListener('mousedown', onOutside)
+      document.removeEventListener('touchstart', onOutside)
+      document.removeEventListener('keydown', onKey)
+    }
+  }, [activeTip])
+
+  function chipHandlers(id: 'streak' | 'xp') {
+    return {
+      onMouseEnter: () => setActiveTip(id),
+      onMouseLeave: () => setActiveTip((cur) => (cur === id ? null : cur)),
+      onFocus:      () => setActiveTip(id),
+      onBlur:       () => setActiveTip((cur) => (cur === id ? null : cur)),
+      onClick:      () => setActiveTip((cur) => (cur === id ? null : id)),
+    }
+  }
 
   return (
     <div className="home-screen">
       {/* Top bar */}
       <div className="home-screen__topbar">
-        <div className="home-screen__xp-pill">
-          <span className="home-screen__flame">🔥</span>
-          <span className="home-screen__streak-count">{streak.count}</span>
-          <span className="home-screen__xp-sep">·</span>
-          <span className="home-screen__xp-count">{totalXP.toLocaleString()}</span>
-          <span className="home-screen__xp-label">xp</span>
+        <div className="home-screen__chips">
+          <button
+            type="button"
+            className="home-chip"
+            aria-describedby="tip-streak"
+            {...chipHandlers('streak')}
+          >
+            <span className={`home-screen__flame${streak.count === 0 ? ' home-screen__flame--inactive' : ''}`}>🔥</span>
+            <span className="home-screen__streak-count">{streak.count}</span>
+            <span className="home-screen__chip-label">{streakUnit}</span>
+            {activeTip === 'streak' && (
+              <span id="tip-streak" role="tooltip" className="home-tooltip">Current streak</span>
+            )}
+          </button>
+
+          <button
+            type="button"
+            className="home-chip"
+            aria-describedby="tip-xp"
+            {...chipHandlers('xp')}
+          >
+            <span className="home-screen__xp-count">{totalXP.toLocaleString()}</span>
+            <span className="home-screen__chip-label">xp</span>
+            {activeTip === 'xp' && (
+              <span id="tip-xp" role="tooltip" className="home-tooltip">Total XP</span>
+            )}
+          </button>
         </div>
         <button className="icon-btn" onClick={() => setSettingsOpen(true)} aria-label="Settings">
           <img src={settingsIcon} alt="" width="22" height="22" className="home-screen__settings-icon" />

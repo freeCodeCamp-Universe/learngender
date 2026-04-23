@@ -72,7 +72,7 @@ export function SummitDrawer({
   }, [showScoreSection])
 
   useEffect(() => {
-    const raf = requestAnimationFrame(() => nextButtonRef.current?.focus())
+    const raf = requestAnimationFrame(() => nextButtonRef.current?.focus({ preventScroll: true }))
     return () => cancelAnimationFrame(raf)
   }, [])
 
