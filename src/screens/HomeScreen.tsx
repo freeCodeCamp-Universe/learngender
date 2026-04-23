@@ -3,18 +3,10 @@ import settingsIcon from '../components/icons/settings.svg'
 import type { Language } from '../types'
 import { LANGUAGE_LABELS } from '../types'
 import { getScore, getSeenCount, getStreak } from '../lib/storage'
-import { getLevelProgressFromMastered, getXPProgress } from '../lib/levels'
+import { getMasteryTierProgress, getXPProgress } from '../lib/levels'
 import { SettingsPanel } from './SettingsPanel'
 
 const LANGUAGES: Language[] = ['pt', 'es', 'fr', 'it']
-const SEGMENT_COUNT = 5
-
-const LANG_COLOR: Record<Language, string> = {
-  pt: '#6c63ff',
-  es: '#3b8beb',
-  fr: '#7fd96b',
-  it: '#ffd75a',
-}
 
 const LEVEL_COLOR: Record<string, string> = {
   New:        '#aaaaaa',
@@ -23,6 +15,15 @@ const LEVEL_COLOR: Record<string, string> = {
   Scholar:    '#6c63ff',
   Linguist:   '#e8630a',
   Polyglot:   '#ffd75a',
+}
+
+const LEVEL_BAR_LEARNING_COLOR: Record<string, string> = {
+  New:        '#8f8f99',
+  Rookie:     '#b7ee8d',
+  Apprentice: '#72b3ff',
+  Scholar:    '#9b7ee8',
+  Linguist:   '#ffb66e',
+  Polyglot:   '#ffe693',
 }
 
 interface HomeScreenProps {
@@ -117,84 +118,101 @@ export function HomeScreen({ onStartRound, onMyWords, onTheory }: HomeScreenProp
           const scoreData = getScore(lang)
           const seenCount = getSeenCount(lang)
           const masteredCount = scoreData.masteredCount ?? 0
+          const learningCount = Math.max(0, seenCount - masteredCount)
           const isNew = seenCount === 0
-          const progress = getLevelProgressFromMastered(masteredCount)
+          const masteryTier = getMasteryTierProgress(masteredCount, learningCount)
           const xpProgress = getXPProgress(scoreData.score)
-          const levelName = isNew ? 'New' : progress.name
-          const color = LANG_COLOR[lang]
+          const levelName = isNew ? 'New' : masteryTier.name
           const levelColor = LEVEL_COLOR[levelName] ?? '#aaaaaa'
-          const completedSegments = progress.level - 1
+          const learningColor = LEVEL_BAR_LEARNING_COLOR[levelName] ?? '#9b7ee8'
 
           return (
             <div key={lang} className="skill-card">
               {/* Card header: flag + level ring + name | level badge */}
               <div className="skill-card__header">
-                {!isNew && (() => {
-                  const size = 28, r = (size - 4) / 2, cx = size / 2, cy = size / 2
+                {(() => {
+                  const size = 56, r = 23, cx = size / 2, cy = size / 2
                   const circ = 2 * Math.PI * r
-                  const xpColor = '#e8a020'
+                  const xpColor = '#ffd75a'
                   const filled = (xpProgress.pct / 100) * circ
                   return (
                     <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} className="skill-card__level-ring" aria-label={`Level ${xpProgress.level}`}>
-                      <circle cx={cx} cy={cy} r={r} fill="none" stroke={`${xpColor}33`} strokeWidth="2.5" />
-                      <circle cx={cx} cy={cy} r={r} fill="none" stroke={xpColor} strokeWidth="2.5"
+                      <circle cx={cx} cy={cy} r={r} fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth="4" />
+                      <circle cx={cx} cy={cy} r={r} fill="none" stroke={xpColor} strokeWidth="4"
                         strokeDasharray={`${filled} ${circ}`} strokeLinecap="round"
                         transform={`rotate(-90 ${cx} ${cy})`} />
-                      <text x={cx} y={cy + 4} textAnchor="middle" fontSize="9" fill="#fff" fontWeight="700">{xpProgress.level}</text>
+                      <text
+                        x={cx}
+                        y={cy + 6}
+                        textAnchor="middle"
+                        fontSize="18"
+                        fill={isNew ? 'rgba(255, 215, 90, 0.72)' : xpColor}
+                        fontWeight="600"
+                      >
+                        {xpProgress.level}
+                      </text>
                     </svg>
                   )
                 })()}
-                <span className="skill-card__flag">{labels.flag}</span>
-                <span className="skill-card__name">{labels.name}</span>
-                <span
-                  className="skill-card__level-badge"
-                  style={{ background: `${levelColor}22`, color: levelColor, borderColor: `${levelColor}55` }}
-                >
-                  {levelName}
-                </span>
-              </div>
+                <div className="skill-card__body">
+                  <div className="skill-card__title-row">
+                    <div className="skill-card__title-group">
+                      <span className="skill-card__flag">{labels.flag}</span>
+                      <span className="skill-card__name">{labels.name}</span>
+                    </div>
+                    <span
+                      className="skill-card__level-badge"
+                      style={{ background: `${levelColor}12`, color: levelColor, borderColor: `${levelColor}88` }}
+                    >
+                      {levelName}
+                    </span>
+                  </div>
 
-              {/* Progress bar — 5 segments based on seen words */}
-              {!isNew && (
-                <div className="skill-card__segments" aria-hidden="true">
-                  {Array.from({ length: SEGMENT_COUNT }).map((_, i) => {
-                    const full   = i < completedSegments
-                    const active = i === completedSegments
-                    return (
-                      <div key={i} className="skill-card__seg">
-                        {(full || active) && (
-                          <div
-                            className="skill-card__seg-fill"
-                            style={{
-                              background: color,
-                              width: full ? '100%' : `${progress.pct}%`,
-                            }}
-                          />
-                        )}
-                      </div>
-                    )
-                  })}
-                </div>
-              )}
-              {isNew && (
-                <div className="skill-card__segments skill-card__segments--empty" aria-hidden="true">
-                  {Array.from({ length: SEGMENT_COUNT }).map((_, i) => (
-                    <div key={i} className="skill-card__seg" />
-                  ))}
-                </div>
-              )}
+                  <div className="skill-card__footer">
+                    <button
+                      className="skill-card__cta"
+                      onClick={() => onStartRound(lang)}
+                    >
+                      {isNew ? 'Start' : 'Play'}
+                    </button>
 
-              {/* Footer: mastered count | Practice/Start button */}
-              <div className="skill-card__footer">
-                <span className="skill-card__mastered">
-                  <strong>{seenCount - masteredCount}</strong> learning · <strong>{masteredCount}</strong> mastered
-                </span>
-                <button
-                  className="skill-card__cta"
-                  onClick={() => onStartRound(lang)}
-                >
-                  {isNew ? 'Start' : 'Play'}
-                </button>
+                    <div className="skill-card__progress-group">
+                      {!isNew && (
+                        <div
+                          className="skill-card__mastery-bar"
+                          role="img"
+                          aria-label={`${masteryTier.name} mastery progress: ${masteryTier.masteredInTier} mastered and ${masteryTier.learningVisible} learning in this tier`}
+                        >
+                          {masteryTier.masteredPct > 0 && (
+                            <div
+                              className="skill-card__mastery-fill skill-card__mastery-fill--mastered"
+                              style={{
+                                width: `${masteryTier.masteredPct}%`,
+                                background: levelColor,
+                              }}
+                            />
+                          )}
+                          {masteryTier.learningPct > 0 && (
+                            <div
+                              className="skill-card__mastery-fill skill-card__mastery-fill--learning"
+                              style={{
+                                width: `${masteryTier.learningPct}%`,
+                                background: learningColor,
+                              }}
+                            />
+                          )}
+                        </div>
+                      )}
+                      {isNew && (
+                        <div className="skill-card__mastery-bar skill-card__mastery-bar--empty" aria-hidden="true" />
+                      )}
+
+                      <span className="skill-card__mastered">
+                        <strong>{learningCount}</strong> learning · <strong>{masteredCount}</strong> mastered
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           )

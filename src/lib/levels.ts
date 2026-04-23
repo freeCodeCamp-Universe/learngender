@@ -71,3 +71,55 @@ export function getLevelProgressFromMastered(mastered: number): {
   const pct = next ? Math.min(100, Math.round((earnedInLevel / rangeSize) * 100)) : 100
   return { level, name: current.name, masteredCount: mastered, nextThreshold: next?.mastered ?? null, pct }
 }
+
+export function getMasteryTierProgress(mastered: number, learning: number): {
+  level: number
+  name: LevelName
+  tierStart: number
+  tierEnd: number | null
+  tierSpan: number
+  masteredInTier: number
+  learningVisible: number
+  remaining: number
+  masteredPct: number
+  learningPct: number
+} {
+  const level = getLevelFromMastered(mastered)
+  const current = LEVEL_THRESHOLDS[level - 1]
+  const next = LEVEL_THRESHOLDS[level] ?? null
+
+  if (!next) {
+    return {
+      level,
+      name: current.name,
+      tierStart: current.mastered,
+      tierEnd: null,
+      tierSpan: 1,
+      masteredInTier: 1,
+      learningVisible: 0,
+      remaining: 0,
+      masteredPct: 100,
+      learningPct: 0,
+    }
+  }
+
+  const tierStart = current.mastered
+  const tierEnd = next.mastered
+  const tierSpan = Math.max(1, tierEnd - tierStart)
+  const masteredInTier = Math.min(tierSpan, Math.max(0, mastered - tierStart))
+  const learningVisible = Math.min(Math.max(0, learning), Math.max(0, tierSpan - masteredInTier))
+  const remaining = Math.max(0, tierSpan - masteredInTier - learningVisible)
+
+  return {
+    level,
+    name: current.name,
+    tierStart,
+    tierEnd,
+    tierSpan,
+    masteredInTier,
+    learningVisible,
+    remaining,
+    masteredPct: Math.round((masteredInTier / tierSpan) * 100),
+    learningPct: Math.round((learningVisible / tierSpan) * 100),
+  }
+}
