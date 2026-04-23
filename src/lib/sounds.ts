@@ -21,20 +21,13 @@ function getCtx(): AudioContext | null {
   return w._lngAudioCtx
 }
 
-function isMuted(): boolean {
-  return !getSettings().soundEnabled
-}
-
-function beep(
+function startTone(
+  ctx: AudioContext,
   frequency: number,
   duration: number,
-  type: OscillatorType = 'sine',
-  gain = 0.3
+  type: OscillatorType,
+  gain: number
 ): void {
-  if (isMuted()) return
-  const ctx = getCtx()
-  if (!ctx) return
-
   const osc = ctx.createOscillator()
   const gainNode = ctx.createGain()
 
@@ -51,6 +44,37 @@ function beep(
   osc.stop(ctx.currentTime + duration)
 }
 
+function isMuted(): boolean {
+  return !getSettings().soundEnabled
+}
+
+export function primeAudio(): void {
+  if (isMuted()) return
+  const ctx = getCtx()
+  if (!ctx || ctx.state !== 'suspended') return
+  void ctx.resume().catch(() => {})
+}
+
+function beep(
+  frequency: number,
+  duration: number,
+  type: OscillatorType = 'sine',
+  gain = 0.3
+): void {
+  if (isMuted()) return
+  const ctx = getCtx()
+  if (!ctx) return
+
+  if (ctx.state === 'suspended') {
+    void ctx.resume().then(() => {
+      if (!isMuted()) startTone(ctx, frequency, duration, type, gain)
+    }).catch(() => {})
+    return
+  }
+
+  startTone(ctx, frequency, duration, type, gain)
+}
+
 export function playCorrect(): void {
   if (isMuted()) return
   beep(523, 0.08) // C5
@@ -61,6 +85,14 @@ export function playIncorrect(): void {
   if (isMuted()) return
   beep(200, 0.15, 'sawtooth', 0.2)
   setTimeout(() => beep(160, 0.2, 'sawtooth', 0.15), 120)
+}
+
+export function playWin(): void {
+  if (isMuted()) return
+  const notes = [523, 659, 784] // C E G
+  notes.forEach((freq, i) => {
+    setTimeout(() => beep(freq, 0.12, 'triangle', 0.28), i * 90)
+  })
 }
 
 export function playLevelUp(): void {
