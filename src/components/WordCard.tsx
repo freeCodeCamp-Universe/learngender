@@ -29,7 +29,8 @@ export function WordCard({ word, onSwipe, showTranslation }: WordCardProps) {
   const velocity         = useRef(0)
   const handled          = useRef(false)
   const showTranslationRef = useRef(showTranslation)
-  const translationUsedRef = useRef(showTranslation)
+  const prevShowTranslationRef = useRef(showTranslation)
+  const translationUsedRef = useRef(false)
 
   useEffect(() => {
     showTranslationRef.current = showTranslation
@@ -42,7 +43,8 @@ export function WordCard({ word, onSwipe, showTranslation }: WordCardProps) {
     setDragY(0)
     setAnim('enter')
     handled.current = false
-    translationUsedRef.current = showTranslationRef.current
+    translationUsedRef.current = false
+    prevShowTranslationRef.current = showTranslationRef.current
     const raf = requestAnimationFrame(() => {
       setReady(true)
       setTimeout(() => setAnim(a => a === 'enter' ? 'idle' : a), 220)
@@ -51,8 +53,10 @@ export function WordCard({ word, onSwipe, showTranslation }: WordCardProps) {
   }, [word.id])
 
   useEffect(() => {
-    if (!showTranslation) return
-    translationUsedRef.current = true
+    if (showTranslation && !prevShowTranslationRef.current) {
+      translationUsedRef.current = true
+    }
+    prevShowTranslationRef.current = showTranslation
   }, [showTranslation])
 
   function commit(dir: 'left' | 'right') {
@@ -63,7 +67,8 @@ export function WordCard({ word, onSwipe, showTranslation }: WordCardProps) {
     primeAudio()
 
     const gender: Gender = dir === 'right' ? 'masculine' : 'feminine'
-    const correct = onSwipe(gender, translationUsedRef.current)
+    const translationUsed = translationUsedRef.current || showTranslationRef.current
+    const correct = onSwipe(gender, translationUsed)
 
     if (correct) {
       playCorrect()

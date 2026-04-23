@@ -55,6 +55,12 @@ export function SummitDrawer({
     if (!acc.find(x => x.word.id === r.word.id)) acc.push(r)
     return acc
   }, [])
+  const orderedCards = mode === 'win'
+    ? uniqueCards
+      .map((card, index) => ({ card, index, delta: card.masteryAfter - card.masteryBefore }))
+      .sort((a, b) => (b.delta - a.delta) || (a.index - b.index))
+      .map(({ card }) => card)
+    : uniqueCards
 
   const breakdown = getRoundScoreBreakdown(uniqueCards, { perfectTarget: SUMMIT_STEP })
   const uniqueCorrect = uniqueCards.filter(r => r.correct).length
@@ -62,6 +68,10 @@ export function SummitDrawer({
   const maxPoints = getRoundPointCap(SUMMIT_STEP, { includePerfectBonus: true })
   const scorePct = Math.min(100, Math.round((breakdown.points / maxPoints) * 100))
   const showScoreSection = mode === 'win' && breakdown.points > 0
+  const bonusChips = [
+    breakdown.perfectBonus > 0 ? `perfect +${breakdown.perfectBonus}` : null,
+    breakdown.noTranslationBonus > 0 ? `no translation +${breakdown.noTranslationBonus}` : null,
+  ].filter((chip): chip is string => chip !== null)
 
   // Score pill pop — show after drawer finishes rising
   const [showScore, setShowScore] = useState(false)
@@ -94,34 +104,27 @@ export function SummitDrawer({
             <span
               className={`summit-drawer__score-pill${showScore ? ' summit-drawer__score-pill--visible' : ''}`}
             >
-              {breakdown.points} / {maxPoints} pts
+              {breakdown.points} pts
             </span>
           </div>
           <div className="summit-drawer__bar-track">
             <AnimatedBar pctBefore={0} pctAfter={scorePct} />
           </div>
-          <div className="summit-drawer__score-breakdown">
-            <span className="summit-drawer__score-chip">
-              {breakdown.correctCount} correct +{breakdown.correctPoints}
-            </span>
-            <span className="summit-drawer__score-chip">
-              bonus {breakdown.passBonus ? `+${breakdown.passBonus}` : ' -'}
-            </span>
-            <span className="summit-drawer__score-chip">
-              no translation {breakdown.noTranslationBonus ? `+${breakdown.noTranslationBonus}` : ' -'}
-            </span>
-            {breakdown.errorPenalty > 0 && (
-              <span className="summit-drawer__score-chip">
-                errors -{breakdown.errorPenalty}
-              </span>
-            )}
-          </div>
+          {bonusChips.length > 0 && (
+            <div className="summit-drawer__score-breakdown">
+              {bonusChips.map((chip) => (
+                <span key={chip} className="summit-drawer__score-chip">
+                  {chip}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
       )}
 
       {/* Word list */}
       <div className="summit-drawer__words">
-        {uniqueCards.map((r, i) => {
+        {orderedCards.map((r, i) => {
           const article = r.word.article
           return (
             <div key={i} className={`summit-drawer__word-row ${r.correct ? 'summit-drawer__word-row--correct' : 'summit-drawer__word-row--wrong'}`}>

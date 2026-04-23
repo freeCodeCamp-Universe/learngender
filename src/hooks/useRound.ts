@@ -64,6 +64,11 @@ export function useRound(language: Language, initialDeck?: Word[]) {
   const levelBeforeRef    = useRef(1)
   const wordIdListRef     = useRef<string[]>([])
   const allWordsRef       = useRef<Word[]>([])
+  const stateRef          = useRef<RoundState | null>(null)
+
+  useEffect(() => {
+    stateRef.current = state
+  }, [state])
 
   useEffect(() => {
     async function attempt(): Promise<boolean> {
@@ -107,7 +112,7 @@ export function useRound(language: Language, initialDeck?: Word[]) {
     init()
   }, [language, initialDeck])
 
-  const buildSummary = useCallback((options?: { pointsOverride?: number }): RoundSummary => {
+  const buildSummary = useCallback((options?: { pointsOverride?: number; passedOverride?: boolean }): RoundSummary => {
     const scoredResults = getScoredResults(resultsRef.current)
     const breakdown = getRoundScoreBreakdown(scoredResults, { perfectTarget: SUMMIT_STEP })
     const masteredAfter = getMasteredCount(language, wordIdListRef.current)
@@ -122,31 +127,37 @@ export function useRound(language: Language, initialDeck?: Word[]) {
       masteredAfter,
       levelBefore: levelBeforeRef.current,
       levelAfter: getLevelFromXP(xpAfter),
-      passed: breakdown.passed,
+      passed: options?.passedOverride ?? false,
     }
   }, [language])
 
   const answer = useCallback(
     (gender: Gender, translationUsed: boolean): boolean => {
-      let correct = false
+      const snapshot = stateRef.current
+      if (!snapshot || snapshot.phase !== 'playing') return false
+
+      const snapshotWord = snapshot.deck[snapshot.currentIndex]
+      if (!snapshotWord) return false
+
+      const correct = snapshotWord.gender === gender
 
       setState((prev) => {
         if (prev.phase !== 'playing') return prev
 
         const currentWord = prev.deck[prev.currentIndex]
-        correct = currentWord.gender === gender
+        const isCorrect = currentWord.gender === gender
 
         // SRS update
         const existingCard = getSRSCard(language, currentWord.id) ?? createCard()
         const masteryBefore = getMastery(existingCard)
-        const updatedCard  = rateCard(existingCard, correct)
+        const updatedCard  = rateCard(existingCard, isCorrect)
         setSRSCard(language, currentWord.id, updatedCard)
         markWordSeen(language, currentWord.id)
 
         const masteryAfter = getMastery(updatedCard)
-        resultsRef.current.push({ word: currentWord, correct, translationUsed, masteryBefore, masteryAfter })
+        resultsRef.current.push({ word: currentWord, correct: isCorrect, translationUsed, masteryBefore, masteryAfter })
 
-        if (!correct) {
+        if (!isCorrect) {
           if (getSettings().hapticsEnabled && typeof navigator !== 'undefined' && 'vibrate' in navigator) {
             navigator.vibrate(200)
           }
@@ -163,7 +174,7 @@ export function useRound(language: Language, initialDeck?: Word[]) {
           const DISMISS_DELAY = 770
 
           if (newLives <= 0) {
-            const summary = buildSummary({ pointsOverride: 0 })
+            const summary = buildSummary({ pointsOverride: 0, passedOverride: false })
             addScore(language, 0, summary.masteredAfter, summary.levelAfter)
             setTimeout(() => {
               setState((s) => ({
@@ -203,7 +214,7 @@ export function useRound(language: Language, initialDeck?: Word[]) {
 
         // Reached the summit — show summit overlay (don't call onDone yet)
         if (newHikerStep >= SUMMIT_STEP) {
-          const summary = buildSummary()
+          const summary = buildSummary({ passedOverride: true })
           addScore(language, summary.pointsEarned, summary.masteredAfter, summary.levelAfter)
           setTimeout(() => setState((s) => ({
             ...s, currentIndex: newIndex,
