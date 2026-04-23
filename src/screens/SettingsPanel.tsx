@@ -97,6 +97,21 @@ export function SettingsPanel({ onClose }: SettingsPanelProps) {
             </li>
 
             <li className="settings-item">
+              <label className="settings-item__label" htmlFor="toggle-haptics">
+                Haptics
+              </label>
+              <button
+                id="toggle-haptics"
+                className={`toggle ${settings.hapticsEnabled ? 'toggle--on' : 'toggle--off'}`}
+                role="switch"
+                aria-checked={settings.hapticsEnabled}
+                onClick={() => toggle('hapticsEnabled')}
+              >
+                {settings.hapticsEnabled ? 'ON' : 'OFF'}
+              </button>
+            </li>
+
+            <li className="settings-item">
               <label className="settings-item__label" htmlFor="toggle-translation">
                 Show translation by default
               </label>

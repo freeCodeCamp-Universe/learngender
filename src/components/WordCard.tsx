@@ -27,6 +27,12 @@ export function WordCard({ word, onSwipe, showTranslation }: WordCardProps) {
   const lastTime         = useRef(0)
   const velocity         = useRef(0)
   const handled          = useRef(false)
+  const showTranslationRef = useRef(showTranslation)
+  const translationUsedRef = useRef(showTranslation)
+
+  useEffect(() => {
+    showTranslationRef.current = showTranslation
+  }, [showTranslation])
 
   // New word arrives → drop-in animation
   useEffect(() => {
@@ -35,12 +41,18 @@ export function WordCard({ word, onSwipe, showTranslation }: WordCardProps) {
     setDragY(0)
     setAnim('enter')
     handled.current = false
+    translationUsedRef.current = showTranslationRef.current
     const raf = requestAnimationFrame(() => {
       setReady(true)
       setTimeout(() => setAnim(a => a === 'enter' ? 'idle' : a), 220)
     })
     return () => cancelAnimationFrame(raf)
   }, [word.id])
+
+  useEffect(() => {
+    if (!showTranslation) return
+    translationUsedRef.current = true
+  }, [showTranslation])
 
   function commit(dir: 'left' | 'right') {
     if (handled.current) return
@@ -49,7 +61,7 @@ export function WordCard({ word, onSwipe, showTranslation }: WordCardProps) {
     setDragY(0)
 
     const gender: Gender = dir === 'right' ? 'masculine' : 'feminine'
-    const correct = onSwipe(gender, showTranslation)
+    const correct = onSwipe(gender, translationUsedRef.current)
 
     if (correct) {
       setAnim(dir === 'right' ? 'fly-right' : 'fly-left')
@@ -120,8 +132,10 @@ export function WordCard({ word, onSwipe, showTranslation }: WordCardProps) {
     pointerStartX.current = null
     pointerStartY.current = null
 
-    if (Math.abs(vel) > FLICK_VELOCITY || Math.abs(dx) >= MIN_DISTANCE) {
-      commit((vel !== 0 ? vel : dx) > 0 ? 'right' : 'left')
+    if (Math.abs(dx) >= MIN_DISTANCE) {
+      commit(dx > 0 ? 'right' : 'left')
+    } else if (Math.abs(vel) > FLICK_VELOCITY) {
+      commit(vel > 0 ? 'right' : 'left')
     } else {
       setDragX(0)
       setDragY(0)

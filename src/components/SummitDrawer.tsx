@@ -72,7 +72,7 @@ export function SummitDrawer({
   }, [showScoreSection])
 
   useEffect(() => {
-    const raf = requestAnimationFrame(() => nextButtonRef.current?.focus())
+    const raf = requestAnimationFrame(() => nextButtonRef.current?.focus({ preventScroll: true }))
     return () => cancelAnimationFrame(raf)
   }, [])
 
@@ -110,6 +110,11 @@ export function SummitDrawer({
             <span className="summit-drawer__score-chip">
               no translation {breakdown.noTranslationBonus ? `+${breakdown.noTranslationBonus}` : ' -'}
             </span>
+            {breakdown.errorPenalty > 0 && (
+              <span className="summit-drawer__score-chip">
+                errors -{breakdown.errorPenalty}
+              </span>
+            )}
           </div>
         </div>
       )}
@@ -142,7 +147,7 @@ export function SummitDrawer({
       {/* Actions */}
       <div className="summit-drawer__actions">
         <button ref={nextButtonRef} className="btn btn--primary" onClick={onNext}>
-          {mode === 'loss' ? 'Retry' : 'Next →'}
+          {mode === 'loss' ? 'New round' : 'Next →'}
         </button>
       </div>
       <button className="summit-drawer__exit-btn" onClick={onExit}>

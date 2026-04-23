@@ -127,7 +127,7 @@ export function GameScreen({ language, onRoundEnd, onPlayAgain, onHome }: GameSc
         </>
       )}
 
-      {(isSummit || isDone) && state.summary && (
+      {(isSummit || isDone) && state.summary && state.drawerReady && (
         <SummitDrawer
           summary={state.summary}
           mode={isDone ? 'loss' : 'win'}

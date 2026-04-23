@@ -15,6 +15,7 @@ export interface Word {
 
 export interface Settings {
   soundEnabled: boolean
+  hapticsEnabled: boolean
   showTranslationByDefault: boolean
 }
 
@@ -61,7 +62,7 @@ export interface CardResult {
 export interface RoundSummary {
   language: Language
   cards: CardResult[]
-  score: number // correct count out of 10
+  score: number // first-try correct count across unique words answered in the round
   pointsEarned: number
   masteredBefore: number  // words mastered before the round
   masteredAfter: number   // words mastered after the round
