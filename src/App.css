@@ -313,6 +313,14 @@ html, body, #root {
   border-radius: 20px;
   padding: 1.05rem 1.15rem;
 }
+.skill-card--new .skill-card__level-badge {
+  color: rgba(255, 255, 255, 0.68) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+}
+.skill-card--maxed .skill-card__level-badge {
+  box-shadow: 0 0 0 1px rgba(255, 215, 90, 0.08), 0 0 18px rgba(255, 215, 90, 0.1);
+}
 
 .skill-card__header {
   display: flex;
@@ -380,6 +388,14 @@ html, body, #root {
 }
 .skill-card__mastery-bar--empty {
   background: rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+.skill-card--new .skill-card__mastery-bar--empty {
+  background: rgba(255, 255, 255, 0.1);
+}
+.skill-card--maxed .skill-card__mastery-bar {
+  background: rgba(255, 215, 90, 0.12);
+  box-shadow: inset 0 0 0 1px rgba(255, 215, 90, 0.12);
 }
 
 /* Footer row */

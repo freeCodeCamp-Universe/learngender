@@ -125,9 +125,18 @@ export function HomeScreen({ onStartRound, onMyWords, onTheory }: HomeScreenProp
           const levelName = isNew ? 'New' : masteryTier.name
           const levelColor = LEVEL_COLOR[levelName] ?? '#aaaaaa'
           const learningColor = LEVEL_BAR_LEARNING_COLOR[levelName] ?? '#9b7ee8'
+          const isMaxTier = !isNew && masteryTier.tierEnd === null
+          const masteryBarLabel = isNew
+            ? `${labels.name} has no mastery progress yet`
+            : isMaxTier
+              ? `${masteryTier.name} mastery tier complete with ${masteredCount} mastered words`
+              : `${masteryTier.name} mastery progress: ${masteryTier.masteredInTier} mastered and ${masteryTier.learningVisible} learning in this tier`
 
           return (
-            <div key={lang} className="skill-card">
+            <div
+              key={lang}
+              className={`skill-card${isNew ? ' skill-card--new' : ''}${isMaxTier ? ' skill-card--maxed' : ''}`}
+            >
               {/* Card header: flag + level ring + name | level badge */}
               <div className="skill-card__header">
                 {(() => {
@@ -177,35 +186,30 @@ export function HomeScreen({ onStartRound, onMyWords, onTheory }: HomeScreenProp
                     </button>
 
                     <div className="skill-card__progress-group">
-                      {!isNew && (
-                        <div
-                          className="skill-card__mastery-bar"
-                          role="img"
-                          aria-label={`${masteryTier.name} mastery progress: ${masteryTier.masteredInTier} mastered and ${masteryTier.learningVisible} learning in this tier`}
-                        >
-                          {masteryTier.masteredPct > 0 && (
-                            <div
-                              className="skill-card__mastery-fill skill-card__mastery-fill--mastered"
-                              style={{
-                                width: `${masteryTier.masteredPct}%`,
-                                background: levelColor,
-                              }}
-                            />
-                          )}
-                          {masteryTier.learningPct > 0 && (
-                            <div
-                              className="skill-card__mastery-fill skill-card__mastery-fill--learning"
-                              style={{
-                                width: `${masteryTier.learningPct}%`,
-                                background: learningColor,
-                              }}
-                            />
-                          )}
-                        </div>
-                      )}
-                      {isNew && (
-                        <div className="skill-card__mastery-bar skill-card__mastery-bar--empty" aria-hidden="true" />
-                      )}
+                      <div
+                        className={`skill-card__mastery-bar${isNew ? ' skill-card__mastery-bar--empty' : ''}`}
+                        role="img"
+                        aria-label={masteryBarLabel}
+                      >
+                        {!isNew && masteryTier.masteredPct > 0 && (
+                          <div
+                            className="skill-card__mastery-fill skill-card__mastery-fill--mastered"
+                            style={{
+                              width: `${masteryTier.masteredPct}%`,
+                              background: levelColor,
+                            }}
+                          />
+                        )}
+                        {!isNew && masteryTier.learningPct > 0 && (
+                          <div
+                            className="skill-card__mastery-fill skill-card__mastery-fill--learning"
+                            style={{
+                              width: `${masteryTier.learningPct}%`,
+                              background: learningColor,
+                            }}
+                          />
+                        )}
+                      </div>
 
                       <span className="skill-card__mastered">
                         <strong>{learningCount}</strong> learning · <strong>{masteredCount}</strong> mastered

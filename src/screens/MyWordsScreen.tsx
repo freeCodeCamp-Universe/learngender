@@ -4,7 +4,7 @@ import { LANGUAGE_LABELS } from '../types'
 import { addScore, getSeenWords, getMasteredCount, getWordMastery, isManuallyMastered, toggleManuallyMastered } from '../lib/storage'
 import { getWords } from '../lib/wordLoader'
 import { MasteryCircle } from '../components/MasteryCircle'
-import { getLevelProgressFromMastered } from '../lib/levels'
+import { getMasteryTierOverview } from '../lib/levels'
 import { MASTERED_THRESHOLD } from '../lib/mastery'
 
 const LANGUAGES: Language[] = ['pt', 'es', 'fr', 'it']
@@ -77,19 +77,18 @@ export function MyWordsScreen({ onHome, onTheory }: MyWordsScreenProps) {
 
   async function handleToggleMastered(wordId: string) {
     toggleManuallyMastered(selectedLang, wordId)
-    // Recalculate and persist masteredCount so home screen level bar updates
+    // Recalculate and persist masteredCount so home screen mastery bar updates
     const allWords = await getWords(selectedLang)
     const wordIds = allWords.map(w => w.id)
     const newMasteredCount = getMasteredCount(selectedLang, wordIds)
-    const { level: newLevel } = getLevelProgressFromMastered(newMasteredCount)
-    addScore(selectedLang, 0, newMasteredCount, newLevel)
+    addScore(selectedLang, 0, newMasteredCount)
     load(selectedLang)
   }
 
   const learningEntries = entries.filter(e => !e.manuallyMastered && e.masteryPct < MASTERED_THRESHOLD)
   const masteredEntries = entries.filter(e => e.manuallyMastered || e.masteryPct >= MASTERED_THRESHOLD)
   const masteredCount = masteredEntries.length
-  const masteredProgress = getLevelProgressFromMastered(masteredCount)
+  const masteryTier = getMasteryTierOverview(masteredCount)
 
   return (
     <div className="my-words-screen">
@@ -120,21 +119,21 @@ export function MyWordsScreen({ onHome, onTheory }: MyWordsScreenProps) {
       {/* Mastered progress bar */}
       <div className="my-words-progress">
         <div className="my-words-progress__header">
-          <span className="my-words-progress__level">{masteredProgress.name.toUpperCase()}</span>
+          <span className="my-words-progress__level">{masteryTier.name.toUpperCase()}</span>
           <span className="my-words-progress__count">
-            {masteredCount}{masteredProgress.nextThreshold ? ` / ${masteredProgress.nextThreshold}` : ''} mastered
+            {masteredCount}{masteryTier.nextThreshold ? ` / ${masteryTier.nextThreshold}` : ''} mastered
           </span>
         </div>
         <div className="my-words-progress__segments" aria-hidden="true">
           {Array.from({ length: SEGMENT_COUNT }).map((_, i) => {
-            const full = i < masteredProgress.level - 1
-            const active = i === masteredProgress.level - 1
+            const full = i < masteryTier.tier - 1
+            const active = i === masteryTier.tier - 1
             return (
               <div key={i} className="my-words-progress__seg">
                 {(full || active) && (
                   <div
                     className="my-words-progress__seg-fill"
-                    style={{ width: full ? '100%' : `${masteredProgress.pct}%`, background: LANG_COLOR[selectedLang] }}
+                    style={{ width: full ? '100%' : `${masteryTier.pct}%`, background: LANG_COLOR[selectedLang] }}
                   />
                 )}
               </div>

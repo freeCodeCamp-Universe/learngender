@@ -26,7 +26,7 @@ export interface StreakData {
 
 export interface LanguageScore {
   score: number         // accumulated decorative points
-  level: number         // 1–5, derived from masteredCount
+  level: number         // cached XP level for convenience in a few write paths
   masteredCount: number // words with learner-facing mastery ≥ 80%
 }
 
@@ -66,7 +66,7 @@ export interface RoundSummary {
   pointsEarned: number
   masteredBefore: number  // words mastered before the round
   masteredAfter: number   // words mastered after the round
-  levelBefore: number
-  levelAfter: number
+  levelBefore: number     // XP level before the round
+  levelAfter: number      // XP level after the round
   passed: boolean
 }

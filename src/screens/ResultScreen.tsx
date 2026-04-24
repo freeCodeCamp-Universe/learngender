@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import type { RoundSummary } from '../types'
 import { MasteryCircle } from '../components/MasteryCircle'
-import { getLevelName, getLevelProgressFromMastered } from '../lib/levels'
+import { getMasteryTierOverview } from '../lib/levels'
 import { SUMMIT_STEP } from '../hooks/useRound'
 
 interface ResultScreenProps {
@@ -26,18 +26,28 @@ export function ResultScreen({ summary, onPlayAgain, onHome }: ResultScreenProps
     return acc
   }, [])
 
-  // Animated progress bar
-  const progressBefore = getLevelProgressFromMastered(summary.masteredBefore)
-  const progressAfter = getLevelProgressFromMastered(summary.masteredAfter)
-  const [barPct, setBarPct] = useState(progressBefore.pct)
+  // Animated mastery-tier progress bar
+  const tierBefore = getMasteryTierOverview(summary.masteredBefore)
+  const tierAfter = getMasteryTierOverview(summary.masteredAfter)
+  const masteryTierChanged = tierAfter.tier > tierBefore.tier
+  const tierLabel = masteryTierChanged ? `${tierBefore.name} -> ${tierAfter.name}` : tierAfter.name
+  const tierCountLabel = tierAfter.nextThreshold
+    ? `${tierAfter.masteredCount} / ${tierAfter.nextThreshold} mastered`
+    : `${tierAfter.masteredCount} mastered`
+
+  const levelUpLabel = summary.levelAfter === summary.levelBefore + 1
+    ? `Level Up! -> Level ${summary.levelAfter}`
+    : `Level Up! -> Level ${summary.levelBefore} to ${summary.levelAfter}`
+
+  const [barPct, setBarPct] = useState(tierBefore.pct)
   const animated = useRef(false)
 
   useEffect(() => {
     if (animated.current) return
     animated.current = true
-    const timeout = setTimeout(() => setBarPct(progressAfter.pct), 300)
+    const timeout = setTimeout(() => setBarPct(tierAfter.pct), 300)
     return () => clearTimeout(timeout)
-  }, [progressAfter.pct])
+  }, [tierAfter.pct])
 
   return (
     <div className="result-screen">
@@ -53,17 +63,15 @@ export function ResultScreen({ summary, onPlayAgain, onHome }: ResultScreenProps
       </div>
       {levelUp && (
         <div className="result-badge__levelup">
-          Level Up! → {getLevelName(summary.levelAfter)}
+          {levelUpLabel}
         </div>
       )}
 
-      {/* Level progress bar */}
+      {/* Mastery tier progress bar */}
       <div className="result-progress">
         <div className="result-progress__labels">
-          <span>{getLevelName(summary.levelAfter)}</span>
-          {progressAfter.nextThreshold && (
-            <span>{progressAfter.masteredCount} / {progressAfter.nextThreshold} words</span>
-          )}
+          <span>{tierLabel}</span>
+          <span>{tierCountLabel}</span>
         </div>
         <div className="result-progress__track">
           <div
