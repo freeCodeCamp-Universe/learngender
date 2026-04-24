@@ -442,14 +442,16 @@ html, body, #root {
 .home-screen__bottom-nav {
   position: fixed;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 480px;
+  left: 0;
+  right: 0;
+  width: min(100%, 480px);
+  margin: 0 auto;
   display: flex;
   background: var(--bg-card);
   border-top: 1px solid var(--border);
-  padding: 0.5rem 0 0.75rem;
+  padding: 0.5rem 0 calc(0.75rem + env(safe-area-inset-bottom));
+  z-index: 20;
+  will-change: transform;
 }
 .bottom-nav__btn {
   flex: 1;
