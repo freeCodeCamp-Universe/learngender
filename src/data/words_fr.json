@@ -4344,14 +4344,6 @@
     "category": "emotions_abstract"
   },
   {
-    "id": "whisky__masculine__whisky",
-    "word": "whisky",
-    "translation": "whisky",
-    "gender": "masculine",
-    "article": "le",
-    "category": "nature"
-  },
-  {
     "id": "humeur__feminine__humour",
     "word": "humeur",
     "translation": "humour",
@@ -7416,14 +7408,6 @@
     "category": "people"
   },
   {
-    "id": "business__masculine__business",
-    "word": "business",
-    "translation": "business",
-    "gender": "masculine",
-    "article": "le",
-    "category": "transport"
-  },
-  {
     "id": "principe__masculine__principle",
     "word": "principe",
     "translation": "principle",
@@ -8272,14 +8256,6 @@
     "category": "arts_leisure"
   },
   {
-    "id": "ticket__masculine__ticket",
-    "word": "ticket",
-    "translation": "ticket",
-    "gender": "masculine",
-    "article": "le",
-    "category": "transport"
-  },
-  {
     "id": "événement__masculine__event",
     "word": "événement",
     "translation": "event",
@@ -8358,14 +8334,6 @@
     "gender": "feminine",
     "article": "la",
     "category": "city_places"
-  },
-  {
-    "id": "lady__feminine__lady",
-    "word": "lady",
-    "translation": "lady",
-    "gender": "feminine",
-    "article": "la",
-    "category": "people"
   },
   {
     "id": "échelle__feminine__ladder",
@@ -8566,14 +8534,6 @@
     "gender": "feminine",
     "article": "la",
     "category": "emotions_abstract"
-  },
-  {
-    "id": "baby__masculine__table_soccer",
-    "word": "baby",
-    "translation": "table soccer",
-    "gender": "masculine",
-    "article": "le",
-    "category": "home"
   },
   {
     "id": "fonction__feminine__function",
@@ -9942,14 +9902,6 @@
     "gender": "masculine",
     "article": "le",
     "category": "nature"
-  },
-  {
-    "id": "poker__masculine__poker",
-    "word": "poker",
-    "translation": "poker",
-    "gender": "masculine",
-    "article": "le",
-    "category": "arts_leisure"
   },
   {
     "id": "batterie__feminine__battery",
@@ -11928,14 +11880,6 @@
     "category": "animals"
   },
   {
-    "id": "steak__masculine__steak",
-    "word": "steak",
-    "translation": "steak",
-    "gender": "masculine",
-    "article": "le",
-    "category": "food"
-  },
-  {
     "id": "écrit__masculine__writing",
     "word": "écrit",
     "translation": "writing",
@@ -12296,14 +12240,6 @@
     "category": "general"
   },
   {
-    "id": "blues__masculine__blues",
-    "word": "blues",
-    "translation": "blues",
-    "gender": "masculine",
-    "article": "le",
-    "category": "arts_leisure"
-  },
-  {
     "id": "chanteuse__feminine__female_singer",
     "word": "chanteuse",
     "translation": "female singer",
@@ -12550,14 +12486,6 @@
     "gender": "feminine",
     "article": "la",
     "category": "body"
-  },
-  {
-    "id": "portugais__masculine__portuguese",
-    "word": "portugais",
-    "translation": "Portuguese",
-    "gender": "masculine",
-    "article": "le",
-    "category": "transport"
   },
   {
     "id": "billard__masculine__billiards",
@@ -13880,14 +13808,6 @@
     "category": "transport"
   },
   {
-    "id": "parking__masculine__parking",
-    "word": "parking",
-    "translation": "parking",
-    "gender": "masculine",
-    "article": "le",
-    "category": "transport"
-  },
-  {
     "id": "yaourt__masculine__yogurt",
     "word": "yaourt",
     "translation": "yogurt",
@@ -14848,14 +14768,6 @@
     "category": "clothing"
   },
   {
-    "id": "sweat__masculine__sweatshirt",
-    "word": "sweat",
-    "translation": "sweatshirt",
-    "gender": "masculine",
-    "article": "le",
-    "category": "clothing"
-  },
-  {
     "id": "débardeur__masculine__tank_top",
     "word": "débardeur",
     "translation": "tank top",
@@ -14997,14 +14909,6 @@
     "translation": "sportswear",
     "gender": "feminine",
     "article": "la",
-    "category": "clothing"
-  },
-  {
-    "id": "lunettes__feminine__glasses",
-    "word": "lunettes",
-    "translation": "glasses",
-    "gender": "feminine",
-    "article": "les",
     "category": "clothing"
   },
   {
@@ -15179,14 +15083,6 @@
     "id": "cloud__masculine__cloud",
     "word": "cloud",
     "translation": "cloud",
-    "gender": "masculine",
-    "article": "le",
-    "category": "technology"
-  },
-  {
-    "id": "wifi__masculine__wifi",
-    "word": "wifi",
-    "translation": "wifi",
     "gender": "masculine",
     "article": "le",
     "category": "technology"
@@ -15998,5 +15894,125 @@
     "gender": "feminine",
     "article": "la",
     "category": "nature"
+  },
+  {
+    "id": "monture__feminine__frame",
+    "word": "monture",
+    "translation": "frame",
+    "gender": "feminine",
+    "article": "la",
+    "category": "clothing"
+  },
+  {
+    "id": "broche__feminine__brooch",
+    "word": "broche",
+    "translation": "brooch",
+    "gender": "feminine",
+    "article": "la",
+    "category": "clothing"
+  },
+  {
+    "id": "répéteur__masculine__repeater",
+    "word": "répéteur",
+    "translation": "repeater",
+    "gender": "masculine",
+    "article": "le",
+    "category": "technology"
+  },
+  {
+    "id": "péage__masculine__toll",
+    "word": "péage",
+    "translation": "toll",
+    "gender": "masculine",
+    "article": "le",
+    "category": "transport"
+  },
+  {
+    "id": "bretelle__feminine__ramp",
+    "word": "bretelle",
+    "translation": "ramp",
+    "gender": "feminine",
+    "article": "la",
+    "category": "transport"
+  },
+  {
+    "id": "palet__masculine__puck",
+    "word": "palet",
+    "translation": "puck",
+    "gender": "masculine",
+    "article": "le",
+    "category": "arts_leisure"
+  },
+  {
+    "id": "raquette__feminine__racket",
+    "word": "raquette",
+    "translation": "racket",
+    "gender": "feminine",
+    "article": "la",
+    "category": "arts_leisure"
+  },
+  {
+    "id": "côtelette__feminine__cutlet",
+    "word": "côtelette",
+    "translation": "cutlet",
+    "gender": "feminine",
+    "article": "la",
+    "category": "food"
+  },
+  {
+    "id": "bordereau__masculine__slip",
+    "word": "bordereau",
+    "translation": "slip",
+    "gender": "masculine",
+    "article": "le",
+    "category": "money_shop"
+  },
+  {
+    "id": "adaptateur__masculine__adapter",
+    "word": "adaptateur",
+    "translation": "adapter",
+    "gender": "masculine",
+    "article": "l'",
+    "category": "technology"
+  },
+  {
+    "id": "rond-point__masculine__roundabout",
+    "word": "rond-point",
+    "translation": "roundabout",
+    "gender": "masculine",
+    "article": "le",
+    "category": "transport"
+  },
+  {
+    "id": "cerf-volant__masculine__kite",
+    "word": "cerf-volant",
+    "translation": "kite",
+    "gender": "masculine",
+    "article": "le",
+    "category": "arts_leisure"
+  },
+  {
+    "id": "ticket__masculine__ticket",
+    "word": "ticket",
+    "translation": "ticket",
+    "gender": "masculine",
+    "article": "le",
+    "category": "transport"
+  },
+  {
+    "id": "steak__masculine__steak",
+    "word": "steak",
+    "translation": "steak",
+    "gender": "masculine",
+    "article": "le",
+    "category": "food"
+  },
+  {
+    "id": "passant__masculine__passerby",
+    "word": "passant",
+    "translation": "passerby",
+    "gender": "masculine",
+    "article": "le",
+    "category": "people"
   }
 ]
