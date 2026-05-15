@@ -8058,14 +8058,6 @@
     "category": "clothing"
   },
   {
-    "word": "pantaloni",
-    "translation": "trousers",
-    "gender": "masculine",
-    "article": "i",
-    "id": "pantaloni__masculine__trousers",
-    "category": "clothing"
-  },
-  {
     "word": "gonna",
     "translation": "skirt",
     "gender": "feminine",
@@ -8191,14 +8183,6 @@
     "gender": "masculine",
     "article": "lo",
     "id": "zaino__masculine__backpack",
-    "category": "clothing"
-  },
-  {
-    "word": "occhiali",
-    "translation": "glasses",
-    "gender": "masculine",
-    "article": "gli",
-    "id": "occhiali__masculine__glasses",
     "category": "clothing"
   },
   {
@@ -8778,14 +8762,6 @@
     "article": "l'",
     "id": "hobby__masculine__hobby",
     "category": "arts_leisure"
-  },
-  {
-    "word": "soldi",
-    "translation": "money",
-    "gender": "masculine",
-    "article": "i",
-    "id": "soldi__masculine__money",
-    "category": "money_shop"
   },
   {
     "word": "scontrino",
