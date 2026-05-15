@@ -43,7 +43,7 @@ export async function drawRound(language: Language): Promise<Word[]> {
         notYetDueWords.push({ word, dueDate: due })
       }
     } else {
-      newWords.push(word) // never seen, ordered by rank (most frequent first)
+      newWords.push(word) // never seen, ordered by file position
     }
   }
 
