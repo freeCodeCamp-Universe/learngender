@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import type { Settings } from '../types'
 import { getSettings, setSettings } from '../lib/storage'
 
@@ -22,6 +22,7 @@ const KEYBIND_SECTIONS = [
     items: [
       { keys: 'Left Arrow', description: 'Answer feminine on the active card' },
       { keys: 'Right Arrow', description: 'Answer masculine on the active card' },
+      { keys: 'T', description: 'Toggle translation on the active card' },
     ],
   },
   {
@@ -35,6 +36,7 @@ const KEYBIND_SECTIONS = [
 export function SettingsPanel({ onClose }: SettingsPanelProps) {
   const [settings, setLocalSettings] = useState<Settings>(getSettings)
   const [view, setView] = useState<SettingsView>('settings')
+  const [isClosing, setIsClosing] = useState(false)
 
   function toggle(key: keyof Settings) {
     setLocalSettings((prev) => {
@@ -44,26 +46,37 @@ export function SettingsPanel({ onClose }: SettingsPanelProps) {
     })
   }
 
+  const closeWithAnimation = useCallback(function closeWithAnimation() {
+    setIsClosing(true)
+  }, [])
+
   // Close on Escape
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
-      if (e.key === 'Escape') onClose()
+      if (e.key === 'Escape') closeWithAnimation()
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [onClose])
+  }, [closeWithAnimation])
 
   return (
     <>
       {/* Backdrop */}
-      <div className="settings-backdrop" onClick={onClose} aria-hidden="true" />
+      <div
+        className={`settings-backdrop${isClosing ? ' settings-backdrop--closing' : ''}`}
+        onClick={closeWithAnimation}
+        aria-hidden="true"
+      />
 
       {/* Panel */}
       <div
-        className="settings-panel"
+        className={`settings-panel${isClosing ? ' settings-panel--closing' : ''}`}
         role="dialog"
         aria-modal="true"
         aria-label={view === 'settings' ? 'Settings' : 'Keybinds'}
+        onAnimationEnd={() => {
+          if (isClosing) onClose()
+        }}
       >
         <div className="settings-panel__header">
           <div className="settings-panel__header-title">
@@ -74,7 +87,7 @@ export function SettingsPanel({ onClose }: SettingsPanelProps) {
             )}
             <h2>{view === 'settings' ? 'Settings' : 'Keybinds'}</h2>
           </div>
-          <button className="icon-btn" onClick={onClose} aria-label="Close settings">
+          <button className="icon-btn" onClick={closeWithAnimation} aria-label="Close settings">
             ✕
           </button>
         </div>

@@ -36,6 +36,31 @@ export function GameScreen({ language, onRoundEnd, onPlayAgain, onHome }: GameSc
     onRoundEnd(state.summary)
   }, [onRoundEnd, state.phase, state.summary])
 
+  useEffect(() => {
+    if (isSummit || isDone) return
+
+    function onKey(e: KeyboardEvent) {
+      if (e.altKey || e.ctrlKey || e.metaKey) return
+      if (e.key.toLowerCase() !== 't') return
+
+      const target = e.target
+      if (
+        target instanceof HTMLInputElement ||
+        target instanceof HTMLSelectElement ||
+        target instanceof HTMLTextAreaElement ||
+        (target instanceof HTMLElement && target.isContentEditable)
+      ) {
+        return
+      }
+
+      e.preventDefault()
+      setShowTranslation((visible) => !visible)
+    }
+
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [isDone, isSummit])
+
   if (state.phase === 'init_failed') {
     return (
       <div className="game-screen game-screen--loading">

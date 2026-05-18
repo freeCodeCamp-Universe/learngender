@@ -9,7 +9,7 @@ export interface Word {
   gender: Gender
   article: string    // definite article for this word (e.g. 'l\'', 'lo', 'il', 'la')
   hint?: string      // disambiguation for dual-gender words (e.g. 'purpose')
-  rank: number
+  category?: string  // curation theme; required per-language once that language is fully recurated
   patternNote?: string
 }
 
