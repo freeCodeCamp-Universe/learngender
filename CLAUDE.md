@@ -4,17 +4,17 @@
 React 19 + TypeScript + Vite noun gender quiz app (PT/ES/FR/IT).
 No test suite — verify changes by running `npx tsc --noEmit` and testing in the browser.
 
-## Word list overhaul (in progress)
-Replacing all four language word lists with ~2,000 curated, theme-tagged nouns per language.
+## Word lists — complete
+All four language word lists have been replaced with ~2,000 curated, theme-tagged nouns per language.
 
 | Language | File | Status |
 |---|---|---|
 | Italian | `src/data/words_it.json` | Done — 2,006 entries |
 | French | `src/data/words_fr.json` | Done — 2,000 entries |
-| Spanish | `src/data/words_es.json` | Pending |
-| Portuguese | `src/data/words_pt.json` | Pending |
+| Spanish | `src/data/words_es.json` | Done — 2,000 entries |
+| Portuguese | `src/data/words_pt.json` | Done — 2,000 entries |
 
-**Next step:** Spanish. Hand `plan/codex-es-categorization.md` to Codex along with `src/data/words_es.json`. After Codex returns results, manually review the `general` bucket (Codex over-populates it) and fix any misplacements.
+Words are added and edited manually. The scraping scripts in `scripts/` are no longer used.
 
 ## Word schema
 ```json
@@ -39,4 +39,4 @@ work_school, city_places, technology, arts_leisure, money_shop, general, health,
 ## Key plan files
 - `plan/word-categories.md` — locked taxonomy + hard exclusion rules
 - `plan/word-curation-workflow.md` — per-batch workflow, article rules per language
-- `plan/codex-es-categorization.md` — Codex instructions for Spanish (adapt for PT)
+- `plan/codex-es-categorization.md` — Codex categorization instructions for Spanish (historical reference)

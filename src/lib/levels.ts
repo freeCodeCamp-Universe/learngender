@@ -124,7 +124,3 @@ export function getMasteryTierProgress(mastered: number, learning: number): {
   }
 }
 
-// Backwards-compatible aliases for older call sites while the naming migrates.
-export const getLevelFromMastered = getMasteryTierFromMastered
-export const getLevelName = getMasteryTierName
-export const getLevelProgressFromMastered = getMasteryTierOverview
