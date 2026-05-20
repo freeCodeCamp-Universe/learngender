@@ -1,0 +1,17 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LearnGender app icon">
+  <title>LearnGender</title>
+  <!-- background tile -->
+  <rect width="512" height="512" rx="112" fill="#0a0a23"/>
+  <!-- back mountain -->
+  <path d="M 96 408 L 224 152 L 352 408 Z" fill="#1b1b32"/>
+  <!-- front mountain -->
+  <path d="M 168 408 L 312 96 L 456 408 Z" fill="#2a2a40"/>
+  <!-- snowcap on front peak -->
+  <path d="M 274 178 L 312 96 L 350 178 L 332 196 L 312 168 L 292 196 Z" fill="#ffffff"/>
+  <!-- climber path (dashed) -->
+  <path d="M 196 396 Q 248 304 292 200" stroke="#ffd75a" stroke-width="6" stroke-dasharray="9 12" fill="none" stroke-linecap="round"/>
+  <!-- climber glow -->
+  <circle cx="248" cy="304" r="32" fill="#ffd75a" opacity="0.18"/>
+  <!-- climber dot -->
+  <circle cx="248" cy="304" r="14" fill="#ffd75a"/>
+</svg>
