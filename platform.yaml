@@ -1,4 +1,4 @@
-site: learngenders
+site: learngender
 build:
   command: pnpm run build
   output: dist
