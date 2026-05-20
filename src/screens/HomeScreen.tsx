@@ -107,7 +107,7 @@ export function HomeScreen({ onStartRound, onMyWords, onTheory }: HomeScreenProp
 
       {/* Title */}
       <div className="home-screen__title">
-        <h1>LearnNounGender</h1>
+        <h1>Learn Genders</h1>
         <p className="home-screen__tagline">choose a language to practice</p>
       </div>
 

@@ -1,4 +1,4 @@
-# LearnNounGender
+# Learn Genders
 
 Browser-based flashcard game for practicing noun gender in Portuguese, Spanish, French, and Italian.
 
