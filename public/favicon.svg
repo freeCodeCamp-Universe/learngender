@@ -1,7 +1,16 @@
-<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LearnGender favicon">
-  <title>LearnGender</title>
-  <rect width="64" height="64" rx="14" fill="#0a0a23"/>
-  <path d="M 12 52 L 32 14 L 52 52 Z" fill="#2a2a40"/>
-  <path d="M 26 25 L 32 14 L 38 25 L 35 28 L 32 23 L 29 28 Z" fill="#ffffff"/>
-  <circle cx="26" cy="40" r="3.5" fill="#ffd75a"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Learn Genders">
+  <title>Learn Genders</title>
+  <rect width="64" height="64" rx="12" fill="#0a0a23"/>
+  <g transform="translate(26 34) rotate(-28)">
+    <rect x="-18" y="-22" width="36" height="44" rx="5" fill="#acd157"/>
+  </g>
+  <g transform="translate(29 33) rotate(-22)">
+    <rect x="-18" y="-22" width="36" height="44" rx="5" fill="#ffadad"/>
+  </g>
+  <g transform="translate(31 32) rotate(-17)">
+    <rect x="-18" y="-22" width="36" height="44" rx="5" fill="#99c9ff"/>
+  </g>
+  <g transform="translate(34 31) rotate(-8)">
+    <rect x="-18" y="-22" width="36" height="44" rx="5" fill="#f1be32"/>
+  </g>
 </svg>
