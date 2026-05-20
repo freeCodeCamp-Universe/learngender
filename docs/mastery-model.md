@@ -11,6 +11,7 @@ They are intentionally separate.
 
 - `XP` drives the numeric player level used during rounds.
 - `mastery` drives the per-word circles, the Home mastery tier badge, the Home tier-progress bar, and the learning/mastered counts.
+- `FSRS` drives review timing and round-selection priority.
 
 The Home card therefore mixes two progress systems on purpose:
 
@@ -48,6 +49,7 @@ That means:
 
 - `80+` mastery: counts as `mastered`
 - `90+` mastery: leaves the active rotation, but can still appear as fallback
+- manually mastered words: count as `mastered` and are excluded from round selection
 
 ## Mastery Tiers
 
@@ -76,6 +78,29 @@ Card scheduling still comes from FSRS, but round construction is slightly more g
 3. new words by frequency
 4. more not-yet-due review cards if needed
 5. high-mastery cards only as a last resort fallback
+
+The implementation currently reserves up to `3` near-due review slots before filling the rest of the deck with new words.
+
+## Round Mechanics
+
+Rounds are summit climbs:
+
+- a playable round needs at least `8` cards to start
+- the deck is capped at `10` cards
+- the learner starts with `5` lives
+- correct answers move the hiker up `1` step
+- incorrect answers remove `1` life, move the hiker down `1` step down to `0`, and requeue the missed word `3` positions ahead
+- reaching `8` hiker steps passes the round
+- reaching `0` lives fails the round
+
+Scoring is based on the first result for each unique word in the round:
+
+- correct answer: `+10` points
+- correct without translation: `+5` extra
+- perfect summit: `+50` extra when all `8` unique summit answers are correct
+- failed round: `0` points, even though SRS and mastery updates still apply
+
+The maximum passed-round score is therefore `170` points: `(10 + 5) * 8 + 50`.
 
 ## Migration / Backward Compatibility
 

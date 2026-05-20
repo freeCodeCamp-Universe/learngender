@@ -1,151 +1,128 @@
 # Learn Genders
 
-Browser-based flashcard game for practicing noun gender in Portuguese, Spanish, French, and Italian.
+Browser-based swipe quiz for practicing noun gender in Portuguese, Spanish, French, and Italian.
 
 ## Stack
 
-- React
-- TypeScript
+- React 19 + TypeScript
 - Vite
 - `pnpm`
 
 ## Development
 
-Install dependencies:
-
 ```bash
-pnpm install
+pnpm install   # install dependencies
+pnpm dev       # start dev server
+pnpm lint      # run lint
+pnpm words:check # validate word data
+pnpm build     # production build
 ```
 
-Start the dev server:
+## How It Works
 
-```bash
-pnpm dev
+### Swipe quiz
+
+The game is a mountain-climb swipe quiz. Swipe left for feminine or right for masculine, or use the left/right arrow keys. The side bands show the article choices for the current word; languages with ambiguous article forms, such as `l'`, add gender qualifiers.
+
+A round starts only when the app can build at least 8 cards. The deck is capped at 10 cards, but the win condition is the summit: reach 8 hiker steps before running out of lives.
+
+| Answer | Effect |
+|---|---|
+| Correct | +1 correct answer, +1 hiker step |
+| Incorrect | −1 life, −1 hiker step down to 0, and the word is requeued 3 positions ahead |
+| 8 hiker steps | Round passed; summit drawer opens |
+| 0 lives | Round failed; no XP points are awarded |
+
+The translation toggle can be changed with the translate button or `T`. A setting can show translations by default.
+
+Cards are drawn in this priority order:
+1. Due SRS review cards
+2. Up to 3 not-yet-due review cards, nearest due first
+3. New unseen words, in word-list order
+4. More not-yet-due SRS cards if needed
+5. High-mastery SRS cards as a last resort
+
+Words manually marked as mastered are excluded from round selection.
+
+### Spaced repetition (FSRS-5)
+
+Each word has an SRS card powered by [ts-fsrs](https://github.com/open-spaced-repetition/ts-fsrs). Correct answers are rated `Good`; incorrect answers are rated `Again`. This determines when the word is next due for review.
+
+### Mastery
+
+Separate from SRS, each word has a learner-facing **mastery score** (0–100%). It changes after every answer:
+
+| Event | Change |
+|---|---|
+| Correct answer | +6 |
+| Correct without seeing translation | +3 bonus |
+| Correct on a due review card | +2 bonus |
+| Incorrect answer | −8 |
+| Incorrect after seeing translation | −5 (instead of −8) |
+
+A word is considered **mastered** at ≥ 80%. Words at ≥ 90% mastery are deprioritized from active rotation.
+
+See docs/mastery-model.md for more details.
+
+### Scoring and XP
+
+Points are earned only on passed summit rounds. Failed rounds update word history and mastery, but award 0 points.
+
+| Event | Points |
+|---|---|
+| Correct answer | +10 |
+| Correct without seeing translation | +5 bonus |
+| Perfect summit (8 unique answers, all correct) | +50 bonus |
+
+Maximum per round: **170 points** (`8 × 15 + 50`).
+
+Accumulated points feed into an **XP level** (starts at 1, grows with a curve). XP level is purely decorative.
+
+### Mastery tiers
+
+Each language also has a **mastery tier** based on how many words you've mastered (≥ 80%):
+
+| Tier | Mastered words |
+|---|---|
+| Rookie | 0 |
+| Apprentice | 50 |
+| Scholar | 200 |
+| Linguist | 600 |
+| Polyglot | 1 500 |
+
+### Theory modules
+
+Each language has slide-based grammar theory modules covering topics like article rules, noun plurals, adjective agreement, and language-specific exceptions. Modules can be navigated with buttons, arrow keys, or swipe gestures. Completion progress is stored in `localStorage`.
+
+| Language | Modules |
+|---|---|
+| Portuguese | 5 |
+| Spanish | 8 |
+| French | 10 |
+| Italian | 8 |
+
+### Word lists
+
+Each language has about 2,000 curated nouns stored in `src/data/words_<lang>.json`. Words are manually curated and tagged with a category. File order drives new-word selection.
+
+Word schema:
+```json
+{
+  "id": "casa__feminine__house",
+  "word": "casa",
+  "translation": "house",
+  "gender": "feminine",
+  "article": "la",
+  "category": "home"
+}
 ```
 
-Run lint:
+The 18 category keys are: `people`, `body`, `food`, `home`, `clothing`, `animals`, `nature`, `weather`, `time`, `transport`, `work_school`, `city_places`, `technology`, `arts_leisure`, `money_shop`, `general`, `health`, `emotions_abstract`.
 
-```bash
-pnpm lint
-```
+### My Words
 
-Build for production:
+The **My Words** screen shows seen words by language, split into learning and mastered tabs. A word moves to mastered at 80% mastery, and the learner can also manually mark or unmark words as mastered. Manual mastery updates the language's mastered count and keeps that word out of future rounds.
 
-```bash
-pnpm build
-```
+### Local storage
 
-## Game Mechanics
-
-- A playable round must start with at least `SUMMIT_STEP` cards, because the game should never enter `playing` without enough cards to reach a full summit.
-- `useRound.attempt()` rejects any deck shorter than `SUMMIT_STEP`.
-- Round initialization retries automatically once. If the second attempt also fails, the round transitions to `init_failed`.
-- `drawRound()` fills the deck in this order:
-  - due review cards
-  - new unseen cards
-  - not-yet-due SRS cards, nearest due first
-  - SRS-mastered cards, nearest due first, as a last resort
-- `loading` is used only while round initialization is actively running.
-- If round initialization fails twice, the game shows a final `Couldn't start the next round.` state with a `Home` action.
-
-## Data Scripts
-
-Rebuild all language wordlists with the dedicated pipelines:
-
-```bash
-pnpm data:extract
-```
-
-Rebuild only the Portuguese list with the pt-BR pipeline:
-
-```bash
-pnpm data:extract:pt
-```
-
-Rebuild only the Spanish list with the cleaner Spanish pipeline:
-
-```bash
-pnpm data:extract:es
-```
-
-Rebuild only the French list with the Lexique-based French pipeline:
-
-```bash
-pnpm data:extract:fr
-```
-
-Rebuild only the Italian list with the PAISÀ-based Italian pipeline:
-
-```bash
-pnpm data:extract:it
-```
-
-Rebuild the Portuguese list and reapply `patternNote`:
-
-```bash
-pnpm data:refresh:pt
-```
-
-Rebuild the Spanish list and reapply `patternNote`:
-
-```bash
-pnpm data:refresh:es
-```
-
-Rebuild the French list and reapply `patternNote`:
-
-```bash
-pnpm data:refresh:fr
-```
-
-Rebuild the Italian list and reapply `patternNote`:
-
-```bash
-pnpm data:refresh:it
-```
-
-Apply rule-based pattern notes to existing wordlists:
-
-```bash
-pnpm data:notes
-```
-
-## pt-BR Wordlist
-
-The Portuguese list is rebuilt from:
-
-- Linguateca `Corpus Brasileiro` noun lemmas for ranking/frequency
-- Kaikki Portuguese entries for gender and seed translations
-- local overrides in `scripts/config/ptbr-manual-overrides.json` for known bad senses and pt-PT exclusions
-
-The generated app data lives in `src/data/words_pt.json`.
-
-## Spanish Wordlist
-
-The Spanish list is rebuilt from:
-
-- `doozan/spanish_data` `frequency.csv` for noun-form frequency
-- Kaikki Spanish entries for gender and seed translations
-- local overrides in `scripts/config/es-manual-overrides.json` for bad homographs, vulgar outliers, and common translation fixes
-
-The generated app data lives in `src/data/words_es.json`.
-
-## French Wordlist
-
-The French list is rebuilt from:
-
-- Lexique 3.83 for noun frequency and grammatical gender
-- Kaikki French entries for seed translations
-- local overrides in `scripts/config/fr-manual-overrides.json` for bad homographs, nonstandard spellings, and translation fixes
-
-The generated app data lives in `src/data/words_fr.json`.
-
-## Italian Wordlist
-
-The Italian list is rebuilt from:
-
-- PAISÀ lemma frequencies for ranking
-- Kaikki Italian entries for gender and seed translations
-- local overrides in `scripts/config/it-manual-overrides.json` for bad homographs, offensive outliers, and translation fixes
-
-The generated app data lives in `src/data/words_it.json`.
+Progress is client-side only. The app stores SRS cards, mastery percentages, seen words, manual mastery flags, score/level data, streaks, settings, and completed theory modules in `localStorage`.
