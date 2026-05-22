@@ -1,4 +1,4 @@
-# Learn Genders
+# Learn Gender
 
 Browser-based swipe quiz for practicing noun gender in Portuguese, Spanish, French, and Italian.
 

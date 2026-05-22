@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Learn Genders">
-  <title>Learn Genders</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Learn Gender">
+  <title>Learn Gender</title>
   <rect width="64" height="64" rx="12" fill="#0a0a23"/>
   <g transform="translate(26 34) rotate(-28)">
     <rect x="-18" y="-22" width="36" height="44" rx="5" fill="#acd157"/>
