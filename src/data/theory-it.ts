@@ -4,7 +4,7 @@ export const IT_MODULE_1: TheorySlide[] = [
   {
     type: 'intro',
     title: 'The article is everything',
-    body: `In Italian, every noun is either **masculine** (il / un) or **feminine** (la / una).\n\n> ✓ **il** libro (the book) — masculine\n> ✓ **la** casa (the house) — feminine\n\nItalian is the most regular of the four languages. The -o / -a pattern is very reliable — but the exceptions are famous and frequent.`,
+    body: `In Italian, every noun is either **masculine** (il / un) or **feminine** (la / una).\n\n> ✓ **il** libro (the book) — masculine\n> ✓ **la** casa (the house) — feminine\n\nThe -o / -a pattern is very reliable — but the exceptions are famous and frequent. There are also special article forms — **lo** (masculine, before s+consonant, z, gn…) and **l'** (before vowels) — covered in detail in Module 6.`,
   },
   {
     type: 'table',
@@ -392,7 +392,7 @@ export const IT_MODULE_7: TheorySlide[] = [
   {
     type: 'pattern',
     title: 'Con and per: no contractions',
-    body: `**Con** (with) and **per** (for/through) do NOT contract in modern Italian.\n\n> con il → col is possible but archaic — use **con il**\n> per il → stays as **per il**\n\n> Vengo **con il** treno. (I'm coming by train.)\n> È **per la** tua famiglia. (It's for your family.)`,
+    body: `**Con** (with) and **per** (for/through) do NOT contract in formal or written Italian.\n\n> con il → **col** exists and is very common in spoken Italian, but avoid it in writing — use **con il**\n> per il → stays as **per il**\n\n> Vengo **con il** treno. (I'm coming by train.)\n> È **per la** tua famiglia. (It's for your family.)`,
   },
   {
     type: 'cheatsheet',
