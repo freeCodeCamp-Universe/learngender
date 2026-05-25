@@ -79,7 +79,7 @@ export function GameScreen({ language, onRoundEnd, onPlayAgain, onHome }: GameSc
   }
 
   return (
-    <div className={`game-screen ${state.isShaking ? 'game-screen--shake' : ''}`}>
+    <div className="game-screen">
       <MountainBackground hikerStep={state.hikerStep} isSummit={isSummit} />
 
       {/* Top bar */}

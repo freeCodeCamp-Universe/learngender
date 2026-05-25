@@ -21,7 +21,6 @@ export interface RoundState {
   lives: number
   hikerStep: number
   results: CardResult[]
-  isShaking: boolean
   summary: RoundSummary | null
   drawerReady: boolean
 }
@@ -55,7 +54,6 @@ export function useRound(language: Language, initialDeck?: Word[]) {
     lives: TOTAL_LIVES,
     hikerStep: 0,
     results: [],
-    isShaking: false,
     summary: null,
     drawerReady: false,
   })
@@ -92,7 +90,6 @@ export function useRound(language: Language, initialDeck?: Word[]) {
           lives: TOTAL_LIVES,
           hikerStep: 0,
           results: [],
-          isShaking: false,
           summary: null,
           drawerReady: false,
         })
@@ -190,13 +187,12 @@ export function useRound(language: Language, initialDeck?: Word[]) {
                 lives: 0,
                 hikerStep: newHikerStep,
                 deck: newDeck,
-                isShaking: false,
                 phase: 'done',
                 summary,
                 drawerReady: true,
               }))
             }, DISMISS_DELAY)
-            return { ...prev, lives: 0, hikerStep: newHikerStep, deck: newDeck, isShaking: true }
+            return { ...prev, lives: 0, hikerStep: newHikerStep, deck: newDeck }
           }
 
           // Advance to next card after dismiss animation completes
@@ -204,11 +200,11 @@ export function useRound(language: Language, initialDeck?: Word[]) {
           setTimeout(() => {
             setState((s) => {
               if (s.phase === 'done' || s.phase === 'summit') return s
-              return { ...s, currentIndex: nextIndex, isShaking: false }
+              return { ...s, currentIndex: nextIndex }
             })
           }, DISMISS_DELAY)
 
-          return { ...prev, lives: newLives, hikerStep: newHikerStep, deck: newDeck, isShaking: true }
+          return { ...prev, lives: newLives, hikerStep: newHikerStep, deck: newDeck }
         }
 
         // Correct answer
