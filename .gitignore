@@ -29,6 +29,9 @@ dist-ssr
 # Local planning docs
 plan/
 
+# AI assistant instructions
+CLAUDE.md
+
 # Theory source markdown (content already compiled into .ts files)
 src/data/theory/
 
