@@ -139,6 +139,10 @@ export function useRound(language: Language, initialDeck?: Word[]) {
 
       const correct = snapshotWord.gender === gender
 
+      if (!correct && getSettings().hapticsEnabled && typeof navigator !== 'undefined' && 'vibrate' in navigator) {
+        navigator.vibrate(200)
+      }
+
       setState((prev) => {
         if (prev.phase !== 'playing') return prev
 
@@ -162,10 +166,6 @@ export function useRound(language: Language, initialDeck?: Word[]) {
         resultsRef.current.push({ word: currentWord, correct: isCorrect, translationUsed, masteryBefore, masteryAfter })
 
         if (!isCorrect) {
-          if (getSettings().hapticsEnabled && typeof navigator !== 'undefined' && 'vibrate' in navigator) {
-            navigator.vibrate(200)
-          }
-
           // Requeue word 3 positions ahead
           const newDeck = [...prev.deck]
           const insertAt = Math.min(prev.currentIndex + 3, newDeck.length)
