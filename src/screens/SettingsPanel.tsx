@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import type { Settings } from '../types'
 import { getSettings, setSettings } from '../lib/storage'
 
@@ -37,6 +37,7 @@ export function SettingsPanel({ onClose }: SettingsPanelProps) {
   const [settings, setLocalSettings] = useState<Settings>(getSettings)
   const [view, setView] = useState<SettingsView>('settings')
   const [isClosing, setIsClosing] = useState(false)
+  const panelRef = useRef<HTMLDivElement>(null)
 
   function toggle(key: keyof Settings) {
     setLocalSettings((prev) => {
@@ -50,10 +51,27 @@ export function SettingsPanel({ onClose }: SettingsPanelProps) {
     setIsClosing(true)
   }, [])
 
-  // Close on Escape
+  // Focus first button on open and when view changes
+  useEffect(() => {
+    panelRef.current?.querySelector<HTMLElement>('button')?.focus()
+  }, [view])
+
+  // Escape + focus trap
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
-      if (e.key === 'Escape') closeWithAnimation()
+      if (e.key === 'Escape') { closeWithAnimation(); return }
+      if (e.key !== 'Tab') return
+      const panel = panelRef.current
+      if (!panel) return
+      const focusable = Array.from(panel.querySelectorAll<HTMLElement>('button:not([disabled])'))
+      if (focusable.length === 0) return
+      const first = focusable[0]
+      const last = focusable[focusable.length - 1]
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault(); last.focus()
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault(); first.focus()
+      }
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
@@ -70,6 +88,7 @@ export function SettingsPanel({ onClose }: SettingsPanelProps) {
 
       {/* Panel */}
       <div
+        ref={panelRef}
         className={`settings-panel${isClosing ? ' settings-panel--closing' : ''}`}
         role="dialog"
         aria-modal="true"

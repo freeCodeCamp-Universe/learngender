@@ -73,7 +73,7 @@ function SlideView({ slide, index, total }: { slide: TheorySlide; index: number;
       {slide.exceptions && (
         <div className="theory-slide__table-wrap">
           <table className="theory-slide__table">
-            <thead><tr><th>Word</th><th>Meaning</th><th>Surprise</th></tr></thead>
+            <thead><tr><th scope="col">Word</th><th scope="col">Meaning</th><th scope="col">Surprise</th></tr></thead>
             <tbody>
               {slide.exceptions.map((ex, i) => (
                 <tr key={i}>
@@ -92,7 +92,7 @@ function SlideView({ slide, index, total }: { slide: TheorySlide; index: number;
       {slide.table && (
         <div className="theory-slide__table-wrap">
           <table className="theory-slide__table">
-            <thead><tr>{slide.table.headers.map((h, i) => <th key={i}>{h}</th>)}</tr></thead>
+            <thead><tr>{slide.table.headers.map((h, i) => <th key={i} scope="col">{h}</th>)}</tr></thead>
             <tbody>
               {slide.table.rows.map((row, ri) => (
                 <tr key={ri}>
@@ -245,8 +245,8 @@ function ModuleList({ lang, onSelect, onHome, onMyWords, onLangChange, refreshKe
             <button
               key={mod.id}
               className={`theory-module-card${done ? ' theory-module-card--done' : !available ? ' theory-module-card--locked' : ''}`}
-              onClick={() => onSelect(mod)}
-              disabled={!available}
+              onClick={available ? () => onSelect(mod) : undefined}
+              aria-disabled={!available ? 'true' : undefined}
             >
               <div className="theory-module-card__icon">{mod.emoji}</div>
               <div className="theory-module-card__main">
@@ -263,7 +263,7 @@ function ModuleList({ lang, onSelect, onHome, onMyWords, onLangChange, refreshKe
         })}
       </div>
 
-      <div className="theory-screen__bottom-nav">
+      <nav className="theory-screen__bottom-nav" aria-label="Main navigation">
         <button className="bottom-nav__btn bottom-nav__btn--home" onClick={onHome} aria-label="Home">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
@@ -282,7 +282,7 @@ function ModuleList({ lang, onSelect, onHome, onMyWords, onLangChange, refreshKe
           </svg>
           <span>Words</span>
         </button>
-      </div>
+      </nav>
     </div>
   )
 }

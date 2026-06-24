@@ -222,7 +222,6 @@ export function WordCard({ word, onSwipe, showTranslation }: WordCardProps) {
       onPointerMove={onPointerMove}
       onPointerUp={onPointerUp}
       onPointerCancel={onPointerCancel}
-      role="main"
       aria-label={`Word: ${word.word}`}
     >
       <p className="word-card__noun">{word.word}</p>

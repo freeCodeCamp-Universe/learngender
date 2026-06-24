@@ -1,7 +1,7 @@
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import homeIcon from '../components/icons/home.svg'
 import translateIcon from '../components/icons/translate.svg'
-import type { Language, RoundSummary } from '../types'
+import type { Gender, Language, RoundSummary } from '../types'
 import { useRound, TOTAL_LIVES } from '../hooks/useRound'
 import { getSettings } from '../lib/storage'
 import { MountainBackground } from '../components/MountainBackground'
@@ -21,7 +21,14 @@ interface GameScreenProps {
 export function GameScreen({ language, onRoundEnd, onPlayAgain, onHome }: GameScreenProps) {
   const { state, currentWord, answer } = useRound(language)
   const [showTranslation, setShowTranslation] = useState(() => getSettings().showTranslationByDefault)
+  const [announcement, setAnnouncement] = useState('')
   const handledSummaryRef = useRef<RoundSummary | null>(null)
+
+  const handleSwipe = useCallback((gender: Gender, translationUsed: boolean): boolean => {
+    const correct = answer(gender, translationUsed)
+    setAnnouncement(correct ? 'Correct' : 'Incorrect')
+    return correct
+  }, [answer])
 
   const isSummit = state.phase === 'summit'
   const isDone   = state.phase === 'done'
@@ -63,7 +70,7 @@ export function GameScreen({ language, onRoundEnd, onPlayAgain, onHome }: GameSc
 
   if (state.phase === 'init_failed') {
     return (
-      <div className="game-screen game-screen--loading">
+      <div className="game-screen game-screen--loading" role="status">
         <p>Couldn't start the next round.</p>
         <button onClick={onHome}>Home</button>
       </div>
@@ -72,7 +79,7 @@ export function GameScreen({ language, onRoundEnd, onPlayAgain, onHome }: GameSc
 
   if (state.phase === 'loading') {
     return (
-      <div className="game-screen game-screen--loading">
+      <div className="game-screen game-screen--loading" role="status" aria-live="polite">
         <p>Loading...</p>
       </div>
     )
@@ -80,6 +87,7 @@ export function GameScreen({ language, onRoundEnd, onPlayAgain, onHome }: GameSc
 
   return (
     <div className="game-screen">
+      <div aria-live="assertive" aria-atomic="true" className="sr-only">{announcement}</div>
       <MountainBackground hikerStep={state.hikerStep} isSummit={isSummit} />
 
       {/* Top bar */}
@@ -120,7 +128,7 @@ export function GameScreen({ language, onRoundEnd, onPlayAgain, onHome }: GameSc
                       <WordCard
                         key={`${state.currentIndex}-${currentWord.id}`}
                         word={currentWord}
-                        onSwipe={answer}
+                        onSwipe={handleSwipe}
                         showTranslation={showTranslation}
                       />
                     )}

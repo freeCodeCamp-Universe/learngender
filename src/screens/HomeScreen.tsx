@@ -224,7 +224,7 @@ export function HomeScreen({ onStartRound, onMyWords, onTheory }: HomeScreenProp
       </div>
 
       {/* Bottom nav */}
-      <div className="home-screen__bottom-nav">
+      <nav className="home-screen__bottom-nav" aria-label="Main navigation">
         <button className="bottom-nav__btn bottom-nav__btn--active bottom-nav__btn--home" aria-label="Home">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
@@ -243,7 +243,7 @@ export function HomeScreen({ onStartRound, onMyWords, onTheory }: HomeScreenProp
           </svg>
           <span>Words</span>
         </button>
-      </div>
+      </nav>
 
       {settingsOpen && <SettingsPanel onClose={() => setSettingsOpen(false)} />}
     </div>

@@ -89,6 +89,9 @@ export function SummitDrawer({
   return (
     <div className={`summit-drawer summit-drawer--${mode}`}>
       <div className="summit-drawer__handle" />
+      <div aria-live="polite" aria-atomic="true" className="sr-only">
+        {badge.label}{showScoreSection && showScore ? `. Score: ${breakdown.points} points.` : ''}
+      </div>
 
       {/* Badge */}
       <div className="summit-drawer__badge">

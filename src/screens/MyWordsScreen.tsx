@@ -200,7 +200,7 @@ export function MyWordsScreen({ onHome, onTheory }: MyWordsScreenProps) {
             </ul>
       )}
       {/* Bottom nav */}
-      <div className="home-screen__bottom-nav">
+      <nav className="home-screen__bottom-nav" aria-label="Main navigation">
         <button className="bottom-nav__btn bottom-nav__btn--home" onClick={onHome} aria-label="Home">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
@@ -219,7 +219,7 @@ export function MyWordsScreen({ onHome, onTheory }: MyWordsScreenProps) {
           </svg>
           <span>Words</span>
         </button>
-      </div>
+      </nav>
     </div>
   )
 }

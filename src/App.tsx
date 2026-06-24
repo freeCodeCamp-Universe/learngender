@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import type { Language, RoundSummary } from './types'
 import { HomeScreen } from './screens/HomeScreen'
 import { GameScreen } from './screens/GameScreen'
@@ -54,29 +54,38 @@ export default function App() {
     setState((s) => ({ ...s, screen: 'theory' }))
   }
 
+  const LANG_BCP47: Record<string, string> = { pt: 'pt-BR', es: 'es', fr: 'fr', it: 'it' }
+
+  useEffect(() => {
+    document.documentElement.lang = state.language ? (LANG_BCP47[state.language] ?? state.language) : 'en'
+  }, [state.language])
+
   return (
     <div className="app">
-      {state.screen === 'home' && (
-        <HomeScreen onStartRound={startRound} onMyWords={goMyWords} onTheory={goTheory} />
-      )}
+      <a href="#main-content" className="skip-link">Skip to main content</a>
+      <main id="main-content" style={{ display: 'contents' }}>
+        {state.screen === 'home' && (
+          <HomeScreen onStartRound={startRound} onMyWords={goMyWords} onTheory={goTheory} />
+        )}
 
-      {state.screen === 'game' && state.language && (
-        <GameScreen
-          key={state.roundKey}
-          language={state.language}
-          onRoundEnd={onRoundEnd}
-          onPlayAgain={() => startRound(state.language!)}
-          onHome={goHome}
-        />
-      )}
+        {state.screen === 'game' && state.language && (
+          <GameScreen
+            key={state.roundKey}
+            language={state.language}
+            onRoundEnd={onRoundEnd}
+            onPlayAgain={() => startRound(state.language!)}
+            onHome={goHome}
+          />
+        )}
 
-      {state.screen === 'words' && (
-        <MyWordsScreen onHome={goHome} onTheory={goTheory} />
-      )}
+        {state.screen === 'words' && (
+          <MyWordsScreen onHome={goHome} onTheory={goTheory} />
+        )}
 
-      {state.screen === 'theory' && (
-        <TheoryScreen onHome={goHome} onMyWords={goMyWords} />
-      )}
+        {state.screen === 'theory' && (
+          <TheoryScreen onHome={goHome} onMyWords={goMyWords} />
+        )}
+      </main>
     </div>
   )
 }
