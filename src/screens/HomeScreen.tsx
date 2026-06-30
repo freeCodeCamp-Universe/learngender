@@ -100,7 +100,7 @@ export function HomeScreen({ onStartRound, onMyWords, onTheory }: HomeScreenProp
             )}
           </button>
         </div>
-        <button className="icon-btn" onClick={() => setSettingsOpen(true)} aria-label="Settings">
+        <button className="icon-btn" onClick={() => setSettingsOpen(true)} aria-label="Settings" aria-expanded={settingsOpen} aria-controls="settings-panel">
           <img src={settingsIcon} alt="" width="22" height="22" className="home-screen__settings-icon" />
         </button>
       </div>

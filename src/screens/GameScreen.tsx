@@ -100,7 +100,7 @@ export function GameScreen({ language, onRoundEnd, onPlayAgain, onHome }: GameSc
             <button className="game-screen__home-btn" onClick={onHome} aria-label="Return to home">
               <img src={homeIcon} alt="" width="20" height="20" />
             </button>
-            <button className="game-screen__home-btn" onClick={() => setSettingsOpen(true)} aria-label="Settings">
+            <button className="game-screen__home-btn" onClick={() => setSettingsOpen(true)} aria-label="Settings" aria-expanded={settingsOpen} aria-controls="settings-panel">
               <img src={settingsIcon} alt="" width="20" height="20" />
             </button>
           </div>

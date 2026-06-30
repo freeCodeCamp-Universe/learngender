@@ -38,6 +38,15 @@ export function SettingsPanel({ onClose }: SettingsPanelProps) {
   const [view, setView] = useState<SettingsView>('settings')
   const [isClosing, setIsClosing] = useState(false)
   const panelRef = useRef<HTMLDivElement>(null)
+  const triggerRef = useRef<Element | null>(null)
+
+  // Remember what had focus before the panel opened so we can restore it on close
+  useEffect(() => {
+    triggerRef.current = document.activeElement
+    return () => {
+      (triggerRef.current as HTMLElement | null)?.focus()
+    }
+  }, [])
 
   function toggle(key: keyof Settings) {
     setLocalSettings((prev) => {
@@ -89,6 +98,7 @@ export function SettingsPanel({ onClose }: SettingsPanelProps) {
       {/* Panel */}
       <div
         ref={panelRef}
+        id="settings-panel"
         className={`settings-panel${isClosing ? ' settings-panel--closing' : ''}`}
         role="dialog"
         aria-modal="true"
