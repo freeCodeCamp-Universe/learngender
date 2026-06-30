@@ -1626,13 +1626,39 @@ html, body, #root {
   display: flex;
   flex-direction: column;
 }
+.mastery-circle-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+.mastery-circle-wrap::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 0;
+  background: var(--surface-2, #2a2a36);
+  color: var(--text);
+  font-size: 0.72rem;
+  font-weight: 600;
+  white-space: nowrap;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.12s ease;
+  z-index: 10;
+}
+.mastery-circle-wrap:hover::after,
+.mastery-circle-wrap:focus-within::after {
+  opacity: 1;
+}
 .my-words-item {
   display: flex;
   align-items: center;
   gap: 8px;
   padding: 9px 14px;
   border-bottom: 1px solid var(--border);
-  overflow: hidden;
+  overflow: visible;
 }
 .my-words-item__article {
   font-size: 0.8rem;

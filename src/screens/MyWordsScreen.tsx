@@ -238,7 +238,9 @@ function WordRow({ word, masteryPct, isMastered, onToggle }: WordRowProps) {
 
   return (
     <li className="my-words-item">
-      <MasteryCircle pct={masteryPct} size={34} />
+      <div className="mastery-circle-wrap" data-tooltip={`Mastery: ${masteryPct}%`}>
+        <MasteryCircle pct={masteryPct} size={34} />
+      </div>
       <span className="my-words-item__article">{article}</span>
       <span className="my-words-item__noun">{word.word}</span>
       <span className="my-words-item__translation">{word.translation}</span>
