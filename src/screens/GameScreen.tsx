@@ -1,6 +1,8 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import homeIcon from '../components/icons/home.svg'
 import translateIcon from '../components/icons/translate.svg'
+import settingsIcon from '../components/icons/settings.svg'
+import { SettingsPanel } from './SettingsPanel'
 import type { Gender, Language, RoundSummary } from '../types'
 import { useRound, TOTAL_LIVES } from '../hooks/useRound'
 import { getSettings } from '../lib/storage'
@@ -21,6 +23,7 @@ interface GameScreenProps {
 export function GameScreen({ language, onRoundEnd, onPlayAgain, onHome }: GameScreenProps) {
   const { state, currentWord, answer } = useRound(language)
   const [showTranslation, setShowTranslation] = useState(() => getSettings().showTranslationByDefault)
+  const [settingsOpen, setSettingsOpen] = useState(false)
   const [announcement, setAnnouncement] = useState('')
   const handledSummaryRef = useRef<RoundSummary | null>(null)
 
@@ -93,9 +96,14 @@ export function GameScreen({ language, onRoundEnd, onPlayAgain, onHome }: GameSc
       {/* Top bar */}
       <div className="game-screen__topbar">
         <div className="game-screen__topbar-left">
-          <button className="game-screen__home-btn" onClick={onHome} aria-label="Return to home">
-            <img src={homeIcon} alt="" width="20" height="20" />
-          </button>
+          <div className="game-screen__left-col">
+            <button className="game-screen__home-btn" onClick={onHome} aria-label="Return to home">
+              <img src={homeIcon} alt="" width="20" height="20" />
+            </button>
+            <button className="game-screen__home-btn" onClick={() => setSettingsOpen(true)} aria-label="Settings">
+              <img src={settingsIcon} alt="" width="20" height="20" />
+            </button>
+          </div>
           <LevelBadge
             key={levelBadgeKey}
             language={language}
@@ -168,6 +176,8 @@ export function GameScreen({ language, onRoundEnd, onPlayAgain, onHome }: GameSc
           onExit={onHome}
         />
       )}
+
+      {settingsOpen && <SettingsPanel onClose={() => setSettingsOpen(false)} />}
     </div>
   )
 }

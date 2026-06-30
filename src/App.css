@@ -307,7 +307,8 @@ html, body, #root {
 }
 
 .home-screen__settings-icon,
-.bottom-nav__icon--home {
+.bottom-nav__icon--home,
+.game-screen__home-btn img {
   filter: brightness(0) invert(1);
 }
 
@@ -679,13 +680,13 @@ html, body, #root {
   z-index: 3;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding: 0.75rem 1rem;
 }
 
 .game-screen__topbar-left {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 8px;
 }
 
