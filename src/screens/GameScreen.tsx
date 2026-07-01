@@ -160,6 +160,7 @@ export function GameScreen({ language, onRoundEnd, onPlayAgain, onHome }: GameSc
               className={`game-screen__translate-btn${showTranslation ? ' game-screen__translate-btn--active' : ''}`}
               onClick={() => setShowTranslation(v => !v)}
               aria-label="Toggle translation"
+              aria-pressed={showTranslation}
             >
               <img src={translateIcon} alt="" width="20" height="20" />
             </button>
