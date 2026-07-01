@@ -1818,27 +1818,13 @@ html, body, #root {
   gap: 10px;
 }
 
-.theory-slide__example-icon {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.theory-slide__example-bullet {
+  color: rgba(255,255,255,0.35);
+  font-size: 0.75rem;
   flex-shrink: 0;
-  font-size: 11px;
-}
-
-.theory-slide__example-icon--bullet {
-  background: rgba(255,255,255,0.06);
-  border: 0.5px solid rgba(255,255,255,0.15);
-  color: var(--text-muted, #aaa);
-}
-
-.theory-slide__example-icon--arrow {
-  background: rgba(239,159,39,0.1);
-  border: 0.5px solid rgba(239,159,39,0.3);
-  color: var(--accent-cta);
+  width: 12px;
+  text-align: center;
+  line-height: 1;
 }
 
 .theory-slide__example-text {

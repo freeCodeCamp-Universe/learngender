@@ -22,23 +22,22 @@ function renderInline(text: string): React.ReactNode[] {
 function parseExampleLine(line: string) {
   const stripped = line.replace(/^> ?[✓→]? ?/, '').trim()
   const dashIdx = stripped.lastIndexOf(' — ')
-  if (dashIdx !== -1) return { example: stripped.slice(0, dashIdx), label: stripped.slice(dashIdx + 3), isCheck: line.includes('✓') }
-  return { example: stripped, label: '', isCheck: line.includes('✓') }
+  if (dashIdx !== -1) return { example: stripped.slice(0, dashIdx), label: stripped.slice(dashIdx + 3) }
+  return { example: stripped, label: '' }
 }
 
 function renderBody(text: string) {
   return text.split('\n\n').map((para, i) => {
     if (para.startsWith('> ')) {
       const lines = para.split('\n')
+      const isList = lines.length > 1
       return (
         <div key={i} className="theory-slide__example-card">
           {lines.map((line, li) => {
-            const { example, label, isCheck } = parseExampleLine(line)
+            const { example, label } = parseExampleLine(line)
             return (
               <div key={li} className="theory-slide__example-row">
-                <div className={`theory-slide__example-icon ${isCheck ? 'theory-slide__example-icon--bullet' : 'theory-slide__example-icon--arrow'}`}>
-                  {isCheck ? '•' : '→'}
-                </div>
+                {isList && <span className="theory-slide__example-bullet" aria-hidden="true">•</span>}
                 <div className="theory-slide__example-text">
                   {renderInline(example)}
                   {label && <span className="theory-slide__example-label">{label}</span>}
