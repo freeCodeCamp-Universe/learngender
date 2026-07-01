@@ -1327,6 +1327,7 @@ html, body, #root {
   text-align: center;
 }
 
+
 /* Hiker summit bounce animation */
 .hiker-summit {
   animation: hikerBounce 1s ease-in-out infinite;
@@ -1631,6 +1632,8 @@ html, body, #root {
 .mastery-circle-wrap {
   position: relative;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
 }
 .mastery-circle-wrap::after {
   content: attr(data-tooltip);
@@ -1651,7 +1654,8 @@ html, body, #root {
   z-index: 10;
 }
 .mastery-circle-wrap:hover::after,
-.mastery-circle-wrap:focus-within::after {
+.mastery-circle-wrap:focus-within::after,
+.mastery-circle-wrap:active::after {
   opacity: 1;
 }
 .my-words-item {

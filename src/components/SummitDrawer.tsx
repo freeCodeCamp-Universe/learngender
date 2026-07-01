@@ -42,6 +42,7 @@ function AnimatedBar({ pctBefore, pctAfter }: { pctBefore: number; pctAfter: num
   )
 }
 
+
 export function SummitDrawer({
   summary,
   mode = 'win',
@@ -134,13 +135,17 @@ export function SummitDrawer({
           const isPositiveDelta = delta > 0 || (delta === 0 && r.correct)
           return (
             <div key={i} className={`summit-drawer__word-row ${r.correct ? 'summit-drawer__word-row--correct' : 'summit-drawer__word-row--wrong'}`}>
-              <MasteryCircle pct={r.masteryAfter} size={34} />
+              <div className="mastery-circle-wrap" data-tooltip={`Mastery: ${r.masteryAfter}%`}>
+                <MasteryCircle pct={r.masteryAfter} size={34} />
+              </div>
               {(() => {
                 if (delta === 0 && !r.correct) return null
                 return (
-                  <span className={`summit-drawer__delta ${isPositiveDelta ? 'summit-drawer__delta--up' : 'summit-drawer__delta--down'}`}>
-                    {isPositiveDelta ? '↑' : '↓'}{displayDelta}%
-                  </span>
+                  <div className="mastery-circle-wrap" data-tooltip="Mastery change">
+                    <span className={`summit-drawer__delta ${isPositiveDelta ? 'summit-drawer__delta--up' : 'summit-drawer__delta--down'}`}>
+                      {isPositiveDelta ? '↑' : '↓'}{displayDelta}%
+                    </span>
+                  </div>
                 )
               })()}
               <span className="summit-drawer__word-article">{article}</span>
