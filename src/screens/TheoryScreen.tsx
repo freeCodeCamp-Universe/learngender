@@ -48,6 +48,16 @@ function renderBody(text: string) {
         </div>
       )
     }
+    if (para.split('\n').every(l => l.startsWith('- '))) {
+      const items = para.split('\n').map(l => l.slice(2))
+      return (
+        <ul key={i} className="theory-slide__list">
+          {items.map((item, li) => (
+            <li key={li} className="theory-slide__list-item">{renderInline(item)}</li>
+          ))}
+        </ul>
+      )
+    }
     if (para.match(/^\*\*(Rule|Confidence|Important|How to|Memory|Rule of thumb)/)) {
       return (
         <div key={i} className="theory-slide__rule-box">

@@ -1818,6 +1818,22 @@ html, body, #root {
   gap: 10px;
 }
 
+.theory-slide__list {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.theory-slide__list-item {
+  font-size: 0.94rem;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.5;
+}
+
+.theory-slide__list-item strong { color: var(--accent-cta); font-weight: 600; }
+
 .theory-slide__example-bullet {
   color: rgba(255,255,255,0.35);
   font-size: 0.75rem;
