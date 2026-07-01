@@ -1829,10 +1829,10 @@ html, body, #root {
   font-size: 11px;
 }
 
-.theory-slide__example-icon--check {
-  background: rgba(99,153,34,0.15);
-  border: 0.5px solid rgba(99,153,34,0.3);
-  color: #97c459;
+.theory-slide__example-icon--bullet {
+  background: rgba(255,255,255,0.06);
+  border: 0.5px solid rgba(255,255,255,0.15);
+  color: var(--text-muted, #aaa);
 }
 
 .theory-slide__example-icon--arrow {

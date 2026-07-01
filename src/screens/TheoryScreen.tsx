@@ -36,8 +36,8 @@ function renderBody(text: string) {
             const { example, label, isCheck } = parseExampleLine(line)
             return (
               <div key={li} className="theory-slide__example-row">
-                <div className={`theory-slide__example-icon ${isCheck ? 'theory-slide__example-icon--check' : 'theory-slide__example-icon--arrow'}`}>
-                  {isCheck ? '✓' : '→'}
+                <div className={`theory-slide__example-icon ${isCheck ? 'theory-slide__example-icon--bullet' : 'theory-slide__example-icon--arrow'}`}>
+                  {isCheck ? '•' : '→'}
                 </div>
                 <div className="theory-slide__example-text">
                   {renderInline(example)}
