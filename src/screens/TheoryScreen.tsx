@@ -20,7 +20,7 @@ function renderInline(text: string): React.ReactNode[] {
 }
 
 function parseExampleLine(line: string) {
-  const stripped = line.replace(/^> ?[✓→] ?/, '').trim()
+  const stripped = line.replace(/^> ?[✓→]? ?/, '').trim()
   const dashIdx = stripped.lastIndexOf(' — ')
   if (dashIdx !== -1) return { example: stripped.slice(0, dashIdx), label: stripped.slice(dashIdx + 3), isCheck: line.includes('✓') }
   return { example: stripped, label: '', isCheck: line.includes('✓') }
