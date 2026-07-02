@@ -2,6 +2,38 @@ import { useEffect, useRef, useState, useCallback } from 'react'
 import type { Language } from '../types'
 import { LANGUAGE_LABELS } from '../types'
 
+import iconBookOpen   from '../components/icons/theory/book-open.svg'
+import iconPencil     from '../components/icons/theory/pencil.svg'
+import iconLibrary    from '../components/icons/theory/library.svg'
+import iconHash       from '../components/icons/theory/hash.svg'
+import iconPalette    from '../components/icons/theory/palette.svg'
+import iconLink       from '../components/icons/theory/link.svg'
+import iconLightbulb  from '../components/icons/theory/lightbulb.svg'
+import iconZap        from '../components/icons/theory/zap.svg'
+import iconQuote      from '../components/icons/theory/quote.svg'
+import iconType       from '../components/icons/theory/type.svg'
+import iconDice       from '../components/icons/theory/dice-5.svg'
+import iconLayers     from '../components/icons/theory/layers.svg'
+import iconGrid       from '../components/icons/theory/grid-2x2.svg'
+import iconCaseLower  from '../components/icons/theory/case-lower.svg'
+
+const MODULE_ICONS: Record<string, string> = {
+  'noun-gender-basics':          iconBookOpen,
+  'indefinite-article-singular': iconPencil,
+  'plural-articles':             iconLibrary,
+  'pluralising-nouns':           iconHash,
+  'adjective-agreement':         iconPalette,
+  'contractions':                iconLink,
+  'neuter-article-lo':           iconLightbulb,
+  'el-before-feminine':          iconZap,
+  'apostrophe':                  iconQuote,
+  'h-muet-aspire':               iconType,
+  'gender-without-logic':        iconDice,
+  'partitive-articles':          iconLayers,
+  'definite-article-singular':   iconGrid,
+  'nouns-ending-in-e':           iconCaseLower,
+}
+
 import { THEORY_MODULES, getModuleDone, setModuleDone } from '../data/theoryModules'
 import type { TheoryModule } from '../data/theoryModules'
 import type { TheorySlide } from '../data/theory'
@@ -240,8 +272,7 @@ function ModuleList({ lang, onSelect, onHome, onMyWords, onLangChange, refreshKe
       <div className="theory-screen__lang-tabs">
         {LANGUAGES.map(l => (
           <button key={l} className={`theory-screen__lang-tab${lang === l ? ' theory-screen__lang-tab--active' : ''}`} onClick={() => onLangChange(l)}>
-            <span>{LANGUAGE_LABELS[l].flag}</span>
-            <span>{l.toUpperCase()}</span>
+            {l.toUpperCase()}
           </button>
         ))}
       </div>
@@ -257,7 +288,11 @@ function ModuleList({ lang, onSelect, onHome, onMyWords, onLangChange, refreshKe
               onClick={available ? () => onSelect(mod) : undefined}
               aria-disabled={!available ? 'true' : undefined}
             >
-              <div className="theory-module-card__icon">{mod.emoji}</div>
+              <div className="theory-module-card__icon">
+                {MODULE_ICONS[mod.id]
+                  ? <img src={MODULE_ICONS[mod.id]} alt="" width="20" height="20" />
+                  : mod.emoji}
+              </div>
               <div className="theory-module-card__main">
                 <span className="theory-module-card__title">{mod.title}</span>
                 <span className="theory-module-card__meta">

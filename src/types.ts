@@ -43,12 +43,12 @@ export const LEVEL_THRESHOLDS: { mastered: number; name: LevelName }[] = [
 
 export const LANGUAGE_LABELS: Record<
   Language,
-  { name: string; flag: string }
+  { name: string }
 > = {
-  pt: { name: 'Portuguese', flag: '🇧🇷' },
-  es: { name: 'Spanish',    flag: '🇪🇸' },
-  fr: { name: 'French',     flag: '🇫🇷' },
-  it: { name: 'Italian',    flag: '🇮🇹' },
+  pt: { name: 'Portuguese' },
+  es: { name: 'Spanish'    },
+  fr: { name: 'French'     },
+  it: { name: 'Italian'    },
 }
 
 export interface CardResult {

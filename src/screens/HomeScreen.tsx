@@ -166,7 +166,6 @@ export function HomeScreen({ onStartRound, onMyWords, onTheory }: HomeScreenProp
                 <div className="skill-card__body">
                   <div className="skill-card__title-row">
                     <div className="skill-card__title-group">
-                      <span className="skill-card__flag">{labels.flag}</span>
                       <span className="skill-card__name">{labels.name}</span>
                     </div>
                     <span

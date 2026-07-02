@@ -111,7 +111,7 @@ export function MyWordsScreen({ onHome, onTheory }: MyWordsScreenProps) {
               setSelectedLang(lang)
             }}
           >
-            {LANGUAGE_LABELS[lang].flag} {lang.toUpperCase()}
+            {lang.toUpperCase()}
           </button>
         ))}
       </div>
