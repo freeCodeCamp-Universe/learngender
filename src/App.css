@@ -1135,6 +1135,7 @@ html, body, #root {
   font-weight: 700;
   color: var(--text);
   flex: 1;
+  margin: 0;
 }
 .summit-drawer--loss .summit-drawer__badge-label {
   color: var(--text-muted);

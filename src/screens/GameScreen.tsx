@@ -119,7 +119,6 @@ export function GameScreen({ language, onRoundEnd, onPlayAgain, onHome }: GameSc
             key={levelBadgeKey}
             language={language}
             summary={isSummit ? state.summary : null}
-            onLevelUp={(lvl) => setAnnouncement(`Level up! You reached level ${lvl}.`)}
           />
         </div>
         <Lives count={state.lives} total={TOTAL_LIVES} />

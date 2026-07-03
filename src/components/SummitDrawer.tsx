@@ -82,6 +82,15 @@ export function SummitDrawer({
     return () => clearTimeout(timer)
   }, [showScoreSection])
 
+  const [levelUpAnnouncement, setLevelUpAnnouncement] = useState('')
+  useEffect(() => {
+    if (summary.levelAfter <= summary.levelBefore) return
+    const timer = setTimeout(() => {
+      setLevelUpAnnouncement(`Level up! You reached level ${summary.levelAfter}.`)
+    }, 2200)
+    return () => clearTimeout(timer)
+  }, [summary.levelBefore, summary.levelAfter])
+
   useEffect(() => {
     const raf = requestAnimationFrame(() => nextButtonRef.current?.focus({ preventScroll: true }))
     return () => cancelAnimationFrame(raf)
@@ -93,11 +102,14 @@ export function SummitDrawer({
       <div aria-live="polite" aria-atomic="true" className="sr-only">
         {badge.label}{showScoreSection && showScore ? `. Score: ${breakdown.points} points.` : ''}
       </div>
+      {levelUpAnnouncement && (
+        <div aria-live="polite" aria-atomic="true" className="sr-only">{levelUpAnnouncement}</div>
+      )}
 
       {/* Badge */}
       <div className="summit-drawer__badge">
-        <span className="summit-drawer__badge-emoji">{badge.emoji}</span>
-        <span className="summit-drawer__badge-label">{badge.label}</span>
+        <span className="summit-drawer__badge-emoji" aria-hidden="true">{badge.emoji}</span>
+        <h2 className="summit-drawer__badge-label">{badge.label}</h2>
       </div>
 
       {/* Score section */}
@@ -134,24 +146,28 @@ export function SummitDrawer({
           const displayDelta = delta === 0 && r.correct ? 1 : Math.abs(delta)
           const isPositiveDelta = delta > 0 || (delta === 0 && r.correct)
           return (
-            <div key={i} className={`summit-drawer__word-row ${r.correct ? 'summit-drawer__word-row--correct' : 'summit-drawer__word-row--wrong'}`}>
-              <div className="mastery-circle-wrap" data-tooltip={`Mastery: ${r.masteryAfter}%`}>
+            <div
+              key={i}
+              className={`summit-drawer__word-row ${r.correct ? 'summit-drawer__word-row--correct' : 'summit-drawer__word-row--wrong'}`}
+              aria-label={`${article} ${r.word.word}, ${r.word.translation} — ${r.correct ? 'correct' : 'incorrect'}, mastery ${r.masteryAfter}%${delta !== 0 || r.correct ? `, ${isPositiveDelta ? 'up' : 'down'} ${displayDelta}%` : ''}`}
+            >
+              <div className="mastery-circle-wrap" data-tooltip={`Mastery: ${r.masteryAfter}%`} aria-hidden="true">
                 <MasteryCircle pct={r.masteryAfter} size={34} />
               </div>
               {(() => {
                 if (delta === 0 && !r.correct) return null
                 return (
-                  <div className="mastery-circle-wrap" data-tooltip="Mastery change">
+                  <div className="mastery-circle-wrap" data-tooltip="Mastery change" aria-hidden="true">
                     <span className={`summit-drawer__delta ${isPositiveDelta ? 'summit-drawer__delta--up' : 'summit-drawer__delta--down'}`}>
                       {isPositiveDelta ? '↑' : '↓'}{displayDelta}%
                     </span>
                   </div>
                 )
               })()}
-              <span className="summit-drawer__word-article" lang={summary.language}>{article}</span>
-              <span className="summit-drawer__word-noun" lang={summary.language}>{r.word.word}</span>
-              <span className="summit-drawer__word-translation">{r.word.translation}</span>
-              <span className="summit-drawer__word-result">{r.correct ? '✓' : '✗'}</span>
+              <span className="summit-drawer__word-article" lang={summary.language} aria-hidden="true">{article}</span>
+              <span className="summit-drawer__word-noun" lang={summary.language} aria-hidden="true">{r.word.word}</span>
+              <span className="summit-drawer__word-translation" aria-hidden="true">{r.word.translation}</span>
+              <span className="summit-drawer__word-result" aria-hidden="true">{r.correct ? '✓' : '✗'}</span>
             </div>
           )
         })}

@@ -6,10 +6,9 @@ import type { Language, RoundSummary } from '../types'
 interface LevelBadgeProps {
   language: Language
   summary?: RoundSummary | null
-  onLevelUp?: (newLevel: number) => void
 }
 
-export function LevelBadge({ language, summary, onLevelUp }: LevelBadgeProps) {
+export function LevelBadge({ language, summary }: LevelBadgeProps) {
   const totalXP = getScore(language).score
   const initialXP = summary ? Math.max(0, totalXP - summary.pointsEarned) : totalXP
   const [displayXP, setDisplayXP] = useState(initialXP)
@@ -52,7 +51,6 @@ export function LevelBadge({ language, summary, onLevelUp }: LevelBadgeProps) {
         if (nextLevel > lastLevel) {
           lastLevel = nextLevel
           setShowLevelUp(true)
-          onLevelUp?.(nextLevel)
           if (levelUpTimer.current) clearTimeout(levelUpTimer.current)
           levelUpTimer.current = setTimeout(() => setShowLevelUp(false), 1700)
         }
