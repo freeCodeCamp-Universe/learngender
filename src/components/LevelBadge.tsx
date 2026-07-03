@@ -81,21 +81,25 @@ export function LevelBadge({ language, summary }: LevelBadgeProps) {
   }, [])
 
   return (
-    <div
+    <button
+      type="button"
       className={`level-badge${summary ? ' level-badge--celebrating' : ''}`}
       onClick={handleClick}
-      style={{ cursor: 'pointer', position: 'relative' }}
+      aria-label={`Level ${level}, show XP details`}
     >
-      <div className="level-badge__circle">{level}</div>
-      <div className="level-badge__bar-track">
+      <div className="level-badge__circle" aria-hidden="true">{level}</div>
+      <div className="level-badge__bar-track" aria-hidden="true">
         <div className="level-badge__bar-fill" style={{ width: `${pct}%` }} />
       </div>
       {showLevelUp && (
-        <div className="level-badge__celebration">Level up!</div>
+        <div className="level-badge__celebration" aria-hidden="true">Level up!</div>
       )}
-      <div className={`level-badge__tooltip${visible ? ' level-badge__tooltip--visible' : ''}`}>
+      <div className={`level-badge__tooltip${visible ? ' level-badge__tooltip--visible' : ''}`} aria-hidden="true">
         {xpInLevel} / {xpNeeded} xp
       </div>
-    </div>
+      <span className="sr-only" aria-live="polite" aria-atomic="true">
+        {visible ? `${xpInLevel} of ${xpNeeded} xp` : ''}
+      </span>
+    </button>
   )
 }

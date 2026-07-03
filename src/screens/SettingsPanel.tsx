@@ -124,14 +124,15 @@ export function SettingsPanel({ onClose }: SettingsPanelProps) {
         {view === 'settings' ? (
           <ul className="settings-list">
             <li className="settings-item">
-              <label className="settings-item__label" htmlFor="toggle-sound">
+              <span className="settings-item__label" id="toggle-sound-label">
                 Sound effects
-              </label>
+              </span>
               <button
                 id="toggle-sound"
                 className={`toggle ${settings.soundEnabled ? 'toggle--on' : 'toggle--off'}`}
                 role="switch"
                 aria-checked={settings.soundEnabled}
+                aria-labelledby="toggle-sound-label"
                 onClick={() => toggle('soundEnabled')}
               >
                 {settings.soundEnabled ? 'ON' : 'OFF'}
@@ -139,14 +140,15 @@ export function SettingsPanel({ onClose }: SettingsPanelProps) {
             </li>
 
             <li className="settings-item">
-              <label className="settings-item__label" htmlFor="toggle-haptics">
+              <span className="settings-item__label" id="toggle-haptics-label">
                 Haptics
-              </label>
+              </span>
               <button
                 id="toggle-haptics"
                 className={`toggle ${settings.hapticsEnabled ? 'toggle--on' : 'toggle--off'}`}
                 role="switch"
                 aria-checked={settings.hapticsEnabled}
+                aria-labelledby="toggle-haptics-label"
                 onClick={() => toggle('hapticsEnabled')}
               >
                 {settings.hapticsEnabled ? 'ON' : 'OFF'}
@@ -154,14 +156,15 @@ export function SettingsPanel({ onClose }: SettingsPanelProps) {
             </li>
 
             <li className="settings-item">
-              <label className="settings-item__label" htmlFor="toggle-translation">
+              <span className="settings-item__label" id="toggle-translation-label">
                 Show translation by default
-              </label>
+              </span>
               <button
                 id="toggle-translation"
                 className={`toggle ${settings.showTranslationByDefault ? 'toggle--on' : 'toggle--off'}`}
                 role="switch"
                 aria-checked={settings.showTranslationByDefault}
+                aria-labelledby="toggle-translation-label"
                 onClick={() => toggle('showTranslationByDefault')}
               >
                 {settings.showTranslationByDefault ? 'ON' : 'OFF'}
@@ -169,9 +172,13 @@ export function SettingsPanel({ onClose }: SettingsPanelProps) {
             </li>
 
             <li className="settings-item settings-item--nav">
-              <span className="settings-item__label">Keyboard shortcuts</span>
-              <button className="settings-link-btn" onClick={() => setView('keybinds')}>
-                Open
+              <span className="settings-item__label" id="keybinds-link-label">Keyboard shortcuts</span>
+              <button
+                className="settings-link-btn"
+                aria-labelledby="keybinds-link-label keybinds-link-open"
+                onClick={() => setView('keybinds')}
+              >
+                <span id="keybinds-link-open">Open</span>
               </button>
             </li>
           </ul>

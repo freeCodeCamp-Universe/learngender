@@ -139,7 +139,7 @@ export function SummitDrawer({
       )}
 
       {/* Word list */}
-      <div className="summit-drawer__words">
+      <div className="summit-drawer__words" role="list">
         {orderedCards.map((r, i) => {
           const article = r.word.article
           const delta = r.masteryAfter - r.masteryBefore
@@ -148,6 +148,7 @@ export function SummitDrawer({
           return (
             <div
               key={i}
+              role="listitem"
               className={`summit-drawer__word-row ${r.correct ? 'summit-drawer__word-row--correct' : 'summit-drawer__word-row--wrong'}`}
               aria-label={`${article} ${r.word.word}, ${r.word.translation} — ${r.correct ? 'correct' : 'incorrect'}, mastery ${r.masteryAfter}%${delta !== 0 || r.correct ? `, ${isPositiveDelta ? 'up' : 'down'} ${displayDelta}%` : ''}`}
             >

@@ -4,10 +4,12 @@ import translateIcon from '../components/icons/translate.svg'
 import settingsIcon from '../components/icons/settings.svg'
 import { SettingsPanel } from './SettingsPanel'
 import type { Gender, Language, RoundSummary } from '../types'
+import { LANGUAGE_LABELS } from '../types'
 import { useRound, TOTAL_LIVES } from '../hooks/useRound'
 import { getSettings } from '../lib/storage'
 import { MountainBackground } from '../components/MountainBackground'
 import { WordCard } from '../components/WordCard'
+import type { WordCardHandle } from '../components/WordCard'
 import { Lives } from '../components/Lives'
 import { LevelBadge } from '../components/LevelBadge'
 import { SummitDrawer } from '../components/SummitDrawer'
@@ -26,6 +28,7 @@ export function GameScreen({ language, onRoundEnd, onPlayAgain, onHome }: GameSc
   const [settingsOpen, setSettingsOpen] = useState(false)
   const [announcement, setAnnouncement] = useState('')
   const handledSummaryRef = useRef<RoundSummary | null>(null)
+  const wordCardRef = useRef<WordCardHandle>(null)
 
   const handleSwipe = useCallback((gender: Gender, translationUsed: boolean): boolean => {
     const correct = answer(gender, translationUsed)
@@ -101,6 +104,7 @@ export function GameScreen({ language, onRoundEnd, onPlayAgain, onHome }: GameSc
 
   return (
     <div className="game-screen">
+      <h1 className="sr-only">{LANGUAGE_LABELS[language].name} round</h1>
       <div aria-live="assertive" aria-atomic="true" className="sr-only">{announcement}</div>
       <MountainBackground hikerStep={state.hikerStep} isSummit={isSummit} />
 
@@ -128,6 +132,7 @@ export function GameScreen({ language, onRoundEnd, onPlayAgain, onHome }: GameSc
         <>
           {/* Card area */}
           <div className="game-screen__card-area">
+            <p className="sr-only">Choose the noun's gender: activate the Feminine or Masculine button, or use the left/right arrow keys.</p>
             <div className="game-screen__card-row">
               {(() => {
                 const pair = currentWord ? getArticlePair(currentWord, language) : null
@@ -139,12 +144,19 @@ export function GameScreen({ language, onRoundEnd, onPlayAgain, onHome }: GameSc
                 )
                 return (
                   <>
-                    <div className="gender-band gender-band--left" aria-label="Feminine">
+                    <button
+                      type="button"
+                      className="gender-band gender-band--left"
+                      aria-label={`Feminine — ${pair?.fem ?? ''}`}
+                      disabled={!currentWord}
+                      onClick={() => wordCardRef.current?.answer('left')}
+                    >
                       {renderLabel(pair?.fem ?? '←', pair?.ambiguous ? 'fém' : null)}
-                    </div>
+                    </button>
 
                     {currentWord && (
                       <WordCard
+                        ref={wordCardRef}
                         key={`${state.currentIndex}-${currentWord.id}`}
                         word={currentWord}
                         language={language}
@@ -153,9 +165,15 @@ export function GameScreen({ language, onRoundEnd, onPlayAgain, onHome }: GameSc
                       />
                     )}
 
-                    <div className="gender-band gender-band--right" aria-label="Masculine">
+                    <button
+                      type="button"
+                      className="gender-band gender-band--right"
+                      aria-label={`Masculine — ${pair?.masc ?? ''}`}
+                      disabled={!currentWord}
+                      onClick={() => wordCardRef.current?.answer('right')}
+                    >
                       {renderLabel(pair?.masc ?? '→', pair?.ambiguous ? 'masc' : null)}
-                    </div>
+                    </button>
                   </>
                 )
               })()}

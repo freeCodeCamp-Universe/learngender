@@ -114,6 +114,18 @@ html, body, #root {
   box-shadow: 0 0 0 1px #2a2a45, 0 0 60px rgba(0, 0, 0, 0.6);
 }
 
+.app__main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  outline: none;
+}
+.app__main:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: -2px;
+}
+
 /* ================================================================
    Shared Components
    ================================================================ */
@@ -737,6 +749,17 @@ html, body, #root {
   display: flex;
   align-items: center;
   position: relative;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+}
+.level-badge:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
 }
 
 .level-badge--celebrating {
@@ -904,7 +927,13 @@ html, body, #root {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
 }
+.gender-band:disabled { cursor: default; }
+.gender-band:focus-visible { outline: 3px solid #fff; outline-offset: -3px; }
 .gender-band--left  { left: 0;  background: rgba(255, 173, 173, 0.82); border-radius: 0 12px 12px 0; }
 .gender-band--right { right: 0; background: rgba(153, 201, 255, 0.82); border-radius: 12px 0 0 12px; }
 
@@ -2198,6 +2227,7 @@ html, body, #root {
 }
 
 .theory-viewer__module-title {
+  margin: 0;
   font-size: 1rem;
   font-weight: 700;
   color: var(--text);

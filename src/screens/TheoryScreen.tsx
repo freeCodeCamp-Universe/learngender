@@ -35,6 +35,7 @@ const MODULE_ICONS: Record<string, string> = {
 }
 
 import { THEORY_MODULES, getModuleDone, setModuleDone } from '../data/theoryModules'
+import { handleTabListKeyDown } from '../lib/tablist'
 import type { TheoryModule } from '../data/theoryModules'
 import type { TheorySlide } from '../data/theory'
 
@@ -213,7 +214,7 @@ function SlideViewer({ lang, module, onClose, onComplete }: ViewerProps) {
     <div className="theory-viewer">
       {/* Header */}
       <div className="theory-viewer__header">
-        <span className="theory-viewer__module-title">{module.title}</span>
+        <h1 className="theory-viewer__module-title">{module.title}</h1>
         <button className="theory-viewer__close" onClick={onClose} aria-label="Close">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
             <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
@@ -235,7 +236,13 @@ function SlideViewer({ lang, module, onClose, onComplete }: ViewerProps) {
         </button>
         <div className="theory-screen__dots">
           {slides.map((_, i) => (
-            <button key={i} className={`theory-screen__dot${i === index ? ' theory-screen__dot--active' : ''}`} onClick={() => goTo(i)} aria-label={`Slide ${i + 1}`} />
+            <button
+              key={i}
+              className={`theory-screen__dot${i === index ? ' theory-screen__dot--active' : ''}`}
+              onClick={() => goTo(i)}
+              aria-label={`Slide ${i + 1}`}
+              aria-current={i === index ? 'true' : undefined}
+            />
           ))}
         </div>
         <button className="theory-screen__arrow theory-screen__arrow--next" onClick={handleNext} aria-label={atLast ? 'Complete' : 'Next'}>
@@ -269,42 +276,54 @@ function ModuleList({ lang, onSelect, onHome, onMyWords, onLangChange, refreshKe
         <h1>Theory</h1>
       </div>
 
-      <div className="theory-screen__lang-tabs">
+      <div className="theory-screen__lang-tabs" role="tablist" aria-label="Language" onKeyDown={handleTabListKeyDown}>
         {LANGUAGES.map(l => (
-          <button key={l} className={`theory-screen__lang-tab${lang === l ? ' theory-screen__lang-tab--active' : ''}`} onClick={() => onLangChange(l)}>
+          <button
+            key={l}
+            id={`theory-lang-tab-${l}`}
+            role="tab"
+            aria-selected={lang === l}
+            aria-controls="theory-lang-panel"
+            aria-label={LANGUAGE_LABELS[l].name}
+            tabIndex={lang === l ? 0 : -1}
+            className={`theory-screen__lang-tab${lang === l ? ' theory-screen__lang-tab--active' : ''}`}
+            onClick={() => onLangChange(l)}
+          >
             {l.toUpperCase()}
           </button>
         ))}
       </div>
 
-      <div className="theory-module-list" key={refreshKey}>
-        {modules.map((mod) => {
-          const done = getModuleDone(lang, mod.id)
-          const available = !!mod.slides
-          return (
-            <button
-              key={mod.id}
-              className={`theory-module-card${done ? ' theory-module-card--done' : !available ? ' theory-module-card--locked' : ''}`}
-              onClick={available ? () => onSelect(mod) : undefined}
-              aria-disabled={!available ? 'true' : undefined}
-            >
-              <div className="theory-module-card__icon">
-                {MODULE_ICONS[mod.id]
-                  ? <img src={MODULE_ICONS[mod.id]} alt="" width="20" height="20" />
-                  : mod.emoji}
-              </div>
-              <div className="theory-module-card__main">
-                <span className="theory-module-card__title">{mod.title}</span>
-                <span className="theory-module-card__meta">
-                  {done ? 'Completed · ' : ''}{mod.slideCount} slides{!available ? ' · coming soon' : ''}
-                </span>
-              </div>
-              <div className="theory-module-card__chevron" aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-              </div>
-            </button>
-          )
-        })}
+      <div id="theory-lang-panel" role="tabpanel" aria-labelledby={`theory-lang-tab-${lang}`}>
+        <div className="theory-module-list" key={refreshKey}>
+          {modules.map((mod) => {
+            const done = getModuleDone(lang, mod.id)
+            const available = !!mod.slides
+            return (
+              <button
+                key={mod.id}
+                className={`theory-module-card${done ? ' theory-module-card--done' : !available ? ' theory-module-card--locked' : ''}`}
+                onClick={available ? () => onSelect(mod) : undefined}
+                aria-disabled={!available ? 'true' : undefined}
+              >
+                <div className="theory-module-card__icon">
+                  {MODULE_ICONS[mod.id]
+                    ? <img src={MODULE_ICONS[mod.id]} alt="" width="20" height="20" />
+                    : mod.emoji}
+                </div>
+                <div className="theory-module-card__main">
+                  <span className="theory-module-card__title">{mod.title}</span>
+                  <span className="theory-module-card__meta">
+                    {done ? 'Completed · ' : ''}{mod.slideCount} slides{!available ? ' · coming soon' : ''}
+                  </span>
+                </div>
+                <div className="theory-module-card__chevron" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                </div>
+              </button>
+            )
+          })}
+        </div>
       </div>
 
       <nav className="theory-screen__bottom-nav" aria-label="Main navigation">
@@ -314,7 +333,7 @@ function ModuleList({ lang, onSelect, onHome, onMyWords, onLangChange, refreshKe
           </svg>
           <span>Home</span>
         </button>
-        <button className="bottom-nav__btn bottom-nav__btn--active bottom-nav__btn--theory" aria-label="Theory">
+        <button className="bottom-nav__btn bottom-nav__btn--active bottom-nav__btn--theory" aria-label="Theory" aria-current="page">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
           </svg>

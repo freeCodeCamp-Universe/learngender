@@ -6,6 +6,7 @@ import { getWords } from '../lib/wordLoader'
 import { MasteryCircle } from '../components/MasteryCircle'
 import { getMasteryTierOverview } from '../lib/levels'
 import { MASTERED_THRESHOLD } from '../lib/mastery'
+import { handleTabListKeyDown } from '../lib/tablist'
 
 const LANGUAGES: Language[] = ['pt', 'es', 'fr', 'it']
 const SEGMENT_COUNT = 5
@@ -98,12 +99,16 @@ export function MyWordsScreen({ onHome, onTheory }: MyWordsScreenProps) {
       </div>
 
       {/* Language tabs */}
-      <div className="lang-tabs" role="tablist">
+      <div className="lang-tabs" role="tablist" aria-label="Language" onKeyDown={handleTabListKeyDown}>
         {LANGUAGES.map((lang) => (
           <button
             key={lang}
+            id={`lang-tab-${lang}`}
             role="tab"
             aria-selected={selectedLang === lang}
+            aria-controls="my-words-lang-panel"
+            aria-label={LANGUAGE_LABELS[lang].name}
+            tabIndex={selectedLang === lang ? 0 : -1}
             className={`lang-tab ${selectedLang === lang ? 'lang-tab--active' : ''}`}
             onClick={() => {
               if (selectedLang === lang) return
@@ -116,6 +121,11 @@ export function MyWordsScreen({ onHome, onTheory }: MyWordsScreenProps) {
         ))}
       </div>
 
+      <div
+        id="my-words-lang-panel"
+        role="tabpanel"
+        aria-labelledby={`lang-tab-${selectedLang}`}
+      >
       {/* Mastered progress bar */}
       <div className="my-words-progress">
         <div className="my-words-progress__header">
@@ -144,18 +154,24 @@ export function MyWordsScreen({ onHome, onTheory }: MyWordsScreenProps) {
       </div>
 
       {/* Learning / Mastered tabs */}
-      <div className="my-words-tabs" role="tablist">
+      <div className="my-words-tabs" role="tablist" aria-label="Word status" onKeyDown={handleTabListKeyDown}>
         <button
+          id="my-words-tab-learning"
           role="tab"
           aria-selected={tab === 'learning'}
+          aria-controls="my-words-list-panel"
+          tabIndex={tab === 'learning' ? 0 : -1}
           className={`my-words-tab ${tab === 'learning' ? 'my-words-tab--active' : ''}`}
           onClick={() => setTab('learning')}
         >
           Learning ({learningEntries.length})
         </button>
         <button
+          id="my-words-tab-mastered"
           role="tab"
           aria-selected={tab === 'mastered'}
+          aria-controls="my-words-list-panel"
+          tabIndex={tab === 'mastered' ? 0 : -1}
           className={`my-words-tab ${tab === 'mastered' ? 'my-words-tab--active' : ''}`}
           onClick={() => setTab('mastered')}
         >
@@ -163,6 +179,11 @@ export function MyWordsScreen({ onHome, onTheory }: MyWordsScreenProps) {
         </button>
       </div>
 
+      <div
+        id="my-words-list-panel"
+        role="tabpanel"
+        aria-labelledby={tab === 'learning' ? 'my-words-tab-learning' : 'my-words-tab-mastered'}
+      >
       {tab === 'learning' && (
         learningEntries.length === 0
           ? <p className="my-words-empty">No words in learning yet — play a round in {LANGUAGE_LABELS[selectedLang].name}!</p>
@@ -199,6 +220,8 @@ export function MyWordsScreen({ onHome, onTheory }: MyWordsScreenProps) {
               ))}
             </ul>
       )}
+      </div>
+      </div>
       {/* Bottom nav */}
       <nav className="home-screen__bottom-nav" aria-label="Main navigation">
         <button className="bottom-nav__btn bottom-nav__btn--home" onClick={onHome} aria-label="Home">
@@ -213,7 +236,7 @@ export function MyWordsScreen({ onHome, onTheory }: MyWordsScreenProps) {
           </svg>
           <span>Theory</span>
         </button>
-        <button className="bottom-nav__btn bottom-nav__btn--active bottom-nav__btn--words" aria-label="My Words">
+        <button className="bottom-nav__btn bottom-nav__btn--active bottom-nav__btn--words" aria-label="My Words" aria-current="page">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
           </svg>

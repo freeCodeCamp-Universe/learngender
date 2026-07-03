@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from 'react'
 import type { Gender, Language, Word } from '../types'
 import { playCorrect, playIncorrect, primeAudio } from '../lib/sounds'
 
@@ -9,12 +9,16 @@ interface WordCardProps {
   showTranslation: boolean
 }
 
+export interface WordCardHandle {
+  answer: (dir: 'left' | 'right') => void
+}
+
 const FLICK_VELOCITY = 0.4  // px/ms
 const MIN_DISTANCE   = 70   // px
 
 const BOUNCE_DURATION = 580 // ms — must match CSS animation duration
 
-export function WordCard({ word, language, onSwipe, showTranslation }: WordCardProps) {
+export const WordCard = forwardRef<WordCardHandle, WordCardProps>(function WordCard({ word, language, onSwipe, showTranslation }, ref) {
   const [dragX, setDragX]         = useState(0)
   const [dragY, setDragY]         = useState(0)
   const [anim, setAnim]           = useState<'idle' | 'enter' | 'fly-left' | 'fly-right' | 'bounce-left' | 'bounce-right' | 'dismiss-left' | 'dismiss-right'>('idle')
@@ -94,6 +98,11 @@ export function WordCard({ word, language, onSwipe, showTranslation }: WordCardP
       }, BOUNCE_DURATION)
     }
   }
+
+  useImperativeHandle(ref, () => ({
+    answer: (dir: 'left' | 'right') => commit(dir),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }), [])
 
   // Keyboard
   useEffect(() => {
@@ -230,4 +239,4 @@ export function WordCard({ word, language, onSwipe, showTranslation }: WordCardP
       {showTranslation && <p className="word-card__translation">{word.translation}</p>}
     </div>
   )
-}
+})

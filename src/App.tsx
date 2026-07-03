@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import type { Language, RoundSummary } from './types'
 import { HomeScreen } from './screens/HomeScreen'
 import { GameScreen } from './screens/GameScreen'
@@ -60,10 +60,21 @@ export default function App() {
     document.documentElement.lang = state.language ? (LANG_BCP47[state.language] ?? state.language) : 'en'
   }, [state.language])
 
+  const mainRef = useRef<HTMLElement>(null)
+  const isFirstRender = useRef(true)
+
+  useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false
+      return
+    }
+    mainRef.current?.focus()
+  }, [state.screen])
+
   return (
     <div className="app">
       <a href="#main-content" className="skip-link">Skip to main content</a>
-      <main id="main-content" style={{ display: 'contents' }}>
+      <main id="main-content" ref={mainRef} tabIndex={-1} className="app__main">
         {state.screen === 'home' && (
           <HomeScreen onStartRound={startRound} onMyWords={goMyWords} onTheory={goTheory} />
         )}
