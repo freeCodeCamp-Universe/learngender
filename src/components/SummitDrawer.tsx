@@ -148,8 +148,8 @@ export function SummitDrawer({
                   </div>
                 )
               })()}
-              <span className="summit-drawer__word-article">{article}</span>
-              <span className="summit-drawer__word-noun">{r.word.word}</span>
+              <span className="summit-drawer__word-article" lang={summary.language}>{article}</span>
+              <span className="summit-drawer__word-noun" lang={summary.language}>{r.word.word}</span>
               <span className="summit-drawer__word-translation">{r.word.translation}</span>
               <span className="summit-drawer__word-result">{r.correct ? '✓' : '✗'}</span>
             </div>

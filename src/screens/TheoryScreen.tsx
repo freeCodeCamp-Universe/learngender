@@ -103,7 +103,7 @@ function renderBody(text: string) {
 
 // ─── Slide view ──────────────────────────────────────────────────
 
-function SlideView({ slide, index, total }: { slide: TheorySlide; index: number; total: number }) {
+function SlideView({ slide, index, total, lang }: { slide: TheorySlide; index: number; total: number; lang: Language }) {
   return (
     <div className={`theory-slide theory-slide--${slide.type}`}>
       <p className="theory-slide__counter">Slide {index + 1} of {total}</p>
@@ -118,7 +118,7 @@ function SlideView({ slide, index, total }: { slide: TheorySlide; index: number;
             <tbody>
               {slide.exceptions.map((ex, i) => (
                 <tr key={i}>
-                  <td className="theory-slide__table-td--key">
+                  <td className="theory-slide__table-td--key" lang={lang}>
                     <span className={`theory-exception__article--${ex.gender}`}>{ex.article}</span>{' '}{ex.word}
                   </td>
                   <td>{ex.meaning}</td>
@@ -138,7 +138,7 @@ function SlideView({ slide, index, total }: { slide: TheorySlide; index: number;
               {slide.table.rows.map((row, ri) => (
                 <tr key={ri}>
                   {row.cells.map((cell, ci) => (
-                    <td key={ci} className={
+                    <td key={ci} lang={ci === 0 ? lang : undefined} className={
                       ci === 0 ? 'theory-slide__table-td--key' :
                       ci === slide.table!.headers.length - 1 ? 'theory-slide__table-td--examples' : ''
                     }>{renderInline(cell)}</td>
@@ -223,7 +223,7 @@ function SlideViewer({ lang, module, onClose, onComplete }: ViewerProps) {
 
       {/* Slide */}
       <div className="theory-screen__slide-area" onPointerDown={onPointerDown} onPointerUp={onPointerUp}>
-        <SlideView key={index} slide={slides[index]} index={index} total={total} />
+        <SlideView key={index} slide={slides[index]} index={index} total={total} lang={lang} />
       </div>
 
       {/* Footer */}

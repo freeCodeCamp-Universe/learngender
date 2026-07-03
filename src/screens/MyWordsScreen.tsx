@@ -233,7 +233,7 @@ interface WordRowProps {
   onToggle: (wordId: string) => void
 }
 
-function WordRow({ word, masteryPct, isMastered, onToggle }: WordRowProps) {
+function WordRow({ word, masteryPct, isMastered, language, onToggle }: WordRowProps) {
   const article = word.article
 
   return (
@@ -241,8 +241,8 @@ function WordRow({ word, masteryPct, isMastered, onToggle }: WordRowProps) {
       <div className="mastery-circle-wrap" data-tooltip={`Mastery: ${masteryPct}%`}>
         <MasteryCircle pct={masteryPct} size={34} />
       </div>
-      <span className="my-words-item__article">{article}</span>
-      <span className="my-words-item__noun">{word.word}</span>
+      <span className="my-words-item__article" lang={language}>{article}</span>
+      <span className="my-words-item__noun" lang={language}>{word.word}</span>
       <span className="my-words-item__translation">{word.translation}</span>
       <button
         className="my-words-item__toggle"

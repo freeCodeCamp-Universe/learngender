@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
-import type { Gender, Word } from '../types'
+import type { Gender, Language, Word } from '../types'
 import { playCorrect, playIncorrect, primeAudio } from '../lib/sounds'
 
 interface WordCardProps {
   word: Word
+  language: Language
   onSwipe: (gender: Gender, translationUsed: boolean) => boolean
   showTranslation: boolean
 }
@@ -13,7 +14,7 @@ const MIN_DISTANCE   = 70   // px
 
 const BOUNCE_DURATION = 580 // ms — must match CSS animation duration
 
-export function WordCard({ word, onSwipe, showTranslation }: WordCardProps) {
+export function WordCard({ word, language, onSwipe, showTranslation }: WordCardProps) {
   const [dragX, setDragX]         = useState(0)
   const [dragY, setDragY]         = useState(0)
   const [anim, setAnim]           = useState<'idle' | 'enter' | 'fly-left' | 'fly-right' | 'bounce-left' | 'bounce-right' | 'dismiss-left' | 'dismiss-right'>('idle')
@@ -224,8 +225,8 @@ export function WordCard({ word, onSwipe, showTranslation }: WordCardProps) {
       onPointerCancel={onPointerCancel}
       aria-label={`Word: ${word.word}`}
     >
-      <p className="word-card__noun">{word.word}</p>
-      {word.hint && <p className="word-card__hint">{word.hint}</p>}
+      <p className="word-card__noun" lang={language}>{word.word}</p>
+      {word.hint && <p className="word-card__hint" lang={language}>{word.hint}</p>}
       {showTranslation && <p className="word-card__translation">{word.translation}</p>}
     </div>
   )

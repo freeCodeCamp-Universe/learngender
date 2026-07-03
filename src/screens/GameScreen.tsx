@@ -136,6 +136,7 @@ export function GameScreen({ language, onRoundEnd, onPlayAgain, onHome }: GameSc
                       <WordCard
                         key={`${state.currentIndex}-${currentWord.id}`}
                         word={currentWord}
+                        language={language}
                         onSwipe={handleSwipe}
                         showTranslation={showTranslation}
                       />

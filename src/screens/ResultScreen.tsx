@@ -96,8 +96,8 @@ export function ResultScreen({ summary, onPlayAgain, onHome }: ResultScreenProps
                   {isPositiveDelta ? '↑' : '↓'}{displayDelta}%
                 </span>
               )}
-              <span className="result-word-row__article">{article}</span>
-              <span className="result-word-row__noun">{r.word.word}</span>
+              <span className="result-word-row__article" lang={summary.language}>{article}</span>
+              <span className="result-word-row__noun" lang={summary.language}>{r.word.word}</span>
               <span className="result-word-row__translation">{r.word.translation}</span>
               <span className="result-word-row__result">{r.correct ? '✓' : '✗'}</span>
             </div>
