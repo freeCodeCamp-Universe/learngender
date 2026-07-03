@@ -11,7 +11,7 @@ export function Lives({ count, total }: LivesProps) {
   const circleColor = pct > 0.6 ? '#e05555' : pct > 0.2 ? '#c47a2a' : '#7a5a2a'
 
   return (
-    <div className="lives-bar" aria-live="polite" aria-atomic="true" aria-label={`${count} of ${total} lives remaining`}>
+    <div className="lives-bar" role="img" aria-label={`${count} of ${total} lives remaining`}>
       <div className="lives-bar__segments">
         {Array.from({ length: total }, (_, i) => (
           <div

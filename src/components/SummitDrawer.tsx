@@ -160,7 +160,7 @@ export function SummitDrawer({
       {/* Actions */}
       <div className="summit-drawer__actions">
         <button ref={nextButtonRef} className="btn btn--primary" onClick={onNext}>
-          {mode === 'loss' ? 'New round' : 'Next →'}
+          {mode === 'loss' ? 'New round' : 'Next'}
         </button>
       </div>
       <button className="summit-drawer__exit-btn" onClick={onExit}>

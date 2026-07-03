@@ -29,9 +29,20 @@ export function GameScreen({ language, onRoundEnd, onPlayAgain, onHome }: GameSc
 
   const handleSwipe = useCallback((gender: Gender, translationUsed: boolean): boolean => {
     const correct = answer(gender, translationUsed)
-    setAnnouncement(correct ? 'Correct' : 'Incorrect')
+    setAnnouncement('')
+    requestAnimationFrame(() => {
+      if (correct) {
+        setAnnouncement('Correct.')
+      } else {
+        const livesAfter = state.lives - 1
+        const msg = livesAfter <= 0
+          ? 'Incorrect. No lives remaining.'
+          : `Incorrect. Life lost. ${livesAfter} ${livesAfter === 1 ? 'life' : 'lives'} remaining.`
+        setAnnouncement(msg)
+      }
+    })
     return correct
-  }, [answer])
+  }, [answer, state.lives])
 
   const isSummit = state.phase === 'summit'
   const isDone   = state.phase === 'done'
@@ -108,6 +119,7 @@ export function GameScreen({ language, onRoundEnd, onPlayAgain, onHome }: GameSc
             key={levelBadgeKey}
             language={language}
             summary={isSummit ? state.summary : null}
+            onLevelUp={(lvl) => setAnnouncement(`Level up! You reached level ${lvl}.`)}
           />
         </div>
         <Lives count={state.lives} total={TOTAL_LIVES} />
