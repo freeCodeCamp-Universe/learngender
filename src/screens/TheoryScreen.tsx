@@ -71,7 +71,7 @@ function renderBody(text: string) {
               <div key={li} className="theory-slide__example-row">
                 {isList && <span className="theory-slide__example-bullet" aria-hidden="true">•</span>}
                 <div className="theory-slide__example-text">
-                  {renderInline(example)}
+                  <span className="theory-slide__example-main">{renderInline(example)}</span>
                   {label && <span className="theory-slide__example-label">{label}</span>}
                 </div>
               </div>
@@ -299,7 +299,7 @@ function ModuleList({ lang, onSelect, onHome, onMyWords, onLangChange, refreshKe
                   {done ? 'Completed · ' : ''}{mod.slideCount} slides{!available ? ' · coming soon' : ''}
                 </span>
               </div>
-              <div className="theory-module-card__chevron">
+              <div className="theory-module-card__chevron" aria-hidden="true">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
               </div>
             </button>
