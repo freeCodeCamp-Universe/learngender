@@ -611,6 +611,50 @@ html, body, #root {
 .settings-link-btn:hover {
   background: rgba(122, 158, 114, 0.24);
 }
+.settings-danger-btn {
+  border: 1px solid rgba(214, 96, 96, 0.55);
+  background: rgba(214, 96, 96, 0.16);
+  color: #f8dcdc;
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.settings-danger-btn:hover {
+  background: rgba(214, 96, 96, 0.26);
+}
+.settings-danger-btn--block {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 0.6rem 0.9rem;
+}
+.reset-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.reset-menu__intro {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+.confirm-reset {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.confirm-reset__text {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+.confirm-reset__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
 .keybinds-panel {
   display: flex;
   flex-direction: column;

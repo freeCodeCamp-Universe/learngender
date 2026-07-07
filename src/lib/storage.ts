@@ -153,3 +153,40 @@ export function toggleManuallyMastered(language: Language, wordId: string): bool
 export function isManuallyMastered(language: Language, wordId: string): boolean {
   return getManuallyMastered(language).has(wordId)
 }
+
+// Remove every localStorage key matching a predicate. Shared by the reset
+// helpers below; fails silently if localStorage is unavailable.
+function removeKeysWhere(predicate: (key: string) => boolean): void {
+  try {
+    const toRemove: string[] = []
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i)
+      if (key && predicate(key)) toRemove.push(key)
+    }
+    for (const key of toRemove) {
+      localStorage.removeItem(key)
+    }
+  } catch {
+    // localStorage unavailable — nothing to reset
+  }
+}
+
+// Reset all learning progress (SRS cards, mastery, scores, streak, seen/mastered
+// words) across every language. User settings (sound/haptics/translation) are
+// preserved — this clears progress, not preferences.
+export function resetProgress(): void {
+  removeKeysWhere((key) => key.startsWith('lng_') && key !== 'lng_settings')
+}
+
+// Reset progress for a single language: score/level, per-word SRS state, mastery,
+// seen words, and manually-mastered words. The global daily streak, other
+// languages, and settings are left untouched.
+export function resetLanguageProgress(language: Language): void {
+  removeKeysWhere((key) =>
+    key === `lng_score_${language}` ||
+    key === `lng_seen_${language}` ||
+    key === `lng_manual_mastered_${language}` ||
+    key.startsWith(`lng_srs_${language}_`) ||
+    key.startsWith(`lng_mastery_${language}_`)
+  )
+}
