@@ -53,6 +53,11 @@
   --radius:    16px;
   --radius-sm: 8px;
 
+  /* Layout widths — retargeted at the desktop breakpoint (bottom of file) */
+  --app-max:   480px;  /* app column + bottom navs + theory footer */
+  --sheet-max: 480px;  /* settings sheet + theory slide reading width */
+  --stage-max: 480px;  /* game stage */
+
   /* Per-language accent colours */
   --lang-pt: #4fc3f7;   /* sky blue   */
   --lang-es: #ffd75a;   /* yellow     */
@@ -107,7 +112,7 @@ html, body, #root {
   min-height: 100svh;
   display: flex;
   flex-direction: column;
-  max-width: 480px;
+  max-width: var(--app-max);
   margin: 0 auto;
   position: relative;
   overflow-x: hidden;
@@ -487,7 +492,7 @@ html, body, #root {
   bottom: 0;
   left: 0;
   right: 0;
-  width: min(100%, 480px);
+  width: min(100%, var(--app-max));
   margin: 0 auto;
   display: flex;
   background: var(--bg-card);
@@ -536,7 +541,7 @@ html, body, #root {
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  max-width: 480px;
+  max-width: var(--sheet-max);
   background: var(--bg-surface);
   border-radius: var(--radius) var(--radius) 0 0;
   border: 1px solid var(--border);
@@ -1840,7 +1845,7 @@ html, body, #root {
 .theory-screen__slide-area:active { cursor: grabbing; }
 
 /* Slide */
-.theory-slide { max-width: 480px; margin: 0 auto; }
+.theory-slide { max-width: var(--sheet-max); margin: 0 auto; }
 
 .theory-slide__counter {
   font-size: 0.78rem;
@@ -2062,7 +2067,7 @@ html, body, #root {
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  max-width: 480px;
+  max-width: var(--app-max);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -2155,7 +2160,7 @@ html, body, #root {
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  max-width: 480px;
+  max-width: var(--app-max);
   display: flex;
   background: var(--bg-card);
   border-top: 1px solid rgba(255,255,255,0.07);
@@ -2314,6 +2319,105 @@ html, body, #root {
 .theory-coming-soon__sub {
   font-size: 0.85rem;
   color: rgba(255,255,255,0.3);
+}
+
+/* ================================================================
+   Desktop / tablet (≥768px) — additive only; every rule above is
+   the mobile layout and stays untouched. Single breakpoint by
+   design; a future ~1200px tier can retarget the width tokens.
+   ================================================================ */
+@media (min-width: 768px) {
+  :root {
+    --app-max:   840px;
+    --sheet-max: 640px;
+    --stage-max: 520px;
+  }
+
+  /* Backdrop: extended night sky around the column. The gradient must
+     live on `html` — the base rule paints #1b1b32 on html, body AND
+     #root, so a body gradient would be occluded by #root and stop at
+     100% body height when the page scrolls. */
+  html {
+    background:
+      radial-gradient(1.5px 1.5px at 22% 18%, rgba(223, 223, 226, 0.35), transparent 60%),
+      radial-gradient(1px 1px at 68% 42%, rgba(223, 223, 226, 0.28), transparent 60%),
+      radial-gradient(1.5px 1.5px at 85% 12%, rgba(223, 223, 226, 0.22), transparent 60%),
+      radial-gradient(64rem 30rem at 50% -10rem, rgba(59, 59, 79, 0.55), transparent 70%),
+      linear-gradient(180deg, var(--gray-90) 0%, var(--gray-85) 100%);
+    background-repeat: repeat, repeat, repeat, no-repeat, no-repeat;
+    background-size: 420px 420px, 340px 340px, 520px 520px, auto, auto;
+    background-attachment: fixed;
+  }
+  body, #root { background: transparent; }
+
+  /* Column reads as a panel floating on the backdrop */
+  .app {
+    box-shadow: 0 0 0 1px #2a2a45, 0 24px 90px rgba(0, 0, 0, 0.55);
+  }
+
+  /* --- Game: centered phone-proportioned stage -------------------
+     .game-screen is position:relative + overflow:hidden and contains
+     the SVG background, HUD, card area, gender bands and SummitDrawer,
+     so narrowing it moves the whole scene as one unit. Height stays
+     full-viewport: the 35vh card offset and the xMidYMin-slice SVG
+     are tuned for a full-height stage. */
+  .game-screen {
+    width: min(100%, var(--stage-max));
+    margin-inline: auto;
+    box-shadow: 0 0 0 1px #2a2a45, 0 24px 90px rgba(0, 0, 0, 0.55);
+  }
+  /* The stage is the framed element on the game screen — drop the
+     outer 840px ring so there's no double frame */
+  .app:has(.game-screen) { box-shadow: none; }
+
+  /* --- Home: 2×2 language grid ---------------------------------- */
+  .home-screen__topbar,
+  .home-screen__title { padding-inline: 1.5rem; }
+  .skill-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    padding-inline: 1.5rem;
+    align-items: start;
+  }
+
+  /* --- Theory: 2-column module grid ------------------------------ */
+  .theory-module-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    padding: 24px 24px 120px;
+  }
+  /* Language pill tabs stop stretching to the full 840px column */
+  .theory-screen__lang-tabs,
+  .lang-tabs { max-width: 420px; }
+
+  /* --- Theory slide viewer ---------------------------------------
+     Slide reading width comes from --sheet-max (640px). The fixed
+     footer spans the column; inset arrows/dots so they align with
+     the slide edges. min(100vw, var(--app-max)) equals the footer's
+     actual width at every viewport size. */
+  .theory-screen__footer {
+    padding-inline: max(24px,
+      calc((min(100vw, var(--app-max)) - var(--sheet-max)) / 2 + 24px));
+  }
+  .theory-viewer__header {
+    padding-inline: max(20px,
+      calc((min(100vw, var(--app-max)) - var(--sheet-max)) / 2 + 24px));
+  }
+
+  /* --- My Words: two-column word list ----------------------------
+     Multicol keeps the mastery-sorted order flowing top-to-bottom,
+     unlike grid's row-major order. */
+  .my-words-screen__header { padding-inline: 1.5rem; }
+  .my-words-progress { margin-inline: 1.5rem; }
+  .my-words-list {
+    display: block;
+    column-count: 2;
+    column-gap: 2.5rem;
+    padding-inline: 1.5rem;
+  }
+  .my-words-item { break-inside: avoid; }
 }
 
 @media (prefers-reduced-motion: reduce) {

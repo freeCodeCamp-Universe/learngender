@@ -80,12 +80,12 @@ export const WordCard = forwardRef<WordCardHandle, WordCardProps>(function WordC
       setAnim(dir === 'right' ? 'fly-right' : 'fly-left')
     } else {
       playIncorrect()
-      // Measure distance from card edge to the app container edge (not window width,
-      // which breaks on desktop where .app is narrower than the viewport).
+      // Measure distance from card edge to the game stage edge (not window width —
+      // on desktop the stage is narrower than both the viewport and the .app column).
       let edgePx = 100
       if (cardRef.current) {
         const rect      = cardRef.current.getBoundingClientRect()
-        const appEl     = cardRef.current.closest('.app') ?? document.body
+        const appEl     = cardRef.current.closest('.game-screen') ?? cardRef.current.closest('.app') ?? document.body
         const appRect   = appEl.getBoundingClientRect()
         edgePx = dir === 'right'
           ? Math.max(0, appRect.right  - rect.right - 8)
