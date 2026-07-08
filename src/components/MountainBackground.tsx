@@ -1,3 +1,5 @@
+import { useResolvedTheme } from '../lib/theme'
+
 // Mountain: peak at y=90, base at y=295
 // Hiker step-0 at y=278, always visible above the card area
 
@@ -23,23 +25,96 @@ const CIRCLE_POSITIONS: [number, number][] = [
   [145, 121],
 ]
 
-// fCC Command-line Chic palette
-const C = {
+interface Palette {
+  sky: string
+  skyMid: string
+  mtBg: string
+  mtMain: string
+  mtEdge: string
+  mtEdgeOpacity: number
+  snow: string
+  ground: string
+  groundEdge: string
+  tree1: string
+  tree2: string
+  treeTrunk: string
+  trail: string
+  trailFill: string
+  circleEmptyStroke: string
+  flagPole: string
+  flag: string
+  celestial: string   // moon (dark) / sun (light)
+  hiker: {
+    backpack: string
+    body: string
+    head: string
+    hat: string
+    arm: string
+    stick: string
+    legs: string
+  }
+}
+
+// Night — fCC Command-line Chic palette (original)
+const C_NIGHT: Palette = {
   sky:        '#0a0a23', // gray-90 — deep navy
   skyMid:     '#1b1b32', // gray-85
   mtBg:       '#3b3b4f', // gray-75 — background mountain
   mtMain:     '#2a2a40', // gray-80 — main mountain
+  mtEdge:     '#dbb8ff', // purple edge highlight
+  mtEdgeOpacity: 0.12,
   snow:       '#dfdfe2', // gray-10
-  ground:     '#1b1b32', // gray-85 — dark ground
+  ground:     '#1b1b32', // gray-85
   groundEdge: '#0a0a23', // gray-90
   tree1:      '#acd157', // fCC green
-  tree2:      '#8fb23a', // fCC green darker
-  treeTrunk:  '#3b3b4f', // gray-75
+  tree2:      '#8fb23a',
+  treeTrunk:  '#3b3b4f',
   trail:      '#f1be32', // fCC yellow
-  trailFill:  '#f1be32', // fCC yellow
-  flagPole:   '#858591', // gray-45
-  flag:       '#e24b4a', // original warm red
-  sun:        '#f1be32', // fCC yellow
+  trailFill:  '#f1be32',
+  circleEmptyStroke: '#858591',
+  flagPole:   '#858591',
+  flag:       '#e24b4a',
+  celestial:  '#dfdfe2', // crescent moon
+  hiker: {
+    backpack: '#4a7c59',
+    body:     '#b57bee',
+    head:     '#f5c5a0',
+    hat:      '#2a1f10',
+    arm:      '#f1be32',
+    stick:    '#6b4c2a',
+    legs:     '#3b2e1e',
+  },
+}
+
+// Day — light theme (from design mockup)
+const C_DAY: Palette = {
+  sky:        '#cce5f6', // soft daylight blue
+  skyMid:     '#f0ede8', // warm haze near horizon
+  mtBg:       '#b0c4ac', // muted sage far mountain
+  mtMain:     '#7a9e72', // green main mountain
+  mtEdge:     '#ffffff', // sunlit edge
+  mtEdgeOpacity: 0.3,
+  snow:       '#ffffff',
+  ground:     '#6b9460', // green ground
+  groundEdge: '#5a8050',
+  tree1:      '#3d6b42',
+  tree2:      '#4a7c4a',
+  treeTrunk:  '#5a3e28',
+  trail:      '#c8b49a', // tan dashed
+  trailFill:  '#f5d87a', // golden filled steps
+  circleEmptyStroke: '#ffffff',
+  flagPole:   '#3a3028',
+  flag:       '#e24b4a',
+  celestial:  '#f5d87a', // sun
+  hiker: {
+    backpack: '#4a7c59',
+    body:     '#e07840', // orange
+    head:     '#f5c5a0',
+    hat:      '#5a3e28',
+    arm:      '#e07840',
+    stick:    '#8b6340',
+    legs:     '#3a3028',
+  },
 }
 
 interface MountainBackgroundProps {
@@ -48,6 +123,9 @@ interface MountainBackgroundProps {
 }
 
 export function MountainBackground({ hikerStep, isSummit }: MountainBackgroundProps) {
+  const theme = useResolvedTheme()
+  const isDay = theme === 'light'
+  const C = isDay ? C_DAY : C_NIGHT
   const hikerPos = HIKER_POSITIONS[Math.min(hikerStep, 7)]
 
   return (
@@ -58,29 +136,36 @@ export function MountainBackground({ hikerStep, isSummit }: MountainBackgroundPr
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
     >
-      {/* Sky — deep navy gradient feel */}
+      {/* Sky */}
       <rect width="320" height="295" fill={C.sky}/>
-      <rect width="320" y="180" height="115" fill={C.skyMid} opacity="0.35"/>
+      <rect width="320" y="180" height="115" fill={C.skyMid} opacity={isDay ? 0.85 : 0.35}/>
 
-      {/* Stars */}
-      {[
-        [30, 30], [80, 15], [140, 40], [200, 20], [260, 35], [290, 60],
-        [50, 65], [110, 55], [230, 50], [170, 25], [310, 25], [15, 80],
-      ].map(([x, y], i) => (
-        <circle key={i} cx={x} cy={y} r="1.2" fill="#dfdfe2" opacity="0.6"/>
-      ))}
-
-      {/* Moon glow */}
-      <circle cx="265" cy="65" r="34" fill="#dfdfe2" opacity="0.04"/>
-      <circle cx="265" cy="65" r="24" fill="#dfdfe2" opacity="0.08"/>
-      {/* Crescent moon — mask cuts shadow side */}
-      <defs>
-        <mask id="crescent">
-          <rect width="320" height="580" fill="white"/>
-          <circle cx="274" cy="59" r="12" fill="black"/>
-        </mask>
-      </defs>
-      <circle cx="265" cy="65" r="16" fill="#dfdfe2" opacity="0.92" mask="url(#crescent)"/>
+      {isDay ? (
+        /* Sun */
+        <>
+          <circle cx="265" cy="62" r="40" fill={C.celestial} opacity="0.2"/>
+          <circle cx="265" cy="62" r="26" fill={C.celestial} opacity="0.85"/>
+        </>
+      ) : (
+        /* Stars + crescent moon */
+        <>
+          {[
+            [30, 30], [80, 15], [140, 40], [200, 20], [260, 35], [290, 60],
+            [50, 65], [110, 55], [230, 50], [170, 25], [310, 25], [15, 80],
+          ].map(([x, y], i) => (
+            <circle key={i} cx={x} cy={y} r="1.2" fill={C.celestial} opacity="0.6"/>
+          ))}
+          <circle cx="265" cy="65" r="34" fill={C.celestial} opacity="0.04"/>
+          <circle cx="265" cy="65" r="24" fill={C.celestial} opacity="0.08"/>
+          <defs>
+            <mask id="crescent">
+              <rect width="320" height="580" fill="white"/>
+              <circle cx="274" cy="59" r="12" fill="black"/>
+            </mask>
+          </defs>
+          <circle cx="265" cy="65" r="16" fill={C.celestial} opacity="0.92" mask="url(#crescent)"/>
+        </>
+      )}
 
       {/* Background mountain */}
       <polygon points="130,295 260,148 390,295" fill={C.mtBg}/>
@@ -92,9 +177,9 @@ export function MountainBackground({ hikerStep, isSummit }: MountainBackgroundPr
       <polyline
         points="-10,295 145,90 300,295"
         fill="none"
-        stroke="#dbb8ff"
+        stroke={C.mtEdge}
         strokeWidth="1"
-        opacity="0.12"
+        opacity={C.mtEdgeOpacity}
       />
 
       {/* Snow cap */}
@@ -108,7 +193,7 @@ export function MountainBackground({ hikerStep, isSummit }: MountainBackgroundPr
       <line x1="145" y1="90" x2="145" y2="60" stroke={C.flagPole} strokeWidth="1.5"/>
       <polygon points="145,60 164,68 145,76" fill={C.flag} opacity="0.95"/>
 
-      {/* Trail path — fCC yellow dashed */}
+      {/* Trail path — dashed */}
       <path
         d="M157,290 Q153,265 151,240 Q149,215 148,190 Q147,168 146,148 Q145,130 145,112"
         stroke={C.trail}
@@ -126,7 +211,7 @@ export function MountainBackground({ hikerStep, isSummit }: MountainBackgroundPr
             key={i}
             cx={cx} cy={cy} r="5"
             fill={filled ? C.trailFill : 'none'}
-            stroke={filled ? C.trailFill : '#858591'}
+            stroke={filled ? C.trailFill : C.circleEmptyStroke}
             strokeWidth="1.5"
             opacity={filled ? 0.9 : Math.max(0.25, 0.6 - i * 0.05)}
           />
@@ -137,7 +222,7 @@ export function MountainBackground({ hikerStep, isSummit }: MountainBackgroundPr
       <rect x="0" y="295" width="320" height="285" fill={C.ground}/>
       <rect x="0" y="295" width="320" height="8" fill={C.groundEdge} opacity="0.5"/>
 
-      {/* Trees left — fCC green */}
+      {/* Trees left */}
       <polygon points="16,295 28,267 40,295" fill={C.tree1}/>
       <rect x="26" y="291" width="4" height="7" fill={C.treeTrunk}/>
       <polygon points="42,295 53,270 64,295" fill={C.tree2}/>
@@ -155,24 +240,16 @@ export function MountainBackground({ hikerStep, isSummit }: MountainBackgroundPr
           transform={`translate(${hikerPos[0]}, ${hikerPos[1]})`}
           style={{ transition: 'transform 0.4s ease-out' }}
         >
-          {/* Backpack */}
-          <rect x="4" y="0" width="7" height="10" fill="#4a7c59" rx="2"/>
-          {/* Body */}
-          <ellipse cx="0" cy="8" rx="5" ry="7" fill="#b57bee"/>
-          {/* Head */}
-          <circle cx="0" cy="-2" r="5" fill="#f5c5a0"/>
-          {/* Hat brim */}
-          <ellipse cx="0" cy="-6.5" rx="6" ry="2" fill="#2a1f10"/>
-          {/* Hat top */}
-          <rect x="-3" y="-11" width="6" height="5" fill="#2a1f10" rx="1"/>
-          {/* Arms — fCC yellow sleeves */}
-          <line x1="-5" y1="5" x2="-10" y2="13" stroke="#f1be32" strokeWidth="2.5" strokeLinecap="round"/>
-          <line x1="5" y1="5" x2="10" y2="13" stroke="#f1be32" strokeWidth="2.5" strokeLinecap="round"/>
-          {/* Walking stick */}
-          <line x1="10" y1="13" x2="13" y2="22" stroke="#6b4c2a" strokeWidth="1.5" strokeLinecap="round"/>
-          {/* Legs */}
-          <line x1="-2" y1="15" x2="-6" y2="25" stroke="#3b2e1e" strokeWidth="2.5" strokeLinecap="round"/>
-          <line x1="2" y1="15" x2="5" y2="25" stroke="#3b2e1e" strokeWidth="2.5" strokeLinecap="round"/>
+          <rect x="4" y="0" width="7" height="10" fill={C.hiker.backpack} rx="2"/>
+          <ellipse cx="0" cy="8" rx="5" ry="7" fill={C.hiker.body}/>
+          <circle cx="0" cy="-2" r="5" fill={C.hiker.head}/>
+          <ellipse cx="0" cy="-6.5" rx="6" ry="2" fill={C.hiker.hat}/>
+          <rect x="-3" y="-11" width="6" height="5" fill={C.hiker.hat} rx="1"/>
+          <line x1="-5" y1="5" x2="-10" y2="13" stroke={C.hiker.arm} strokeWidth="2.5" strokeLinecap="round"/>
+          <line x1="5" y1="5" x2="10" y2="13" stroke={C.hiker.arm} strokeWidth="2.5" strokeLinecap="round"/>
+          <line x1="10" y1="13" x2="13" y2="22" stroke={C.hiker.stick} strokeWidth="1.5" strokeLinecap="round"/>
+          <line x1="-2" y1="15" x2="-6" y2="25" stroke={C.hiker.legs} strokeWidth="2.5" strokeLinecap="round"/>
+          <line x1="2" y1="15" x2="5" y2="25" stroke={C.hiker.legs} strokeWidth="2.5" strokeLinecap="round"/>
         </g>
       )}
 
@@ -180,22 +257,15 @@ export function MountainBackground({ hikerStep, isSummit }: MountainBackgroundPr
       {isSummit && (
         <g transform="translate(-25, -65)">
           <g className="hiker-summit">
-            {/* Body */}
-            <ellipse cx="162" cy="156" rx="5" ry="7" fill="#b57bee"/>
-            {/* Head */}
-            <circle cx="162" cy="146" r="5" fill="#f5c5a0"/>
-            {/* Hat brim */}
-            <ellipse cx="162" cy="141.5" rx="6" ry="2" fill="#2a1f10"/>
-            {/* Hat top */}
-            <rect x="159" y="137" width="6" height="5" fill="#2a1f10" rx="1"/>
-            {/* Arms raised — fCC yellow */}
-            <line x1="157" y1="153" x2="150" y2="143" stroke="#f1be32" strokeWidth="2.5" strokeLinecap="round"/>
-            <line x1="167" y1="153" x2="174" y2="143" stroke="#f1be32" strokeWidth="2.5" strokeLinecap="round"/>
-            {/* Backpack */}
-            <rect x="165" y="149" width="6" height="9" fill="#4a7c59" rx="2"/>
-            {/* Legs */}
-            <line x1="160" y1="163" x2="157" y2="172" stroke="#3b2e1e" strokeWidth="2.5" strokeLinecap="round"/>
-            <line x1="164" y1="163" x2="167" y2="172" stroke="#3b2e1e" strokeWidth="2.5" strokeLinecap="round"/>
+            <ellipse cx="162" cy="156" rx="5" ry="7" fill={C.hiker.body}/>
+            <circle cx="162" cy="146" r="5" fill={C.hiker.head}/>
+            <ellipse cx="162" cy="141.5" rx="6" ry="2" fill={C.hiker.hat}/>
+            <rect x="159" y="137" width="6" height="5" fill={C.hiker.hat} rx="1"/>
+            <line x1="157" y1="153" x2="150" y2="143" stroke={C.hiker.arm} strokeWidth="2.5" strokeLinecap="round"/>
+            <line x1="167" y1="153" x2="174" y2="143" stroke={C.hiker.arm} strokeWidth="2.5" strokeLinecap="round"/>
+            <rect x="165" y="149" width="6" height="9" fill={C.hiker.backpack} rx="2"/>
+            <line x1="160" y1="163" x2="157" y2="172" stroke={C.hiker.legs} strokeWidth="2.5" strokeLinecap="round"/>
+            <line x1="164" y1="163" x2="167" y2="172" stroke={C.hiker.legs} strokeWidth="2.5" strokeLinecap="round"/>
           </g>
         </g>
       )}

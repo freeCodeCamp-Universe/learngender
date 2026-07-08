@@ -4,6 +4,7 @@ import type { Language } from '../types'
 import { LANGUAGE_LABELS } from '../types'
 import { getScore, getSeenCount, getStreak } from '../lib/storage'
 import { getMasteryTierProgress, getXPProgress } from '../lib/levels'
+import { useResolvedTheme } from '../lib/theme'
 import { SettingsPanel } from './SettingsPanel'
 
 const LANGUAGES: Language[] = ['pt', 'es', 'fr', 'it']
@@ -33,6 +34,7 @@ interface HomeScreenProps {
 }
 
 export function HomeScreen({ onStartRound, onMyWords, onTheory }: HomeScreenProps) {
+  const isDay = useResolvedTheme() === 'light'
   const [settingsOpen, setSettingsOpen] = useState(false)
   const [activeTip, setActiveTip] = useState<'streak' | 'xp' | null>(null)
   const streak = getStreak()
@@ -142,11 +144,13 @@ export function HomeScreen({ onStartRound, onMyWords, onTheory }: HomeScreenProp
                 {(() => {
                   const size = 56, r = 23, cx = size / 2, cy = size / 2
                   const circ = 2 * Math.PI * r
-                  const xpColor = '#ffd75a'
+                  const xpColor = isDay ? '#b8730a' : '#ffd75a'
+                  const ringTrack = isDay ? 'rgba(10, 10, 35, 0.12)' : 'rgba(255, 255, 255, 0.1)'
+                  const numberColor = isDay ? '#3a3028' : (isNew ? 'rgba(255, 215, 90, 0.72)' : xpColor)
                   const filled = (xpProgress.pct / 100) * circ
                   return (
                     <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} className="skill-card__level-ring" aria-label={`Level ${xpProgress.level}`}>
-                      <circle cx={cx} cy={cy} r={r} fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth="4" />
+                      <circle cx={cx} cy={cy} r={r} fill="none" stroke={ringTrack} strokeWidth="4" />
                       <circle cx={cx} cy={cy} r={r} fill="none" stroke={xpColor} strokeWidth="4"
                         strokeDasharray={`${filled} ${circ}`} strokeLinecap="round"
                         transform={`rotate(-90 ${cx} ${cy})`} />
@@ -155,7 +159,7 @@ export function HomeScreen({ onStartRound, onMyWords, onTheory }: HomeScreenProp
                         y={cy + 6}
                         textAnchor="middle"
                         fontSize="18"
-                        fill={isNew ? 'rgba(255, 215, 90, 0.72)' : xpColor}
+                        fill={numberColor}
                         fontWeight="600"
                       >
                         {xpProgress.level}
@@ -170,7 +174,11 @@ export function HomeScreen({ onStartRound, onMyWords, onTheory }: HomeScreenProp
                     </div>
                     <span
                       className="skill-card__level-badge"
-                      style={{ background: `${levelColor}12`, color: levelColor, borderColor: `${levelColor}88` }}
+                      style={
+                        isDay
+                          ? { background: `${levelColor}22`, color: 'var(--text)', borderColor: levelColor }
+                          : { background: `${levelColor}12`, color: levelColor, borderColor: `${levelColor}88` }
+                      }
                     >
                       {levelName}
                     </span>

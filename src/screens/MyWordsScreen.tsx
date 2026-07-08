@@ -7,6 +7,7 @@ import { MasteryCircle } from '../components/MasteryCircle'
 import { getMasteryTierOverview } from '../lib/levels'
 import { MASTERED_THRESHOLD } from '../lib/mastery'
 import { handleTabListKeyDown } from '../lib/tablist'
+import { useResolvedTheme } from '../lib/theme'
 
 const LANGUAGES: Language[] = ['pt', 'es', 'fr', 'it']
 const SEGMENT_COUNT = 5
@@ -16,6 +17,15 @@ const LANG_COLOR: Record<Language, string> = {
   es: '#3b8beb',
   fr: '#7fd96b',
   it: '#ffd75a',
+}
+
+// Darker per-language fills for light mode so the progress bar keeps ≥3:1
+// against the light track (var(--bg-surface) #dfdfe2).
+const LANG_COLOR_LIGHT: Record<Language, string> = {
+  pt: '#5a52d6',
+  es: '#1f6fc9',
+  fr: '#2e7d32',
+  it: '#8a6500',
 }
 
 interface WordEntry {
@@ -30,6 +40,7 @@ interface MyWordsScreenProps {
 }
 
 export function MyWordsScreen({ onHome, onTheory }: MyWordsScreenProps) {
+  const isDay = useResolvedTheme() === 'light'
   const [selectedLang, setSelectedLang] = useState<Language>('pt')
   const [tab, setTab] = useState<'learning' | 'mastered'>('learning')
   const [entries, setEntries] = useState<WordEntry[]>([])
@@ -143,7 +154,7 @@ export function MyWordsScreen({ onHome, onTheory }: MyWordsScreenProps) {
                 {(full || active) && (
                   <div
                     className="my-words-progress__seg-fill"
-                    style={{ width: full ? '100%' : `${masteryTier.pct}%`, background: LANG_COLOR[selectedLang] }}
+                    style={{ width: full ? '100%' : `${masteryTier.pct}%`, background: (isDay ? LANG_COLOR_LIGHT : LANG_COLOR)[selectedLang] }}
                   />
                 )}
               </div>

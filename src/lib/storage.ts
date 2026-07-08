@@ -6,6 +6,7 @@ const DEFAULT_SETTINGS: Settings = {
   soundEnabled: true,
   hapticsEnabled: true,
   showTranslationByDefault: false,
+  theme: 'system',
 }
 
 const DEFAULT_STREAK: StreakData = {

@@ -36,9 +36,18 @@
   /* Semantic borders */
   --border:      var(--gray-75);
 
+  /* Foreground ink channel — the RGB triple used by every alpha-composited
+     text/border/hover/fill (rgba(var(--fg-rgb), α)). Flips to dark in light
+     mode so all those neutral whites invert in one place. */
+  --fg-rgb: 255, 255, 255;
+
+  /* App frame hairline ring */
+  --frame-ring: var(--frame-ring);
+
   /* Accents (on dark) */
   --accent:          #dbb8ff;   /* purple — emphasis */
   --accent-cta:      #ffd75a;   /* yellow — CTA / calls-to-action */
+  --accent-cta-text: var(--accent-cta);  /* yellow as TEXT — darkened on light for contrast */
   --blue:            #99c9ff;   /* blue   — links, interactive */
   --correct:         #c8f36b;   /* green  — success */
   --incorrect:       #ffadad;   /* red    — error */
@@ -65,6 +74,36 @@
   --lang-it: #c8f36b;   /* lime green */
 }
 
+/* ================================================================
+   Light theme — applied via <html data-theme="light">.
+   Only theme-dependent tokens are overridden; the gray scale and
+   accent fills stay shared. The `--fg-rgb` flip re-inks every
+   rgba(var(--fg-rgb), α) neutral (text/borders/hovers/fills) at once.
+   The game screen keeps its own warm palette (see the game-screen
+   light overrides lower in this file).
+   ================================================================ */
+:root[data-theme="light"] {
+  color-scheme: light;
+  --fg-rgb: 10, 10, 35;
+
+  --bg:          var(--gray-00);   /* #ffffff */
+  --bg-card:     var(--gray-05);   /* #f5f6f7 */
+  --bg-surface:  var(--gray-10);   /* #dfdfe2 */
+
+  --text:        var(--gray-90);   /* #0a0a23 */
+  --text-muted:  #5f5f6b;          /* legible muted on light (~6.8:1 on white) */
+
+  --border:      var(--gray-15);   /* #d0d0d5 */
+  --frame-ring:  rgba(10, 10, 35, 0.12);
+
+  /* Accents used as text/interactive need the darker counterparts on light */
+  --accent:      #5a01a7;          /* purple-dark */
+  --blue:        #185fa5;          /* blue readable as link text on light */
+  --accent-cta-text: #4d3800;      /* yellow-dark — readable yellow text on light */
+}
+
+:root { color-scheme: dark; }
+
 html {
   font-size: 18px;
 }
@@ -72,7 +111,7 @@ html {
 html, body, #root {
   height: 100%;
   font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background: #1b1b32;
+  background: var(--bg);
   color: var(--text);
   -webkit-font-smoothing: antialiased;
   line-height: 1.5;
@@ -86,7 +125,7 @@ html, body, #root {
   z-index: 9999;
   padding: 0.75rem 1rem;
   background: var(--bg-surface);
-  color: var(--accent-cta);
+  color: var(--accent-cta-text);
   font-weight: 600;
   text-decoration: underline;
   border-radius: 0 0 4px 0;
@@ -116,7 +155,7 @@ html, body, #root {
   margin: 0 auto;
   position: relative;
   overflow-x: hidden;
-  box-shadow: 0 0 0 1px #2a2a45, 0 0 60px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 0 1px var(--frame-ring), 0 0 60px rgba(0, 0, 0, 0.6);
 }
 
 .app__main {
@@ -126,9 +165,13 @@ html, body, #root {
   min-height: 0;
   outline: none;
 }
+/* The main region is focused programmatically on every screen change (so
+   screen readers announce the new content) and by the skip link. That focus
+   is for assistive tech — drawing a full-column outline around it is visual
+   noise, so we suppress it. Real interactive controls keep their own
+   focus-visible rings, so keyboard focus stays visible where it matters. */
 .app__main:focus-visible {
-  outline: 2px solid #fff;
-  outline-offset: -2px;
+  outline: none;
 }
 
 /* ================================================================
@@ -147,7 +190,7 @@ html, body, #root {
   line-height: 1;
 }
 .icon-btn:hover {
-  background: rgba(255,255,255,0.08);
+  background: rgba(var(--fg-rgb), 0.08);
 }
 .icon-btn:focus-visible {
   outline: 2px solid var(--focus-ring);
@@ -276,6 +319,9 @@ html, body, #root {
   color: #e8630a;
   font-size: 1rem;
 }
+:root[data-theme="light"] .home-screen__streak-count {
+  color: #c2410c;
+}
 .home-screen__xp-count {
   font-weight: 700;
   color: var(--text);
@@ -328,6 +374,11 @@ html, body, #root {
 .game-screen__home-btn img {
   filter: brightness(0) invert(1);
 }
+:root[data-theme="light"] .home-screen__settings-icon,
+:root[data-theme="light"] .bottom-nav__icon--home,
+:root[data-theme="light"] .game-screen__home-btn img {
+  filter: brightness(0);   /* dark icons on light backgrounds */
+}
 
 /* Title */
 .home-screen__title {
@@ -362,9 +413,9 @@ html, body, #root {
   padding: 1.05rem 1.15rem;
 }
 .skill-card--new .skill-card__level-badge {
-  color: rgba(255, 255, 255, 0.68) !important;
-  border-color: rgba(255, 255, 255, 0.3) !important;
-  background: rgba(255, 255, 255, 0.04) !important;
+  color: rgba(var(--fg-rgb), 0.68) !important;
+  border-color: rgba(var(--fg-rgb), 0.3) !important;
+  background: rgba(var(--fg-rgb), 0.04) !important;
 }
 .skill-card--maxed .skill-card__level-badge {
   box-shadow: 0 0 0 1px rgba(255, 215, 90, 0.08), 0 0 18px rgba(255, 215, 90, 0.1);
@@ -420,9 +471,9 @@ html, body, #root {
   height: 8px;
   overflow: hidden;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.16);
+  background: rgba(var(--fg-rgb), 0.16);
   margin-bottom: 0.35rem;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 0 0 1px rgba(var(--fg-rgb), 0.05);
 }
 .skill-card__mastery-fill {
   height: 100%;
@@ -435,11 +486,11 @@ html, body, #root {
   box-shadow: inset -1px 0 0 rgba(10, 10, 35, 0.28);
 }
 .skill-card__mastery-bar--empty {
-  background: rgba(255, 255, 255, 0.12);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  background: rgba(var(--fg-rgb), 0.12);
+  box-shadow: inset 0 0 0 1px rgba(var(--fg-rgb), 0.08);
 }
 .skill-card--new .skill-card__mastery-bar--empty {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(var(--fg-rgb), 0.1);
 }
 .skill-card--maxed .skill-card__mastery-bar {
   background: rgba(255, 215, 90, 0.12);
@@ -462,12 +513,12 @@ html, body, #root {
 }
 .skill-card__mastered {
   font-size: 0.76rem;
-  color: rgba(255, 255, 255, 0.52);
+  color: rgba(var(--fg-rgb), 0.52);
   white-space: nowrap;
   text-align: right;
 }
 .skill-card__mastered strong {
-  color: rgba(255, 255, 255, 0.84);
+  color: rgba(var(--fg-rgb), 0.84);
   font-weight: 600;
 }
 .skill-card__cta {
@@ -518,7 +569,7 @@ html, body, #root {
 .bottom-nav__btn--active { color: var(--text); }
 .bottom-nav__btn--active.bottom-nav__btn--home   svg { color: #99c9ff; }
 .bottom-nav__btn--active.bottom-nav__btn--theory svg { color: #dbb8ff; }
-.bottom-nav__btn--active.bottom-nav__btn--words  svg { color: var(--accent-cta); }
+.bottom-nav__btn--active.bottom-nav__btn--words  svg { color: var(--accent-cta-text); }
 .bottom-nav__icon { display: block; }
 
 /* ================================================================
@@ -602,6 +653,43 @@ html, body, #root {
 }
 .settings-item--nav {
   align-items: center;
+}
+/* Row that stacks its control under the label (e.g. Appearance) */
+.settings-item--stack {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.5rem;
+}
+
+/* Segmented control (System / Light / Dark) */
+.segmented {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+.segmented__option {
+  flex: 1;
+  padding: 0.45rem 0.5rem;
+  border: none;
+  background: none;
+  border-radius: 999px;
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.segmented__option--active {
+  background: var(--accent-cta);
+  color: var(--gray-90);
+}
+.segmented__option:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
 }
 .settings-link-btn {
   border: 1px solid rgba(122, 158, 114, 0.5);
@@ -778,7 +866,7 @@ html, body, #root {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255,255,255,0.5);
+  background: rgba(var(--fg-rgb), 0.5);
   border: none;
   border-radius: 50%;
   width: 34px;
@@ -807,7 +895,7 @@ html, body, #root {
   text-align: left;
 }
 .level-badge:focus-visible {
-  outline: 2px solid #fff;
+  outline: 2px solid var(--text);
   outline-offset: 2px;
 }
 
@@ -861,7 +949,7 @@ html, body, #root {
   border-radius: 999px;
   background: #fff3cd;
   border: 1.5px solid var(--accent-cta);
-  color: #c8860a;
+  color: #6b4500;
   font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.04em;
@@ -982,7 +1070,7 @@ html, body, #root {
   font: inherit;
 }
 .gender-band:disabled { cursor: default; }
-.gender-band:focus-visible { outline: 3px solid #fff; outline-offset: -3px; }
+.gender-band:focus-visible { outline: 3px solid var(--text); outline-offset: -3px; }
 .gender-band--left  { left: 0;  background: rgba(255, 173, 173, 0.82); border-radius: 0 12px 12px 0; }
 .gender-band--right { right: 0; background: rgba(153, 201, 255, 0.82); border-radius: 12px 0 0 12px; }
 
@@ -1152,7 +1240,7 @@ html, body, #root {
 .swipe-hint {
   font-size: 0.889rem;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(var(--fg-rgb), 0.65);
   letter-spacing: 1px;
   margin-top: 1rem;
 }
@@ -1167,6 +1255,51 @@ html, body, #root {
   color: rgba(58,48,40,0.5);
 }
 
+/* ================================================================
+   Game screen — light (day) chrome. Warm palette from the design
+   mockup, layered over the day scene. Scoped to [data-theme="light"]
+   so dark mode is untouched.
+   ================================================================ */
+:root[data-theme="light"] .game-screen__home-btn,
+:root[data-theme="light"] .game-screen__translate-btn {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(58, 48, 40, 0.35);
+}
+:root[data-theme="light"] .game-screen__translate-btn--active {
+  background: rgba(239, 159, 39, 0.28);
+  box-shadow: inset 0 0 0 1.5px rgba(239, 159, 39, 0.72);
+}
+:root[data-theme="light"] .level-badge__circle,
+:root[data-theme="light"] .level-badge__bar-fill {
+  background: #ef9f27;
+}
+:root[data-theme="light"] .level-badge__circle {
+  color: var(--gray-90);
+  box-shadow: 0 0 0 1px rgba(58, 48, 40, 0.35), 2px 0 6px rgba(0, 0, 0, 0.25);
+}
+:root[data-theme="light"] .level-badge__bar-track {
+  background: rgba(58, 48, 40, 0.12);
+}
+:root[data-theme="light"] .lives-bar__seg--active { background: #c0392b; }
+:root[data-theme="light"] .lives-bar__seg--lost   { background: rgba(58, 48, 40, 0.3); }
+/* Opaque bands so the article letters sit on a controlled background
+   (a 0.12 tint over the green scene left them at ~2:1). */
+:root[data-theme="light"] .gender-band--left  { background: #f6d6df; }
+:root[data-theme="light"] .gender-band--right { background: #d6e6f6; }
+:root[data-theme="light"] .gender-band--left  .gender-band__article { color: #7a1038; }
+:root[data-theme="light"] .gender-band--right .gender-band__article { color: #0f4c85; }
+:root[data-theme="light"] .word-card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 0.5px solid rgba(58, 48, 40, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+}
+:root[data-theme="light"] .word-card__noun { color: #1a1612; }
+:root[data-theme="light"] .word-card__translation { color: rgba(58, 48, 40, 0.72); }
+:root[data-theme="light"] .word-card__reveal-btn { color: rgba(58, 48, 40, 0.72); }
+/* Hint/progress sit over the mid-green scene — need a very dark ink for 4.5:1 */
+:root[data-theme="light"] .swipe-hint { color: #1a1410; }
+:root[data-theme="light"] .game-screen__progress { color: #1a1410; }
+
 /* Summit Drawer */
 .summit-drawer {
   position: absolute;
@@ -1175,7 +1308,7 @@ html, body, #root {
   right: 0;
   height: 70%;
   z-index: 20;
-  background: var(--gray-85);
+  background: var(--bg-card);
   border-radius: 20px 20px 0 0;
   box-shadow: 0 -4px 32px rgba(0,0,0,0.5);
   display: flex;
@@ -1367,6 +1500,19 @@ html, body, #root {
 .summit-drawer__delta--up   { color: var(--correct); }
 .summit-drawer__delta--down { color: var(--incorrect); }
 
+/* Light drawer: the bright green/red accents used as TEXT need dark
+   counterparts, and the green fills need a darker green on light tracks. */
+:root[data-theme="light"] .summit-drawer__score-pill {
+  color: #00471b;
+  background: rgba(0, 71, 27, 0.12);
+  border-color: rgba(0, 71, 27, 0.45);
+}
+:root[data-theme="light"] .summit-drawer__bar-fill { background: #2e7d32; }
+:root[data-theme="light"] .summit-drawer__word-row--correct .summit-drawer__word-result,
+:root[data-theme="light"] .summit-drawer__delta--up { color: #00471b; }
+:root[data-theme="light"] .summit-drawer__word-row--wrong .summit-drawer__word-result,
+:root[data-theme="light"] .summit-drawer__delta--down { color: #850000; }
+
 /* Actions */
 .summit-drawer__actions {
   display: flex;
@@ -1389,7 +1535,7 @@ html, body, #root {
 }
 .summit-drawer__actions .btn--secondary {
   background: rgba(255, 215, 90, 0.14);
-  color: var(--accent-cta);
+  color: var(--accent-cta-text);
   border: 1.5px solid rgba(255, 215, 90, 0.42);
 }
 .summit-drawer__exit-btn {
@@ -1441,7 +1587,7 @@ html, body, #root {
   text-align: center;
   padding: 0.25rem 0 0.5rem;
   font-size: 0.944rem;
-  color: var(--accent-cta);
+  color: var(--accent-cta-text);
   font-weight: 700;
   animation: pulse 0.8s ease-in-out infinite alternate;
 }
@@ -1511,7 +1657,7 @@ html, body, #root {
   align-items: center;
   gap: 8px;
   padding: 6px 4px;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(var(--fg-rgb), 0.06);
 }
 .result-word-row:nth-child(even) { background: var(--bg-card); }
 .result-word-row--correct  { border-left: 3px solid var(--correct); padding-left: 8px; }
@@ -1613,7 +1759,7 @@ html, body, #root {
 .lang-tab--active {
   background: var(--bg-surface);
   color: var(--text);
-  border-color: var(--accent-cta);
+  border-color: var(--accent-cta-text);
 }
 
 /* Progress card */
@@ -1687,7 +1833,7 @@ html, body, #root {
 }
 .my-words-tab--active {
   color: var(--text);
-  border-bottom-color: var(--accent-cta);
+  border-bottom-color: var(--accent-cta-text);
 }
 
 /* Word list */
@@ -1719,14 +1865,14 @@ html, body, #root {
   position: absolute;
   bottom: calc(100% + 6px);
   left: 0;
-  background: var(--surface-2, #2a2a36);
-  color: var(--text);
+  background: #2a2a36;
+  color: #ffffff;
   font-size: 0.72rem;
   font-weight: 600;
   white-space: nowrap;
   padding: 4px 8px;
   border-radius: 6px;
-  border: 1px solid var(--border);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.12s ease;
@@ -1786,7 +1932,7 @@ html, body, #root {
 }
 .my-words-item__toggle:hover {
   color: var(--text);
-  border-color: var(--accent-cta);
+  border-color: var(--accent-cta-text);
 }
 
 /* ================================================================
@@ -1829,7 +1975,7 @@ html, body, #root {
 .theory-screen__lang-tab--active {
   background: var(--bg-surface);
   color: var(--text);
-  border-color: var(--accent-cta);
+  border-color: var(--accent-cta-text);
 }
 
 /* Slide area */
@@ -1852,14 +1998,14 @@ html, body, #root {
   font-weight: 500;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: var(--accent-cta);
+  color: var(--accent-cta-text);
   margin-bottom: 12px;
 }
 
 .theory-slide__title {
   font-size: 1.35rem;
   font-weight: 600;
-  color: #fff;
+  color: var(--text);
   margin: 0 0 16px;
   line-height: 1.3;
 }
@@ -1874,15 +2020,15 @@ html, body, #root {
   margin: 0;
   font-size: 1rem;
   line-height: 1.75;
-  color: rgba(255,255,255,0.75);
+  color: rgba(var(--fg-rgb), 0.75);
 }
 
-.theory-slide__body-text strong { color: #fff; font-weight: 500; }
+.theory-slide__body-text strong { color: var(--text); font-weight: 500; }
 
 /* Example card — amber left border */
 .theory-slide__example-card {
-  background: rgba(255,255,255,0.04);
-  border: 0.5px solid rgba(255,255,255,0.08);
+  background: rgba(var(--fg-rgb), 0.04);
+  border: 0.5px solid rgba(var(--fg-rgb), 0.08);
   border-left: 3px solid var(--accent-cta);
   border-radius: 0 12px 12px 0;
   padding: 14px 16px;
@@ -1907,14 +2053,14 @@ html, body, #root {
 
 .theory-slide__list-item {
   font-size: 0.94rem;
-  color: rgba(255,255,255,0.8);
+  color: rgba(var(--fg-rgb), 0.8);
   line-height: 1.5;
 }
 
-.theory-slide__list-item strong { color: var(--accent-cta); font-weight: 600; }
+.theory-slide__list-item strong { color: var(--accent-cta-text); font-weight: 600; }
 
 .theory-slide__example-bullet {
-  color: rgba(255,255,255,0.35);
+  color: rgba(var(--fg-rgb), 0.35);
   font-size: 0.75rem;
   flex-shrink: 0;
   width: 12px;
@@ -1930,15 +2076,15 @@ html, body, #root {
 
 .theory-slide__example-main {
   font-size: 0.94rem;
-  color: rgba(255,255,255,0.8);
+  color: rgba(var(--fg-rgb), 0.8);
   line-height: 1.4;
 }
 
-.theory-slide__example-main strong { color: var(--accent-cta); font-weight: 600; }
+.theory-slide__example-main strong { color: var(--accent-cta-text); font-weight: 600; }
 
 .theory-slide__example-label {
   font-size: 0.88rem;
-  color: rgba(255,255,255,0.7);
+  color: rgba(var(--fg-rgb), 0.7);
   line-height: 1.3;
 }
 
@@ -1953,11 +2099,11 @@ html, body, #root {
 .theory-slide__rule-text {
   margin: 0;
   font-size: 0.94rem;
-  color: rgba(255,255,255,0.8);
+  color: rgba(var(--fg-rgb), 0.8);
   line-height: 1.65;
 }
 
-.theory-slide__rule-text strong { color: var(--accent-cta); font-weight: 500; }
+.theory-slide__rule-text strong { color: var(--accent-cta-text); font-weight: 500; }
 
 /* Exception cards */
 .theory-slide__exceptions {
@@ -1986,14 +2132,14 @@ html, body, #root {
 .theory-exception__word {
   font-size: 1rem;
   font-weight: 500;
-  color: #fff;
+  color: var(--text);
 }
 
 .theory-exception__article { font-weight: 600; }
 
 .theory-exception__meaning {
   font-size: 0.8rem;
-  color: rgba(255,255,255,0.7);
+  color: rgba(var(--fg-rgb), 0.7);
   margin-top: 2px;
 }
 
@@ -2009,11 +2155,13 @@ html, body, #root {
   background: rgba(226,75,74,0.15);
   color: #e24b4a;
 }
+:root[data-theme="light"] .theory-exception__tag--masculine { color: #850000; }
 
 .theory-exception__tag--feminine {
   background: rgba(212,83,126,0.15);
   color: #ed93b1;
 }
+:root[data-theme="light"] .theory-exception__tag--feminine { color: #9b1c5a; }
 
 /* Table — no outer border, inline rows */
 .theory-slide__table-wrap {
@@ -2032,33 +2180,33 @@ html, body, #root {
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 1px;
-  color: rgba(255,255,255,0.75);
+  color: rgba(var(--fg-rgb), 0.75);
   text-transform: uppercase;
   padding: 0 0 8px;
-  border-bottom: 0.5px solid rgba(255,255,255,0.08);
+  border-bottom: 0.5px solid rgba(var(--fg-rgb), 0.08);
 }
 
 .theory-slide__table td {
   padding: 9px 0;
-  border-bottom: 0.5px solid rgba(255,255,255,0.05);
-  color: rgba(255,255,255,0.7);
+  border-bottom: 0.5px solid rgba(var(--fg-rgb), 0.05);
+  color: rgba(var(--fg-rgb), 0.7);
   vertical-align: top;
   line-height: 1.45;
   padding-right: 10px;
 }
 
 .theory-slide__table tbody tr:last-child td { border-bottom: none; }
-.theory-slide__table-td--key { color: var(--accent-cta) !important; font-weight: 500; width: 30%; }
-.theory-slide__table-td--examples { color: rgba(255,255,255,0.7) !important; font-size: 0.83rem; }
+.theory-slide__table-td--key { color: var(--accent-cta-text) !important; font-weight: 500; width: 30%; }
+.theory-slide__table-td--examples { color: rgba(var(--fg-rgb), 0.7) !important; font-size: 0.83rem; }
 
 .theory-slide__table-note {
   padding: 10px 0 0;
   font-size: 0.83rem;
-  color: rgba(255,255,255,0.7);
+  color: rgba(var(--fg-rgb), 0.7);
   line-height: 1.5;
 }
 
-.theory-slide__table-note strong { color: rgba(255,255,255,0.7); font-weight: 500; }
+.theory-slide__table-note strong { color: rgba(var(--fg-rgb), 0.7); font-weight: 500; }
 
 /* Footer: ← dots → — fixed above bottom nav */
 .theory-screen__footer {
@@ -2073,7 +2221,7 @@ html, body, #root {
   justify-content: space-between;
   padding: 14px 24px 14px;
   background: var(--bg);
-  border-top: 0.5px solid rgba(255,255,255,0.06);
+  border-top: 0.5px solid rgba(var(--fg-rgb), 0.06);
   z-index: 10;
 }
 
@@ -2105,7 +2253,7 @@ html, body, #root {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.12);
+  background: rgba(var(--fg-rgb), 0.12);
   transition: all 0.3s;
   flex-shrink: 0;
 }
@@ -2126,9 +2274,9 @@ html, body, #root {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.3);
-  background: rgba(255,255,255,0.05);
-  color: rgba(255,255,255,0.8);
+  border: 1px solid rgba(var(--fg-rgb), 0.3);
+  background: rgba(var(--fg-rgb), 0.05);
+  color: rgba(var(--fg-rgb), 0.8);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -2142,16 +2290,26 @@ html, body, #root {
 
 .theory-screen__arrow--next {
   background: var(--accent-cta);
-  border-color: var(--accent-cta);
+  border-color: var(--accent-cta-text);
   color: var(--gray-90);
   font-weight: 700;
 }
 
 .theory-screen__arrow--next:disabled {
-  background: rgba(255,255,255,0.08);
+  background: rgba(var(--fg-rgb), 0.08);
   border-color: transparent;
-  color: rgba(255,255,255,0.4);
+  color: rgba(var(--fg-rgb), 0.4);
 }
+
+/* Light: dots and the prev arrow need a firmer ink on white */
+:root[data-theme="light"] .theory-screen__dot::before {
+  background: rgba(10, 10, 35, 0.3);
+}
+:root[data-theme="light"] .theory-screen__arrow {
+  border-color: rgba(10, 10, 35, 0.4);
+  color: rgba(10, 10, 35, 0.85);
+}
+:root[data-theme="light"] .theory-screen__arrow:disabled { opacity: 0.4; }
 
 /* Bottom nav */
 .theory-screen__bottom-nav {
@@ -2163,7 +2321,7 @@ html, body, #root {
   max-width: var(--app-max);
   display: flex;
   background: var(--bg-card);
-  border-top: 1px solid rgba(255,255,255,0.07);
+  border-top: 1px solid rgba(var(--fg-rgb), 0.07);
   padding: 0.5rem 0 0.75rem;
 }
 
@@ -2179,8 +2337,8 @@ html, body, #root {
 
 .theory-module-card {
   width: 100%;
-  background: rgba(255,255,255,0.04);
-  border: 0.5px solid rgba(255,255,255,0.09);
+  background: rgba(var(--fg-rgb), 0.04);
+  border: 0.5px solid rgba(var(--fg-rgb), 0.09);
   border-radius: 16px;
   padding: 14px 16px;
   display: flex;
@@ -2193,12 +2351,18 @@ html, body, #root {
 }
 
 .theory-module-card:hover:not([aria-disabled="true"]) {
-  background: rgba(255,255,255,0.07);
-  border-color: rgba(255,255,255,0.16);
+  background: rgba(var(--fg-rgb), 0.07);
+  border-color: rgba(var(--fg-rgb), 0.16);
 }
 
 .theory-module-card--done {
   border-color: rgba(172,209,87,0.25);
+}
+/* Light: the pale-green border is invisible on a light card — use a firm
+   dark-green border plus a faint green wash so "completed" reads clearly. */
+:root[data-theme="light"] .theory-module-card--done {
+  border-color: rgba(0, 71, 27, 0.45);
+  background: rgba(0, 71, 27, 0.06);
 }
 
 .theory-module-card--locked {
@@ -2211,7 +2375,7 @@ html, body, #root {
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  background: rgba(255,255,255,0.07);
+  background: rgba(var(--fg-rgb), 0.07);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2221,6 +2385,9 @@ html, body, #root {
 .theory-module-card__icon img {
   filter: brightness(0) invert(1);
   opacity: 0.75;
+}
+:root[data-theme="light"] .theory-module-card__icon img {
+  filter: brightness(0);
 }
 
 .theory-module-card__main {
@@ -2234,7 +2401,7 @@ html, body, #root {
 .theory-module-card__title {
   font-size: 0.95rem;
   font-weight: 600;
-  color: #fff;
+  color: var(--text);
   line-height: 1.3;
   white-space: nowrap;
   overflow: hidden;
@@ -2243,16 +2410,19 @@ html, body, #root {
 
 .theory-module-card__meta {
   font-size: 0.75rem;
-  color: rgba(255,255,255,0.5);
+  color: rgba(var(--fg-rgb), 0.5);
   letter-spacing: 0.02em;
 }
 
 .theory-module-card--done .theory-module-card__meta {
   color: #acd157;
 }
+:root[data-theme="light"] .theory-module-card--done .theory-module-card__meta {
+  color: #00471b;
+}
 
 .theory-module-card__chevron {
-  color: rgba(255,255,255,0.4);
+  color: rgba(var(--fg-rgb), 0.4);
   flex-shrink: 0;
 }
 
@@ -2270,7 +2440,7 @@ html, body, #root {
   align-items: center;
   justify-content: space-between;
   padding: 14px 20px 10px;
-  border-bottom: 0.5px solid rgba(255,255,255,0.07);
+  border-bottom: 0.5px solid rgba(var(--fg-rgb), 0.07);
   flex-shrink: 0;
   gap: 12px;
 }
@@ -2290,9 +2460,9 @@ html, body, #root {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  border: 0.5px solid rgba(255,255,255,0.15);
-  background: rgba(255,255,255,0.05);
-  color: rgba(255,255,255,0.5);
+  border: 0.5px solid rgba(var(--fg-rgb), 0.15);
+  background: rgba(var(--fg-rgb), 0.05);
+  color: rgba(var(--fg-rgb), 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2313,12 +2483,12 @@ html, body, #root {
 .theory-coming-soon__label {
   font-size: 1.1rem;
   font-weight: 600;
-  color: rgba(255,255,255,0.6);
+  color: rgba(var(--fg-rgb), 0.6);
 }
 
 .theory-coming-soon__sub {
   font-size: 0.85rem;
-  color: rgba(255,255,255,0.3);
+  color: rgba(var(--fg-rgb), 0.3);
 }
 
 /* ================================================================
@@ -2348,11 +2518,19 @@ html, body, #root {
     background-size: 420px 420px, 340px 340px, 520px 520px, auto, auto;
     background-attachment: fixed;
   }
+  /* Light: soft daylight backdrop, no stars */
+  :root[data-theme="light"] html {
+    background:
+      radial-gradient(64rem 30rem at 50% -10rem, rgba(10, 10, 35, 0.05), transparent 70%),
+      linear-gradient(180deg, var(--gray-05) 0%, var(--gray-10) 100%);
+    background-repeat: no-repeat, no-repeat;
+    background-attachment: fixed;
+  }
   body, #root { background: transparent; }
 
   /* Column reads as a panel floating on the backdrop */
   .app {
-    box-shadow: 0 0 0 1px #2a2a45, 0 24px 90px rgba(0, 0, 0, 0.55);
+    box-shadow: 0 0 0 1px var(--frame-ring), 0 24px 90px rgba(0, 0, 0, 0.55);
   }
 
   /* --- Game: centered phone-proportioned stage -------------------
@@ -2364,7 +2542,7 @@ html, body, #root {
   .game-screen {
     width: min(100%, var(--stage-max));
     margin-inline: auto;
-    box-shadow: 0 0 0 1px #2a2a45, 0 24px 90px rgba(0, 0, 0, 0.55);
+    box-shadow: 0 0 0 1px var(--frame-ring), 0 24px 90px rgba(0, 0, 0, 0.55);
   }
   /* The stage is the framed element on the game screen — drop the
      outer 840px ring so there's no double frame */

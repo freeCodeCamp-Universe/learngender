@@ -5,6 +5,7 @@ import { GameScreen } from './screens/GameScreen'
 import { MyWordsScreen } from './screens/MyWordsScreen'
 import { TheoryScreen } from './screens/TheoryScreen'
 import { updateStreak } from './lib/storage'
+import { applyThemeFromSettings, startThemeSync } from './lib/theme'
 import { playLevelUp, playWin, primeAudio } from './lib/sounds'
 import './App.css'
 
@@ -59,6 +60,15 @@ export default function App() {
   useEffect(() => {
     document.documentElement.lang = state.language ? (LANG_BCP47[state.language] ?? state.language) : 'en'
   }, [state.language])
+
+  // Apply the saved theme on mount and keep it in sync with the OS when the
+  // preference is 'system'. The inline script in index.html sets the initial
+  // theme before paint; this re-applies in case storage changed and wires the
+  // OS listener.
+  useEffect(() => {
+    applyThemeFromSettings()
+    return startThemeSync()
+  }, [])
 
   const mainRef = useRef<HTMLElement>(null)
   const isFirstRender = useRef(true)

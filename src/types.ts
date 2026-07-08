@@ -13,10 +13,13 @@ export interface Word {
   patternNote?: string
 }
 
+export type ThemePref = 'system' | 'light' | 'dark'
+
 export interface Settings {
   soundEnabled: boolean
   hapticsEnabled: boolean
   showTranslationByDefault: boolean
+  theme: ThemePref
 }
 
 export interface StreakData {

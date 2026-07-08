@@ -1,7 +1,14 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
-import type { Language, Settings } from '../types'
+import type { Language, Settings, ThemePref } from '../types'
 import { LANGUAGE_LABELS } from '../types'
 import { getSettings, resetLanguageProgress, resetProgress, setSettings } from '../lib/storage'
+import { applyThemeFromSettings } from '../lib/theme'
+
+const THEME_OPTIONS: { value: ThemePref; label: string }[] = [
+  { value: 'system', label: 'System' },
+  { value: 'light', label: 'Light' },
+  { value: 'dark', label: 'Dark' },
+]
 
 interface SettingsPanelProps {
   onClose: () => void
@@ -62,10 +69,19 @@ export function SettingsPanel({ onClose }: SettingsPanelProps) {
     }
   }, [])
 
-  function toggle(key: keyof Settings) {
+  function toggle(key: 'soundEnabled' | 'hapticsEnabled' | 'showTranslationByDefault') {
     setLocalSettings((prev) => {
       const updated = { ...prev, [key]: !prev[key] }
       setSettings(updated)
+      return updated
+    })
+  }
+
+  function setThemePref(theme: ThemePref) {
+    setLocalSettings((prev) => {
+      const updated = { ...prev, theme }
+      setSettings(updated)
+      applyThemeFromSettings() // instant preview
       return updated
     })
   }
@@ -162,6 +178,26 @@ export function SettingsPanel({ onClose }: SettingsPanelProps) {
 
         {view === 'settings' ? (
           <ul className="settings-list">
+            <li className="settings-item settings-item--stack">
+              <span className="settings-item__label" id="theme-label">
+                Appearance
+              </span>
+              <div className="segmented" role="radiogroup" aria-labelledby="theme-label">
+                {THEME_OPTIONS.map((opt) => (
+                  <button
+                    key={opt.value}
+                    type="button"
+                    role="radio"
+                    aria-checked={settings.theme === opt.value}
+                    className={`segmented__option${settings.theme === opt.value ? ' segmented__option--active' : ''}`}
+                    onClick={() => setThemePref(opt.value)}
+                  >
+                    {opt.label}
+                  </button>
+                ))}
+              </div>
+            </li>
+
             <li className="settings-item">
               <span className="settings-item__label" id="toggle-sound-label">
                 Sound effects
