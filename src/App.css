@@ -2519,7 +2519,7 @@ html, body, #root {
     background-attachment: fixed;
   }
   /* Light: soft daylight backdrop, no stars */
-  :root[data-theme="light"] html {
+  html[data-theme="light"] {
     background:
       radial-gradient(64rem 30rem at 50% -10rem, rgba(10, 10, 35, 0.05), transparent 70%),
       linear-gradient(180deg, var(--gray-05) 0%, var(--gray-10) 100%);
