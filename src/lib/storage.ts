@@ -4,7 +4,6 @@ import { getLegacyMastery, MASTERED_THRESHOLD } from './mastery'
 
 const DEFAULT_SETTINGS: Settings = {
   soundEnabled: true,
-  hapticsEnabled: true,
   showTranslationByDefault: false,
   theme: 'system',
 }
@@ -173,7 +172,7 @@ function removeKeysWhere(predicate: (key: string) => boolean): void {
 }
 
 // Reset all learning progress (SRS cards, mastery, scores, streak, seen/mastered
-// words) across every language. User settings (sound/haptics/translation) are
+// words) across every language. User settings (sound/translation) are
 // preserved — this clears progress, not preferences.
 export function resetProgress(): void {
   removeKeysWhere((key) => key.startsWith('lng_') && key !== 'lng_settings')

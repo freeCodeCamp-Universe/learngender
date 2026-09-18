@@ -69,7 +69,7 @@ export function SettingsPanel({ onClose }: SettingsPanelProps) {
     }
   }, [])
 
-  function toggle(key: 'soundEnabled' | 'hapticsEnabled' | 'showTranslationByDefault') {
+  function toggle(key: 'soundEnabled' | 'showTranslationByDefault') {
     setLocalSettings((prev) => {
       const updated = { ...prev, [key]: !prev[key] }
       setSettings(updated)
@@ -211,22 +211,6 @@ export function SettingsPanel({ onClose }: SettingsPanelProps) {
                 onClick={() => toggle('soundEnabled')}
               >
                 {settings.soundEnabled ? 'ON' : 'OFF'}
-              </button>
-            </li>
-
-            <li className="settings-item">
-              <span className="settings-item__label" id="toggle-haptics-label">
-                Haptics
-              </span>
-              <button
-                id="toggle-haptics"
-                className={`toggle ${settings.hapticsEnabled ? 'toggle--on' : 'toggle--off'}`}
-                role="switch"
-                aria-checked={settings.hapticsEnabled}
-                aria-labelledby="toggle-haptics-label"
-                onClick={() => toggle('hapticsEnabled')}
-              >
-                {settings.hapticsEnabled ? 'ON' : 'OFF'}
               </button>
             </li>
 

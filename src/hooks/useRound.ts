@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import type { CardResult, Gender, Language, RoundSummary, Word } from '../types'
 import { drawRound } from '../lib/wordLoader'
 import { createCard, isDue, rateCard } from '../lib/srs'
-import { addScore, getMasteredCount, getScore, getSettings, getSRSCard, getWordMastery, markWordSeen, setSRSCard, setWordMastery } from '../lib/storage'
+import { addScore, getMasteredCount, getScore, getSRSCard, getWordMastery, markWordSeen, setSRSCard, setWordMastery } from '../lib/storage'
 import { getRoundScoreBreakdown } from '../lib/scoring'
 import { getLevelFromXP } from '../lib/levels'
 import { getWords } from '../lib/wordLoader'
@@ -138,10 +138,6 @@ export function useRound(language: Language, initialDeck?: Word[]) {
       if (!snapshotWord) return false
 
       const correct = snapshotWord.gender === gender
-
-      if (!correct && getSettings().hapticsEnabled && typeof navigator !== 'undefined' && 'vibrate' in navigator) {
-        navigator.vibrate(200)
-      }
 
       setState((prev) => {
         if (prev.phase !== 'playing') return prev

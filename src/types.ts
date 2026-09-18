@@ -17,7 +17,6 @@ export type ThemePref = 'system' | 'light' | 'dark'
 
 export interface Settings {
   soundEnabled: boolean
-  hapticsEnabled: boolean
   showTranslationByDefault: boolean
   theme: ThemePref
 }
