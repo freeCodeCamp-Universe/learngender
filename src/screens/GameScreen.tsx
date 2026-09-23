@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
+import type { ReactNode } from 'react'
 import homeIcon from '../components/icons/home.svg'
 import translateIcon from '../components/icons/translate.svg'
 import settingsIcon from '../components/icons/settings.svg'
@@ -26,9 +27,10 @@ export function GameScreen({ language, onRoundEnd, onPlayAgain, onHome }: GameSc
   const { state, currentWord, answer } = useRound(language)
   const [showTranslation, setShowTranslation] = useState(() => getSettings().showTranslationByDefault)
   const [settingsOpen, setSettingsOpen] = useState(false)
-  const [announcement, setAnnouncement] = useState('')
+  const [announcement, setAnnouncement] = useState<ReactNode>('')
   const handledSummaryRef = useRef<RoundSummary | null>(null)
   const wordCardRef = useRef<WordCardHandle>(null)
+  const prevWordIdRef = useRef<string | null>(null)
 
   const handleSwipe = useCallback((gender: Gender, translationUsed: boolean): boolean => {
     const correct = answer(gender, translationUsed)
@@ -46,6 +48,19 @@ export function GameScreen({ language, onRoundEnd, onPlayAgain, onHome }: GameSc
     })
     return correct
   }, [answer, state.lives])
+
+  // Announce the next word once it's on screen — press feedback ("Correct."/"Incorrect...")
+  // already fired synchronously in handleSwipe above.
+  useEffect(() => {
+    if (!currentWord) return
+    if (prevWordIdRef.current === null) {
+      prevWordIdRef.current = currentWord.id
+      return
+    }
+    if (prevWordIdRef.current === currentWord.id) return
+    prevWordIdRef.current = currentWord.id
+    setAnnouncement(<>Next: <span lang={language}>{currentWord.word}</span></>)
+  }, [currentWord, language])
 
   const isSummit = state.phase === 'summit'
   const isDone   = state.phase === 'done'
