@@ -1,11 +1,14 @@
 import { useEffect, useState } from 'react'
 import settingsIcon from '../components/icons/settings.svg'
+import donationConfig from '../data/donation-config.json'
 import type { Language } from '../types'
 import { LANGUAGE_LABELS } from '../types'
 import { getScore, getSeenCount, getStreak } from '../lib/storage'
 import { getMasteryTierProgress, getXPProgress } from '../lib/levels'
 import { useResolvedTheme } from '../lib/theme'
 import { SettingsPanel } from './SettingsPanel'
+
+const DONATE_URL = `https://donate.freecodecamp.org?source=${donationConfig.donationId}&campaign=learn-gender&medium=web`
 
 const LANGUAGES: Language[] = ['pt', 'es', 'fr', 'it']
 
@@ -102,9 +105,19 @@ export function HomeScreen({ onStartRound, onMyWords, onTheory }: HomeScreenProp
             )}
           </button>
         </div>
-        <button className="icon-btn" onClick={() => setSettingsOpen(true)} aria-label="Settings" aria-expanded={settingsOpen} aria-controls="settings-panel">
-          <img src={settingsIcon} alt="" width="22" height="22" className="home-screen__settings-icon" />
-        </button>
+        <div className="home-screen__topbar-actions">
+          <a
+            href={DONATE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="home-screen__donate-btn"
+          >
+            Donate
+          </a>
+          <button className="icon-btn" onClick={() => setSettingsOpen(true)} aria-label="Settings" aria-expanded={settingsOpen} aria-controls="settings-panel">
+            <img src={settingsIcon} alt="" width="22" height="22" className="home-screen__settings-icon" />
+          </button>
+        </div>
       </div>
 
       {/* Title */}
