@@ -1,14 +1,12 @@
 import { useEffect, useState } from 'react'
 import settingsIcon from '../components/icons/settings.svg'
-import donationConfig from '../data/donation-config.json'
 import type { Language } from '../types'
 import { LANGUAGE_LABELS } from '../types'
 import { getScore, getSeenCount, getStreak } from '../lib/storage'
 import { getMasteryTierProgress, getXPProgress } from '../lib/levels'
 import { useResolvedTheme } from '../lib/theme'
+import { DONATE_URL } from '../lib/donate'
 import { SettingsPanel } from './SettingsPanel'
-
-const DONATE_URL = `https://donate.freecodecamp.org?source=${donationConfig.donationId}&campaign=learn-gender&medium=web`
 
 const LANGUAGES: Language[] = ['pt', 'es', 'fr', 'it']
 

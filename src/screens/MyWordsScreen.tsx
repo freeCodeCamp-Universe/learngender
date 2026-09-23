@@ -8,6 +8,7 @@ import { getMasteryTierOverview } from '../lib/levels'
 import { MASTERED_THRESHOLD } from '../lib/mastery'
 import { handleTabListKeyDown } from '../lib/tablist'
 import { useResolvedTheme } from '../lib/theme'
+import { DONATE_URL } from '../lib/donate'
 
 const LANGUAGES: Language[] = ['pt', 'es', 'fr', 'it']
 const SEGMENT_COUNT = 5
@@ -107,6 +108,14 @@ export function MyWordsScreen({ onHome, onTheory }: MyWordsScreenProps) {
       {/* Header */}
       <div className="my-words-screen__header">
         <h1>My Words</h1>
+        <a
+          href={DONATE_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="home-screen__donate-btn"
+        >
+          Donate
+        </a>
       </div>
 
       {/* Language tabs */}
