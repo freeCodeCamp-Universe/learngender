@@ -232,11 +232,18 @@ export const WordCard = forwardRef<WordCardHandle, WordCardProps>(function WordC
       onPointerMove={onPointerMove}
       onPointerUp={onPointerUp}
       onPointerCancel={onPointerCancel}
-      aria-label={`Word: ${word.word}`}
+      role="img"
+      aria-roledescription="swipeable word card"
+      aria-labelledby="word-card-summary"
     >
-      <p className="word-card__noun" lang={language}>{word.word}</p>
-      {word.hint && <p className="word-card__hint" lang={language}>{word.hint}</p>}
-      {showTranslation && <p className="word-card__translation">{word.translation}</p>}
+      <span id="word-card-summary" className="sr-only">
+        Word: <span lang={language}>{word.word}</span>
+        {word.hint && <>, hint: {word.hint}</>}
+        {showTranslation && <>, translation: {word.translation}</>}
+      </span>
+      <p className="word-card__noun" lang={language} aria-hidden="true">{word.word}</p>
+      {word.hint && <p className="word-card__hint" lang={language} aria-hidden="true">{word.hint}</p>}
+      {showTranslation && <p className="word-card__translation" aria-hidden="true">{word.translation}</p>}
     </div>
   )
 })
