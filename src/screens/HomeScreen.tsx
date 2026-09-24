@@ -104,6 +104,9 @@ export function HomeScreen({ onStartRound, onMyWords, onTheory }: HomeScreenProp
           </button>
         </div>
         <div className="home-screen__topbar-actions">
+          <button className="icon-btn" onClick={() => setSettingsOpen(true)} aria-label="Settings" aria-expanded={settingsOpen} aria-controls="settings-panel">
+            <img src={settingsIcon} alt="" width="22" height="22" className="home-screen__settings-icon" />
+          </button>
           <a
             href={DONATE_URL}
             target="_blank"
@@ -112,9 +115,6 @@ export function HomeScreen({ onStartRound, onMyWords, onTheory }: HomeScreenProp
           >
             Donate
           </a>
-          <button className="icon-btn" onClick={() => setSettingsOpen(true)} aria-label="Settings" aria-expanded={settingsOpen} aria-controls="settings-panel">
-            <img src={settingsIcon} alt="" width="22" height="22" className="home-screen__settings-icon" />
-          </button>
         </div>
       </div>
 
