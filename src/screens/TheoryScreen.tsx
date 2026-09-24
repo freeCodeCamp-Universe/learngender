@@ -36,6 +36,7 @@ const MODULE_ICONS: Record<string, string> = {
 
 import { THEORY_MODULES, getModuleDone, setModuleDone } from '../data/theoryModules'
 import { handleTabListKeyDown } from '../lib/tablist'
+import { DONATE_URL } from '../lib/donate'
 import type { TheoryModule } from '../data/theoryModules'
 import type { TheorySlide } from '../data/theory'
 
@@ -274,6 +275,14 @@ function ModuleList({ lang, onSelect, onHome, onMyWords, onLangChange, refreshKe
     <div className="theory-screen">
       <div className="my-words-screen__header">
         <h1>Theory</h1>
+        <a
+          href={DONATE_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="home-screen__donate-btn"
+        >
+          Donate
+        </a>
       </div>
 
       <div className="theory-screen__lang-tabs" role="tablist" aria-label="Language" onKeyDown={handleTabListKeyDown}>

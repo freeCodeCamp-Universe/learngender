@@ -5,6 +5,7 @@ import { LANGUAGE_LABELS } from '../types'
 import { getScore, getSeenCount, getStreak } from '../lib/storage'
 import { getMasteryTierProgress, getXPProgress } from '../lib/levels'
 import { useResolvedTheme } from '../lib/theme'
+import { DONATE_URL } from '../lib/donate'
 import { SettingsPanel } from './SettingsPanel'
 
 const LANGUAGES: Language[] = ['pt', 'es', 'fr', 'it']
@@ -102,9 +103,19 @@ export function HomeScreen({ onStartRound, onMyWords, onTheory }: HomeScreenProp
             )}
           </button>
         </div>
-        <button className="icon-btn" onClick={() => setSettingsOpen(true)} aria-label="Settings" aria-expanded={settingsOpen} aria-controls="settings-panel">
-          <img src={settingsIcon} alt="" width="22" height="22" className="home-screen__settings-icon" />
-        </button>
+        <div className="home-screen__topbar-actions">
+          <button className="icon-btn" onClick={() => setSettingsOpen(true)} aria-label="Settings" aria-expanded={settingsOpen} aria-controls="settings-panel">
+            <img src={settingsIcon} alt="" width="22" height="22" className="home-screen__settings-icon" />
+          </button>
+          <a
+            href={DONATE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="home-screen__donate-btn"
+          >
+            Donate
+          </a>
+        </div>
       </div>
 
       {/* Title */}

@@ -289,6 +289,31 @@ html, body, #root {
   gap: 8px;
 }
 
+.home-screen__topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.home-screen__donate-btn {
+  display: inline-flex;
+  align-items: center;
+  background: var(--accent-cta);
+  color: var(--gray-90);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.home-screen__donate-btn:hover { opacity: 0.9; }
+.home-screen__donate-btn:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
 .home-chip {
   position: relative;
   display: inline-flex;
@@ -1729,6 +1754,9 @@ html, body, #root {
 }
 
 .my-words-screen__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 1.1rem 1rem 0.5rem;
 }
 .my-words-screen__header h1 {
